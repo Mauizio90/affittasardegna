@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "affittasardegna": {
+      "i18n": {
+        "sourceLocale":"it",
+        "locales": {
+          "en": "src/locale/messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":[
+              "it"
+            ],
             "outputPath": "dist/affittasardegna",
             "index": "src/index.html",
             "main": "src/main.ts",
