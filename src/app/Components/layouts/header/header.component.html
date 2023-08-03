@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" routerLink="" i18n-routerLink>
+        <img src="assets/images/logo.png" alt="Logo" style="height: 60px;">
+      </a>
+  
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse custom-collapse justify-content-end" id="navbar" [ngbCollapse]="isCollapsed" [ngClass]="{'white-bg': !isCollapsed}">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ml-2">
+            <a class="nav-link" routerLink="ville-appartamenti-vacanze-sardegna" i18n-routerLink i18n>Gli alloggi</a>
+          </li>
+          <li class="nav-item ml-2">
+            <a class="nav-link" routerLink="localita-spiagge-sardegna" i18n-routerLink i18n>Località</a>
+          </li>
+          <li class="nav-item ml-2">
+            <a class="nav-link" routerLink="proponi-immobile" i18n-routerLink i18n>Proponi Immobile</a>
+          </li>
+          <li class="nav-item ml-2">
+            <a class="nav-link" routerLink="chisiamo" i18n-routerLink i18n>Chi siamo</a>
+          </li>
+          <li class="nav-item ml-2">
+            <a class="nav-link" routerLink="contatti"i18n-routerLink i18n>Contatti</a>
+          </li>
+          <!-- Dropdown for language selection -->
+          <li class="nav-item dropdown ml-2" ngbDropdown>
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
+              <img [src]="languageIcon" alt="Language Icon" style="height: 20px;"> Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
+              <a class="dropdown-item" href="" (click)="changeLanguage('it', true)">Italiano</a>
+              <a class="dropdown-item" href="en" (click)="changeLanguage('en', true)">English</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="contact-info d-none d-lg-block">
+        <a href="tel:+393494787272" style="margin-right: 15px;">
+          <img src="assets/images/call.png" alt="Phone Icon" style="height: 20px;">
+          +39 3494787272
+        </a>
+        <a href="mailto:info@affittasardegna.it">
+          <img src="assets/images/email.png" alt="Email Icon" style="height: 20px;">
+          info@affittasardegna.it
+        </a>
+      </div>
+    </div>
+  </nav>
+  
