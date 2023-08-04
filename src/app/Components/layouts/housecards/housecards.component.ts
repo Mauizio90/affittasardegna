@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Accomodation } from '../../models/accomodation';
-import { AccomodationsService } from '../../services/accomodations.service';
+import { Accommodation } from '../../models/accommodation';
+import { AccommodationService } from '../../services/accommodation.service';
 
 @Component({
   selector: 'app-housecards',
@@ -8,8 +8,8 @@ import { AccomodationsService } from '../../services/accomodations.service';
   styleUrls: ['./housecards.component.css']
 })
 export class HousecardsComponent {
-  @Input() public accomodations?: Accomodation[];
+  @Input() public accommodations?: Accommodation[];
 
-  constructor(private accomodationsService: AccomodationsService) { }
+  constructor(private accommodationService: AccommodationService) { }
 
 }

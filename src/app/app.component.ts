@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Accomodation } from './Components/models/accomodation';
-import { AccomodationsService } from './Components/services/accomodations.service';
+import { Accommodation } from './Components/models/accommodation';
+import { AccommodationService } from './Components/services/accommodation.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,16 @@ import { AccomodationsService } from './Components/services/accomodations.servic
 })
 export class AppComponent {
   title = 'affittasardegna';
-  public allAccomodations?: Accomodation[];
+  public allAccommodations?: Accommodation[];
+  public accommodationsByAlghero?: Accommodation[];
 
-  constructor(private accomodationsService: AccomodationsService) { }
+  constructor(private accommodationService : AccommodationService) { }
 
   ngOnInit(): void {
-    this.accomodationsService.getAccomodations().subscribe((data: Accomodation[]) => {
-    this.allAccomodations = data;
-    console.log(this.allAccomodations);
+    this.accommodationService.getAccommodations().subscribe((data: Accommodation[]) => {
+    this.allAccommodations = data;
+    this.accommodationsByAlghero = data.filter((accommodation) => accommodation.city === 'Alghero');
+    console.log(this.accommodationsByAlghero);
       }
     )
     

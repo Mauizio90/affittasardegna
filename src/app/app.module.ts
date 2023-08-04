@@ -7,7 +7,6 @@ import { FooterComponent } from './Components/layouts/footer/footer.component';
 import { HeaderComponent } from './Components/layouts/header/header.component';
 import { HousecardsComponent } from './Components/layouts/housecards/housecards.component';
 import { AboutUsComponent } from './Components/pages/about-us/about-us.component';
-import { AccomodationsComponent } from './Components/pages/accomodations/accomodations.component';
 import { ContactsComponent } from './Components/pages/contacts/contacts.component';
 import { HomeComponent } from './Components/pages/home/home.component';
 import { LocationsComponent } from './Components/pages/locations/locations.component';
@@ -16,6 +15,7 @@ import { PropertiesSuggestionComponent } from './Components/pages/properties-sug
 import { TermsComponent } from './Components/pages/terms/terms.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { AccommodationsComponent } from './Components/pages/accommodations/accommodations.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,14 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HousecardsComponent,
     AboutUsComponent,
-    AccomodationsComponent,
+    AccommodationsComponent,
     ContactsComponent,
     HomeComponent,
     LocationsComponent,
     PrivacyComponent,
     PropertiesSuggestionComponent,
-    TermsComponent
+    TermsComponent,
+    AccommodationsComponent
   ],
   imports: [
     BrowserModule,

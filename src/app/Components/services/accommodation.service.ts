@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Accomodation } from '../models/accomodation';
+import { Accommodation } from '../models/accommodation';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AccomodationsService {
+export class AccommodationService {
 
   constructor(private http: HttpClient) { }
 
-  getAccomodations(): Observable<Accomodation[]> {
-    return this.http.get<Accomodation[]>(`assets/accomodations.json`);
+  getAccommodations(): Observable<Accommodation[]> {
+    return this.http.get<Accommodation[]>(`assets/accommodations.json`);
   }
 
 }

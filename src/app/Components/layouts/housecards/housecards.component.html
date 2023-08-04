@@ -1,37 +1,35 @@
-<div class="container">
-    <div class="box">
-      <div class="top">
-        <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271__340.jpg" alt="" />
-        <span
-          ><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i
-        ></span>
-      </div>
-      <div class="bottom">
-        <h3>Home In Merrick Way</h3>
-        <p>
-          Enchanting three bedrooms, three bath home with spacious one
-          bedroom, one bath...
-        </p>
-        <div class="advants">
-          <div>
-            <span>Bedrooms</span>
-            <div><i class="fas fa-th-large"></i><span>3</span></div>
-          </div>
-          <div>
-            <span>Bathrooms</span>
-            <div><i class="fas fa-shower"></i><span>3</span></div>
-          </div>
-          <div>
-            <span>Area</span>
-            <div>
-              <i class="fas fa-vector-square"></i
-              ><span>4300<span>Sq Ft</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="price">
-          <span>For Sale</span>
-          <span>$540,000</span>
-        </div>
-      </div>
-    </div>
+<div class="accommodation" *ngFor="let accommodation of accommodations">
+  <img [src]="accommodation.images?.[0]" class="accommodation-img-top" alt="Accommodation image">
+  <div class="accomodation-body">
+    <h5 class="accomodation-title">{{ accommodation.name_it }}</h5>
+    <h6 class="accomodation-subtitle mb-2 text-muted">{{ accommodation.name_room_type_category }}</h6>
+    <p class="accomodation-text">{{ accommodation.description}}</p>
+
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Guests:</strong> {{ accommodation.guests }}
+      </li>
+      <li class="list-group-item">
+        <strong>Bedrooms:</strong> {{ accommodation.n_bedrooms }}
+      </li>
+      <li class="list-group-item">
+        <strong>Bathrooms:</strong> {{ accommodation.n_bathrooms }}
+      </li>
+      <li class="list-group-item">
+        <strong>Address:</strong> {{ accommodation.address }}, {{ accommodation.city }}, {{ accommodation.postcode }}, {{ accommodation.cod_country }}
+      </li>
+      <li class="list-group-item">
+        <strong>Price:</strong> {{ accommodation.price }}
+      </li>
+      <li class="list-group-item">
+        <strong>Amenities:</strong>
+        <ul>
+          <li *ngFor="let amenity of accommodation.amenities">{{ amenity.name.it }}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a [href]="accommodation.meta_it_url" class="btn btn-primary">View Details</a>
+  </div>
+</div>>
+  

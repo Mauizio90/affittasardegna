@@ -1,4 +1,4 @@
-export class Accomodation {
+export class Accommodation {
     id_room_typ?: number;
     name_it?: string;
     h2_it?: string | null;
@@ -39,3 +39,4 @@ export interface Amenity {
       en: string;
     };
   }
+
