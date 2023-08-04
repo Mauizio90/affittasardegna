@@ -15,6 +15,7 @@ import { PrivacyComponent } from './Components/pages/privacy/privacy.component';
 import { PropertiesSuggestionComponent } from './Components/pages/properties-suggestion/properties-suggestion.component';
 import { TermsComponent } from './Components/pages/terms/terms.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,13 @@
 nav{
-    height: 80px;
-    background-color: var(--navbar-footer-color);
+    height: 90px;
+    background-color: var(--light);
 }
 
 .nav-link{
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: var(--primary);
     font-weight: bold;
+    font-size: 14px;
 }
 
 .white-bg {

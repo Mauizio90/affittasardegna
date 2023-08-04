@@ -2,61 +2,81 @@
 @import "~node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
 :root{
-    --primary-color: #00399b;
-    --secondary-color: white;
-    --body-text-color: #00399b;
-    --navbar-footer-color: white;
+    --primary: #00399b;
+    --secondary: #FF6922;
+    --light: white;
+    --dark: #00399b;font-family: 'Roboto', sans-serif;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: var(--body-text-color)
 }
 
-.shadow-effect{
-    border: none;
-    box-shadow: 0px 0px 33px -10px rgba(71, 114, 254, 0.3);
+.btn{
+    padding: 8px 22px;
+    background: var(--secondary);
+    color: var(--light);
+    border-radius: 5rem;
 }
 
-.bg-theme{
-    background-color: var(--primary-color);
+.btn:hover{
+    background: var(--primary);
+    color: var(--light);
 }
 
-.bg-secondary-theme{
-    background-color: var(--secondary-color);
+.home{
+    margin-top: 100px;
+    background: url(src\assets\images\5533882.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 440px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
 }
 
-.text-theme-primary{
-    color: var(--primary-color);
+.home-text{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-
-.btn-theme{
-    height: 58px;
-    border: none;
-    font-size: 13px;
-    background-color: var(--primary-color);
-    color: white;
+.home-text h1{
+    color: var(--light);
+    margin-bottom: 1rem;
 }
 
-input[type="text"], input[type="email"]{
-    height: 60px;
-    padding-left: 20px;
-    font-size: 13px;
-    width: 100%;
+.about{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
+    gap: 2rem;
+}
+.about-img img{
+    height: 365px;
+    border-radius: 3rem 0 3rem 3rem;
+    max-width: 600px;
+
 }
 
-.app-body {
-    margin-top: 80px;
+.about-text span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--secondary);
+}
+.about-text h2{
+    
+    color: var(--primary);
+    font-size: 2rem;
 }
 
-.text-center{
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-family: 'Roboto', sans-serif;
+.about-text p{
+    color: var(--primary);
+    font-size: 1rem;
+    margin: 1rem 0 1rem;
 }
