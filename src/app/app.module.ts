@@ -16,6 +16,7 @@ import { TermsComponent } from './Components/pages/terms/terms.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { AccommodationsComponent } from './Components/pages/accommodations/accommodations.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,14 @@ import { AccommodationsComponent } from './Components/pages/accommodations/accom
     PrivacyComponent,
     PropertiesSuggestionComponent,
     TermsComponent,
-    AccommodationsComponent
+    AccommodationsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
