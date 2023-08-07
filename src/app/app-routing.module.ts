@@ -6,6 +6,8 @@ import { ContactsComponent } from './Components/pages/contacts/contacts.componen
 import { HomeComponent } from './Components/pages/home/home.component';
 import { LocationsComponent } from './Components/pages/locations/locations.component';
 import { PropertiesSuggestionComponent } from './Components/pages/properties-suggestion/properties-suggestion.component';
+import { TermsComponent } from './Components/pages/terms/terms.component';
+import { PrivacyComponent } from './Components/pages/privacy/privacy.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,12 +16,16 @@ const routes: Routes = [
   {path: 'proponi-immobile', component: PropertiesSuggestionComponent},
   {path: 'chisiamo', component: AboutUsComponent},
   {path: 'contatti', component: ContactsComponent},
+  {path: 'termini-e-condizioni', component: TermsComponent},
+  {path: 'privacy', component: PrivacyComponent},
   {path: 'en', component: HomeComponent},
   {path: 'en/villas-accommodations-holiday-sardinia', component: AccommodationsComponent},
   {path: 'en/locations-beaches-sardinia', component: LocationsComponent},
   {path: 'en/property-suggestion', component: PropertiesSuggestionComponent},
   {path: 'en/about-us', component: AboutUsComponent},
   {path: 'en/contact-us', component: ContactsComponent},
+  {path: 'en/terms-and-conditions', component: TermsComponent},
+  {path: 'en/privacy', component: PrivacyComponent},
 ];
 
 @NgModule({
