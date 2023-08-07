@@ -1,0 +1,18 @@
+.mini-header ul li {
+  display: inline-block;
+  margin-right: 30px; /* Aggiungi uno spazio tra i link */
+}
+
+.mini-header ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  
+  font-size: 20px;
+}
+
+.mini-header ul li a i {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px; /* Spazio tra l'icona e il testo */
+}
