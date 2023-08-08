@@ -1,0 +1,26 @@
+.container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary);
+}
+
+.about-us > div {
+    flex: 1;
+}
+
+.about-us-img {
+    text-align: right;
+    margin-left: 25px;
+}
+
+.about-us-img img {
+    max-width: 100%;
+    height: auto;
+    box-shadow:#0000003f 19px 12px 12px 0px
+}
