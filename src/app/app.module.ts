@@ -17,6 +17,9 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { AccommodationsComponent } from './Components/pages/accommodations/accommodations.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PopupsubmissionsuccessComponent } from './Components/layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -33,13 +36,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     PropertiesSuggestionComponent,
     TermsComponent,
     AccommodationsComponent,
+    PopupsubmissionsuccessComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

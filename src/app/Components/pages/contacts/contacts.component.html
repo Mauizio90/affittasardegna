@@ -26,3 +26,39 @@
     </div>
 </div>
 
+
+<div class="container">
+  <div class="inner-container">
+    <div class="map-container">
+      <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.682682014014!2d8.407902115712707!3d40.836034979321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x658915030789bc5e!2sAffittaSardegna%20Soc.%20Coop!5e0!3m2!1sen!2sus!4v1635361234567!5m2!1sen!2sus" allowfullscreen></iframe>
+    </div>
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2 class="contact-title">Contattaci</h2>
+        <p class="contact-subtitle">Compila il modulo sottostante per inviarci un messaggio.</p>
+      </div>
+      <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
+        <label for="nome">Nome</label>
+        <input class="input-field" type="text" name="nome" placeholder="Nome" formControlName="nome">
+        <label for="nome">Cognome</label>
+        <input class="input-field" type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
+        <label for="nome">Telefono</label>
+        <input class="input-field" type="tel" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
+        <div *ngIf="contactForm.get('telefono')?.hasError('pattern')">Inserisci solo numeri nel campo telefono.</div>
+        <label for="nome">Email</label>
+        <input class="input-field" type="email" name="email" placeholder="Email" formControlName="email">
+        <label for="nome">Messaggio</label>
+        <textarea class="input-field textarea-field" name="messaggio" placeholder="Messaggio" formControlName="messaggio"></textarea>
+        <label class="privacy-checkbox">
+          <input type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy" i18n-routerLink i18n>politica sulla privacy</a>. <br>
+          <input type="checkbox" name="trattamentodati" formControlName="trattamentodati"> Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.
+        </label>
+        <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="contactForm.invalid">Invia</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  
+  
+

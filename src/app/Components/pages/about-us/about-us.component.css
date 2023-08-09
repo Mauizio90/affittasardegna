@@ -2,12 +2,16 @@
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .about-us {
     display: flex;
     justify-content: space-between;
     color: var(--primary);
+    display: flex;
+    flex-direction: column;
 }
 
 .about-us > div {
@@ -23,4 +27,18 @@
     max-width: 100%;
     height: auto;
     box-shadow:#0000003f 19px 12px 12px 0px
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .about-us {
+        flex-direction: row;
+    }
+
+    .about-us-img {
+        text-align: right;
+    }
 }
