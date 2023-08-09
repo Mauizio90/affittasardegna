@@ -43,14 +43,17 @@
         <label for="nome">Cognome</label>
         <input class="input-field" type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
         <label for="nome">Telefono</label>
-        <input class="input-field" type="tel" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
-        <div *ngIf="contactForm.get('telefono')?.hasError('pattern')">Inserisci solo numeri nel campo telefono.</div>
+        <input class="input-field" type="text" inputmode="numeric" pattern="[0-9]+" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
+        <div *ngIf="contactForm.get('telefono')?.hasError('pattern')" style="color: red;">Inserisci solo numeri nel campo telefono.</div>
         <label for="nome">Email</label>
         <input class="input-field" type="email" name="email" placeholder="Email" formControlName="email">
+        <div *ngIf="contactForm.get('email')?.hasError('email')" style="color: red;">Inserisci una mail valida.</div>
         <label for="nome">Messaggio</label>
         <textarea class="input-field textarea-field" name="messaggio" placeholder="Messaggio" formControlName="messaggio"></textarea>
         <label class="privacy-checkbox">
           <input type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy" i18n-routerLink i18n>politica sulla privacy</a>. <br>
+        </label>
+        <label class="privacy-checkbox">
           <input type="checkbox" name="trattamentodati" formControlName="trattamentodati"> Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.
         </label>
         <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="contactForm.invalid">Invia</button>
