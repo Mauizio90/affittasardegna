@@ -1,31 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutUsComponent } from './Components/pages/about-us/about-us.component';
-import { AccommodationsComponent } from './Components/pages/accommodations/accommodations.component';
-import { ContactsComponent } from './Components/pages/contacts/contacts.component';
-import { HomeComponent } from './Components/pages/home/home.component';
-import { LocationsComponent } from './Components/pages/locations/locations.component';
-import { PropertiesSuggestionComponent } from './Components/pages/properties-suggestion/properties-suggestion.component';
-import { TermsComponent } from './Components/pages/terms/terms.component';
-import { PrivacyComponent } from './Components/pages/privacy/privacy.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'ville-appartamenti-vacanze-sardegna', component: AccommodationsComponent},
-  {path: 'localita-spiagge-sardegna', component: LocationsComponent},
-  {path: 'proponi-immobile', component: PropertiesSuggestionComponent},
-  {path: 'chisiamo', component: AboutUsComponent},
-  {path: 'contatti', component: ContactsComponent},
-  {path: 'termini-e-condizioni', component: TermsComponent},
-  {path: 'privacy', component: PrivacyComponent},
-  {path: 'en', component: HomeComponent},
-  {path: 'en/villas-accommodations-holiday-sardinia', component: AccommodationsComponent},
-  {path: 'en/locations-beaches-sardinia', component: LocationsComponent},
-  {path: 'en/property-suggestion', component: PropertiesSuggestionComponent},
-  {path: 'en/about-us', component: AboutUsComponent},
-  {path: 'en/contact-us', component: ContactsComponent},
-  {path: 'en/terms-and-conditions', component: TermsComponent},
-  {path: 'en/privacy', component: PrivacyComponent},
+  {path: '', loadChildren: () => import('./Components/pages/home/home.module').then(m => m.HomeModule)},
+  {path: 'ville-appartamenti-vacanze-sardegna', loadChildren: () => import('./Components/pages/accommodations/accommodations.module').then(m => m.AccommodationsModule)},
+  {path: 'localita-spiagge-sardegna', loadChildren: () => import('./Components/pages/locations/locations.module').then(m => m.LocationsModule)},
+  {path: 'proponi-immobile', loadChildren: () => import('./Components/pages/properties-suggestion/properties-suggestion.module').then(m => m.PropertiesSuggestionModule)},
+  {path: 'chisiamo', loadChildren: () => import('./Components/pages/about-us/about-us.module').then(m => m.AboutUsModule)},
+  {path: 'contatti', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
+  {path: 'termini-e-condizioni', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
+  {path: 'privacy', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
+  {path: 'en', loadChildren: () => import('./Components/pages/home/home.module').then(m => m.HomeModule)},
+  {path: 'en/villas-accommodations-holiday-sardinia', loadChildren: () => import('./Components/pages/accommodations/accommodations.module').then(m => m.AccommodationsModule)},
+  {path: 'en/locations-beaches-sardinia', loadChildren: () => import('./Components/pages/locations/locations.module').then(m => m.LocationsModule)},
+  {path: 'en/property-suggestion', loadChildren: () => import('./Components/pages/properties-suggestion/properties-suggestion.module').then(m => m.PropertiesSuggestionModule)},
+  {path: 'en/about-us', loadChildren: () => import('./Components/pages/about-us/about-us.module').then(m => m.AboutUsModule)},
+  {path: 'en/contact-us', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
+  {path: 'en/terms-and-conditions', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
+  {path: 'en/privacy', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
 ];
 
 @NgModule({

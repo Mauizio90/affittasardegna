@@ -15,9 +15,9 @@
             <p class="property-suggestion-subtitle">CONTATTACI! Ti indicheremo come fare.</p>
         </div>
         <form [formGroup]="suggestForm" (ngSubmit)="sendEmail($event)">
-            <label for="nome">Città/Frazione</label>
+            <label for="nome">Città/Frazione dell'immobile</label>
             <input class="input-field" type="text" name="city" placeholder="Città" formControlName="city">
-            <label for="nome">Indirizzo</label>
+            <label for="nome">Indirizzo dell'immobile</label>
             <input class="input-field" type="text" name="address" placeholder="Indirizzo" formControlName="address">
             <label for="nome">Descrivi l'immobile</label>
             <textarea class="input-field textarea-field" name="description" placeholder="Descrizione"></textarea>
