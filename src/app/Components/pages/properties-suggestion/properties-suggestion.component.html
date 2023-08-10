@@ -4,3 +4,41 @@
         <h3 style="font-size: 20px;"><b>Metti a reddito il tuo immobile</b></h3>
     </div>
 </div>
+
+<div class="property-suggestion-container container">
+    <div class="property-suggestion-content">
+        <div class="property-suggestion-header">
+            <div class="icon-container">
+                <i class="ri-home-smile-fill"></i>
+            </div>
+            <p class="property-suggestion-title"><strong>VUOI INSERIRE LA TUA CASA VACANZE SUL CIRCUITO AffittaSardegna?</strong></p>
+            <p class="property-suggestion-subtitle">CONTATTACI! Ti indicheremo come fare.</p>
+        </div>
+        <form [formGroup]="suggestForm" (ngSubmit)="sendEmail($event)">
+            <label for="nome">Città/Frazione</label>
+            <input class="input-field" type="text" name="city" placeholder="Città" formControlName="city">
+            <label for="nome">Indirizzo</label>
+            <input class="input-field" type="text" name="address" placeholder="Indirizzo" formControlName="address">
+            <label for="nome">Descrivi l'immobile</label>
+            <textarea class="input-field textarea-field" name="description" placeholder="Descrizione"></textarea>
+            <label for="nome">Nome</label>
+            <input class="input-field" type="text" name="nome" placeholder="Nome" formControlName="nome">
+            <label for="nome">Cognome</label>
+            <input class="input-field" type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
+            <label for="nome">Telefono</label>
+            <input class="input-field" type="text" inputmode="numeric" pattern="[0-9]+" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
+            <div *ngIf="suggestForm.get('telefono')?.hasError('pattern')" style="color: red;">Inserisci solo numeri nel campo telefono.</div>
+            <label for="nome">Email</label>
+            <input class="input-field" type="email" name="email" placeholder="Email" formControlName="email">
+            <div *ngIf="suggestForm.get('email')?.hasError('email')" style="color: red;">Inserisci una mail valida.</div>
+            <label class="privacy-checkbox">
+              <input type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy" i18n-routerLink>politica sulla privacy</a>.
+            </label>
+            <br>
+            <label class="privacy-checkbox">
+              <input type="checkbox" name="trattamentodati" formControlName="trattamentodati"> Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.
+            </label>
+            <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="suggestForm.invalid">Invia</button>
+          </form>
+    </div>
+</div>

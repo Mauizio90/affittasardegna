@@ -11,11 +11,11 @@
       </button>
 
       <div class="navbar-collapse custom-collapse justify-content-end" id="navbar" [ngbCollapse]="isCollapsed" [ngClass]="{'white-bg': !isCollapsed}" style="margin-right: 15px;">
-      <a class="nav-link" routerLink="/ville-appartamenti-vacanze-sardegna" i18n-routerLink i18n>Gli alloggi</a>
-      <a class="nav-link" routerLink="/localita-spiagge-sardegna" i18n-routerLink i18n>Località</a>
-      <a class="nav-link" routerLink="/proponi-immobile" i18n-routerLink i18n>Proponi Immobile</a>
-      <a class="nav-link" routerLink="/chisiamo" i18n-routerLink i18n>Chi siamo</a>
-      <a class="nav-link" routerLink="/contatti"i18n-routerLink i18n>Contatti</a>
+      <a class="nav-link" routerLink="/ville-appartamenti-vacanze-sardegna" (click)="isCollapsed = true" i18n-routerLink i18n>Gli alloggi</a>
+      <a class="nav-link" routerLink="/localita-spiagge-sardegna" (click)="isCollapsed = true" i18n-routerLink i18n>Località</a>
+      <a class="nav-link" routerLink="/proponi-immobile" (click)="isCollapsed = true" i18n-routerLink i18n>Proponi Immobile</a>
+      <a class="nav-link" routerLink="/chisiamo" (click)="isCollapsed = true" i18n-routerLink i18n>Chi siamo</a>
+      <a class="nav-link" routerLink="/contatti" (click)="isCollapsed = true" i18n-routerLink i18n>Contatti</a>
       <a class="nav-link dropdown ml-2" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
           <img [src]="languageIcon" alt="Language Icon" style="height: 13px;"> Language
