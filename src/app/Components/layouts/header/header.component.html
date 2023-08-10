@@ -1,55 +1,36 @@
+
+
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand" routerLink="/" i18n-routerLink>
-        <img src="assets/images/logo.png" alt="Logo" style="height: 85px;">
-      </a>
-  
-      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+    <a class="logo" routerLink="/" i18n-routerLink>
+      <img src="assets/images/logo.png" alt="Logo" style="height: 85px; margin-left: 15px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
         [attr.aria-expanded]="!isCollapsed" aria-controls="#navbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
-      <div class="navbar-collapse custom-collapse justify-content-end" id="navbar" [ngbCollapse]="isCollapsed" [ngClass]="{'white-bg': !isCollapsed}">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item ml-2">
-            <a class="nav-link" routerLink="/ville-appartamenti-vacanze-sardegna" i18n-routerLink i18n>Gli alloggi</a>
-          </li>
-          <li class="nav-item ml-2">
-            <a class="nav-link" routerLink="/localita-spiagge-sardegna" i18n-routerLink i18n>Località</a>
-          </li>
-          <li class="nav-item ml-2">
-            <a class="nav-link" routerLink="/proponi-immobile" i18n-routerLink i18n>Proponi Immobile</a>
-          </li>
-          <li class="nav-item ml-2">
-            <a class="nav-link" routerLink="/chisiamo" i18n-routerLink i18n>Chi siamo</a>
-          </li>
-          <li class="nav-item ml-2">
-            <a class="nav-link" routerLink="/contatti"i18n-routerLink i18n>Contatti</a>
-          </li>
-          <!-- Dropdown for language selection -->
-          <li class="nav-item dropdown ml-2" ngbDropdown>
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
-              <img [src]="languageIcon" alt="Language Icon" style="height: 13px;"> Language
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
-              <a class="dropdown-item" href="" (click)="changeLanguage('it', true)">Italiano</a>
-              <a class="dropdown-item" href="en" (click)="changeLanguage('en', true)">English</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-  
-      <div class="contact-info d-none d-lg-block">
-        <a href="tel:+393494787272" style="margin-right: 15px;">
-          <i class="ri-phone-fill" style="color: var(--primary); font-size: 20px;"></i>
-          +39 3494787272
+
+      <div class="navbar-collapse custom-collapse justify-content-end" id="navbar" [ngbCollapse]="isCollapsed" [ngClass]="{'white-bg': !isCollapsed}" style="margin-right: 15px;">
+      <a class="nav-link" routerLink="/ville-appartamenti-vacanze-sardegna" i18n-routerLink i18n>Gli alloggi</a>
+      <a class="nav-link" routerLink="/localita-spiagge-sardegna" i18n-routerLink i18n>Località</a>
+      <a class="nav-link" routerLink="/proponi-immobile" i18n-routerLink i18n>Proponi Immobile</a>
+      <a class="nav-link" routerLink="/chisiamo" i18n-routerLink i18n>Chi siamo</a>
+      <a class="nav-link" routerLink="/contatti"i18n-routerLink i18n>Contatti</a>
+      <a class="nav-link dropdown ml-2" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
+          <img [src]="languageIcon" alt="Language Icon" style="height: 13px;"> Language
         </a>
-        <a href="mailto:info@affittasardegna.it">
-          <i class="ri-mail-fill" style="color: var(--primary); font-size: 20px;"></i>
-          info@affittasardegna.it
-        </a>
-      </div>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" style="background-color: transparent;" href="/" (click)="changeLanguage('it', true)">Italiano</a>
+          <a class="dropdown-item" style="background-color: transparent;" href="en" (click)="changeLanguage('en', true)">English</a>
+        </div></a>
+      <a class="nav-link" href="tel:+393494787272" style="margin-bottom: 5px;">
+        <i class="ri-phone-fill" style="color: var(--primary); font-size: 20px;"></i>
+        +39 3494787272
+      </a>
+      <a class="nav-link" href="mailto:info@affittasardegna.it" style="margin-bottom: 5px;">
+        <i class="ri-mail-fill" style="color: var(--primary); font-size: 20px;"></i>
+        info@affittasardegna.it
+      </a>
     </div>
-  </nav>
-  
+</nav>
