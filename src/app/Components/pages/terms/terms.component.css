@@ -1,0 +1,12 @@
+h5{
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+p{
+    color: var(--primary);
+}
+
+ul{
+    color: var(--primary);
+}
