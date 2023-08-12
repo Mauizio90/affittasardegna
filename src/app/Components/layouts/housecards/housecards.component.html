@@ -1,4 +1,4 @@
-<div class="accommodation" *ngFor="let accommodation of accommodations">
+<!-- <div class="accommodation" *ngFor="let accommodation of accommodations">
   <img [src]="accommodation.images?.[0]" class="accommodation-img-top" alt="Accommodation image">
   <div class="accomodation-body">
     <h5 class="accomodation-title">{{ accommodation.name_it }}</h5>
@@ -32,4 +32,42 @@
     <a [href]="accommodation.meta_it_url" class="btn btn-primary">View Details</a>
   </div>
 </div>>
-  
+   -->
+
+<!-- alternative -->
+<!-- <div class="row">
+  <div class="col-lg-12">
+    <div class="projcard-container" *ngFor="let accommodation of accommodations">
+      <div class="projcard projcard-blue">
+        <div class="projcard-innerbox col-xs-6">
+          <img class="projcard-img" [src]="accommodation.images?.[0]" />
+          <div class="projcard-textbox col-xs-6">
+            <div class="projcard-title">{{accommodation.name_it}}</div>
+            <div class="projcard-subtitle">This explains the card in more detail</div>
+            <div class="projcard-bar"></div>
+            <div class="projcard-description">{{accommodation.description?.it}}</div>
+            <div class="projcard-tagbox">
+              <span class="projcard-tag">HTML</span>
+              <span class="projcard-tag">CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> -->
+<div class="container" *ngFor="let accommodation of accommodations">
+  <div class="box">
+    <img src="{{accommodation.images?.[0]}}" alt="">
+    <h2>{{accommodation.price}}</h2>
+    <div class="content">
+      <div class="text">
+        <h2>{{accommodation.name_it}}</h2>
+        <p>{{accommodation.city}}</p>
+      </div>
+      <div class="icon">
+        <i class="ri-hotel-bed-line"><span>{{accommodation.n_bedrooms}}</span></i>
+        <i class="fa-solid fa-bath"><span>{{accommodation.n_bathrooms}}</span></i>
+      </div>
+    </div>
+  </div>
+</div>
