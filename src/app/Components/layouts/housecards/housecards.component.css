@@ -1,14 +1,4 @@
-/* Demo Code: */
-body {
-	font-family: 'Open Sans', arial, sans-serif;
-	color: #333;
-	font-size: 14px;
-}
-.projcard-container {
-	margin: 50px 0;
-}
-
-/* Actual Code: */
+/* 
 .projcard-container,
 .projcard-container * {
 	box-sizing: border-box;
@@ -181,122 +171,61 @@ body {
 	border-top: 13px solid transparent;
 	right: -10px;
 	top: 0;
+} */
+
+.box img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	overflow: hidden;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
-/* Aggiungi queste regole alla fine del tuo stile CSS */
-
-@media (max-width: 768px) {
-    /* Stili per schermi con larghezza massima di 768px (schermi più piccoli) */
-
-    .projcard-container {
-        width: 100%;
-        margin: 20px;
-    }
-
-    .projcard {
-        height: auto;
-        margin-bottom: 20px;
-        font-size: 14px;
-    }
-
-    .projcard-img {
-        height: auto;
-        width: 100%;
-    }
-
-    .projcard-textbox {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .projcard-textbox::before,
-    .projcard-textbox::after {
-        display: none;
-    }
-
-    .projcard-description {
-        height: auto;
-        overflow: visible;
-    }
-
-    .projcard-tagbox {
-        bottom: 0;
-        font-size: 12px;
-    }
-
-    .projcard-tag {
-        padding: 0 6px 0 15px;
-        margin-right: 10px;
-        line-height: 22px;
-    }
-
-    .projcard-tag::before {
-        left: 6px;
-        width: 4px;
-        top: 8px;
-        height: 4px;
-    }
-
-    .projcard-tag::after {
-        border-bottom: 9px solid transparent;
-        border-left: 7px solid #E0E0E0;
-        border-top: 9px solid transparent;
-        right: -7px;
-        top: 0;
-    }
+.box{
+	border-radius: 10px;
+	background-color: white;
+	margin: 15px;
+	max-width: 300px;
+	box-shadow: 19px 20px 12px -3px rgba(0,0,0,0.1);
+	text-decoration: none;
+	padding-left: 0px;
+	padding-right: 0px;
 }
-/* Aggiungi queste regole al tuo stile CSS */
 
-@media (max-width: 768px) {
-  /* Stili per schermi con larghezza massima di 768px (schermi più piccoli) */
+.box:hover{
+	box-shadow: 19px 20px 12px -3px var(--secondary);
+	transition-duration: 0.5s;
+}
 
-  .projcard-container {
-      width: 100%;
-      margin: 20px;
-  }
+.box h2{
+	color: var(--primary);
+	font-size: 25px;
+}
 
-  .projcard {
-      height: 600px;
-      margin-bottom: 20px;
-      font-size: 16px; /* Incrementato leggermente il font-size */
-  }
+.box p{
+	color: var(--primary);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5; /* Numero massimo di righe */
+	-webkit-box-orient: vertical;
+	font-size: 13px;
+	margin-bottom: 0px;
+}
 
-  .projcard-img {
-      height: auto;
-      width: 100%;
-  }
+.box i{
+	color: var(--secondary);
+	font-size: 25px;
+}
 
-  .projcard-textbox {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      font-size: 16px; /* Incrementato leggermente il font-size */
-  }
+.box span{
+	color: var(--primary);
+	font-size: 25px;
+}
 
-  .projcard-description {
-      height: auto;
-      overflow: visible;
-  }
-
-  .projcard-tagbox {
-      bottom: 0;
-      font-size: 14px; /* Incrementato leggermente il font-size */
-  }
-
-  .projcard-tag {
-      padding: auto; /* Aumentato leggermente il padding */
-      margin-right: 12px; /* Aumentato leggermente il margine */
-      line-height: 24px; /* Incrementato leggermente il line-height */
-  }
-
-  .projcard-tag::before {
-      left: 8px; /* Aumentato leggermente il left */
-      width: 100px; /* Aumentato leggermente il width */
-      top: auto; /* Aumentato leggermente il top */
-      height: 6px; /* Aumentato leggermente il height */
-  }
+@media (max-width: 767px) {
+	.box {
+	  max-width: 100%;
+	}
 }

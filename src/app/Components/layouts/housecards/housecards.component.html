@@ -55,19 +55,24 @@
       </div>
   </div>
 </div> -->
-<div class="container" *ngFor="let accommodation of accommodations">
-  <div class="box">
-    <img src="{{accommodation.images?.[0]}}" alt="">
-    <h2>{{accommodation.price}}</h2>
-    <div class="content">
-      <div class="text">
-        <h2>{{accommodation.name_it}}</h2>
-        <p>{{accommodation.city}}</p>
+<div class="container">
+  <div class="row" style="justify-content: center;">
+    <a href="https://affittasardegna.kross.travel{{accommodation.meta_it_url}}" class="box col-lg-3 col-md-4 col-sm-12" *ngFor="let accommodation of accommodations | slice:0:cardsToShow">
+      <img src="{{accommodation.images?.[0]}}" alt="foto appartamento">
+      <h2 style="font-size: medium; color: var(--secondary);">Da {{accommodation.price}}€ notte</h2>
+      <div class="content">
+        <div class="text">
+          <h2>{{accommodation.name_it}}</h2>
+          <p style="font-size: 20px;"><i class="ri-map-pin-2-line"></i>{{accommodation.city}}</p>
+        </div>
+        <div class="description">
+          <p>{{accommodation.description?.it}}</p>
+        </div>
+        <div class="icon">
+          <i class="ri-hotel-bed-line"><span>{{accommodation.n_bedrooms}}</span></i>
+          <i class="ri-drop-line"><span>{{accommodation.n_bathrooms}}</span></i>
+        </div>
       </div>
-      <div class="icon">
-        <i class="ri-hotel-bed-line"><span>{{accommodation.n_bedrooms}}</span></i>
-        <i class="fa-solid fa-bath"><span>{{accommodation.n_bathrooms}}</span></i>
-      </div>
-    </div>
+    </a>
   </div>
 </div>

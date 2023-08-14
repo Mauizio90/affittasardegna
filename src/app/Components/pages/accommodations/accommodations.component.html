@@ -4,3 +4,7 @@
         <h4 style="font-size: 20px;"><b>Per vacanze in Sardegna</b></h4>
     </div>
 </div>
+<app-housecards #child [accommodations]="allAccommodations"></app-housecards>
+<div style="display: flex; justify-content: center;">
+    <button class="btn" style="text-align: center;" (click)="loadMoreCards()">Carica più schede</button>
+</div>

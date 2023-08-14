@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -8,14 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   isCollapsed = true;
-  languageIcon?: string; // Update the type to string for the languageIcon property
+  languageIcon?: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     // Set the initial language icon based on the stored currentLanguage in localStorage
     const currentLanguage = localStorage.getItem('currentLanguage');
     this.changeLanguage(currentLanguage || 'en', false);
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 
   changeLanguage(language: string, reload: boolean) {

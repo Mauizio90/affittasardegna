@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Accommodation } from '../../models/accommodation';
-import { AccommodationService } from '../../services/accommodation.service';
 
 @Component({
   selector: 'app-housecards',
@@ -9,7 +8,14 @@ import { AccommodationService } from '../../services/accommodation.service';
 })
 export class HousecardsComponent {
   @Input() public accommodations?: Accommodation[];
+  public cardsToShow: number = 40;
 
-  constructor(private accommodationService: AccommodationService) { }
+
+  constructor() { }
+
+  public loadMoreCards(): void {
+    this.cardsToShow += 40;
+}
+
 
 }
