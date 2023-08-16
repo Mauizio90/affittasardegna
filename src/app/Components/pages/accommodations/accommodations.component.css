@@ -47,6 +47,8 @@
   background-color: white;
   min-width: 200px;
   z-index: 1;
+  font-weight: bold;
+  padding-left: 10px; ;
   
 }
 
@@ -68,17 +70,16 @@
   content: '\25B4';
 }
 
-.fixed-dropdown {
-  position: fixed;
-  justify-content: center;
+.total-accommodations{
   text-align: center;
-  top: 100px;
-  z-index: 999;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  /* Add any additional styling as needed */
+  color: var(--secondary);
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-
+@media only screen and (max-width: 600px) {
+  .dropdown-content {
+    font-size: 9px;
+  }
+}
 

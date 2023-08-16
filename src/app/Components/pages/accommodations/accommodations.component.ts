@@ -71,7 +71,6 @@ export class AccommodationsComponent {
     { code: 'garden', name: 'Giardino', selected: false },
     { code: 'bbq_area', name: 'Area barbecue', selected: false }
   ];
-  isDropdownFixed = false;
   
   @ViewChild('child') child?: HousecardsComponent;
 
@@ -80,12 +79,6 @@ export class AccommodationsComponent {
   ngOnInit(): void {
     this.filterAccommodations();
   }
-
-  @HostListener('window:scroll')
-     onWindowScroll() {
-       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-       this.isDropdownFixed = scrollPosition > 0;
-     }
 
   public loadMoreCards(): void {
     this.child?.loadMoreCards();
