@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, HostListener, Input, ViewChild } from '@angular/core';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
@@ -71,6 +71,7 @@ export class AccommodationsComponent {
     { code: 'garden', name: 'Giardino', selected: false },
     { code: 'bbq_area', name: 'Area barbecue', selected: false }
   ];
+  isDropdownFixed = false;
   
   @ViewChild('child') child?: HousecardsComponent;
 
@@ -79,6 +80,12 @@ export class AccommodationsComponent {
   ngOnInit(): void {
     this.filterAccommodations();
   }
+
+  @HostListener('window:scroll')
+     onWindowScroll() {
+       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+       this.isDropdownFixed = scrollPosition > 0;
+     }
 
   public loadMoreCards(): void {
     this.child?.loadMoreCards();
@@ -101,33 +108,33 @@ export class AccommodationsComponent {
   }
 
   private filterAccommodations(): void {
-    this.accommodationService.getAccommodations().subscribe((accommodations) => {
-      if (this.selectableCities.some((city) => city.selected) && this.selectableAmenities.some((amenity) => amenity.selected)) {
-        this.allAccommodations = accommodations.filter((accommodation) => {
-          const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
-          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
-                 selectedAmenities.every((amenity) => 
-                   accommodation.amenities?.some(a => a.code === amenity.code)
-                 );
-        });
-      } else if (this.selectableCities.some((city) => city.selected)) {
-        this.allAccommodations = accommodations.filter((accommodation) => {
-          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city);
-        });
-      } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
-        this.allAccommodations = accommodations.filter((accommodation) => {
-          const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
-          return selectedAmenities.every((amenity) => 
-            accommodation.amenities?.some(a => a.code === amenity.code)
-          );
-        });
-      } else {
-        this.allAccommodations = accommodations;
-      }
-      console.log(this.allAccommodations);
-    });
-  }
-  
+  this.accommodationService.getAccommodations().subscribe((accommodations) => {
+    if (this.selectableCities.some((city) => city.selected) && this.selectableAmenities.some((amenity) => amenity.selected)) {
+      this.allAccommodations = accommodations.filter((accommodation) => {
+        const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
+        return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
+               selectedAmenities.every((amenity) => 
+                 accommodation.amenities?.some(a => a.code === amenity.code)
+               );
+      });
+    } else if (this.selectableCities.some((city) => city.selected)) {
+      this.allAccommodations = accommodations.filter((accommodation) => {
+        return this.selectableCities.some((city) => city.selected && city.name === accommodation.city);
+      });
+    } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
+      this.allAccommodations = accommodations.filter((accommodation) => {
+        const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
+        return selectedAmenities.every((amenity) => 
+          accommodation.amenities?.some(a => a.code === amenity.code)
+        );
+      });
+    } else {
+      this.allAccommodations = accommodations;
+    }
+    console.log(this.allAccommodations);
+  });
+}
+
   
   
 }

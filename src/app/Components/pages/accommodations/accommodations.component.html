@@ -6,26 +6,51 @@
 </div>
 
 
-<div class="filter-box">
-    <div class="filter-box-title">
-            <h3>Dotazioni</h3>
-        <div class="amenities" *ngFor="let selectableAmenity of selectableAmenities">
-            <label>
-                <input type="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code)">
-                {{selectableAmenity.name}}
-            </label>
+<div class="filter-container container" [class.fixed-dropdown]="isDropdownFixed">
+  <div class="filter-column" style="border-bottom-left-radius: 10px">
+    <div class="filter-box">
+      <div class="filter-box-title">
+        <div class="dropdown">
+          <input id="dotazioni-dropdown" type="checkbox" class="dropdown-toggle" />
+          <label for="dotazioni-dropdown" class="dropdown-label center-text">Filtra per Dotazioni</label>
+          <div class="dropdown-content">
+            <div class="amenities-grid">
+              <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
+                <label>
+                  <input type="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code)">
+                  {{selectableAmenity.name}}
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="filter-box-title">
-        <h3>Località/Città</h3>
-        <div class="localities" *ngFor="let selectableCity of selectableCities">
-            <label>
-                <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null)">
-                {{selectableCity.name}}
-            </label>
+  </div>
+  <div class="filter-column" style="border-bottom-right-radius: 10px">
+    <div class="filter-box">
+      <div class="filter-box-title">
+        <div class="dropdown">
+          <input id="location-dropdown" type="checkbox" class="dropdown-toggle" />
+          <label for="location-dropdown" class="dropdown-label center-text">Filtra per Località/Città</label>
+          <div class="dropdown-content">
+            <div class="localities-grid">
+              <div class="locality" *ngFor="let selectableCity of selectableCities">
+                <label>
+                  <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null)">
+                  {{selectableCity.name}}
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
+  
+  
 
 
   
