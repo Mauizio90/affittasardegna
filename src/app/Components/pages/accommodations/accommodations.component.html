@@ -7,18 +7,26 @@
 
 
 <div class="filter-box">
-    <div>
-        <label>
-            <input type="checkbox">Animali Ammessi
-        </label>
+    <div class="filter-box-title">
+            <h3>Dotazioni</h3>
+        <div class="amenities" *ngFor="let selectableAmenity of selectableAmenities">
+            <label>
+                <input type="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code)">
+                {{selectableAmenity.name}}
+            </label>
+        </div>
     </div>
-    <div class="localities" *ngFor="let selectableCity of selectableCities">
-        <label>
-            <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name)">
-            {{selectableCity.name}}
-        </label>
+    <div class="filter-box-title">
+        <h3>Località/Città</h3>
+        <div class="localities" *ngFor="let selectableCity of selectableCities">
+            <label>
+                <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null)">
+                {{selectableCity.name}}
+            </label>
+        </div>
     </div>
 </div>
+
 
   
    

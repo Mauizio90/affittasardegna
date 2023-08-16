@@ -46,6 +46,31 @@ export class AccommodationsComponent {
     { name: 'Valledoria', selected: false },
     { name: 'Viddalba', selected: false },
   ];
+  public selectableAmenities: { code: string, name: string, selected: boolean }[] = [
+    { code: 'sofa_bed', name: 'Divano letto', selected: false },
+    { code: 'bidet', name: 'Bidet', selected: false },
+    { code: 'hairdryer', name: 'Phon', selected: false },
+    { code: 'refrigerator', name: 'Frigorifero', selected: false },
+    { code: 'extra_pillows_and_blankets', name: 'Cuscini e coperte extra', selected: false },
+    { code: 'hangers', name: 'Appendini', selected: false },
+    { code: 'hot_water', name: 'Acqua calda', selected: false },
+    { code: 'private_entrance', name: 'Ingresso privato', selected: false },
+    { code: 'stove', name: 'Fornelli', selected: false },
+    { code: 'washerdryer', name: 'Lavatrice/Asciugatrice', selected: false },
+    { code: 'iron', name: 'Ferro da stiro', selected: false },
+    { code: 'washer', name: 'Lavatrice', selected: false },
+    { code: 'free_parking', name: 'Parcheggio gratuito', selected: false },
+    { code: 'single_level_home', name: 'Casa a un livello', selected: false },
+    { code: 'kitchen', name: 'Cucina', selected: false },
+    { code: 'microwave', name: 'Forno a microonde', selected: false },
+    { code: 'oven', name: 'Forno', selected: false },
+    { code: 'dishes_and_silverware', name: 'Piatti e Argenteria', selected: false },
+    { code: 'beach_view', name: 'Vista sulla spiaggia', selected: false },
+    { code: 'long_term_stays_allowed', name: 'Soggiorni a lungo termine ammessi', selected: false },
+    { code: 'tv', name: 'TV', selected: false },
+    { code: 'garden', name: 'Giardino', selected: false },
+    { code: 'bbq_area', name: 'Area barbecue', selected: false }
+  ];
   
   @ViewChild('child') child?: HousecardsComponent;
 
@@ -59,28 +84,50 @@ export class AccommodationsComponent {
     this.child?.loadMoreCards();
   }
 
-  public onChange(selectedCity: string): void {
+  public onChange(selectedCity: string | null, selectedAmenity: string | null): void {
     this.selectableCities.forEach((city) => {
       if (city.name === selectedCity) {
         city.selected = !city.selected;
       }
     });
+  
+    this.selectableAmenities.forEach((amenity) => {
+      if (amenity.code === selectedAmenity) {
+        amenity.selected = !amenity.selected;
+      }
+    });
+  
     this.filterAccommodations();
   }
 
   private filterAccommodations(): void {
-    if (this.selectableCities.some((city) => city.selected)) {
-      this.accommodationService.getAccommodations().subscribe((accommodations) => {
+    this.accommodationService.getAccommodations().subscribe((accommodations) => {
+      if (this.selectableCities.some((city) => city.selected) && this.selectableAmenities.some((amenity) => amenity.selected)) {
+        this.allAccommodations = accommodations.filter((accommodation) => {
+          const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
+          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
+                 selectedAmenities.every((amenity) => 
+                   accommodation.amenities?.some(a => a.code === amenity.code)
+                 );
+        });
+      } else if (this.selectableCities.some((city) => city.selected)) {
         this.allAccommodations = accommodations.filter((accommodation) => {
           return this.selectableCities.some((city) => city.selected && city.name === accommodation.city);
         });
-      });
-    } else {
-      this.accommodationService.getAccommodations().subscribe((accommodations) => {
+      } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
+        this.allAccommodations = accommodations.filter((accommodation) => {
+          const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
+          return selectedAmenities.every((amenity) => 
+            accommodation.amenities?.some(a => a.code === amenity.code)
+          );
+        });
+      } else {
         this.allAccommodations = accommodations;
-      });
-    }
-    console.log(this.allAccommodations);
-    
-  } 
+      }
+      console.log(this.allAccommodations);
+    });
+  }
+  
+  
+  
 }
