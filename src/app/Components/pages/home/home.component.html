@@ -17,15 +17,15 @@
         flex-direction: row;
         justify-content: space-around; ">
             <div class="nav-item" style="margin-top: -40px;">
-                <i class="ri-phone-find-line" style="background-color: blue; color: white; font-size: 60px; border-radius: 45px; height: 90px; width: 90px; text-align: center;"></i>
+                <i class="ri-phone-find-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
                 <span>Cerca</span>
             </div>
             <div class="nav-item" style="margin-top: -40px;">
-                <i class="ri-heart-3-line" style="background-color: blue; color: white; font-size: 60px; border-radius: 45px; height: 90px; width: 90px; text-align: center;"></i>
+                <i class="ri-heart-3-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
                 <span>Scegli</span>
             </div>
             <div class="nav-item" style="margin-top: -40px;">
-                <i class="ri-luggage-cart-line" style="background-color: blue; color: white; font-size: 60px; border-radius: 45px; height: 90px; width: 90px; text-align: center;"></i>
+                <i class="ri-luggage-cart-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
                 <span>Prenota</span>
             </div>
         </div>
@@ -61,3 +61,12 @@
     </form>
 </div>
 <!-- searchbar end -->
+
+<div class="featured">
+    <div class="featured-title">
+        <h2>IN PRIMO PIANO</h2>
+    </div>
+    <div class="featured-housecards">
+        <app-housecards [accommodations]="allAccommodations"></app-housecards>
+    </div>
+</div>

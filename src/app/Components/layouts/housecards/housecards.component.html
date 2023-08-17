@@ -59,18 +59,31 @@
   <div class="row" style="justify-content: center;">
     <a href="https://affittasardegna.kross.travel{{accommodation.meta_it_url}}" class="box col-lg-3 col-md-4 col-sm-12" *ngFor="let accommodation of accommodations | slice:0:cardsToShow">
       <img src="{{accommodation.images?.[0]}}" alt="foto appartamento">
-      <h2 style="font-size: medium; color: var(--secondary);">Da {{accommodation.price}}€ notte</h2>
+      <div class="under-img" style="display: grid; grid-template-columns: repeat(1, 1fr) auto;">
+        <h2 style="font-size: medium; color: var(--secondary);">Da {{accommodation.price}}€ notte</h2>
+        <h2 style="font-size: medium; color: var(--secondary);">fino a {{accommodation.guests}} ospiti</h2>
+      </div>
       <div class="content">
         <div class="text">
           <h2>{{accommodation.name_it}}</h2>
-          <p style="font-size: 20px;"><i class="ri-map-pin-2-line"></i>{{accommodation.city}}</p>
+          <p>
+            <div class="iconwrapper">
+            <fa-icon class="icon" [icon]="faLocationDot"></fa-icon><span style="font-size: 17px;">{{accommodation.city}}</span>
+          </div>
         </div>
         <div class="description">
           <p>{{accommodation.description?.it}}</p>
         </div>
-        <div class="icon">
-          <i class="ri-hotel-bed-line"><span>{{accommodation.n_bedrooms}}</span></i>
-          <i class="ri-drop-line"><span>{{accommodation.n_bathrooms}}</span></i>
+        <div class="icon-container">
+          <div class="iconwrapper">
+            <fa-icon class="icon" [icon]="faBed"></fa-icon><span>{{accommodation.n_bedrooms}}</span>
+          </div>
+          <div class="iconwrapper">
+            <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span>{{accommodation.n_bathrooms}}</span>
+          </div>
+          <div class="iconwrapper">
+            <fa-icon class="icon" [icon]="faWifi"></fa-icon>
+          </div>
         </div>
       </div>
     </a>

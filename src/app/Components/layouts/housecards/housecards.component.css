@@ -186,7 +186,7 @@
 	border-radius: 10px;
 	background-color: white;
 	margin: 15px;
-	max-width: 300px;
+	max-width: 400px;
 	box-shadow: 19px 20px 12px -3px rgba(0,0,0,0.1);
 	text-decoration: none;
 	padding-left: 0px;
@@ -200,7 +200,8 @@
 
 .box h2{
 	color: var(--primary);
-	font-size: 25px;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 .box p{
@@ -208,15 +209,21 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 5; /* Numero massimo di righe */
+	-webkit-line-clamp: 8; /* Numero massimo di righe */
 	-webkit-box-orient: vertical;
 	font-size: 13px;
 	margin-bottom: 0px;
 }
 
-.box i{
+.icon{
 	color: var(--secondary);
 	font-size: 25px;
+	
+}
+
+.icon-container{
+	display: grid; 
+	grid-template-columns: repeat(2, 1fr) auto;
 }
 
 .box span{

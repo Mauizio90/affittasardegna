@@ -111,10 +111,19 @@
 
   @media (max-width: 600px) {
     .booking-container form {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Cambio il numero di colonne a 1 */
+      gap: 1rem;
     }
   
     .booking-container .btn {
-      grid-column: span 2;
+      grid-column: 1 / -2; /* Espando il pulsante su tutta la larghezza */
     }
+  }
+
+  .featured-title{
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
   }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Accommodation } from '../../models/accommodation';
+import { AccommodationService } from '../../services/accommodation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class HomeComponent {
 form!: FormGroup;
+public allAccommodations?: Accommodation[];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -17,6 +20,10 @@ form!: FormGroup;
       checkOut: [this.getFormattedDate(this.getFutureDate(7)),Validators.required],
       guests: ['1',Validators.required]
     });
+
+    this.accommodationService.getAccommodations().subscribe((accommodations) => {
+      this.allAccommodations = accommodations.filter((accommodation => accommodation.city === 'Golfo Aranci'))
+    })
   }
 
   onFormSubmit() {

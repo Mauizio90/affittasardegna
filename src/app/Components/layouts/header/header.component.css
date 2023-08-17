@@ -1,3 +1,8 @@
+img {
+  height: 85px;
+  margin-left: 15px;
+}
+
 nav{
   height: 100px;
   background-color: var(--light);
@@ -38,5 +43,9 @@ outline: none;
   .custom-collapse a {
     text-align: center;
     margin-top: 15px;
+  }
+
+  img {
+    height: 60px;
   }
 }
