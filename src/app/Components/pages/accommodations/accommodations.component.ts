@@ -11,8 +11,8 @@ import { HousecardsComponent } from '../../layouts/housecards/housecards.compone
 export class AccommodationsComponent {
   public allAccommodations?: Accommodation[];
   public selectableCities: { name: string, selected: boolean }[] = [
-    { name: 'Alghero', selected: false },
     { name: 'Aglientu', selected: false },
+    { name: 'Alghero', selected: false },
     { name: 'Badesi', selected: false },
     { name: 'Baja Sardinia', selected: false },
     { name: 'Bosa', selected: false },

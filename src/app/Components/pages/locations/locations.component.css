@@ -1,0 +1,44 @@
+.location-list-container{
+    border: 1px solid #ccc;
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28);
+}
+
+.location-list-title{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+.location-list{
+    display: block
+}
+
+.location-list-item{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 5px;
+}
+
+.numero-alloggi{
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+li{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+    text-align: center;
+    margin-right: 5px;
+}

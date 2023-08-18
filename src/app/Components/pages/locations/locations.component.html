@@ -4,3 +4,16 @@
         <h4 style="font-size: 20px;"><b>Informazioni turistiche sulle località della Sardegna</b></h4>
     </div>
 </div>
+<div class="container">
+    <div class="location-list-container">
+        <div class="location-list-title">
+            <h3><b>Località</b></h3>    
+        </div>
+        <div class="location-list">
+            <ul class="location-list-item" *ngFor="let city of selectableCities">
+                <li><a href="">{{city.name}}</a></li>
+                <a href="" class="numero-alloggi" style="font-size: 10px;">{{city.accommodationsCount}} alloggi</a>
+            </ul>
+       </div>
+    </div>
+</div>

@@ -172,6 +172,10 @@
 	right: -10px;
 	top: 0;
 } */
+.card-container{
+	margin-left: 200px;
+	margin-right: 200px;
+}
 
 .box img {
 	width: 100%;
@@ -234,5 +238,13 @@
 @media (max-width: 767px) {
 	.box {
 	  max-width: 100%;
+	}
+}
+
+@media (max-width: 1600px) {
+	
+	.card-container{
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }
