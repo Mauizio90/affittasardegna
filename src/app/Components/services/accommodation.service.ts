@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Accommodation } from '../models/accommodation';
 
 @Injectable({
@@ -12,6 +12,18 @@ export class AccommodationService {
 
   getAccommodations(): Observable<Accommodation[]> {
     return this.http.get<Accommodation[]>(`assets/accommodations.json`);
+  }
+
+  getAccommodationByMetaUrlIta(metaUrl: string): Observable<Accommodation> {
+    return this.http.get<Accommodation[]>(`assets/accommodations.json`).pipe(
+      map((accommodations: any[]) => accommodations.find(a => a.meta_it_url === metaUrl))
+    );
+  }
+
+  getAccommodationByMetaUrlEng(metaUrl: string): Observable<Accommodation> {
+    return this.http.get<Accommodation[]>(`assets/accommodations.json`).pipe(
+      map((accommodations: any[]) => accommodations.find(a => a.meta_en_url === metaUrl))
+    );
   }
 
 }

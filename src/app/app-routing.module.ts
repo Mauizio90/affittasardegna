@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'en/contact-us', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
   {path: 'en/terms-and-conditions', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
   {path: 'en/privacy', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
+  {path: ':accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
 ];
 
 @NgModule({
