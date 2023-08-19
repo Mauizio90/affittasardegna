@@ -4,16 +4,73 @@
         <h4 style="font-size: 20px;"><b>Informazioni turistiche sulle località della Sardegna</b></h4>
     </div>
 </div>
-<div class="container">
-    <div class="location-list-container">
-        <div class="location-list-title">
-            <h3><b>Località</b></h3>    
+
+<div class="locations-container">
+    <div class="container">
+        <div class="location-list-container">
+            <div class="location-list-title">
+                <h3><b>Località</b></h3>    
+            </div>
+            <div class="location-list">
+                <ul class="location-list-item" *ngFor="let city of selectableCities">
+                    <li><a href="">{{city.name}}</a></li>
+                    <a [routerLink]="['/ville-appartamenti-vacanze-sardegna']" class="numero-alloggi" style="font-size: 10px;">{{city.accommodationsCount}} alloggi</a>
+                </ul>
+           </div>
         </div>
-        <div class="location-list">
-            <ul class="location-list-item" *ngFor="let city of selectableCities">
-                <li><a href="">{{city.name}}</a></li>
-                <a [routerLink]="['/ville-appartamenti-vacanze-sardegna']" class="numero-alloggi" style="font-size: 10px;">{{city.accommodationsCount}} alloggi</a>
-            </ul>
-       </div>
+    </div>
+    <div class="localites-big">
+        <div class="localities-description-container">
+            <div class="localities-description-image">
+                <img src="assets\images\01.jpg" alt="La spiaggia di Alghero in Sardegna">
+            </div>
+            <div class="location-description-title">
+                <h3>Alghero</h3>
+                <p>Perla della “Riviera del Corallo”, ricca di testimonianze del suo passato catalano (tra cui la lingua che ancora vi si parla), ha un vivacissimo porto turistico e commerciale,
+                     attrezzato per le attività di diporto. Famosa per l’aragosta che si pesca nelle acque cristalline del suo golfo, per la produzione di gioielli e manufatti di corallo e per il suo 
+                     incantevole centro storico, le cui viuzze di notte si animano di una vivace movida. A pochi Km da Alghero, la Baia di Conte è il porto naturale più grande del Mediterraneo, utilizzato 
+                     per questo sin dall’epoca romana; oggi è soprattutto una località turistica, molto amata da chi pratica sport acquatici e immersioni. A Nord la Baia è delimitata dalla scogliera di 
+                     Capo Caccia, promontorio calcareo di altissime rocce a strapiombo sul mare, che va dai 170 m del capo agli oltre 300 di P. Cristallo, ricoperto dalla macchia mediterranea e da esemplari 
+                     di flora rara come la palma nana, ove nidificano e si riproducono grifoni, falchi e gabbiani. Sul versante del promontorio rivolto verso il mare aperto, davanti ad una pittoresca isoletta 
+                     detta “Foradada”, si aprono le famose Grotte di Nettuno cui si può arrivare in barca o, per i più coraggiosi, per mezzo dei 656 scalini della “Scala del Capriolo”, scavata lungo costone 
+                     roccioso, con viste mozzafiato. Da non perdere: un bagno alle Bombarde. Principali distanze: Porto Torres, 40 Km; Stintino, 60 km; Sassari, 35 Km; Bosa, 50 Km. Come arrivare: via mare, 
+                     a Porto Torres (distanza 40 Km), collegata con Genova, Civitavecchia e Marsiglia (compagnie di navigazione: Tirrenia, Moby Lines, Grandi Navi Veloci ,Grimaldi); in aereo, l’aeroporto di 
+                     Fertilia (distanza 5 km) è scalo delle principali compagnie di volo nazionali ed estere. Le spiagge: il suo litorale è ampiamente balneabile e ricchissimo di calette e spiagge. Tra le 
+                     principali: il Lido, spiaggia a fondo sabbioso e fondali bassi, lunga alcuni Km; Le Bombarde e il Lazzaretto, a fondo sabbioso con rocce affiorati; nella Baia di Conte: Porto Conte e 
+                     Mugoni, a fondo sabbioso, avvolte da un’ampia pineta, Spiaggia di Tramariglio, Cala Dragunara (da cui partono barconi per le Grotte di Nettuno), Belvedere Foradada (scogliera a picco 
+                     sul mare); risalendo verso nord: Cala del Porticciolo, Baia di Porto Ferro, Cala dell’Argentiera (calette sabbiose che si aprono tra alte scogliere).</p>
+            </div>
+            <div class="location-description-footer-bg">
+                <div class="location-description-footer">
+                    <a href="">Vedi gli alloggi</a>
+                </div>
+            </div>
+        </div>
+        <div class="localities-description-container">
+            <div class="localities-description-image">
+                <img src="assets\images\01.jpg" alt="La spiaggia di Alghero in Sardegna">
+            </div>
+            <div class="location-description-title">
+                <h3>Alghero</h3>
+                <p>Perla della “Riviera del Corallo”, ricca di testimonianze del suo passato catalano (tra cui la lingua che ancora vi si parla), ha un vivacissimo porto turistico e commerciale,
+                     attrezzato per le attività di diporto. Famosa per l’aragosta che si pesca nelle acque cristalline del suo golfo, per la produzione di gioielli e manufatti di corallo e per il suo 
+                     incantevole centro storico, le cui viuzze di notte si animano di una vivace movida. A pochi Km da Alghero, la Baia di Conte è il porto naturale più grande del Mediterraneo, utilizzato 
+                     per questo sin dall’epoca romana; oggi è soprattutto una località turistica, molto amata da chi pratica sport acquatici e immersioni. A Nord la Baia è delimitata dalla scogliera di 
+                     Capo Caccia, promontorio calcareo di altissime rocce a strapiombo sul mare, che va dai 170 m del capo agli oltre 300 di P. Cristallo, ricoperto dalla macchia mediterranea e da esemplari 
+                     di flora rara come la palma nana, ove nidificano e si riproducono grifoni, falchi e gabbiani. Sul versante del promontorio rivolto verso il mare aperto, davanti ad una pittoresca isoletta 
+                     detta “Foradada”, si aprono le famose Grotte di Nettuno cui si può arrivare in barca o, per i più coraggiosi, per mezzo dei 656 scalini della “Scala del Capriolo”, scavata lungo costone 
+                     roccioso, con viste mozzafiato. Da non perdere: un bagno alle Bombarde. Principali distanze: Porto Torres, 40 Km; Stintino, 60 km; Sassari, 35 Km; Bosa, 50 Km. Come arrivare: via mare, 
+                     a Porto Torres (distanza 40 Km), collegata con Genova, Civitavecchia e Marsiglia (compagnie di navigazione: Tirrenia, Moby Lines, Grandi Navi Veloci ,Grimaldi); in aereo, l’aeroporto di 
+                     Fertilia (distanza 5 km) è scalo delle principali compagnie di volo nazionali ed estere. Le spiagge: il suo litorale è ampiamente balneabile e ricchissimo di calette e spiagge. Tra le 
+                     principali: il Lido, spiaggia a fondo sabbioso e fondali bassi, lunga alcuni Km; Le Bombarde e il Lazzaretto, a fondo sabbioso con rocce affiorati; nella Baia di Conte: Porto Conte e 
+                     Mugoni, a fondo sabbioso, avvolte da un’ampia pineta, Spiaggia di Tramariglio, Cala Dragunara (da cui partono barconi per le Grotte di Nettuno), Belvedere Foradada (scogliera a picco 
+                     sul mare); risalendo verso nord: Cala del Porticciolo, Baia di Porto Ferro, Cala dell’Argentiera (calette sabbiose che si aprono tra alte scogliere).</p>
+            </div>
+            <div class="location-description-footer-bg">
+                <div class="location-description-footer">
+                    <a href="">Vedi gli alloggi</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

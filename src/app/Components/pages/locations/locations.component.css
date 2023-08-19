@@ -3,9 +3,10 @@
     max-width: 350px;
     display: grid;
     grid-template-columns: 1fr;
-    margin-top: 10px;
+    margin-top: 40px;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28);
+    min-width: 260px;
 }
 
 .location-list-title{
@@ -41,4 +42,58 @@ a{
     color: var(--primary);
     text-align: center;
     margin-right: 5px;
+}
+
+.localites-big{
+    border-radius: 10px;
+	background-color: white;
+	margin: 15px;
+	max-width: 1000px;
+	box-shadow: 19px 20px 12px -3px rgba(0,0,0,0.1);
+	text-decoration: none;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+  .locations-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+.localities-description-image img{
+    width: 100%;
+	height: auto;
+	max-width: 100%;
+	overflow: hidden;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.location-description-footer-bg{
+    background-color: var(--secondary);
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.location-description-footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.localities-description-container{
+    margin-top: 20px;
+}
+
+@media (max-width: 1400px) {
+	.localites-big {
+	  max-width: 100%;
+	}
+
+    .locations-container{
+        display: block;
+    }
+
+    .location-list-container{
+        min-width: 450px;
+    }
 }
