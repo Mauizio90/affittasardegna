@@ -21,7 +21,7 @@ export class SinglePageAccommodationComponent {
       const accommodationUrl = params['accommodationUrl'];
       if (accommodationUrl) {
         this.accommodationService
-          .getAccommodationByMetaUrlIta(accommodationUrl)
+          .getAccommodationByMetaUrl('/'+accommodationUrl)
           .subscribe(accommodation => {
             this.accommodation = accommodation;
             console.log(this.accommodation);

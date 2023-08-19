@@ -14,15 +14,9 @@ export class AccommodationService {
     return this.http.get<Accommodation[]>(`assets/accommodations.json`);
   }
 
-  getAccommodationByMetaUrlIta(metaUrl: string): Observable<Accommodation> {
+  getAccommodationByMetaUrl(metaUrl: string): Observable<Accommodation> {
     return this.http.get<Accommodation[]>(`assets/accommodations.json`).pipe(
       map((accommodations: any[]) => accommodations.find(a => a.meta_it_url === metaUrl))
-    );
-  }
-
-  getAccommodationByMetaUrlEng(metaUrl: string): Observable<Accommodation> {
-    return this.http.get<Accommodation[]>(`assets/accommodations.json`).pipe(
-      map((accommodations: any[]) => accommodations.find(a => a.meta_en_url === metaUrl))
     );
   }
 
