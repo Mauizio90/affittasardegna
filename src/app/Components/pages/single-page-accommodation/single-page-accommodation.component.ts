@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
+import { faBathtub, faBed, faWifi, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-single-page-accommodation',
@@ -10,6 +11,10 @@ import { Accommodation } from '../../models/accommodation';
 })
 export class SinglePageAccommodationComponent {
   accommodation: Accommodation | undefined;
+  faBathtub = faBathtub;
+  faBed = faBed;
+  faWifi = faWifi;
+  faLocationDot = faLocationDot;
 
   constructor(
     private accommodationService: AccommodationService,

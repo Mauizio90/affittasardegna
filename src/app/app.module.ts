@@ -21,6 +21,7 @@ import { PopupsubmissionsuccessComponent } from './Components/layouts/popupsubmi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SinglePageAccommodationComponent } from './Components/pages/single-page-accommodation/single-page-accommodation.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TermsComponent,
     AccommodationsComponent,
     PopupsubmissionsuccessComponent,
+    SinglePageAccommodationComponent
   ],
   imports: [
     BrowserModule,
