@@ -73,6 +73,7 @@ export class AccommodationsComponent {
   ];
   
   @ViewChild('child') child?: HousecardsComponent;
+  guests!: number | null;
 
   constructor(private accommodationService : AccommodationService) { }
 
@@ -84,7 +85,7 @@ export class AccommodationsComponent {
     this.child?.loadMoreCards();
   }
 
-  public onChange(selectedCity: string | null, selectedAmenity: string | null): void {
+  public onChange(selectedCity: string | null, selectedAmenity: string | null, guests: number|null): void {
     this.selectableCities.forEach((city) => {
       if (city.name === selectedCity) {
         city.selected = !city.selected;
@@ -95,38 +96,50 @@ export class AccommodationsComponent {
       if (amenity.code === selectedAmenity) {
         amenity.selected = !amenity.selected;
       }
-    });
-  
+    }
+    );
+    
+    const guestsInput = document.getElementById("guestsInput") as HTMLInputElement;
+    this.guests = guestsInput.valueAsNumber;
+    this.filterAccommodations();
     this.filterAccommodations();
   }
 
   private filterAccommodations(): void {
-  this.accommodationService.getAccommodations().subscribe((accommodations) => {
-    if (this.selectableCities.some((city) => city.selected) && this.selectableAmenities.some((amenity) => amenity.selected)) {
-      this.allAccommodations = accommodations.filter((accommodation) => {
-        const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
-        return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
-               selectedAmenities.every((amenity) => 
-                 accommodation.amenities?.some(a => a.code === amenity.code)
-               );
-      });
-    } else if (this.selectableCities.some((city) => city.selected)) {
-      this.allAccommodations = accommodations.filter((accommodation) => {
-        return this.selectableCities.some((city) => city.selected && city.name === accommodation.city);
-      });
-    } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
-      this.allAccommodations = accommodations.filter((accommodation) => {
-        const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
-        return selectedAmenities.every((amenity) => 
-          accommodation.amenities?.some(a => a.code === amenity.code)
+    this.accommodationService.getAccommodations().subscribe((accommodations) => {
+      if (this.selectableCities.some((city) => city.selected) && this.selectableAmenities.some((amenity) => amenity.selected)) {
+        this.allAccommodations = accommodations.filter((accommodation) => {
+          const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
+          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
+                 selectedAmenities.every((amenity) => 
+                   accommodation.amenities?.some(a => a.code === amenity.code)
+                 ) &&
+                 (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
+        });
+      } else if (this.selectableCities.some((city) => city.selected)) {
+        this.allAccommodations = accommodations.filter((accommodation) => {
+          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) &&
+                 (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
+        });
+      } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
+        this.allAccommodations = accommodations.filter((accommodation) => {
+          const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
+          return selectedAmenities.every((amenity) => 
+            accommodation.amenities?.some(a => a.code === amenity.code)
+          ) &&
+          (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
+        });
+      } else {
+        this.allAccommodations = accommodations.filter((accommodation) =>
+          (!this.guests || parseInt(accommodation.guests || '0') === this.guests)
         );
-      });
-    } else {
-      this.allAccommodations = accommodations;
-    }
-    console.log(this.allAccommodations);
-  });
-}
+      }
+      console.log(this.allAccommodations);
+    });
+  }
+  
+  
+  
 
   
   

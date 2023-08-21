@@ -7,7 +7,7 @@
 
 
 <div class="filter-container container">
-  <div class="filter-column" style="border-bottom-left-radius: 10px">
+  <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title">
         <div class="dropdown">
@@ -17,7 +17,7 @@
             <div class="amenities-grid">
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
                 <label>
-                  <input type="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code)">
+                  <input type="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code, null)">
                   {{selectableAmenity.name}}
                 </label>
               </div>
@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <div class="filter-column" style="border-bottom-right-radius: 10px">
+  <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title">
         <div class="dropdown">
@@ -37,13 +37,21 @@
             <div class="localities-grid">
               <div class="locality" *ngFor="let selectableCity of selectableCities">
                 <label>
-                  <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null)">
+                  <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null, null)">
                   {{selectableCity.name}}
                 </label>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-column">
+    <div class="filter-box">
+      <div class="filter-box-title dropdown-label">
+        <label for="guests-input" class="center-text" style="margin-right: 10px;">Ospiti Massimi</label>
+        <input id="guestsInput" type="number" min="2" max="15" (input)="onChange(null,null, guests)" />
       </div>
     </div>
   </div>
