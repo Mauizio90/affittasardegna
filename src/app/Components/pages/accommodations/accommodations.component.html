@@ -17,7 +17,7 @@
             <div class="amenities-grid">
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
                 <label>
-                  <input type="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code, null)">
+                  <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.code, null)">
                   {{selectableAmenity.name}}
                 </label>
               </div>
@@ -37,7 +37,7 @@
             <div class="localities-grid">
               <div class="locality" *ngFor="let selectableCity of selectableCities">
                 <label>
-                  <input type="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null, null)">
+                  <input type="checkbox" name="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null, null)">
                   {{selectableCity.name}}
                 </label>
               </div>
@@ -50,8 +50,7 @@
   <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title dropdown-label">
-        <label for="guests-input" class="center-text" style="margin-right: 10px;">Ospiti Massimi</label>
-        <input id="guestsInput" type="number" min="2" max="15" (input)="onChange(null,null, guests)" />
+        <label class="center-text" style="margin-right: 10px;"><input id="guestsInput" type="number" min="2" max="15" (input)="onChange(null,null, guests)" />Ospiti Massimi</label>
       </div>
     </div>
   </div>
@@ -59,8 +58,7 @@
 <div class="filter-column">
   <div class="filter-box">
     <div class="filter-box-title dropdown-label">
-      <label for="name-input" class="center-text" style="margin-right: 10px;">Cerca per Nome</label>
-      <input id="nameInput" type="text" (input)="onNameChange($event)" />
+      <label class="center-text" style="margin-right: 10px;"><input id="nameInput" type="text" (input)="onNameChange($event)" />Cerca per Nome</label>
     </div>
   </div>
 </div>
