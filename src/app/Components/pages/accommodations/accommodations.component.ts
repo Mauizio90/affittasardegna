@@ -10,6 +10,7 @@ import { HousecardsComponent } from '../../layouts/housecards/housecards.compone
 })
 export class AccommodationsComponent {
   public allAccommodations?: Accommodation[];
+  public originalAccommodations?: Accommodation[];
   public selectableCities: { name: string, selected: boolean }[] = [
     { name: 'Aglientu', selected: false },
     { name: 'Alghero', selected: false },
@@ -74,11 +75,16 @@ export class AccommodationsComponent {
   
   @ViewChild('child') child?: HousecardsComponent;
   guests!: number | null;
+  public houseName: string = '';
+
 
   constructor(private accommodationService : AccommodationService) { }
 
   ngOnInit(): void {
-    this.filterAccommodations();
+    this.accommodationService.getAccommodations().subscribe((accommodations) => {
+      this.originalAccommodations = accommodations;
+      this.filterAccommodations();
+    });
   }
 
   public loadMoreCards(): void {
@@ -101,7 +107,6 @@ export class AccommodationsComponent {
     
     const guestsInput = document.getElementById("guestsInput") as HTMLInputElement;
     this.guests = guestsInput.valueAsNumber;
-    this.filterAccommodations();
     this.filterAccommodations();
   }
 
@@ -136,6 +141,18 @@ export class AccommodationsComponent {
       }
       console.log(this.allAccommodations);
     });
+  }
+
+  public onNameChange(event: any): void {
+    this.houseName = (event.target as HTMLInputElement).value;
+    this.filterAccommodationsByName();
+  }
+
+  private filterAccommodationsByName(): void {
+    this.allAccommodations = this.originalAccommodations?.filter((accommodation) =>
+      (!this.houseName) || accommodation.name_it?.toLowerCase().includes(this.houseName.toLowerCase())
+    );
+    console.log(this.allAccommodations);
   }
   
   
