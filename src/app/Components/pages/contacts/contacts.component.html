@@ -1,31 +1,37 @@
 <div class="mini-header-background">
-    <div class="mini-header">
-        <h3 style="font-size: 40px;"><b>AffittaSardegna Soc. Coop</b></h3>
-        <h4 style="font-size: 20px;"><b>P.IVA: 02737310900</b></h4>
-        <div>
-            <ul>
-                <li><a href="https://www.google.com/maps/place/Via+Ariosto,+3,+07046+Porto+Torres+(SS)">
-                    <i class="ri-map-pin-line" style="font-size: 40px;"></i>
-                    <b>Via Ariosto, 3 Porto Torres</b>
-                </a></li>
-                <li><a href="tel:+393494787272">
-                    <i class="ri-phone-line" style="font-size: 40px;"></i>
-                    <b>+39 3494787272</b>
-                  </a></li>
-                <li><a href="mailto:info@affittasardegna.it">
-                    <i class="ri-mail-line" style="font-size: 40px;"></i>
-                    <b>info@affittasardegna.it</b>
-                  </a></li>
-                <li>
-                    <a href="https://www.facebook.com/affittasardegna" target="_blank">
-                        <i class="ri-facebook-circle-fill" style="font-size: 40px;"></i>
-                        <b>Facebook @AffittaSardegna</b>
-                    </a></li>
-            </ul>
-        </div>
+  <div class="mini-header">
+    <h3 style="font-size: 40px;"><b>AffittaSardegna Soc. Coop</b></h3>
+    <h4 style="font-size: 20px;"><b>P.IVA: 02737310900</b></h4>
+    <div>
+      <ul>
+        <li>
+          <a href="https://www.google.com/maps/place/Via+Ariosto,+3,+07046+Porto+Torres+(SS)">
+            <i class="ri-map-pin-line" style="font-size: 40px;"></i>
+            <b>Via Ariosto, 3 Porto Torres</b>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+393494787272">
+            <i class="ri-phone-line" style="font-size: 40px;"></i>
+            <b>+39 3494787272</b>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:info@affittasardegna.it">
+            <i class="ri-mail-line" style="font-size: 40px;"></i>
+            <b>info@affittasardegna.it</b>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/affittasardegna" target="_blank">
+            <i class="ri-facebook-circle-fill" style="font-size: 40px;"></i>
+            <b>Facebook @AffittaSardegna</b>
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
-
 
 <div class="container">
   <div class="inner-container">
@@ -39,29 +45,25 @@
       </div>
       <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
         <label for="nome">Nome</label>
-        <input class="input-field" type="text" name="nome" placeholder="Nome" formControlName="nome">
-        <label for="nome">Cognome</label>
-        <input class="input-field" type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
-        <label for="nome">Telefono</label>
-        <input class="input-field" type="text" inputmode="numeric" pattern="[0-9]+" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
+        <input id="nome" class="input-field" type="text" name="nome" placeholder="Nome" formControlName="nome">
+        <label for="cognome">Cognome</label>
+        <input id="cognome" class="input-field" type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
+        <label for="telefono">Telefono</label>
+        <input id="telefono" class="input-field" type="text" inputmode="numeric" pattern="[0-9]+" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
         <div *ngIf="contactForm.get('telefono')?.hasError('pattern')" style="color: red;">Inserisci solo numeri nel campo telefono.</div>
-        <label for="nome">Email</label>
-        <input class="input-field" type="email" name="email" placeholder="Email" formControlName="email">
+        <label for="email">Email</label>
+        <input id="email" class="input-field" type="email" name="email" placeholder="Email" formControlName="email" autocomplete="email">
         <div *ngIf="contactForm.get('email')?.hasError('email')" style="color: red;">Inserisci una mail valida.</div>
-        <label for="nome">Messaggio</label>
-        <textarea class="input-field textarea-field" name="messaggio" placeholder="Messaggio" formControlName="messaggio"></textarea>
-        <label class="privacy-checkbox">
-          <input type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy" i18n-routerLink i18n>politica sulla privacy</a>. <br>
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" class="input-field textarea-field" name="messaggio" placeholder="Messaggio" formControlName="messaggio"></textarea>
+        <label for="privacy" class="privacy-checkbox">
+          <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy" i18n-routerLink i18n>politica sulla privacy</a>. <br>
         </label>
-        <label class="privacy-checkbox">
-          <input type="checkbox" name="trattamentodati" formControlName="trattamentodati"> Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.
+        <label for="trattamentodati" class="privacy-checkbox">
+          <input id="trattamentodati" type="checkbox" name="trattamentodati" formControlName="trattamentodati"> Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.
         </label>
         <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="contactForm.invalid">Invia</button>
       </form>
     </div>
   </div>
 </div>
-
-  
-  
-
