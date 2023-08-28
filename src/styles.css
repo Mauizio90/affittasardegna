@@ -28,7 +28,7 @@ body{
 
 .home{
     margin-top: 100px;
-    background: url(src\assets\images\26copia.jpg);
+    background: url(~src\assets\images\26copia.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
