@@ -26,17 +26,6 @@ body{
     color: var(--light);
 }
 
-.home{
-    margin-top: 100px;
-    background: url(~src\assets\images\26copia.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 440px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
 
 .home-text{
     padding-left: 35px;
