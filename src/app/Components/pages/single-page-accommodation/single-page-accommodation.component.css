@@ -1,0 +1,113 @@
+.view-property{
+    margin-top: 100px;
+}
+
+.view-property .details{
+    padding: 2rem;
+}
+
+.view-property .details .thumb{
+    background: url(src\assets\images\5533882.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 13px 12px 16px 7px rgba(0,0,0,0.1);
+
+}
+
+.view-property .details .thumb .big-image img{
+    height: 40rem;
+    width: 100%;
+    object-fit: contain;
+    backdrop-filter: blur(15px);
+}
+
+.view-property .details .thumb .small-images{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+    backdrop-filter: blur(15px);
+}
+
+.view-property .details .thumb .small-images img{
+    height: 7rem;
+    width: 10rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 10px;
+}
+
+.view-property .details .thumb .small-images img:hover{
+    transform: scale(1.1);
+}
+
+.view-property .details .title{
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    color: var(--primary);
+    margin-top: 40px;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.view-property .details .location{
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+
+.view-property .details .icon{
+    margin-right: 1rem;
+    color: var(--secondary);
+}
+
+.view-property .details .info{
+    display: flex;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.view-property .details .info p{
+    font-size: 1.7rem;
+}
+
+.view-property .details .info p span,
+.view-property .details .info p a{
+    font-size: 1.7rem;
+}
+
+.view-property .details .details{
+    font-size: 2rem;
+    border-bottom: .3rem solid var(--primary);
+}
+
+.view-property .details .flex{
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+}
+
+.view-property .details .flex .box{
+    flex: 1 1 40rem;
+    justify-content: center;
+}
+
+.view-property .details .flex .box p{
+    font-size: 1.1rem;
+    color: var(--primary);
+}

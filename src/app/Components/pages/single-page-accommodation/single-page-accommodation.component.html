@@ -1,1 +1,41 @@
-<img src="{{accommodation?.images?.[0]}}" alt="foto appartamento">
+<div class="view-property container">
+    <div class="details">
+        <div class="thumb">
+            <div class="big-image">
+                <img [src]="bigImageSource" alt="foto appartamento">
+            </div>
+            <div class="small-images">
+                <img *ngFor="let image of accommodation?.images; let i = index" 
+                     [src]="image" alt="foto appartamento" 
+                     (click)="replaceBigImage(image)">
+            </div>
+        </div>
+        <h3 class="title" style="font-size: 2.5rem;">
+            {{accommodation?.name_it}}
+        </h3>
+        <p class="location">
+            <fa-icon class="icon" [icon]="faLocationDot"></fa-icon><span>{{accommodation?.city + ' ' + accommodation?.postcode}}</span>
+        </p>
+        <div class="info">
+            <div class="info-item">
+                <fa-icon class="icon" [icon]="faBed"></fa-icon><span style="color: var(--primary);">{{accommodation?.n_bedrooms}} Camere da Letto</span>
+            </div>
+            <div class="info-item">
+                <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span style="color: var(--primary);"> {{accommodation?.n_bathrooms}} {{accommodation?.n_bathrooms === 1 ? 'Bagno' : 'Bagni'}}</span>
+            </div>
+            <div class="info-item">
+                <fa-icon class="icon" [icon]="faEuroSign"></fa-icon><span style="color: var(--primary);">a partire da {{accommodation?.price}} per notte</span>
+            </div>
+        </div>
+        <h3 class="title">Descrizione</h3>
+        <p class="description" style="color: var(--primary);">
+            {{accommodation?.description?.it}}
+        </p>
+        <h3 class="title">Dotazioni</h3>
+        <div class="flex">
+            <div class="box" *ngFor="let amenity of accommodation?.amenities">
+                <fa-icon class="icon" [icon]="faCheck"></fa-icon> <span style="color: var(--primary);">{{amenity?.name?.it}}</span>
+            </div>
+        </div>
+    </div>
+</div>
