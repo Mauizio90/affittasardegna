@@ -198,7 +198,7 @@
 }
 
 .box:hover{
-	box-shadow: 19px 20px 12px -3px var(--secondary);
+	box-shadow: 19px 20px 12px -3px #08B1E2;
 	transition-duration: 0.5s;
 }
 
