@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single-page-accommodation',
@@ -21,7 +22,8 @@ export class SinglePageAccommodationComponent {
 
   constructor(
     private accommodationService: AccommodationService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -44,4 +46,13 @@ export class SinglePageAccommodationComponent {
   replaceBigImage(imageSource: string) {
     this.bigImageSource = imageSource;
   }
+
+  generateIframeUrl() {
+    const latitude = this.accommodation?.latitude;
+    const longitude = this.accommodation?.longitude;
+    const url = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d0!2d${longitude}!3d${latitude}`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+  
+
 }

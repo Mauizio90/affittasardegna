@@ -7,7 +7,7 @@
 }
 
 .view-property .details .thumb{
-    background: url(src\assets\images\5533882.jpg);
+    background-color: whitesmoke;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -16,7 +16,7 @@
 }
 
 .view-property .details .thumb .big-image img{
-    height: 40rem;
+    height: 52rem;
     width: 100%;
     object-fit: contain;
     backdrop-filter: blur(15px);
@@ -38,6 +38,7 @@
     cursor: pointer;
     transition: .2s linear;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .view-property .details .thumb .small-images img:hover{
@@ -110,4 +111,17 @@
 .view-property .details .flex .box p{
     font-size: 1.1rem;
     color: var(--primary);
+}
+
+@media (max-width: 1100px) {
+    .view-property .details .flex{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .view-property .details .thumb .big-image {
+        display: none;
+    }
+    .view-property .details .thumb .small-images img {
+        height: 14rem;
+        width: 20rem;
+    }
 }
