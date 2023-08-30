@@ -17,6 +17,8 @@ public allAccommodations?: Accommodation[];
 
   ngOnInit() {
     this.titleService.setTitle("AffittaSardegna - Ville, case vacanza ed appartamenti in Sardegna vicino alla spiaggia - Tel. +39 3494787272");
+    this.metaTagService.updateTag({ name: 'description', content: 'Ville, Case Vacanza ed Appartamenti in Sardegna vicino la spiaggia nelle più belle località turistiche,Budoni, Stintino, Cala Gonone, Costa Smeralda' });
+    this.metaTagService.addTag({ property: 'og:image', content: './assets/images/logo.png' });
     this.form = this.formBuilder.group({
       checkIn: [this.getFormattedDate(new Date()),Validators.required],
       checkOut: [this.getFormattedDate(this.getFutureDate(7)),Validators.required],

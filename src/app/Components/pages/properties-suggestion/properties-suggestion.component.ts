@@ -18,6 +18,7 @@ export class PropertiesSuggestionComponent {
 
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta) {
     this.titleService.setTitle("AffittaSardegna - Proponi il tuo immobile in Sardegna e guadagna con gli affitti");
+    this.metaTagService.updateTag({ name: 'description', content: 'Ricava dagli affitti del tuo immobile in Sardegna, commissione bassa, massimo rendimento' });
     this.suggestForm = this.formBuilder.group({
       city: ['', Validators.required],
       address: ['', Validators.required],

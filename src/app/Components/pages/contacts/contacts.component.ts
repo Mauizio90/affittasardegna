@@ -17,6 +17,8 @@ export class ContactsComponent {
 
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta) {
     this.titleService.setTitle("AffittaSardegna - Contattaci per ricevere informazioni, Tel. +39 3494787272, E-mail: info@affittasardegna.it");
+    this.metaTagService.updateTag({ name: 'description', content: 'Contattaci e richiedi informazioni sulla tua vacanza, chiamaci al Tel. +39 3494787272 oppure scrivici all\'indirizzo info@affittasardegna.it' });
+    
     this.contactForm = this.formBuilder.group({
       nome: ['', Validators.required],
       cognome: ['', Validators.required],

@@ -84,6 +84,7 @@ export class AccommodationsComponent {
 
   ngOnInit(): void {
     this.titleService.setTitle("AffittaSardegna - Ville, Case Vacanza ed Appartamenti in affitto in Sardegna vicino la spiaggia");
+    this.metaTagService.updateTag({ name: 'description', content: 'Affittiamo Ville, Case Vacanza ed Appartamenti vicino le più belle spiagge della Sardegna, a Stintino, Cala Gonone e Costa Smeralda' });
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();

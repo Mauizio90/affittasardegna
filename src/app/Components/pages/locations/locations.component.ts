@@ -50,6 +50,7 @@ export class LocationsComponent {
 
   constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta) {
     this.titleService.setTitle("AffittaSardegna - Le migliori località turistiche della Sardegna");
+    this.metaTagService.updateTag({ name: 'description', content: 'Tutte le migliori località turistiche della Sardegna, spiagge in Sardegna, spiaggia di Stintino, spiaggia di Cala Gonone, spiaggia Costa Smeralda' });
     this.accommodationService.getAccommodations().subscribe((data) => {
       this.allAccommodations = data;
       this.updateAccommodationsCount();      
