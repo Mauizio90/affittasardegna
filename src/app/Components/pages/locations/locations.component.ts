@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-locations',
@@ -46,7 +48,8 @@ export class LocationsComponent {
     { name: 'Viddalba', accommodationsCount: 0, descriptionIta: '', descriptionEng: '' },
 ];
 
-  constructor(private accommodationService: AccommodationService) {
+  constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta) {
+    this.titleService.setTitle("AffittaSardegna - Le migliori località turistiche della Sardegna");
     this.accommodationService.getAccommodations().subscribe((data) => {
       this.allAccommodations = data;
       this.updateAccommodationsCount();      

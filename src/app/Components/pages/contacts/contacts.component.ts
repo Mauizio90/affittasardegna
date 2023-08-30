@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-contacts',
@@ -13,7 +15,8 @@ export class ContactsComponent {
   contactForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private dialog: MatDialog) {
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta) {
+    this.titleService.setTitle("AffittaSardegna - Contattaci per ricevere informazioni, Tel. +39 3494787272, E-mail: info@affittasardegna.it");
     this.contactForm = this.formBuilder.group({
       nome: ['', Validators.required],
       cognome: ['', Validators.required],

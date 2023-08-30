@@ -2,6 +2,8 @@ import { Component, HostListener, Input, ViewChild } from '@angular/core';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-accommodations',
@@ -78,9 +80,10 @@ export class AccommodationsComponent {
   public houseName: string = '';
 
 
-  constructor(private accommodationService : AccommodationService) { }
+  constructor(private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle("AffittaSardegna - Ville, Case Vacanza ed Appartamenti in affitto in Sardegna vicino la spiaggia");
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Accommodation } from '../../models/accommodation';
 import { AccommodationService } from '../../services/accommodation.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +13,10 @@ export class HomeComponent {
 form!: FormGroup;
 public allAccommodations?: Accommodation[];
 
-  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService) { }
+  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta) { }
 
   ngOnInit() {
+    this.titleService.setTitle("AffittaSardegna - Ville, case vacanza ed appartamenti in Sardegna vicino alla spiaggia - Tel. +39 3494787272");
     this.form = this.formBuilder.group({
       checkIn: [this.getFormattedDate(new Date()),Validators.required],
       checkOut: [this.getFormattedDate(this.getFutureDate(7)),Validators.required],

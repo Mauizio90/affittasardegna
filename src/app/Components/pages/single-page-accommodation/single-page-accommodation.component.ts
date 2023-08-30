@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck } from '@fortawesome/free-solid-svg-icons';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-single-page-accommodation',
@@ -20,11 +21,7 @@ export class SinglePageAccommodationComponent {
   faEuroSign = faEuroSign;
   faCheck = faCheck;
 
-  constructor(
-    private accommodationService: AccommodationService,
-    private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
-  ) {}
+  constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -34,6 +31,7 @@ export class SinglePageAccommodationComponent {
           .getAccommodationByMetaUrl('/'+accommodationUrl)
           .subscribe(accommodation => {
             this.accommodation = accommodation;
+            this.titleService.setTitle("AffittaSardegna - " + this.accommodation?.name_it?.toString());
             if (accommodation.images && accommodation.images.length > 0) {
               this.bigImageSource = accommodation.images[0];
             }
@@ -41,17 +39,11 @@ export class SinglePageAccommodationComponent {
           });
       }
     });
+    
   }
 
   replaceBigImage(imageSource: string) {
     this.bigImageSource = imageSource;
-  }
-
-  generateIframeUrl() {
-    const latitude = this.accommodation?.latitude;
-    const longitude = this.accommodation?.longitude;
-    const url = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d0!2d${longitude}!3d${latitude}`;
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
   
 
