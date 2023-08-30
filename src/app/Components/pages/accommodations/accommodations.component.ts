@@ -3,12 +3,15 @@ import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { Title, Meta } from '@angular/platform-browser';
+import { NgFor } from '@angular/common';
 
 
 @Component({
-  selector: 'app-accommodations',
-  templateUrl: './accommodations.component.html',
-  styleUrls: ['./accommodations.component.css']
+    selector: 'app-accommodations',
+    templateUrl: './accommodations.component.html',
+    styleUrls: ['./accommodations.component.css'],
+    standalone: true,
+    imports: [NgFor, HousecardsComponent]
 })
 export class AccommodationsComponent {
   public allAccommodations?: Accommodation[];

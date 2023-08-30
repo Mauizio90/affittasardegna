@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
 import { Title, Meta } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 
 @Component({
-  selector: 'app-properties-suggestion',
-  templateUrl: './properties-suggestion.component.html',
-  styleUrls: ['./properties-suggestion.component.css']
+    selector: 'app-properties-suggestion',
+    templateUrl: './properties-suggestion.component.html',
+    styleUrls: ['./properties-suggestion.component.css'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgIf, RouterLink]
 })
 export class PropertiesSuggestionComponent {
 

@@ -8,8 +8,8 @@ describe('SinglePageAccommodationComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SinglePageAccommodationComponent]
-    });
+    imports: [SinglePageAccommodationComponent]
+});
     fixture = TestBed.createComponent(SinglePageAccommodationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

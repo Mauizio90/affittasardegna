@@ -3,9 +3,10 @@ import { Title, Meta } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-privacy',
-  templateUrl: './privacy.component.html',
-  styleUrls: ['./privacy.component.css']
+    selector: 'app-privacy',
+    templateUrl: './privacy.component.html',
+    styleUrls: ['./privacy.component.css'],
+    standalone: true
 })
 export class PrivacyComponent {
 

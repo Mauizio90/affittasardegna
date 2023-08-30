@@ -3,9 +3,10 @@ import { Title, Meta } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-terms',
-  templateUrl: './terms.component.html',
-  styleUrls: ['./terms.component.css']
+    selector: 'app-terms',
+    templateUrl: './terms.component.html',
+    styleUrls: ['./terms.component.css'],
+    standalone: true
 })
 export class TermsComponent {
 

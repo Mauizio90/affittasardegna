@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
 import { Title, Meta } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 
 @Component({
-  selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+    selector: 'app-contacts',
+    templateUrl: './contacts.component.html',
+    styleUrls: ['./contacts.component.css'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgIf, RouterLink]
 })
 export class ContactsComponent {
   contactForm: FormGroup;

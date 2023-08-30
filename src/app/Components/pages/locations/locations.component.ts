@@ -2,12 +2,16 @@ import { Component } from '@angular/core';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { Title, Meta } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
+import { NgFor } from '@angular/common';
 
 
 @Component({
-  selector: 'app-locations',
-  templateUrl: './locations.component.html',
-  styleUrls: ['./locations.component.css']
+    selector: 'app-locations',
+    templateUrl: './locations.component.html',
+    styleUrls: ['./locations.component.css'],
+    standalone: true,
+    imports: [NgFor, RouterLink]
 })
 export class LocationsComponent {
   public allAccommodations?: Accommodation[];

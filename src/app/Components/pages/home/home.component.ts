@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Accommodation } from '../../models/accommodation';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
+    standalone: true,
+    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent]
 })
 export class HomeComponent {
 form!: FormGroup;

@@ -4,12 +4,16 @@ import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Title, Meta } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgFor } from '@angular/common';
 
 
 @Component({
-  selector: 'app-single-page-accommodation',
-  templateUrl: './single-page-accommodation.component.html',
-  styleUrls: ['./single-page-accommodation.component.css']
+    selector: 'app-single-page-accommodation',
+    templateUrl: './single-page-accommodation.component.html',
+    styleUrls: ['./single-page-accommodation.component.css'],
+    standalone: true,
+    imports: [NgFor, FontAwesomeModule]
 })
 export class SinglePageAccommodationComponent {
   bigImageSource!: string;

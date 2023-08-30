@@ -24,34 +24,32 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SinglePageAccommodationComponent } from './Components/pages/single-page-accommodation/single-page-accommodation.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    HousecardsComponent,
-    AboutUsComponent,
-    AccommodationsComponent,
-    ContactsComponent,
-    HomeComponent,
-    LocationsComponent,
-    PrivacyComponent,
-    PropertiesSuggestionComponent,
-    TermsComponent,
-    AccommodationsComponent,
-    PopupsubmissionsuccessComponent,
-    SinglePageAccommodationComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    FontAwesomeModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        FontAwesomeModule,
+        FooterComponent,
+        HeaderComponent,
+        HousecardsComponent,
+        AboutUsComponent,
+        AccommodationsComponent,
+        ContactsComponent,
+        HomeComponent,
+        LocationsComponent,
+        PrivacyComponent,
+        PropertiesSuggestionComponent,
+        TermsComponent,
+        AccommodationsComponent,
+        PopupsubmissionsuccessComponent,
+        SinglePageAccommodationComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
