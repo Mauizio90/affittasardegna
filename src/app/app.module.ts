@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './Components/layouts/footer/footer.component';
@@ -49,7 +48,7 @@ import { SinglePageAccommodationComponent } from './Components/pages/single-page
         PopupsubmissionsuccessComponent,
         SinglePageAccommodationComponent,
     ],
-    providers: [],
+    providers: [provideClientHydration()],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
