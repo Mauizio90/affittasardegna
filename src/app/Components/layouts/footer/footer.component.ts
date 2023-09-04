@@ -13,12 +13,14 @@ export class FooterComponent {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
-      }
-    });
+  ngOnInit(): void {
+    if (typeof window !== 'undefined') {
+      this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          window.scrollTo(0, 0);
+        }
+      });
+    }
   }
   
 }
