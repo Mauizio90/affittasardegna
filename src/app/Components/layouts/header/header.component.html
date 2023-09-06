@@ -15,14 +15,15 @@
       <a class="nav-link" routerLink="/proponi-immobile" (click)="isCollapsed = true">Proponi Immobile</a>
       <a class="nav-link" routerLink="/chisiamo" (click)="isCollapsed = true">Chi siamo</a>
       <a class="nav-link" routerLink="/contatti" (click)="isCollapsed = true">Contatti</a>
-      <a class="nav-link dropdown ml-2" ngbDropdown>
+      <div class="nav-link dropdown ml-2" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
           <img [src]="languageIcon" alt="Language Icon" style="height: 13px;"> Language
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
           <a class="dropdown-item" style="background-color: transparent;" href="/" (click)="changeLanguage('it', true)">Italiano</a>
           <a class="dropdown-item" style="background-color: transparent;" href="en" (click)="changeLanguage('en', true)">English</a>
-        </div></a>
+        </div>
+      </div>
       <a class="nav-link" href="tel:+393494787272" style="margin-bottom: 5px;">
         <i class="ri-phone-fill" style="color: var(--primary); font-size: 20px;"></i>
         +39 3494787272
