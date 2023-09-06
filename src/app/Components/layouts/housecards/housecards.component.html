@@ -81,7 +81,7 @@
           <div class="iconwrapper">
             <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span>{{accommodation.n_bathrooms}}</span>
           </div>
-          <div class="iconwrapper">
+          <div class="iconwrapper" *ngIf="hasWifi(accommodation)">
             <fa-icon class="icon" [icon]="faWifi"></fa-icon>
           </div>
         </div>
