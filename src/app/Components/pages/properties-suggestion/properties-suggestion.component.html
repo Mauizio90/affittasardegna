@@ -32,7 +32,7 @@
             <input id="email" class="input-field" type="email" name="email" autocomplete="email" placeholder="Email" formControlName="email">
             <div *ngIf="suggestForm.get('email')?.hasError('email')" style="color: red;">Inserisci una mail valida.</div>
             <label for="privacy" class="privacy-checkbox">
-              <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy" i18n-routerLink>politica sulla privacy</a>.
+              <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy">politica sulla privacy</a>.
             </label>
             <br>
             <label for="trattamentodati" class="privacy-checkbox">
