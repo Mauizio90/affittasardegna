@@ -52,31 +52,45 @@ export class AccommodationsComponent {
     { name: 'Valledoria', selected: false },
     { name: 'Viddalba', selected: false },
   ];
-  public selectableAmenities: { code: string, name: string, selected: boolean }[] = [
-    { code: 'sofa_bed', name: 'Divano letto', selected: false },
-    { code: 'bidet', name: 'Bidet', selected: false },
-    { code: 'hairdryer', name: 'Phon', selected: false },
-    { code: 'refrigerator', name: 'Frigorifero', selected: false },
-    { code: 'extra_pillows_and_blankets', name: 'Cuscini e coperte extra', selected: false },
-    { code: 'hangers', name: 'Appendini', selected: false },
-    { code: 'hot_water', name: 'Acqua calda', selected: false },
-    { code: 'private_entrance', name: 'Ingresso privato', selected: false },
-    { code: 'stove', name: 'Fornelli', selected: false },
-    { code: 'washerdryer', name: 'Lavatrice/Asciugatrice', selected: false },
-    { code: 'iron', name: 'Ferro da stiro', selected: false },
-    { code: 'washer', name: 'Lavatrice', selected: false },
-    { code: 'free_parking', name: 'Parcheggio gratuito', selected: false },
-    { code: 'single_level_home', name: 'Casa a un livello', selected: false },
-    { code: 'kitchen', name: 'Cucina', selected: false },
-    { code: 'microwave', name: 'Forno a microonde', selected: false },
-    { code: 'oven', name: 'Forno', selected: false },
-    { code: 'dishes_and_silverware', name: 'Piatti e Argenteria', selected: false },
-    { code: 'beach_view', name: 'Vista sulla spiaggia', selected: false },
-    { code: 'long_term_stays_allowed', name: 'Soggiorni a lungo termine ammessi', selected: false },
-    { code: 'tv', name: 'TV', selected: false },
-    { code: 'garden', name: 'Giardino', selected: false },
-    { code: 'bbq_area', name: 'Area barbecue', selected: false }
-  ];
+  
+  public selectableAmenities: { name: string, selected: boolean }[] = [
+    { name: 'Zanzariere in tutta la struttura', selected: false },
+    { name: 'Doccia', selected: false },
+    { name: 'Doccia esterna', selected: false },
+    { name: 'Frigorifero', selected: false },
+    { name: 'Phon', selected: false },
+    { name: 'Culle', selected: false },
+    { name: 'Aria condizionata', selected: false },
+    { name: 'Riscaldamento / Condizionatore autonomo', selected: false },
+    { name: 'Ferro da stiro', selected: false },
+    { name: 'Lavatrice/Asciugatrice', selected: false },
+    { name: 'Seggiolone', selected: false },
+    { name: 'Vasca da bagno', selected: false },
+    { name: 'Cucina', selected: false },
+    { name: 'Forno', selected: false },
+    { name: 'Forno a microonde', selected: false },
+    { name: 'Lavastoviglie', selected: false },
+    { name: 'Vista sull\'oceano', selected: false },
+    { name: 'Tavolo da ping pong', selected: false },
+    { name: 'Area barbecue', selected: false },
+    { name: 'Bicicletta', selected: false },
+    { name: 'Giardino', selected: false },
+    { name: 'Tennis', selected: false },
+    { name: 'Veranda all\'aperto', selected: false },
+    { name: 'Parcheggio', selected: false },
+    { name: 'Animali domestici permessi', selected: false },
+    { name: 'Piscina comune', selected: false },
+    { name: 'Piscina privata', selected: false },
+    { name: 'Caminetto', selected: false },
+    { name: 'TV', selected: false },
+    { name: 'Arredi da esterno', selected: false },
+    { name: 'Biliardo', selected: false },
+    { name: 'Connessione WiFi', selected: false },
+    { name: 'Cortile', selected: false },
+    { name: 'Garage', selected: false }
+];
+
+
   
   @ViewChild('child') child?: HousecardsComponent;
   guests!: number | null;
@@ -106,7 +120,7 @@ export class AccommodationsComponent {
     });
   
     this.selectableAmenities.forEach((amenity) => {
-      if (amenity.code === selectedAmenity) {
+      if (amenity.name === selectedAmenity) {
         amenity.selected = !amenity.selected;
       }
     }
@@ -124,7 +138,7 @@ export class AccommodationsComponent {
           const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
           return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
                  selectedAmenities.every((amenity) => 
-                   accommodation.amenities?.some(a => a.code === amenity.code)
+                   accommodation.amenities?.some(a => a.name.it === amenity.name)
                  ) &&
                  (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
         });
@@ -137,7 +151,7 @@ export class AccommodationsComponent {
         this.allAccommodations = accommodations.filter((accommodation) => {
           const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
           return selectedAmenities.every((amenity) => 
-            accommodation.amenities?.some(a => a.code === amenity.code)
+            accommodation.amenities?.some(a => a.name.it === amenity.name)
           ) &&
           (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
         });
@@ -149,6 +163,7 @@ export class AccommodationsComponent {
       console.log(this.allAccommodations);
     });
   }
+  
 
   public onNameChange(event: any): void {
     this.houseName = (event.target as HTMLInputElement).value;

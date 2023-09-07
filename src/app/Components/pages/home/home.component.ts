@@ -32,7 +32,7 @@ public allAccommodations?: Accommodation[];
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.allAccommodations = accommodations.filter((accommodation) => {
         const amenities = accommodation.amenities || [];
-        return amenities.some((amenity) => amenity.name.it === 'primo piano');
+        return amenities.some((amenity) => amenity.name.it === 'in evidenza');
       });
     });
     

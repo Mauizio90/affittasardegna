@@ -29,7 +29,7 @@ export class HousecardsComponent {
 
 
   hasWifi(accommodation: any): boolean {
-    return accommodation.amenities.some((amenity: any) => amenity.name.it === 'connessione wifi');
+    return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Connessione WiFi');
   }
 
 
