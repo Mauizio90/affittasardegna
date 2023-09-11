@@ -75,15 +75,67 @@
           <p>{{accommodation.description?.it}}</p>
         </div>
         <div class="icon-container">
+
           <div class="iconwrapper">
             <fa-icon class="icon" [icon]="faBed"></fa-icon><span>{{accommodation.n_bedrooms}}</span>
           </div>
+
           <div class="iconwrapper">
             <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span>{{accommodation.n_bathrooms}}</span>
           </div>
+
           <div class="iconwrapper" *ngIf="hasWifi(accommodation)">
             <fa-icon class="icon" [icon]="faWifi"></fa-icon>
           </div>
+          
+          <div class="iconwrapper" *ngIf="hasMosquitoNets(accommodation)">
+            <fa-icon class="icon" [icon]="faMosquitoNet"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasShower(accommodation)">
+            <fa-icon class="icon" [icon]="faShower"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasAirConditioning(accommodation)">
+            <fa-icon class="icon" [icon]="faSnowflake"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasKitchen(accommodation)">
+            <fa-icon class="icon" [icon]="faKitchenSet"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasPingPongTable(accommodation)">
+            <fa-icon class="icon" [icon]="faTableTennis"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasBicycle(accommodation)">
+            <fa-icon class="icon" [icon]="faBicycle"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasGarden(accommodation)">
+            <fa-icon class="icon" [icon]="faSeedling"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasParking(accommodation)">
+            <fa-icon class="icon" [icon]="faSquareParking"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasPetsAllowed(accommodation)">
+            <fa-icon class="icon" [icon]="faPaw"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasPrivatePool(accommodation)">
+            <fa-icon class="icon" [icon]="faWaterLadder"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasTV(accommodation)">
+            <fa-icon class="icon" [icon]="faTv"></fa-icon>
+          </div>
+          
+          <div class="iconwrapper" *ngIf="hasGarage(accommodation)">
+            <fa-icon class="icon" [icon]="faWarehouse"></fa-icon>
+          </div>
+          
         </div>
       </div>
     </a>

@@ -88,6 +88,13 @@ p{
 	background-color: var(--primary);
 }
 
+.whatsapp i {
+	font-size: 35px;
+	background-color: #25D366;
+	border-radius: 45px;
+	padding: 5px;
+}
+
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{
@@ -96,9 +103,18 @@ p{
 }
 }
 @media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
+  	.footer-col{
+    	width: 100%;
+	}
+
+	.whatsapp{
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        font-size: 50px;
+    }
+	
+
 }
 
 .closer{
