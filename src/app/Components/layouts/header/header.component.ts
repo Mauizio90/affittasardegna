@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     const currentLanguage = this.localStorageService.getItem('currentLanguage');
-    this.changeLanguage(currentLanguage || 'en', false);
+    this.changeLanguage(currentLanguage || 'it', false);
     // ...
   }
 
