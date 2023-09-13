@@ -5,13 +5,14 @@ import { AccommodationService } from '../../services/accommodation.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
     standalone: true,
-    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent]
+    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule]
 })
 export class HomeComponent {
 form!: FormGroup;

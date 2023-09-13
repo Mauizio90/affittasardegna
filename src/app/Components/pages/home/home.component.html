@@ -5,8 +5,8 @@
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.6px);">
-        <h1>Trova <br>L' ALLOGGIO PERFETTO <br> per la tua Vacanza</h1>
-        <a routerLink="/ville-appartamenti-vacanze-sardegna" class="btn">Scopri tutti i nostri alloggi</a>
+        <h1>{{"homeheader-trova" | translate}} <br>{{"homeheader-alloggio" | translate}}<br>{{"homeheader-vacanza" | translate}}</h1>
+        <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="btn">{{'headerButton' | translate}}</a>
     </div>
 </div>
 <!-- header end -->
@@ -18,15 +18,15 @@
         justify-content: space-around; ">
             <div class="nav-item" style="margin-top: -40px;">
                 <i class="ri-phone-find-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-                <span>Cerca</span>
+                <span>{{'home-cerca' | translate}}</span>
             </div>
             <div class="nav-item" style="margin-top: -40px;">
                 <i class="ri-heart-3-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-                <span>Scegli</span>
+                <span>{{'home-scegli' | translate}}</span>
             </div>
             <div class="nav-item" style="margin-top: -40px;">
                 <i class="ri-luggage-cart-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-                <span>Prenota</span>
+                <span>{{'home-prenota' | translate}}</span>
             </div>
         </div>
     <form form [formGroup]="form" (ngSubmit)="onFormSubmit()">
@@ -50,7 +50,7 @@
             <span><i class="ri-user-5-line"></i></span>
             <div class="input-content">
                 <div class="input-group">
-                    <label><input type="number" min="1" formControlName="guests" id="guests-input">Ospiti</label>
+                    <label><input type="number" min="1" formControlName="guests" id="guests-input">{{'ospiti' | translate}}</label>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
 <!-- featured session -->
 <div class="featured">
     <div class="featured-title">
-        <h2>IN PRIMO PIANO</h2>
+        <h2>{{'primoPiano' | translate}}</h2>
     </div>
     <div class="featured-housecards">
         <app-housecards [accommodations]="allAccommodations"></app-housecards>
