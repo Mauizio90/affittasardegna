@@ -22,11 +22,18 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SinglePageAccommodationComponent } from './Components/pages/single-page-accommodation/single-page-accommodation.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { of } from 'rxjs';
+import { en } from 'src/assets/i18n/en';
+import { it } from 'src/assets/i18n/it';
 
-export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
-}
+export class CustomTranslateLoader implements TranslateLoader {
+    public getTranslation(lang: string) {
+      if (lang === 'en') {
+        return of(en);
+      }
+      return of(it);
+    }
+  }
 
 @NgModule({
     declarations: [AppComponent],
@@ -56,7 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
+                useClass: CustomTranslateLoader,
                 deps: [HttpClient]
             }
         })

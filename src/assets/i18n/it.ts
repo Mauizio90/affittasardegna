@@ -1,0 +1,23 @@
+export const it = {
+    "rl.home": "",
+    "rl.gliAlloggi": "ville-appartamenti-vacanze-sardegna",
+    "rl.localita": "localita-spiagge-sardegna",
+    "rl.proponiImmobile": "proponi-immobile",
+    "rl.chiSiamo": "chi-siamo",
+    "rl.contatti": "contatti",
+    "gliAlloggi": "Gli Alloggi",
+    "localita": "Località",
+    "proponiImmobile": "Proponi Immobile",
+    "chiSiamo": "Chi Siamo",
+    "contatti": "Contatti",
+    "lingua": "Language",
+    "homeheader-trova": "Trova",    
+    "homeheader-alloggio": "L' ALLOGGIO PERFETTO",
+    "homeheader-vacanza": "per la tua Vacanza",
+    "headerButton": "Scopri tutti i nostri alloggi",
+    "home-cerca": "Cerca",
+    "home-scegli": "Scegli",
+    "home-prenota": "Prenota",
+    "ospiti": "Ospiti",
+    "primoPiano": "IN PRIMO PIANO"
+}
