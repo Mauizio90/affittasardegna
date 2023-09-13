@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top container-fluid">
   <div class="container">
-    <a class="logo" routerLink="/">
+    <a class="logo" [routerLink]="['/' + ('rl.home' | translate)]">
       <img src="assets/images/logo.png" alt="Logo">
     </a>
 
@@ -10,14 +10,14 @@
       </button>
 
       <div class="navbar-collapse custom-collapse justify-content-end" id="navbar" [ngbCollapse]="isCollapsed" [ngClass]="{'white-bg': !isCollapsed}" style="margin-right: 15px;">
-      <a class="nav-link" routerLink="/ville-appartamenti-vacanze-sardegna" (click)="isCollapsed = true">Gli alloggi</a>
-      <a class="nav-link" routerLink="/localita-spiagge-sardegna" (click)="isCollapsed = true">Località</a>
-      <a class="nav-link" routerLink="/proponi-immobile" (click)="isCollapsed = true">Proponi Immobile</a>
-      <a class="nav-link" routerLink="/chisiamo" (click)="isCollapsed = true">Chi siamo</a>
-      <a class="nav-link" routerLink="/contatti" (click)="isCollapsed = true">Contatti</a>
+        <a class="nav-link" [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" (click)="isCollapsed = true">{{ 'gliAlloggi' | translate }}</a>
+        <a class="nav-link" [routerLink]="['/' + ('rl.localita' | translate)]" (click)="isCollapsed = true">{{ 'localita' | translate }}</a>
+        <a class="nav-link" [routerLink]="['/' + ('rl.proponiImmobile' | translate)]" (click)="isCollapsed = true">{{ 'proponiImmobile' | translate }}</a>
+        <a class="nav-link" [routerLink]="['/' + ('rl.chiSiamo' | translate)]" (click)="isCollapsed = true">{{ 'chiSiamo' | translate }}</a>
+        <a class="nav-link" [routerLink]="['/' + ('rl.contatti' | translate)]" (click)="isCollapsed = true">{{ 'contatti' | translate }}</a>
       <div class="nav-link dropdown ml-2" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
-          <img [src]="languageIcon" alt="Language Icon" style="height: 13px;"> Language
+          <img [src]="languageIcon" alt="Language Icon" style="height: 13px;"> {{ 'lingua' | translate }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
           <a class="dropdown-item" style="background-color: transparent;" href="/" (click)="changeLanguage('it', true)">Italiano</a>

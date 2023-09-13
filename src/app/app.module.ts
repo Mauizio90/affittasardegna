@@ -13,7 +13,7 @@ import { PrivacyComponent } from './Components/pages/privacy/privacy.component';
 import { PropertiesSuggestionComponent } from './Components/pages/properties-suggestion/properties-suggestion.component';
 import { TermsComponent } from './Components/pages/terms/terms.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AccommodationsComponent } from './Components/pages/accommodations/accommodations.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopupsubmissionsuccessComponent } from './Components/layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
@@ -21,6 +21,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SinglePageAccommodationComponent } from './Components/pages/single-page-accommodation/single-page-accommodation.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 @NgModule({
     declarations: [AppComponent],
@@ -47,6 +53,13 @@ import { SinglePageAccommodationComponent } from './Components/pages/single-page
         AccommodationsComponent,
         PopupsubmissionsuccessComponent,
         SinglePageAccommodationComponent,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent]
