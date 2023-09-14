@@ -19,5 +19,8 @@ export const en ={
     "home-scegli": "Choose",
     "home-prenota": "Book",
     "ospiti": "Guests",
-    "primoPiano": "HIGHLIGHTED"
+    "primoPiano": "HIGHLIGHTED",
+    "LOCALITÀ TURISTICHE": "BEST TOURIST DESTINATIONS",
+    "In primo piano": "",
+    "bestlocalities": "The best tourist destinations in Sardinia. Dreamy beaches and crystal-clear waters."
 }

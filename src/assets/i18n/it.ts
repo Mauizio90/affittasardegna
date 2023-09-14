@@ -19,5 +19,8 @@ export const it = {
     "home-scegli": "Scegli",
     "home-prenota": "Prenota",
     "ospiti": "Ospiti",
-    "primoPiano": "IN PRIMO PIANO"
+    "primoPiano": "IN PRIMO PIANO",
+    "LOCALITÀ TURISTICHE": "LOCALITÀ TURISTICHE",
+    "In primo piano": "In primo piano",
+    "bestlocalities": "Le migliori località turistiche della Sardegna. Spiagge da sogno e acque cristalline."
 }
