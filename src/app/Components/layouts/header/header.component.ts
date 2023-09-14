@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { NgbCollapse, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu } from '@ng-bootstrap/ng-bootstrap';
 import { LocalStorageService } from '../../services/local-storage-service.service';
@@ -18,10 +18,15 @@ export class HeaderComponent implements OnInit {
 
   isCollapsed = true;
   languageIcon?: string;
+  private router?: Router
 
   constructor(private localStorageService: LocalStorageService , private locationService: LocationService, private translate: TranslateService) {
     this.translate.setDefaultLang('it')
     this.translate.use('it')
+    const currentUrl = this.router?.url;
+    if (currentUrl === '/en' || currentUrl?.startsWith('/en/')) {
+      this.changeLanguage('en', false);
+    }
   }
 
   ngOnInit() {

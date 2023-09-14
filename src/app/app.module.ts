@@ -27,13 +27,16 @@ import { en } from 'src/assets/i18n/en';
 import { it } from 'src/assets/i18n/it';
 
 export class CustomTranslateLoader implements TranslateLoader {
-    public getTranslation(lang: string) {
-      if (lang === 'en') {
-        return of(en);
-      }
-      return of(it);
+  public getTranslation(lang: string) {
+    let translationFile = it; // Default to Italian translation
+    
+    if (window.location.pathname.includes('/en')) { // Check if URL contains '/en'
+      translationFile = en; // Use English translation
     }
+    
+    return of(translationFile);
   }
+}
 
 @NgModule({
     declarations: [AppComponent],
