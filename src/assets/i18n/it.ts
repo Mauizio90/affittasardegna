@@ -5,11 +5,14 @@ export const it = {
     "rl.proponiImmobile": "proponi-immobile",
     "rl.chiSiamo": "chi-siamo",
     "rl.contatti": "contatti",
+    "rl.termini": "termini-e-condizioni",
+    "rl.privacy": "privacy",
     "gliAlloggi": "Gli Alloggi",
     "localita": "Località",
     "proponiImmobile": "Proponi Immobile",
     "chiSiamo": "Chi Siamo",
     "contatti": "Contatti",
+    "termini": "Termini e condizioni",
     "lingua": "Language",
     "homeheader-trova": "Trova",    
     "homeheader-alloggio": "L' ALLOGGIO PERFETTO",
@@ -22,5 +25,10 @@ export const it = {
     "primoPiano": "IN PRIMO PIANO",
     "LOCALITÀ TURISTICHE": "LOCALITÀ TURISTICHE",
     "In primo piano": "In primo piano",
-    "bestlocalities": "Le migliori località turistiche della Sardegna. Spiagge da sogno e acque cristalline."
+    "bestlocalities": "Le migliori località turistiche della Sardegna. Spiagge da sogno e acque cristalline.",
+    "descrizioneLocalità1": "Piccolo comune dell'alta Baronia, al confine tra le province di Olbia-Tempio e Nuoro, dotato di un a...",
+    "footerDescription": "AffittaSardegna è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive",
+    "scopriDiPiù": "Scopri di più",
+    "CONTATTACI": "CONTATTACI",
+    "footerSeguici": "SEGUICI SUI NOSTRI SOCIAL"
 }

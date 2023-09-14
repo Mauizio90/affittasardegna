@@ -5,26 +5,26 @@
       <div class="footer-col">
         <h4><b>AFFITTASARDEGNA</b></h4>
         <ul>
-          <p>AffittaSardegna è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive</p>
-          <li><a routerLink="chisiamo">Scopri di più</a></li>
+          <p>{{"footerDescription" | translate}}</p>
+          <li><a [routerLink]="['/' + ('rl.chiSiamo' | translate)]">{{"scopriDiPiù" | translate}}</a></li>
 
         </ul>
       </div>
       <div class="footer-col">
         <h4><b>LINKS</b></h4>
         <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/ville-appartamenti-vacanze-sardegna">Gli Alloggi</a></li>
-          <li><a routerLink="/localita-spiagge-sardegna">Località</a></li>
-          <li><a routerLink="/proponi-immobile">Proponi Immobile</a></li>
-          <li><a routerLink="/chisiamo">Chi siamo</a></li>
-          <li><a routerLink="/contatti">Contatti</a></li>
-          <li><a routerLink="/termini-e-condizioni">Termini e condizioni</a></li>
-          <li><a routerLink="/privacy">Privacy</a></li>
+          <li><a [routerLink]="['/' + ('rl.home' | translate)]">Home</a></li>
+          <li><a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]">{{ 'gliAlloggi' | translate }}</a></li>
+          <li><a [routerLink]="['/' + ('rl.localita' | translate)]">{{ 'localita' | translate }}</a></li>
+          <li><a [routerLink]="['/' + ('rl.proponiImmobile' | translate)]">{{ 'proponiImmobile' | translate }}</a></li>
+          <li><a [routerLink]="['/' + ('rl.chiSiamo' | translate)]">{{ 'chiSiamo' | translate }}</a></li>
+          <li><a [routerLink]="['/' + ('rl.contatti' | translate)]">{{ 'contatti' | translate }}</a></li>
+          <li><a [routerLink]="['/' + ('rl.termini' | translate)]">{{'termini' | translate}}</a></li>
+          <li><a [routerLink]="['/' + ('rl.privacy' | translate)]">Privacy</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4><b>CONTATTACI</b></h4>
+        <h4><b>{{"CONTATTACI" | translate}}</b></h4>
         <p style="color: black;">AffittaSardegna</p>
         <ul>
           <li>
@@ -52,7 +52,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4><b>SEGUICI SUI NOSTRI SOCIAL</b></h4>
+        <h4><b>{{"footerSeguici" | translate}}</b></h4>
         <div class="social-links">
           <a href="https://www.facebook.com/affittasardegna" target="_blank"><i class="ri-facebook-circle-fill" style="font-size: 35px;"></i></a>
           <a href="https://www.instagram.com/affitta_sardegna/" target="_blank"><i class="ri-instagram-fill" style="font-size: 35px;"></i></a>
