@@ -29,7 +29,7 @@ export const it = {
     "descrizioneLocalità1": "Piccolo comune dell'alta Baronia, al confine tra le province di Olbia-Tempio e Nuoro, dotato di un a...",
     "footerDescription": "AffittaSardegna è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive",
     "scopriDiPiù": "Scopri di più",
-    "CONTATTACI": "CONTATTACI",
+    "contattaci": "contattaci",
     "footerSeguici": "SEGUICI SUI NOSTRI SOCIAL",
     "pricePerNight": "Da {{price}}€ notte",
     "maxGuests": "fino a {{guests}} ospiti",
@@ -48,6 +48,20 @@ export const it = {
     "filtroOspiti": "Ospiti Massimi",
     "filtroNome": "Cerca per Nome",
     "casedisponibili": "{{numero}} case vacanza disponibili!",
-    "listaDotazioni": "{{it}}"
+    "listaDotazioni": "{{it}}",
+    "carica": "Carica più schede",
+    "compila": "Compila il modulo sottostante per inviarci un messaggio.",
+    "nome": "Nome",
+    "cognome": "Cognome",
+    "telefono": "Telefono",
+    "phoneplaceholder": "Numero di telefono (cellulare)",
+    "numberWarn": "Inserisci solo numeri nel campo telefono.",
+    "emailWarn": "Inserisci una mail valida.",
+    "messaggio": "Messaggio",
+    "accetto": "Accetto la",
+    "privacypolicy": "politica sulla privacy",
+    "autorizzo": "Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.",
+    "invia": "Invia"
+
 
 }

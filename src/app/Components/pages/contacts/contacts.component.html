@@ -40,29 +40,29 @@
     </div>
     <div class="contact-container">
       <div class="contact-header">
-        <h2 class="contact-title">Contattaci</h2>
-        <p class="contact-subtitle">Compila il modulo sottostante per inviarci un messaggio.</p>
+        <h2 class="contact-title">{{"contattaci" | translate}}</h2>
+        <p class="contact-subtitle">{{"compila" | translate}}</p>
       </div>
       <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
-        <label for="nome">Nome</label>
-        <input id="nome" class="input-field" type="text" name="nome" placeholder="Nome" formControlName="nome">
-        <label for="cognome">Cognome</label>
-        <input id="cognome" class="input-field" type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
-        <label for="telefono">Telefono</label>
-        <input id="telefono" class="input-field" type="text" inputmode="numeric" pattern="[0-9]+" name="telefono" placeholder="Numero di telefono (cellulare)" formControlName="telefono">
-        <div *ngIf="contactForm.get('telefono')?.hasError('pattern')" style="color: red;">Inserisci solo numeri nel campo telefono.</div>
+        <label for="nome">{{"nome" | translate}}</label>
+        <input id="nome" class="input-field" type="text" name="nome" [placeholder]="'nome' | translate" formControlName="nome">
+        <label for="cognome">{{"cognome" | translate}}</label>
+        <input id="cognome" class="input-field" type="text" name="cognome" [placeholder]="'cognome' | translate" formControlName="cognome">
+        <label for="telefono">{{"telefono" | translate}}</label>
+        <input id="telefono" class="input-field" type="text" inputmode="numeric" pattern="[0-9]+" name="telefono" [placeholder]="'phoneplaceholder' | translate" formControlName="telefono">
+        <div *ngIf="contactForm.get('telefono')?.hasError('pattern')" style="color: red;">{{"numberWarn" | translate}}</div>
         <label for="email">Email</label>
         <input id="email" class="input-field" type="email" name="email" placeholder="Email" formControlName="email" autocomplete="email">
-        <div *ngIf="contactForm.get('email')?.hasError('email')" style="color: red;">Inserisci una mail valida.</div>
-        <label for="messaggio">Messaggio</label>
-        <textarea id="messaggio" class="input-field textarea-field" name="messaggio" placeholder="Messaggio" formControlName="messaggio"></textarea>
+        <div *ngIf="contactForm.get('email')?.hasError('email')" style="color: red;">{{"emailWarn" | translate}}</div>
+        <label for="messaggio">{{"messaggio" | translate}}</label>
+        <textarea id="messaggio" class="input-field textarea-field" name="messaggio" [placeholder]="'messaggio' | translate" formControlName="messaggio"></textarea>
         <label for="privacy" class="privacy-checkbox">
-          <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> Accetto la <a class="privacy-link" routerLink="/privacy">politica sulla privacy</a>. <br>
+          <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> {{"accetto" | translate}} <a class="privacy-link" routerLink="/privacy">{{"privacypolicy" | translate}}</a>. <br>
         </label>
         <label for="trattamentodati" class="privacy-checkbox">
-          <input id="trattamentodati" type="checkbox" name="trattamentodati" formControlName="trattamentodati"> Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.
+          <input id="trattamentodati" type="checkbox" name="trattamentodati" formControlName="trattamentodati">{{"autorizzo" | translate}}
         </label>
-        <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="contactForm.invalid">Invia</button>
+        <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="contactForm.invalid">{{"invia" | translate}}</button>
       </form>
     </div>
   </div>

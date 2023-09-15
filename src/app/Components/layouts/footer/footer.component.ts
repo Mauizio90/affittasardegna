@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -8,7 +9,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.css'],
     standalone: true,
-    imports: [RouterLink, TranslateModule]
+    imports: [RouterLink, TranslateModule, CommonModule]
 })
 export class FooterComponent {
 

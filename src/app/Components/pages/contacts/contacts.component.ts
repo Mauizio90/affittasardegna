@@ -6,6 +6,7 @@ import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsu
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { NgIf } from '@angular/common';
     templateUrl: './contacts.component.html',
     styleUrls: ['./contacts.component.css'],
     standalone: true,
-    imports: [ReactiveFormsModule, NgIf, RouterLink]
+    imports: [ReactiveFormsModule, NgIf, RouterLink, TranslateModule]
 })
 export class ContactsComponent {
   contactForm: FormGroup;

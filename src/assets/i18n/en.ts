@@ -29,7 +29,7 @@ export const en ={
     "descrizioneLocalità1": "Small municipality in the upper Baronia, on the border between the provinces of Olbia-Tempio and Nuoro, equipped with a...",
     "footerDescription": "AffittaSardegna is a leader in vacation rentals throughout the upper half of Sardinia. With over 500 units, it offers a variety of vacation homes, ranging from simple studios to exclusive villas.",
     "scopriDiPiù": "Learn more",
-    "CONTATTACI": "CONTACT US",
+    "contattaci": "Contact Us",
     "footerSeguici": "FOLLOW US ON OUR SOCIAL MEDIA",
     "pricePerNight": "Starting from {{price}}€ per night",
     "maxGuests": "Max {{guests}} guests",
@@ -48,5 +48,18 @@ export const en ={
     "filtroOspiti": "Maximum Guests",
     "filtroNome": "Search by Name",
     "casedisponibili": "{{numero}} accommodations available!",
-    "listaDotazioni": "{{en}}"
+    "listaDotazioni": "{{en}}",
+    "carica": "Load more",
+    "compila": "Fill the form to send us a message.",
+    "nome": "Name",
+    "cognome": "Surname",
+    "telefono": "Phone",
+    "phoneplaceholder": "(Mobile) Phone number",
+    "numberWarn": "Only numbers admitted",
+    "emailWarn": "Insert a valid email address",
+    "messaggio": "Message",
+    "accetto": "I accept the",
+    "privacypolicy": "privacy policy",
+    "autorizzo": "I authorize the processing of my personal data, in accordance with Legislative Decree No. 196 of June 30, 2003",
+    "invia": "Send"
 }
