@@ -60,8 +60,8 @@
     <a href="https://affittasardegna.kross.travel{{accommodation.meta_it_url}}" class="box col-lg-3 col-md-4 col-sm-12" *ngFor="let accommodation of accommodations | slice:0:cardsToShow">
       <img src="{{accommodation.images?.[0]}}" alt="foto appartamento">
       <div class="under-img" style="display: grid; grid-template-columns: repeat(1, 1fr) auto;">
-        <h2 style="font-size: medium; color: var(--secondary);">Da {{accommodation.price}}€ notte</h2>
-        <h2 style="font-size: medium; color: var(--secondary);">fino a {{accommodation.guests}} ospiti</h2>
+        <h2 style="font-size: medium; color: var(--secondary);">{{ 'pricePerNight' | translate:{price: accommodation.price} }}</h2>
+        <h2 style="font-size: medium; color: var(--secondary);">{{'maxGuests' | translate:{guests: accommodation.guests} }}</h2>
       </div>
       <div class="content">
         <div class="text">
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="description">
-          <p>{{accommodation.description?.it}}</p>
+          <p>{{'descrizioneCasa' | translate:{descrizione: accommodation.description?.it, description: accommodation.description?.en} }}</p>
         </div>
         <div class="icon-container">
 

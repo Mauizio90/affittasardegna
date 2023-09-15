@@ -30,5 +30,8 @@ export const en ={
     "footerDescription": "AffittaSardegna is a leader in vacation rentals throughout the upper half of Sardinia. With over 500 units, it offers a variety of vacation homes, ranging from simple studios to exclusive villas.",
     "scopriDiPiù": "Learn more",
     "CONTATTACI": "CONTACT US",
-    "footerSeguici": "FOLLOW US ON OUR SOCIAL MEDIA"
+    "footerSeguici": "FOLLOW US ON OUR SOCIAL MEDIA",
+    "pricePerNight": "Starting from {{price}}€ per night",
+    "maxGuests": "Max {{guests}} guests",
+    "descrizioneCasa": "{{description}}"
 }

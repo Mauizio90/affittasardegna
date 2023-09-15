@@ -3,7 +3,7 @@ export const it = {
     "rl.gliAlloggi": "ville-appartamenti-vacanze-sardegna",
     "rl.localita": "localita-spiagge-sardegna",
     "rl.proponiImmobile": "proponi-immobile",
-    "rl.chiSiamo": "chi-siamo",
+    "rl.chiSiamo": "chisiamo",
     "rl.contatti": "contatti",
     "rl.termini": "termini-e-condizioni",
     "rl.privacy": "privacy",
@@ -30,5 +30,8 @@ export const it = {
     "footerDescription": "AffittaSardegna è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive",
     "scopriDiPiù": "Scopri di più",
     "CONTATTACI": "CONTATTACI",
-    "footerSeguici": "SEGUICI SUI NOSTRI SOCIAL"
+    "footerSeguici": "SEGUICI SUI NOSTRI SOCIAL",
+    "pricePerNight": "Da {{price}}€ notte",
+    "maxGuests": "fino a {{guests}} ospiti",
+    "descrizioneCasa": "{{descrizione}}"
 }

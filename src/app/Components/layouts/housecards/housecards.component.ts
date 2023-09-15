@@ -4,13 +4,14 @@ import { faBathtub, faBed, faWifi, faLocationDot, faMosquitoNet, faShower, faSno
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor, SlicePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-housecards',
     templateUrl: './housecards.component.html',
     styleUrls: ['./housecards.component.css'],
     standalone: true,
-    imports: [NgFor, FontAwesomeModule, SlicePipe, CommonModule]
+    imports: [NgFor, FontAwesomeModule, SlicePipe, CommonModule, TranslateModule]
 })
 export class HousecardsComponent {
   faBathtub = faBathtub;
@@ -33,7 +34,7 @@ export class HousecardsComponent {
   public cardsToShow: number = 40;
 
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   public loadMoreCards(): void {
     this.cardsToShow += 40;
