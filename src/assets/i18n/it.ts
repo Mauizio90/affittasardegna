@@ -33,5 +33,14 @@ export const it = {
     "footerSeguici": "SEGUICI SUI NOSTRI SOCIAL",
     "pricePerNight": "Da {{price}}€ notte",
     "maxGuests": "fino a {{guests}} ospiti",
-    "descrizioneCasa": "{{descrizione}}"
+    "descrizioneCasa": "{{descrizione}}",
+    "popupRichiesta": "Richiesta effettuata con successo.",
+    "popupProvvederemo": " Provvederemo a contattarti il prima possibile",
+    "Leader":"Leader negli affitti in Sardegna",
+    "aboutusLeader": " è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive, al fine di soddisfare ogni tipo di richiesta per un soggiorno indimenticabile in quel paradiso chiamato Sardegna!",
+    "aboutusLeader2": "È presente nelle località più affascinanti della costa sarda, sia quelle più note e frequentate, sia quelle ancora selvagge e caratterizzate da scenari naturali di incomparabile bellezza.",
+    "aboutusLeader3": " è il partner ideale cui affidarsi per trascorrere una magnifica vacanza in Sardegna, sia questa per coppie, famiglie o gruppi di amici; e ancora, volta al relax più totale, al benessere, al divertimento, agli sport acquatici, al trekking, all’escursionismo, al cicloturismo.",
+    "aboutusLeader4": "La vasta scelta di località, la gamma ampia e differenziata di case vacanze offerte, l’esperienza, la serietà, la competenza e la continua assistenza sono al vostro servizio per soddisfare tutte le vostre esigenze e rendere speciale e unico il vostro soggiorno in Sardegna.",
+    "miniHeaderSuggests1": "VILLE ED APPARTAMENTI",
+    "miniHeaderSuggests2": "Per vacanze in Sardegna",
 }

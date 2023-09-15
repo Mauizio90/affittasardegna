@@ -4,6 +4,7 @@ import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { Title, Meta } from '@angular/platform-browser';
 import { NgFor } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { NgFor } from '@angular/common';
     templateUrl: './accommodations.component.html',
     styleUrls: ['./accommodations.component.css'],
     standalone: true,
-    imports: [NgFor, HousecardsComponent]
+    imports: [NgFor, HousecardsComponent, TranslateModule]
 })
 export class AccommodationsComponent {
   public allAccommodations?: Accommodation[];
