@@ -42,5 +42,11 @@ export const en ={
     "aboutusLeader3": " is the ideal partner to rely on for a magnificent vacation in Sardinia, whether it's for couples, families, or groups of friends; whether it's for total relaxation, well-being, fun, water sports, trekking, hiking, or cycling.",
     "aboutusLeader4": "The wide choice of locations, the extensive and varied range of vacation homes offered, the experience, reliability, competence, and ongoing assistance are at your service to meet all your needs and make your stay in Sardinia special and unique.",
     "miniHeaderSuggests1": "VILLAS AND APARTMENTS",
-    "miniHeaderSuggests2": "For vacations in Sardinia"
+    "miniHeaderSuggests2": "For vacations in Sardinia",
+    "filtroDotazioni": "Filter by Amenities",
+    "filtroLocalità": "Filter by Location/City",
+    "filtroOspiti": "Maximum Guests",
+    "filtroNome": "Search by Name",
+    "casedisponibili": "{{numero}} accommodations available!",
+    "listaDotazioni": "{{en}}"
 }

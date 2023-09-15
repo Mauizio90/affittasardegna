@@ -43,4 +43,11 @@ export const it = {
     "aboutusLeader4": "La vasta scelta di località, la gamma ampia e differenziata di case vacanze offerte, l’esperienza, la serietà, la competenza e la continua assistenza sono al vostro servizio per soddisfare tutte le vostre esigenze e rendere speciale e unico il vostro soggiorno in Sardegna.",
     "miniHeaderSuggests1": "VILLE ED APPARTAMENTI",
     "miniHeaderSuggests2": "Per vacanze in Sardegna",
+    "filtroDotazioni": "Filtra per Dotazioni",
+    "filtroLocalità":"Filtra per Località/Città",
+    "filtroOspiti": "Ospiti Massimi",
+    "filtroNome": "Cerca per Nome",
+    "casedisponibili": "{{numero}} case vacanza disponibili!",
+    "listaDotazioni": "{{it}}"
+
 }

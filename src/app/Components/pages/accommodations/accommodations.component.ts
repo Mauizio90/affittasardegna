@@ -4,7 +4,7 @@ import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { Title, Meta } from '@angular/platform-browser';
 import { NgFor } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -54,42 +54,43 @@ export class AccommodationsComponent {
     { name: 'Viddalba', selected: false },
   ];
   
-  public selectableAmenities: { name: string, selected: boolean }[] = [
-    { name: 'Zanzariere in tutta la struttura', selected: false },
-    { name: 'Doccia', selected: false },
-    { name: 'Doccia esterna', selected: false },
-    { name: 'Frigorifero', selected: false },
-    { name: 'Phon', selected: false },
-    { name: 'Culle', selected: false },
-    { name: 'Aria condizionata', selected: false },
-    { name: 'Riscaldamento / Condizionatore autonomo', selected: false },
-    { name: 'Ferro da stiro', selected: false },
-    { name: 'Lavatrice/Asciugatrice', selected: false },
-    { name: 'Seggiolone', selected: false },
-    { name: 'Vasca da bagno', selected: false },
-    { name: 'Cucina', selected: false },
-    { name: 'Forno', selected: false },
-    { name: 'Forno a microonde', selected: false },
-    { name: 'Lavastoviglie', selected: false },
-    { name: 'Vista sull\'oceano', selected: false },
-    { name: 'Tavolo da ping pong', selected: false },
-    { name: 'Area barbecue', selected: false },
-    { name: 'Bicicletta', selected: false },
-    { name: 'Giardino', selected: false },
-    { name: 'Tennis', selected: false },
-    { name: 'Veranda all\'aperto', selected: false },
-    { name: 'Parcheggio', selected: false },
-    { name: 'Animali domestici permessi', selected: false },
-    { name: 'Piscina comune', selected: false },
-    { name: 'Piscina privata', selected: false },
-    { name: 'Caminetto', selected: false },
-    { name: 'TV', selected: false },
-    { name: 'Arredi da esterno', selected: false },
-    { name: 'Biliardo', selected: false },
-    { name: 'Connessione WiFi', selected: false },
-    { name: 'Cortile', selected: false },
-    { name: 'Garage', selected: false }
+  public selectableAmenities: { name: string, nameEn: string, selected: boolean }[] = [
+    { name: 'Zanzariere in tutta la struttura', nameEn: 'Mosquito Nets Throughout the Property', selected: false },
+    { name: 'Doccia', nameEn: 'Shower', selected: false },
+    { name: 'Doccia esterna', nameEn: 'Outdoor Shower', selected: false },
+    { name: 'Frigorifero', nameEn: 'Refrigerator', selected: false },
+    { name: 'Phon', nameEn: 'Hair Dryer', selected: false },
+    { name: 'Culle', nameEn: 'Cribs', selected: false },
+    { name: 'Aria condizionata', nameEn: 'Air Conditioning', selected: false },
+    { name: 'Riscaldamento / Condizionatore autonomo', nameEn: 'Heating / Autonomous Air Conditioning', selected: false },
+    { name: 'Ferro da stiro', nameEn: 'Iron', selected: false },
+    { name: 'Lavatrice/Asciugatrice', nameEn: 'Washer/Dryer', selected: false },
+    { name: 'Seggiolone', nameEn: 'High Chair', selected: false },
+    { name: 'Vasca da bagno', nameEn: 'Bathtub', selected: false },
+    { name: 'Cucina', nameEn: 'Kitchen', selected: false },
+    { name: 'Forno', nameEn: 'Oven', selected: false },
+    { name: 'Forno a microonde', nameEn: 'Microwave', selected: false },
+    { name: 'Lavastoviglie', nameEn: 'Dishwasher', selected: false },
+    { name: 'Vista sull\'oceano', nameEn: 'Ocean View', selected: false },
+    { name: 'Tavolo da ping pong', nameEn: 'Ping Pong Table', selected: false },
+    { name: 'Area barbecue', nameEn: 'Barbecue Area', selected: false },
+    { name: 'Bicicletta', nameEn: 'Bicycle', selected: false },
+    { name: 'Giardino', nameEn: 'Garden', selected: false },
+    { name: 'Tennis', nameEn: 'Tennis', selected: false },
+    { name: 'Veranda all\'aperto', nameEn: 'Outdoor Veranda', selected: false },
+    { name: 'Parcheggio', nameEn: 'Parking', selected: false },
+    { name: 'Animali domestici permessi', nameEn: 'Pets Allowed', selected: false },
+    { name: 'Piscina comune', nameEn: 'Common Pool', selected: false },
+    { name: 'Piscina privata', nameEn: 'Private Pool', selected: false },
+    { name: 'Caminetto', nameEn: 'Fireplace', selected: false },
+    { name: 'TV', nameEn: 'TV', selected: false },
+    { name: 'Arredi da esterno', nameEn: 'Outdoor Furniture', selected: false },
+    { name: 'Biliardo', nameEn: 'Billiards', selected: false },
+    { name: 'Connessione WiFi', nameEn: 'WiFi Connection', selected: false },
+    { name: 'Cortile', nameEn: 'Courtyard', selected: false },
+    { name: 'Garage', nameEn: 'Garage', selected: false }
 ];
+
 
 
   
