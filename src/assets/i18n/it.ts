@@ -8,6 +8,7 @@ export const it = {
     "rl.termini": "termini-e-condizioni",
     "rl.privacy": "privacy",
     "gliAlloggi": "Gli Alloggi",
+    "alloggi": "alloggi",
     "localita": "Località",
     "proponiImmobile": "Proponi Immobile",
     "chiSiamo": "Chi Siamo",
@@ -61,7 +62,12 @@ export const it = {
     "accetto": "Accetto la",
     "privacypolicy": "politica sulla privacy",
     "autorizzo": "Autorizzo il trattamento dei miei dati personali, ai sensi del D. lgs. 196 del 30 giugno 2003.",
-    "invia": "Invia"
+    "invia": "Invia",
+    "localitàHeader": "località della sardegna",
+    "localitàHeaderDescription": "Informazioni turistiche sulle località della Sardegna",
+    "vediAlloggi": "Vedi gli alloggi",
+    "descrizione": "{{ita}}"
+
 
 
 }

@@ -8,6 +8,7 @@ export const en ={
     "rl.termini": "en/terms-and-conditions",
     "rl.privacy": "en/privacy",
     "gliAlloggi": "Accommodations",
+    "alloggi": "accommodations",
     "localita": "Locations",
     "proponiImmobile": " Suggests Property",
     "chiSiamo": "About Us",
@@ -61,5 +62,9 @@ export const en ={
     "accetto": "I accept the",
     "privacypolicy": "privacy policy",
     "autorizzo": "I authorize the processing of my personal data, in accordance with Legislative Decree No. 196 of June 30, 2003",
-    "invia": "Send"
+    "invia": "Send",
+    "localitàHeader": "località della sardegna",
+    "localitàHeaderDescription": "Tourist information about the locations in Sardinia",
+    "vediAlloggi": "See the accommodations",
+    "descrizione": "{{eng}}"
 }

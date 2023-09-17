@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, RouterLink } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class FooterComponent {
 
-  constructor(private router: Router, private translate: TranslateService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     if (typeof window !== 'undefined') {

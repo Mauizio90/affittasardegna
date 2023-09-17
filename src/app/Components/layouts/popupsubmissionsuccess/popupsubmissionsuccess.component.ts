@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-popupsubmissionsuccess',
@@ -9,8 +9,5 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     imports: [TranslateModule]
 })
 export class PopupsubmissionsuccessComponent {
-    constructor(private translate: TranslateService){
-
-    }
 
 }

@@ -4,7 +4,7 @@ import { faBathtub, faBed, faWifi, faLocationDot, faMosquitoNet, faShower, faSno
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor, SlicePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-housecards',
@@ -32,9 +32,6 @@ export class HousecardsComponent {
   faWarehouse = faWarehouse;
   @Input() public accommodations?: Accommodation[];
   public cardsToShow: number = 40;
-
-
-  constructor(private translate: TranslateService) { }
 
   public loadMoreCards(): void {
     this.cardsToShow += 40;
