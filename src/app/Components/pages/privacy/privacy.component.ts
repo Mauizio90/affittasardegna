@@ -1,12 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
     selector: 'app-privacy',
     templateUrl: './privacy.component.html',
     styleUrls: ['./privacy.component.css'],
-    standalone: true
+    standalone: true,
+    imports: [TranslateModule, CommonModule]
 })
 export class PrivacyComponent {
 
