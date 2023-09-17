@@ -28,10 +28,9 @@ import { it } from 'src/assets/i18n/it';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
-    let translationFile = it; // Default to Italian translation
-    
-    if (window.location.pathname.includes('/en')) { // Check if URL contains '/en'
-      translationFile = en; // Use English translation
+    let translationFile = it;
+    if (typeof window !== 'undefined' && window.location.pathname.includes('/en')) {
+      translationFile = en;
     }
     
     return of(translationFile);
