@@ -6,6 +6,7 @@ import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck } from '@f
 import { Title, Meta } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { NgFor } from '@angular/common';
     templateUrl: './single-page-accommodation.component.html',
     styleUrls: ['./single-page-accommodation.component.css'],
     standalone: true,
-    imports: [NgFor, FontAwesomeModule]
+    imports: [NgFor, FontAwesomeModule, TranslateModule]
 })
 export class SinglePageAccommodationComponent {
   bigImageSource!: string;
@@ -29,7 +30,7 @@ export class SinglePageAccommodationComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      const accommodationUrl = params['accommodationUrl'];
+      const accommodationUrl = params['accommodationUrl' || 'en/' + 'accommodationUrl'];
       if (accommodationUrl) {
         this.accommodationService
           .getAccommodationByMetaUrl('/' + accommodationUrl)

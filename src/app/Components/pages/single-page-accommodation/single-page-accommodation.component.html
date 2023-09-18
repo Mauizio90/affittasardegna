@@ -29,7 +29,7 @@
         </div>
         <h3 class="title">Descrizione</h3>
         <p class="description" style="color: var(--primary);">
-            {{accommodation?.description?.it}}
+            {{'descrizioneCasa' | translate:{descrizione: accommodation?.description?.it, description: accommodation?.description?.en} }}
         </p>
         <h3 class="title">Dotazioni</h3>
         <div class="flex">
