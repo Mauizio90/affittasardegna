@@ -55,6 +55,9 @@ export const en ={
     "nome": "Name",
     "cognome": "Surname",
     "telefono": "Phone",
+    "citta": "City",
+    "indirizzo": "Address",
+    "descrizionePlaceholder": "Description",
     "phoneplaceholder": "(Mobile) Phone number",
     "numberWarn": "Only numbers admitted",
     "emailWarn": "Insert a valid email address",
@@ -94,5 +97,11 @@ export const en ={
     "privacyLi7": "Payment service providers for transaction processing",
     "privacyLi8": "Partners for offers and promotions",
     "privacyLi9": "Access, correction, and deletion of personal data",
-    "privacyLi10": "Objection to data processing"
+    "privacyLi10": "Objection to data processing",
+    "suggestsPropertyHeader": "Generate income from your property.",
+    "suggestP1": "DO YOU WANT TO LIST YOUR VACATION HOME ON THE AffittaSardegna NETWORK?",
+    "suggestP2": "CONTACT US! We'll show you how to do it.",
+    "suggestLabel1":"City/District of the property",
+    "suggestLabel2":"Address of the property",
+    "suggestLabel3":"Describe the property",
 }

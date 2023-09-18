@@ -5,7 +5,8 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { NgIf } from '@angular/common';
     templateUrl: './properties-suggestion.component.html',
     styleUrls: ['./properties-suggestion.component.css'],
     standalone: true,
-    imports: [ReactiveFormsModule, NgIf, RouterLink]
+    imports: [ReactiveFormsModule, NgIf, RouterLink, TranslateModule, CommonModule]
 })
 export class PropertiesSuggestionComponent {
 
