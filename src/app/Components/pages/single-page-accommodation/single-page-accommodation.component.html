@@ -1,3 +1,11 @@
+<div class="mini-header-background">
+    <div class="mini-header">
+        <h3 style="font-size: 40px;"><b>
+            {{accommodation?.name_it}}</b></h3>
+        <h4 style="font-size: 20px;"><b>{{accommodation?.city + ' ' + accommodation?.postcode}}</b></h4>
+    </div>
+</div>
+
 <div class="view-property container">
     <div class="details">
         <div class="thumb">
@@ -18,23 +26,26 @@
         </p>
         <div class="info">
             <div class="info-item">
-                <fa-icon class="icon" [icon]="faBed"></fa-icon><span style="color: var(--primary);">{{accommodation?.n_bedrooms}} Camere da Letto</span>
+                <fa-icon class="icon" [icon]="faBed"></fa-icon><span style="color: var(--primary);">{{accommodation?.n_bedrooms}} {{(accommodation?.n_bedrooms === 1 ? "cameraDaLetto" : "camereDaLetto") | translate}}</span>
             </div>
             <div class="info-item">
-                <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span style="color: var(--primary);"> {{accommodation?.n_bathrooms}} {{accommodation?.n_bathrooms === 1 ? 'Bagno' : 'Bagni'}}</span>
+                <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span style="color: var(--primary);"> {{accommodation?.n_bathrooms}} {{(accommodation?.n_bathrooms === 1 ? "bagno" : "bagni") | translate}}</span>
             </div>
             <div class="info-item">
-                <fa-icon class="icon" [icon]="faEuroSign"></fa-icon><span style="color: var(--primary);">a partire da {{accommodation?.price}} per notte</span>
+                <fa-icon class="icon" [icon]="faEuroSign"></fa-icon><span style="color: var(--primary);">{{ 'pricePerNight2' | translate:{price: accommodation?.price} }}</span>
+            </div>
+            <div class="info-item">
+                <fa-icon class="icon" [icon]="faUser"></fa-icon><span style="color: var(--primary);">{{'maxGuests' | translate:{guests: accommodation?.guests} }}</span>
             </div>
         </div>
-        <h3 class="title">Descrizione</h3>
+        <h3 class="title">{{"descrizioneSP" | translate}}</h3>
         <p class="description" style="color: var(--primary);">
             {{'descrizioneCasa' | translate:{descrizione: accommodation?.description?.it, description: accommodation?.description?.en} }}
         </p>
-        <h3 class="title">Dotazioni</h3>
+        <h3 class="title">{{"ammenities" | translate}}</h3>
         <div class="flex">
             <div class="box" *ngFor="let amenity of accommodation?.amenities">
-                <fa-icon class="icon" [icon]="faCheck"></fa-icon> <span style="color: var(--primary);">{{amenity?.name?.it}}</span>
+                <fa-icon class="icon" [icon]="faCheck"></fa-icon> <span style="color: var(--primary);">{{"ammenitiesList" | translate:{ita:amenity?.name?.it, eng:amenity?.name?.en} }}</span>
             </div>
         </div>
         <iframe class="map-iframe container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.682682014014!2d8.407902115712707!3d40.836034979321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x658915030789bc5e!2sAffittaSardegna%20Soc.%20Coop!5e0!3m2!1sen!2sus!4v1635361234567!5m2!1sen!2sus"></iframe>

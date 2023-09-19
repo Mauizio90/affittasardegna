@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
-import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Title, Meta } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor } from '@angular/common';
@@ -25,6 +25,7 @@ export class SinglePageAccommodationComponent {
   faLocationDot = faLocationDot;
   faEuroSign = faEuroSign;
   faCheck = faCheck;
+  faUser = faUser;
 
   constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta) {}
 

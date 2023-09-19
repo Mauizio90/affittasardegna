@@ -39,9 +39,9 @@ export class HeaderComponent implements OnInit {
     this.translate.use(language)
   
     if (language === 'it') {
-      this.languageIcon = 'assets/images/flags/it.png';
+      this.languageIcon = 'assets/images/flags/it.jpg';
     } else if (language === 'en') {
-      this.languageIcon = 'assets/images/flags/en.png';
+      this.languageIcon = 'assets/images/flags/en.jpg';
     }
   
     if(reload) {
