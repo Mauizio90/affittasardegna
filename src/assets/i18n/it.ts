@@ -47,7 +47,7 @@ export const it = {
     "miniHeaderSuggests2": "Per vacanze in Sardegna",
     "filtroDotazioni": "Filtra per Dotazioni",
     "filtroLocalità":"Filtra per Località/Città",
-    "filtroOspiti": "Ospiti Massimi",
+    "filtroOspiti": "Ospiti",
     "filtroNome": "Cerca per Nome",
     "casedisponibili": "{{numero}} case vacanza disponibili!",
     "listaDotazioni": "{{it}}",

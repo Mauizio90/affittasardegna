@@ -142,12 +142,12 @@ export class AccommodationsComponent {
                  selectedAmenities.every((amenity) => 
                    accommodation.amenities?.some(a => a.name.it === amenity.name)
                  ) &&
-                 (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
+                 (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
         });
       } else if (this.selectableCities.some((city) => city.selected)) {
         this.allAccommodations = accommodations.filter((accommodation) => {
           return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) &&
-                 (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
+                 (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
         });
       } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
         this.allAccommodations = accommodations.filter((accommodation) => {
@@ -155,16 +155,17 @@ export class AccommodationsComponent {
           return selectedAmenities.every((amenity) => 
             accommodation.amenities?.some(a => a.name.it === amenity.name)
           ) &&
-          (!this.guests || parseInt(accommodation.guests || '0') === this.guests);
+          (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
         });
       } else {
         this.allAccommodations = accommodations.filter((accommodation) =>
-          (!this.guests || parseInt(accommodation.guests || '0') === this.guests)
+          (!this.guests || parseInt(accommodation.guests || '0') >= this.guests)
         );
       }
       console.log(this.allAccommodations);
     });
   }
+  
   
 
   public onNameChange(event: any): void {

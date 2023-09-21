@@ -47,7 +47,7 @@ export const en ={
     "miniHeaderSuggests2": "For vacations in Sardinia",
     "filtroDotazioni": "Filter by Amenities",
     "filtroLocalità": "Filter by Location/City",
-    "filtroOspiti": "Maximum Guests",
+    "filtroOspiti": "Guests",
     "filtroNome": "Search by Name",
     "casedisponibili": "{{numero}} accommodations available!",
     "listaDotazioni": "{{en}}",
