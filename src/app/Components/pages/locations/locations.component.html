@@ -6,27 +6,28 @@
 </div>
 
 <div class="locations-container">
-    <div class="container">
+    <div class="container pappa">
         <div class="location-list-container">
             <div class="location-list-title">
                 <h3><b>{{"localita" | translate}}</b></h3>    
             </div>
             <div class="location-list">
                 <ul class="location-list-item" *ngFor="let city of selectableCities">
-                    <li><a href="">{{city.name}}</a></li>
+                    <li><a [routerLink]="['.']" [fragment]="city.id.toString()">{{city.name}}</a></li>
                     <a [routerLink]="['/ville-appartamenti-vacanze-sardegna']" class="numero-alloggi" style="font-size: 10px;">{{city.accommodationsCount}} {{"alloggi" | translate}}</a>
                 </ul>
            </div>
         </div>
     </div>
     <div class="localites-big">
-        <div class="localities-description-container"  *ngFor="let city of selectableCities">
+        <div class="localities-description-container"  *ngFor="let city of selectableCities" #h3ElementRef>
             <div class="localities-description-image">
                 <img src={{city.image}} alt="foto spiaggia {{city.name}}">
             </div>
             <div class="location-description-title">
-                <h3 id={{city.id}}>{{city.name}}</h3>
-                <p [innerHTML]="'descrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng}"></p>
+                <h3 class="location-title">{{city.name}}</h3>
+                <p class="location"> {{city.provincia}}</p>
+                <p class="location" [innerHTML]="'descrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng}"></p>
             </div>
             <div class="location-description-footer-bg">
                 <div class="location-description-footer">

@@ -84,16 +84,26 @@ a{
     margin-top: 20px;
 }
 
-@media (max-width: 1400px) {
+.location{
+    color: var(--primary);
+}
+
+.location-title{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+@media (max-width: 750px) {
 	.localites-big {
 	  max-width: 100%;
 	}
 
     .locations-container{
         display: block;
+        justify-content: center;
     }
 
     .location-list-container{
-        min-width: 300px;
+        min-width: 500px;
     }
 }
