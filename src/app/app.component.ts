@@ -7,13 +7,15 @@ declare const gtag: Function;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'affittasardegna';
   constructor(public router: Router) {
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', 'G-7XJBP872BN', { 'page_path': event.urlAfterRedirects });
+      if (event instanceof NavigationEnd && typeof window !== 'undefined') {
+        (<any>window).gtag('config', 'G-7XJBP872BN', { 'page_path': event.urlAfterRedirects });
       }      
     })
   }
 }
+
