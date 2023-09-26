@@ -27,7 +27,7 @@
             <div class="location-description-title">
                 <h3 class="location-title">{{city.name}}</h3>
                 <p class="location"> {{city.provincia}}</p>
-                <p class="location" [innerHTML]="'descrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng}"></p>
+                <p class="location" [innerHTML]="'locationDescrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng, esp:city.descriptionEng}"></p>
             </div>
             <div class="location-description-footer-bg">
                 <div class="location-description-footer">

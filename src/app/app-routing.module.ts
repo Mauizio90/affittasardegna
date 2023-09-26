@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'en', loadChildren: () => import('./Components/pages/home/home.module').then(m => m.HomeModule)},
   {path: 'en/villas-accommodations-holiday-sardinia', loadChildren: () => import('./Components/pages/accommodations/accommodations.module').then(m => m.AccommodationsModule)},
   {path: 'en/locations-beaches-sardinia', loadChildren: () => import('./Components/pages/locations/locations.module').then(m => m.LocationsModule)},
-  {path: 'en/lugares-playas-cerdeña', loadChildren: () => import('./Components/pages/properties-suggestion/properties-suggestion.module').then(m => m.PropertiesSuggestionModule)},
+  {path: 'en/property-suggestion', loadChildren: () => import('./Components/pages/properties-suggestion/properties-suggestion.module').then(m => m.PropertiesSuggestionModule)},
   {path: 'en/about-us', loadChildren: () => import('./Components/pages/about-us/about-us.module').then(m => m.AboutUsModule)},
   {path: 'en/contact-us', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
   {path: 'en/terms-and-conditions', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},

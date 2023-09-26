@@ -70,7 +70,7 @@ export const it = {
     "localitàHeader": "località della sardegna",
     "localitàHeaderDescription": "Informazioni turistiche sulle località della Sardegna",
     "vediAlloggi": "Vedi gli alloggi",
-    "descrizione": "{{ita}}",
+    "locationDescrizione": "{{ita}}",
     "privacyHeader": "Informativa sulla Privacy",
     "privacyHeaderDescrizione": "Quali informazioni raccogliamo?",
     "privacyH6-1": "Dati Raccolti",

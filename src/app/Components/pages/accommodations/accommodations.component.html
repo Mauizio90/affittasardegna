@@ -18,7 +18,7 @@
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
                 <label>
                   <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.name, null)">
-                  {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn } }}
+                  {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEn } }}
                 </label>
               </div>
             </div>
