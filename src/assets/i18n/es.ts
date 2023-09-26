@@ -23,7 +23,7 @@ export const es ={
     "home-scegli": "Elige",
     "home-prenota": "Reserva",
     "ospiti": "Huéspedes",
-    "primoPiano": "EN PRIMERA PLANA",
+    "primoPiano": "DESTACADAS",
     "LOCALITÀ TURISTICHE": "DESTINOS TURÍSTICOS",
     "In primo piano": "En primera plana",
     "bestlocalities": "Las mejores localidades turísticas de Cerdeña. Playas de ensueño y aguas cristalinas.",
