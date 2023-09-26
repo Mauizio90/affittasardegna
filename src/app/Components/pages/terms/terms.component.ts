@@ -13,9 +13,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class TermsComponent {
 
-  constructor(private titleService: Title, private metaTagService: Meta) {
-    this.titleService.setTitle("AffittaSardegna - Termini e condizioni");
-    this.metaTagService.updateTag({ name: 'description', content: 'Termini e condizioni di prenotazione' });
+  constructor(private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+    this.translate.get('termsMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('termsMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
   }
 
 }

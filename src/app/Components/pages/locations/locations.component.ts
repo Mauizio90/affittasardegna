@@ -1,10 +1,10 @@
-import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { Title, Meta } from '@angular/platform-browser';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule, NgFor } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -55,9 +55,14 @@ export class LocationsComponent {
 
 
 
-  constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private router: Router, private renderer: Renderer2) {
-    this.titleService.setTitle("AffittaSardegna - Le migliori località turistiche della Sardegna");
-    this.metaTagService.updateTag({ name: 'description', content: 'Tutte le migliori località turistiche della Sardegna, spiagge in Sardegna, spiaggia di Stintino, spiaggia di Cala Gonone, spiaggia Costa Smeralda' });
+  constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private router: Router, private renderer: Renderer2, private translate: TranslateService) {
+    this.translate.get('locationsMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('locationsMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
+    
     this.accommodationService.getAccommodations().subscribe((data) => {
       this.allAccommodations = data;
       this.updateAccommodationsCount();      

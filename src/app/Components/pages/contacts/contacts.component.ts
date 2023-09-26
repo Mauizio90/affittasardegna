@@ -6,7 +6,7 @@ import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsu
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -20,9 +20,13 @@ export class ContactsComponent {
   contactForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta) {
-    this.titleService.setTitle("AffittaSardegna - Contattaci per ricevere informazioni, Tel. +39 3494787272, E-mail: info@affittasardegna.it");
-    this.metaTagService.updateTag({ name: 'description', content: 'Contattaci e richiedi informazioni sulla tua vacanza, chiamaci al Tel. +39 3494787272 oppure scrivici all\'indirizzo info@affittasardegna.it' });
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+    this.translate.get('contactsMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('contactsMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
     
     this.contactForm = this.formBuilder.group({
       nome: ['', Validators.required],

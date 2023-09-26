@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -13,9 +13,13 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutUsComponent {
 
-  constructor(private titleService: Title, private metaTagService: Meta) {
-    this.titleService.setTitle("AffittaSardegna - Leader negli affitti di Case Vacanza, Appartamenti e Ville");
-    this.metaTagService.updateTag({ name: 'description', content: 'AffittaSardegna è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive.' });
+  constructor(private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+    this.translate.get('aboutUsMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('aboutUsMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
   }
 
 }

@@ -6,7 +6,7 @@ import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsu
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -21,9 +21,14 @@ export class PropertiesSuggestionComponent {
   suggestForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta) {
-    this.titleService.setTitle("AffittaSardegna - Proponi il tuo immobile in Sardegna e guadagna con gli affitti");
-    this.metaTagService.updateTag({ name: 'description', content: 'Ricava dagli affitti del tuo immobile in Sardegna, commissione bassa, massimo rendimento' });
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+    this.translate.get('propertySuggestionMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('propertySuggestionMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
+    
     this.suggestForm = this.formBuilder.group({
       city: ['', Validators.required],
       address: ['', Validators.required],

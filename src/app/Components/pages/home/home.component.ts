@@ -5,7 +5,7 @@ import { AccommodationService } from '../../services/accommodation.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-home',
@@ -18,12 +18,15 @@ export class HomeComponent {
 form!: FormGroup;
 public allAccommodations?: Accommodation[];
 
-  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta) { }
+  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) { }
 
   ngOnInit() {
-    this.titleService.setTitle("AffittaSardegna - Ville, case vacanza ed appartamenti in Sardegna vicino alla spiaggia - Tel. +39 3494787272");
-    this.metaTagService.updateTag({ name: 'description', content: 'Ville, Case Vacanza ed Appartamenti in Sardegna vicino la spiaggia nelle più belle località turistiche,Budoni, Stintino, Cala Gonone, Costa Smeralda' });
-    this.metaTagService.addTag({ property: 'og:image', content: './assets/images/logo.png' });
+    this.translate.get('homeMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('homeMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
     this.form = this.formBuilder.group({
       checkIn: [this.getFormattedDate(new Date()),Validators.required],
       checkOut: [this.getFormattedDate(this.getFutureDate(7)),Validators.required],

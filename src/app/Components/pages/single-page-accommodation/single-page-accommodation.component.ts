@@ -6,7 +6,7 @@ import { faBathtub, faBed, faWifi, faLocationDot, faEuroSign, faCheck, faUser } 
 import { Title, Meta } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -27,7 +27,7 @@ export class SinglePageAccommodationComponent {
   faCheck = faCheck;
   faUser = faUser;
 
-  constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta) {}
+  constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -37,8 +37,19 @@ export class SinglePageAccommodationComponent {
           .getAccommodationByMetaUrl('/' + accommodationUrl)
           .subscribe(accommodation => {
             this.accommodation = accommodation;
-            this.titleService.setTitle("AffittaSardegna - " + this.accommodation?.name_it?.toString() + " a " + this.accommodation?.city?.toString());
-            this.metaTagService.updateTag({ name: 'description', content: this.accommodation?.name_it?.toString() + ", splendido alloggio per " + this.accommodation?.guests + " persone a " + this.accommodation?.city?.toString() + " in Sardegna" });
+            this.translate.get('singlePageMetaTitle').subscribe((str: string) => {
+              this.titleService.setTitle("AffittaSardegna - " + this.accommodation?.name_it?.toString() + str + this.accommodation?.city?.toString());
+            });
+            this.translate.get(['singlePageMetaDescription1', 'singlePageMetaDescription2', 'singlePageMetaDescription3']).subscribe((translations: { [key: string]: string }) => {
+              const str1 = translations['singlePageMetaDescription1'];
+              const str2 = translations['singlePageMetaDescription2'];
+              const str3 = translations['singlePageMetaDescription3'];
+            
+              this.metaTagService.updateTag({ name: 'description', content: this.accommodation?.name_it?.toString() + str1 + this.accommodation?.guests + str2 + this.accommodation?.city?.toString() + str3 });
+              const tag = this.metaTagService.getTag('name = "description"');
+              console.log(tag);
+            });
+            
             
             if (accommodation.images && accommodation.images.length > 0) {
               const firstImage = accommodation.images[0];

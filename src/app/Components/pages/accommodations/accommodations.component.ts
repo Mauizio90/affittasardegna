@@ -4,7 +4,7 @@ import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { Title, Meta } from '@angular/platform-browser';
 import { NgFor } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -99,11 +99,15 @@ export class AccommodationsComponent {
   public houseName: string = '';
 
 
-  constructor(private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta) { }
+  constructor(private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
 
-  ngOnInit(): void {
-    this.titleService.setTitle("AffittaSardegna - Ville, Case Vacanza ed Appartamenti in affitto in Sardegna vicino la spiaggia");
-    this.metaTagService.updateTag({ name: 'description', content: 'Affittiamo Ville, Case Vacanza ed Appartamenti vicino le più belle spiagge della Sardegna, a Stintino, Cala Gonone e Costa Smeralda' });
+    this.translate.get('accommodationsMetaTitle').subscribe((str: string) => {
+      this.titleService.setTitle(str);
+    });
+    this.translate.get('accommodationsMetaDescription').subscribe((str: string) => {
+      this.metaTagService.updateTag({ name: 'description', content: str });
+    });
+
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();
