@@ -26,6 +26,7 @@ export class Accommodation {
     description?: {
       it: string;
       en: string;
+      es: string;
     }
     images?: string[];
     price?: number;
@@ -37,6 +38,7 @@ export interface Amenity {
     name: {
       it: string;
       en: string;
+      es: string
     };
   }
 

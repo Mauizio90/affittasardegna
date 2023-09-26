@@ -35,7 +35,7 @@ export const en ={
     "pricePerNight": "Starting from {{price}}€ per night",
     "pricePerNight2": "From {{price}}€ per night",
     "maxGuests": "Max {{guests}} guests",
-    "descrizioneCasa": "{{description}}",
+    "descrizioneCasa": "{{descriptionEn}}",
     "popupRichiesta": "Request successfully made.",
     "popupProvvederemo": " We will contact you as soon as possible.",
     "Leader":"In Sardinia, a leader in vacation rentals.",

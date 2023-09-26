@@ -35,7 +35,7 @@ export const it = {
     "pricePerNight": "Da {{price}}€ notte",
     "pricePerNight2": "A partire da {{price}}€ a notte",
     "maxGuests": "fino a {{guests}} ospiti",
-    "descrizioneCasa": "{{descrizione}}",
+    "descrizioneCasa": "{{descriptionIt}}",
     "popupRichiesta": "Richiesta effettuata con successo.",
     "popupProvvederemo": " Provvederemo a contattarti il prima possibile",
     "Leader":"Leader negli affitti in Sardegna",

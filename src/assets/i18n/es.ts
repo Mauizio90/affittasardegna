@@ -35,7 +35,7 @@ export const es ={
     "pricePerNight": "A partir de {{price}}€ por noche",
     "pricePerNight2": "Desde {{price}}€ por noche",
     "maxGuests": "Máximo {{guests}} huéspedes",
-    "descrizioneCasa": "{{description}}",
+    "descrizioneCasa": "{{descriptionEs}}",
     "popupRichiesta": "Solicitud realizada con éxito.",
     "popupProvvederemo": "Nos pondremos en contacto contigo lo antes posible.",
     "Leader": "En Cerdeña, líder en alquileres vacacionales.",
