@@ -87,7 +87,9 @@
   margin-top: 10px;
 }
 
-
+#nameInput {
+  width: 160px;
+}
 
 
 @media only screen and (max-width: 600px) {
