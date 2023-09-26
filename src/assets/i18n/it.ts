@@ -14,7 +14,7 @@ export const it = {
     "chiSiamo": "Chi Siamo",
     "contatti": "Contatti",
     "termini": "Termini e condizioni",
-    "lingua": "Language",
+    "lingua": "Lingua",
     "homeheader-trova": "Trova",    
     "homeheader-alloggio": "L' ALLOGGIO PERFETTO",
     "homeheader-vacanza": "per la tua Vacanza",

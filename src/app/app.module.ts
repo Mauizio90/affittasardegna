@@ -25,12 +25,16 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 import { en } from 'src/assets/i18n/en';
 import { it } from 'src/assets/i18n/it';
+import { es } from 'src/assets/i18n/es';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
     let translationFile = it;
     if (typeof window !== 'undefined' && window.location.pathname.includes('/en')) {
       translationFile = en;
+    }
+    else if (typeof window !== 'undefined' && window.location.pathname.includes('/es')) {
+      translationFile = es;
     }
     
     return of(translationFile);

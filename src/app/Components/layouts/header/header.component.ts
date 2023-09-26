@@ -27,6 +27,9 @@ export class HeaderComponent implements OnInit {
     if (currentUrl === '/en' || currentUrl?.startsWith('/en/')) {
       this.changeLanguage('en', false);
     }
+    else if (currentUrl === '/es' || currentUrl?.startsWith('/es/')) {
+      this.changeLanguage('es', false);
+    }
   }
 
   ngOnInit() {
@@ -42,6 +45,8 @@ export class HeaderComponent implements OnInit {
       this.languageIcon = 'assets/images/flags/it.jpg';
     } else if (language === 'en') {
       this.languageIcon = 'assets/images/flags/en.jpg';
+    } else if (language === 'es') {
+      this.languageIcon = 'assets/images/flags/es.jpg';
     }
   
     if(reload) {
