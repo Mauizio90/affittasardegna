@@ -40,12 +40,12 @@
         </div>
         <h3 class="title">{{"descrizioneSP" | translate}}</h3>
         <p class="description" style="color: var(--primary);">
-            {{'descrizioneCasa' | translate:{descriptionIt: accommodation?.description?.it, descriptionEn: accommodation?.description?.en, descriptionEs: accommodation?.description?.es} }}
+            {{'descrizioneCasa' | translate:{descriptionIt: accommodation?.description?.it, descriptionEn: accommodation?.description?.en, descriptionEs: accommodation?.description?.es, descriptionDe: accommodation?.description?.de} }}
         </p>
         <h3 class="title">{{"ammenities" | translate}}</h3>
         <div class="flex">
             <div class="box" *ngFor="let amenity of accommodation?.amenities">
-                <fa-icon class="icon" [icon]="faCheck"></fa-icon> <span style="color: var(--primary);">{{"ammenitiesList" | translate:{ita:amenity?.name?.it, eng:amenity?.name?.en, esp:amenity?.name?.en} }}</span>
+                <fa-icon class="icon" [icon]="faCheck"></fa-icon> <span style="color: var(--primary);">{{"ammenitiesList" | translate:{ita:amenity?.name?.it, eng:amenity?.name?.en, esp:amenity?.name?.en, de:amenity?.name?.en} }}</span>
             </div>
         </div>
         <iframe class="map-iframe container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.682682014014!2d8.407902115712707!3d40.836034979321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x658915030789bc5e!2sAffittaSardegna%20Soc.%20Coop!5e0!3m2!1sen!2sus!4v1635361234567!5m2!1sen!2sus"></iframe>
