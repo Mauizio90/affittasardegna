@@ -26,6 +26,7 @@ import { of } from 'rxjs';
 import { en } from 'src/assets/i18n/en';
 import { it } from 'src/assets/i18n/it';
 import { es } from 'src/assets/i18n/es';
+import { de } from 'src/assets/i18n/de';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
@@ -35,6 +36,9 @@ export class CustomTranslateLoader implements TranslateLoader {
     }
     else if (typeof window !== 'undefined' && window.location.pathname.includes('/es')) {
       translationFile = es;
+    }
+    else if (typeof window !== 'undefined' && window.location.pathname.includes('/de')) {
+      translationFile = de;
     }
     
     return of(translationFile);

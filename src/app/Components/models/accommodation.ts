@@ -27,6 +27,7 @@ export class Accommodation {
       it: string;
       en: string;
       es: string;
+      de: string;
     }
     images?: string[];
     price?: number;

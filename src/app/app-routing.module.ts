@@ -27,9 +27,18 @@ const routes: Routes = [
   {path: 'es/contacto', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
   {path: 'es/términos-y-condiciones', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
   {path: 'es/privacidad', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
+  {path: 'de', loadChildren: () => import('./Components/pages/home/home.module').then(m => m.HomeModule)},
+  {path: 'de/ferienhäuser-appartements-sardinien', loadChildren: () => import('./Components/pages/accommodations/accommodations.module').then(m => m.AccommodationsModule)},
+  {path: 'de/orte-strände-sardinien', loadChildren: () => import('./Components/pages/locations/locations.module').then(m => m.LocationsModule)},
+  {path: 'de/immobilie-anbieten', loadChildren: () => import('./Components/pages/properties-suggestion/properties-suggestion.module').then(m => m.PropertiesSuggestionModule)},
+  {path: 'de/über-uns', loadChildren: () => import('./Components/pages/about-us/about-us.module').then(m => m.AboutUsModule)},
+  {path: 'de/kontakt', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
+  {path: 'de/geschäftsbedingungen', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
+  {path: 'de/datenschutz', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
   {path: ':accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
   {path: 'en/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
   {path: 'es/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
+  {path: 'de/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
 ];
 
 @NgModule({
