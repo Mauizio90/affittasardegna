@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { NgbCollapse, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu } from '@ng-bootstrap/ng-bootstrap';
 import { LocalStorageService } from '../../services/local-storage-service.service';
 import { LocationService } from '../../services/location-service.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
 
 @Component({
     selector: 'app-header',
@@ -19,21 +18,36 @@ export class HeaderComponent implements OnInit {
   isCollapsed = true;
   languageIcon?: string;
 
-  constructor(private localStorageService: LocalStorageService , private locationService: LocationService, private translate: TranslateService, private router: Router) {}
+  constructor(private localStorageService: LocalStorageService , private locationService: LocationService, private translate: TranslateService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.translate.setDefaultLang('it');
     this.translate.use('it');
-    const currentUrl = this.router?.url;
-    if (currentUrl === '/en' || currentUrl?.startsWith('/en/')) {
-      this.changeLanguage('en', false);
-    } else if (currentUrl === '/es' || currentUrl?.startsWith('/es/')) {
-      this.changeLanguage('es', false);
-    }
 
-    const currentLanguage = this.localStorageService.getItem('currentLanguage');
-    this.changeLanguage(currentLanguage || 'it', false);
+    this.setLanguageIcon();
+
+    this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+            this.setLanguageIcon();
+        }
+    });
+}
+
+private setLanguageIcon() {
+  const currentUrl = this.router.url;
+
+  // Gestione per l'URL principale senza identificatore di lingua
+  if (currentUrl === '/' || currentUrl === '/it') {
+      this.changeLanguage('it', false);
+  } else if (currentUrl === '/en' || currentUrl.startsWith('/en/')) {
+      this.changeLanguage('en', false);
+  } else if (currentUrl === '/es' || currentUrl.startsWith('/es/')) {
+      this.changeLanguage('es', false);
+  } else {
+      const currentLanguage = this.localStorageService.getItem('currentLanguage');
+      this.changeLanguage(currentLanguage || 'it', false);
   }
+}
 
   changeLanguage(language: string, reload: boolean) {
     this.localStorageService.setItem('currentLanguage', language);
