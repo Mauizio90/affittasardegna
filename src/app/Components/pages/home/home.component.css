@@ -202,6 +202,17 @@
     text-align: center;
 }
 
+.custom-input {
+  max-width: 120px; /* Adjust the width as per your requirement */
+}
+
+.mat-datepicker-toggle{
+  color: var(--primary); /* Replace 'red' with the desired color */
+}
+
+
+
+
 @media (max-width: 600px) {
   .booking-container form {
     grid-template-columns: 1fr; /* Cambio il numero di colonne a 1 */
@@ -237,10 +248,20 @@
   }
 
   .localities-big-container {
-    max-width: 400px;
+    text-align: center;
   }
 
   .localities-background {
-    max-width: 400px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-input {
+    max-width: 200px; /* Adjust the width as per your requirement */
+    text-align: center;
   }
 }

@@ -29,36 +29,39 @@
                 <span>{{'home-prenota' | translate}}</span>
             </div>
         </div>
-    <form form [formGroup]="form" (ngSubmit)="onFormSubmit()">
-        <div class="form-group">
-            <span><i class="ri-calendar-check-line"></i></span>
-            <div class="input-content">
+        <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+            <div class="form-group">
+              <div class="input-content">
                 <div class="input-group">
-                    <span class="label" style="font-size: 20px;">Check-in</span>
-                    <input type="date" formControlName="checkIn" id="checkIn-input">
+                  <span class="label" style="font-size: 20px;">Check-in</span>
+                  <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
+                  <input matInput [matDatepicker]="checkInPicker" formControlName="checkIn" id="checkIn-input" class="custom-input">
+                  <mat-datepicker #checkInPicker></mat-datepicker>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="form-group">
-            <span><i class="ri-calendar-close-line"></i></span>
-            <div class="input-content">
+            <div class="form-group">
+              <div class="input-content">
                 <div class="input-group">
-                    <span class="label" style="font-size: 20px;">Check-out</span>
-                    <input type="date" formControlName="checkOut" id="checkOut-input">
+                  <span class="label" style="font-size: 20px;">Check-out</span>
+                  <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
+                  <input matInput [matDatepicker]="checkOutPicker" formControlName="checkOut" id="checkOut-input" class="custom-input">
+                  <mat-datepicker #checkOutPicker></mat-datepicker>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="form-group">
-            <span><i class="ri-user-5-line"></i></span>
-            <div class="input-content">
+            <div class="form-group">
+              <div class="input-content">
                 <div class="input-group">
-                    <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
-                    <input type="number" min="1" formControlName="guests" id="guests-input">
+                  <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
+                  <span><i class="ri-user-5-line"></i></span>
+                  <input type="number" min="1" formControlName="guests" id="guests-input" class="custom-input">
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="btn" (click)="onFormSubmit()"><i class="ri-search-line"></i></div>
-    </form>
+            <div class="btn" (click)="onFormSubmit()"><i class="ri-search-line"></i></div>
+          </form>
+          
 </div>
 <!-- searchbar end -->
 

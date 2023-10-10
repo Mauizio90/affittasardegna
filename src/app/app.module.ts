@@ -27,6 +27,9 @@ import { en } from 'src/assets/i18n/en';
 import { it } from 'src/assets/i18n/it';
 import { es } from 'src/assets/i18n/es';
 import { de } from 'src/assets/i18n/de';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
@@ -76,7 +79,10 @@ export class CustomTranslateLoader implements TranslateLoader {
                 useClass: CustomTranslateLoader,
                 deps: [HttpClient]
             }
-        })
+        }),
+        MatDatepickerModule,
+        MatInputModule,
+        MatNativeDateModule
     ],
     providers: [provideClientHydration()],
     bootstrap: [AppComponent]

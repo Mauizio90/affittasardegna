@@ -6,13 +6,16 @@ import { Title, Meta } from '@angular/platform-browser';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
     standalone: true,
-    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule]
+    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule, MatDatepickerModule, MatInputModule, MatNativeDateModule]
 })
 export class HomeComponent {
 form!: FormGroup;
