@@ -9,6 +9,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
+import { DatePipe } from '@angular/common';
+
 
 @Component({
     selector: 'app-home',
@@ -21,7 +23,7 @@ export class HomeComponent {
 form!: FormGroup;
 public allAccommodations?: Accommodation[];
 
-  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) { }
+  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.translate.get('homeMetaTitle').subscribe((str: string) => {
@@ -49,12 +51,16 @@ public allAccommodations?: Accommodation[];
     const checkInDate = this.form.get('checkIn')?.value;
     const checkOutDate = this.form.get('checkOut')?.value;
     const guests = this.form.get('guests')?.value;
-    const url = `https://affittasardegna.kross.travel/book/step1?adults=${guests}&children=0&rooms=1&guests=${guests}&n_guests=${guests}&guests_rooms=${guests},0;&kross_lang=it&from=${checkInDate}&to=${checkOutDate}`;
-    console.log(checkInDate, checkOutDate, guests);
-
+  
+    const formattedCheckInDate = this.datePipe.transform(checkInDate, 'yyyy-MM-dd');
+    const formattedCheckOutDate = this.datePipe.transform(checkOutDate, 'yyyy-MM-dd');
+  
+    const url = `https://affittasardegna.kross.travel/book/step1?adults=${guests}&children=0&rooms=1&guests=${guests}&n_guests=${guests}&guests_rooms=${guests},0;&kross_lang=it&from=${formattedCheckInDate}&to=${formattedCheckOutDate}`;
+    console.log(formattedCheckInDate, formattedCheckOutDate, guests);
+  
     window.location.href = url;
-    
   }
+  
 
   getFormattedDate(date: Date): string {
     const year = date.getFullYear();
@@ -62,6 +68,7 @@ public allAccommodations?: Accommodation[];
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   }
+  
 
   getFutureDate(days: number): Date {
     const futureDate = new Date();
