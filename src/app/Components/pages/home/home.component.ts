@@ -6,7 +6,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { MatNativeDateModule } from '@angular/material/core';
+import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { DatePipe } from '@angular/common';
@@ -23,7 +23,9 @@ export class HomeComponent {
 form!: FormGroup;
 public allAccommodations?: Accommodation[];
 
-  constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe) { }
+constructor(private formBuilder: FormBuilder, private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>) {
+  this.dateAdapter.setLocale('it');
+}
 
   ngOnInit() {
     this.translate.get('homeMetaTitle').subscribe((str: string) => {
