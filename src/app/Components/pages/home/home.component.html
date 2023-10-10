@@ -34,7 +34,8 @@
             <span><i class="ri-calendar-check-line"></i></span>
             <div class="input-content">
                 <div class="input-group">
-                    <label><input type="date" formControlName="checkIn" id="checkIn-input">Check-in</label>
+                    <span class="label" style="font-size: 20px;">Check-in</span>
+                    <input type="date" formControlName="checkIn" id="checkIn-input">
                 </div>
             </div>
         </div>
@@ -42,7 +43,8 @@
             <span><i class="ri-calendar-close-line"></i></span>
             <div class="input-content">
                 <div class="input-group">
-                    <label><input type="date" formControlName="checkOut" id="checkOut-input">Check-out</label>
+                    <span class="label" style="font-size: 20px;">Check-out</span>
+                    <input type="date" formControlName="checkOut" id="checkOut-input">
                 </div>
             </div>
         </div>
@@ -50,7 +52,8 @@
             <span><i class="ri-user-5-line"></i></span>
             <div class="input-content">
                 <div class="input-group">
-                    <label><input type="number" min="1" formControlName="guests" id="guests-input">{{'ospiti' | translate}}</label>
+                    <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
+                    <input type="number" min="1" formControlName="guests" id="guests-input">
                 </div>
             </div>
         </div>
