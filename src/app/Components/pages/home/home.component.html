@@ -5,7 +5,8 @@
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.6px);">
-        <h1>{{"homeheader-trova" | translate}} <br>{{"homeheader-alloggio" | translate}}<br>{{"homeheader-vacanza" | translate}}</h1>
+        <h1>{{"homeheader-trova" | translate}} <br>{{"homeheader-alloggio" | translate}}<br>{{"homeheader-vacanza" |
+            translate}}</h1>
         <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="btn">{{'headerButton' | translate}}</a>
     </div>
 </div>
@@ -13,55 +14,60 @@
 
 <!-- searchbar -->
 <div class="section-container booking-container">
-        <div class="booking-nav" style="display: flex;
+    <div class="booking-nav" style="display: flex;
         flex-direction: row;
         justify-content: space-around; ">
-            <div class="nav-item" style="margin-top: -40px;">
-                <i class="ri-phone-find-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-                <span>{{'home-cerca' | translate}}</span>
-            </div>
-            <div class="nav-item" style="margin-top: -40px;">
-                <i class="ri-heart-3-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-                <span>{{'home-scegli' | translate}}</span>
-            </div>
-            <div class="nav-item" style="margin-top: -40px;">
-                <i class="ri-luggage-cart-line" style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-                <span>{{'home-prenota' | translate}}</span>
+        <div class="nav-item" style="margin-top: -40px;">
+            <i class="ri-phone-find-line"
+                style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
+            <span>{{'home-cerca' | translate}}</span>
+        </div>
+        <div class="nav-item" style="margin-top: -40px;">
+            <i class="ri-heart-3-line"
+                style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
+            <span>{{'home-scegli' | translate}}</span>
+        </div>
+        <div class="nav-item" style="margin-top: -40px;">
+            <i class="ri-luggage-cart-line"
+                style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
+            <span>{{'home-prenota' | translate}}</span>
+        </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+        <div class="form-group">
+            <div class="input-content">
+                <div class="input-group">
+                    <span class="label" style="font-size: 20px;">Check-in</span>
+                    <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
+                    <input matInput [matDatepicker]="checkInPicker" formControlName="checkIn" id="checkIn-input"
+                        class="custom-input">
+                    <mat-datepicker #checkInPicker></mat-datepicker>
+                </div>
             </div>
         </div>
-        <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
-            <div class="form-group">
-              <div class="input-content">
+        <div class="form-group">
+            <div class="input-content">
                 <div class="input-group">
-                  <span class="label" style="font-size: 20px;">Check-in</span>
-                  <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
-                  <input matInput [matDatepicker]="checkInPicker" formControlName="checkIn" id="checkIn-input" class="custom-input">
-                  <mat-datepicker #checkInPicker></mat-datepicker>
+                    <span class="label" style="font-size: 20px;">Check-out</span>
+                    <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
+                    <input matInput [matDatepicker]="checkOutPicker" formControlName="checkOut" id="checkOut-input"
+                        class="custom-input">
+                    <mat-datepicker #checkOutPicker></mat-datepicker>
                 </div>
-              </div>
             </div>
-            <div class="form-group">
-              <div class="input-content">
+        </div>
+        <div class="form-group">
+            <div class="input-content">
                 <div class="input-group">
-                  <span class="label" style="font-size: 20px;">Check-out</span>
-                  <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
-                  <input matInput [matDatepicker]="checkOutPicker" formControlName="checkOut" id="checkOut-input" class="custom-input">
-                  <mat-datepicker #checkOutPicker></mat-datepicker>
+                    <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
+                    <span><i class="ri-user-5-line"></i></span>
+                    <input type="number" min="1" formControlName="guests" id="guests-input" class="custom-input">
                 </div>
-              </div>
             </div>
-            <div class="form-group">
-              <div class="input-content">
-                <div class="input-group">
-                  <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
-                  <span><i class="ri-user-5-line"></i></span>
-                  <input type="number" min="1" formControlName="guests" id="guests-input" class="custom-input">
-                </div>
-              </div>
-            </div>
-            <div class="btn" (click)="onFormSubmit()"><i class="ri-search-line"></i></div>
-          </form>
-          
+        </div>
+        <div class="btn" (click)="onFormSubmit()"><i class="ri-search-line"></i></div>
+    </form>
+
 </div>
 <!-- searchbar end -->
 
@@ -104,7 +110,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">BUDONI</h3>
                             <p class="localities-overlay-description">{{"descrizioneLocalità1" | translate}}</p>
-                            <a href="/localita-spiagge-sardegna#localita22" class="localities-overlay-link">{{"scopriDiPiù" | translate}}</a>
+                            <a href="/localita-spiagge-sardegna#localita22"
+                                class="localities-overlay-link">{{"scopriDiPiù" | translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +120,8 @@
                     <div class="localities-overlay">
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">BUDONI</h3>
-                            <p class="localities-overlay-description">Piccolo comune dell'alta Baronia, al confine tra le province di Olbia-Tempio e Nuoro, dotato di un a...</p>
+                            <p class="localities-overlay-description">Piccolo comune dell'alta Baronia, al confine tra
+                                le province di Olbia-Tempio e Nuoro, dotato di un a...</p>
                             <a href="/localita-spiagge-sardegna#localita22" class="localities-overlay-link">CONTINUA</a>
                         </div>
                     </div>
@@ -123,7 +131,8 @@
                     <div class="localities-overlay">
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">BUDONI</h3>
-                            <p class="localities-overlay-description">Piccolo comune dell'alta Baronia, al confine tra le province di Olbia-Tempio e Nuoro, dotato di un a...</p>
+                            <p class="localities-overlay-description">Piccolo comune dell'alta Baronia, al confine tra
+                                le province di Olbia-Tempio e Nuoro, dotato di un a...</p>
                             <a href="/localita-spiagge-sardegna#localita22" class="localities-overlay-link">CONTINUA</a>
                         </div>
                     </div>
@@ -133,7 +142,8 @@
                     <div class="localities-overlay">
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">BUDONI</h3>
-                            <p class="localities-overlay-description">Piccolo comune dell'alta Baronia, al confine tra le province di Olbia-Tempio e Nuoro, dotato di un a...</p>
+                            <p class="localities-overlay-description">Piccolo comune dell'alta Baronia, al confine tra
+                                le province di Olbia-Tempio e Nuoro, dotato di un a...</p>
                             <a href="/localita-spiagge-sardegna#localita22" class="localities-overlay-link">CONTINUA</a>
                         </div>
                     </div>

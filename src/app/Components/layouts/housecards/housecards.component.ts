@@ -5,13 +5,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor, SlicePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
     selector: 'app-housecards',
     templateUrl: './housecards.component.html',
     styleUrls: ['./housecards.component.css'],
     standalone: true,
-    imports: [NgFor, FontAwesomeModule, SlicePipe, CommonModule, TranslateModule]
+    imports: [NgFor, FontAwesomeModule, SlicePipe, CommonModule, TranslateModule, CarouselModule],
+    providers: [
+        { provide: CarouselConfig, useValue: { interval: 0, noPause: true, showIndicators: true, animation: true } }
+      ]
 })
 export class HousecardsComponent {
   faBathtub = faBathtub;
@@ -31,10 +35,10 @@ export class HousecardsComponent {
   faTv = faTv;
   faWarehouse = faWarehouse;
   @Input() public accommodations?: Accommodation[];
-  public cardsToShow: number = 40;
+  public cardsToShow: number = 25;
 
   public loadMoreCards(): void {
-    this.cardsToShow += 40;
+    this.cardsToShow += 25;
   }
 
 
