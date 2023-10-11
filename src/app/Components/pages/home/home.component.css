@@ -9,13 +9,22 @@
 
 @keyframes carousel {
   0% {
-    background-image: url('~src/assets/images/26Copia.jpg');
+    background-image: url('~src/assets/images/14. OROSEI -Cala liberotto 3.jpg');
   }
-  50% {
-    background-image: url('~src/assets/images/5533882.jpg');
+  20% {
+    background-image: url('~src/assets/images/1. ALGHERO.jpg');
+  }
+  40% {
+    background-image: url('~src/assets/images/4. BOSA 1.jpg');
+  }
+  60% {
+    background-image: url('~src/assets/images/10. Golfo Aranci.jpg');
+  }
+  80% {
+    background-image: url('~src/assets/images/31. Viddalba ALLEDORIA_005_WEB.jpg');
   }
   100% {
-    background-image: url('~src/assets/images/01.jpg');
+    background-image: url('~src/assets/images/8. CASTELSARDO_CITY_002_WEB.jpg');
   }
 }
 
@@ -147,7 +156,7 @@
 
   .localities-background {
     position: relative;
-    background-image: url('~src/assets/images/26Copia.jpg');
+    background-image: url('~src/assets/images/14. OROSEI -Cala liberotto 3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 25px;
