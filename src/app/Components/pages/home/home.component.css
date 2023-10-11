@@ -20,7 +20,7 @@
 }
 
 .home {
-  animation: carousel 80s infinite;
+  animation: carousel 100s infinite;
   background-size: cover;
   background-position: center;
 }
