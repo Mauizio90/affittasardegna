@@ -1,5 +1,5 @@
 export const de = {
-    "rl.home": "",
+    "rl.home": "de",
     "rl.gliAlloggi": "de/ferienhäuser-appartements-sardinien",
     "rl.localita": "de/orte-strände-sardinien",
     "rl.proponiImmobile": "de/immobilie-anbieten",

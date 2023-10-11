@@ -45,6 +45,8 @@ private setLanguageIcon() {
       this.changeLanguage('es', false);
   } else if (currentUrl === '/de' || currentUrl.startsWith('/de/')) {
     this.changeLanguage('de', false);
+  } else if (currentUrl === '/fr' || currentUrl.startsWith('/fr/')) {
+    this.changeLanguage('fr', false);
   } else {
       const currentLanguage = this.localStorageService.getItem('currentLanguage');
       this.changeLanguage(currentLanguage || 'it', false);
@@ -62,6 +64,8 @@ private setLanguageIcon() {
       this.languageIcon = 'assets/images/flags/es.jpg';
     } else if (language === 'de') {
       this.languageIcon = 'assets/images/flags/de.jpg';
+    } else if (language === 'fr') {
+      this.languageIcon = 'assets/images/flags/fr.jpg';
     }
   }
 }

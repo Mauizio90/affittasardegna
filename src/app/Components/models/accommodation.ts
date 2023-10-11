@@ -28,6 +28,7 @@ export class Accommodation {
       en: string;
       es: string;
       de: string;
+      fr: string;
     }
     images?: string[];
     price?: number;
@@ -39,7 +40,9 @@ export interface Amenity {
     name: {
       it: string;
       en: string;
-      es: string
+      es: string;
+      de: string;
+      fr: string;
     };
   }
 

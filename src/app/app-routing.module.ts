@@ -35,10 +35,19 @@ const routes: Routes = [
   {path: 'de/kontakt', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
   {path: 'de/geschäftsbedingungen', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
   {path: 'de/datenschutz', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
+  {path: 'fr', loadChildren: () => import('./Components/pages/home/home.module').then(m => m.HomeModule)},
+  {path: 'fr/locations-maisons-appartements-sardaigne', loadChildren: () => import('./Components/pages/accommodations/accommodations.module').then(m => m.AccommodationsModule)},
+  {path: 'fr/localites-plages-sardaigne', loadChildren: () => import('./Components/pages/locations/locations.module').then(m => m.LocationsModule)},
+  {path: 'fr/proposer-une-propriete', loadChildren: () => import('./Components/pages/properties-suggestion/properties-suggestion.module').then(m => m.PropertiesSuggestionModule)},
+  {path: 'fr/a-propos-de-nous', loadChildren: () => import('./Components/pages/about-us/about-us.module').then(m => m.AboutUsModule)},
+  {path: 'fr/nous-contacter', loadChildren: () => import('./Components/pages/contacts/contacts.module').then(m => m.ContactsModule)},
+  {path: 'fr/termes-et-conditions', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
+  {path: 'fr/confidentialite', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
   {path: ':accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
   {path: 'en/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
   {path: 'es/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
   {path: 'de/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
+  {path: 'fr/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
 ];
 
 @NgModule({

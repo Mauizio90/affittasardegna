@@ -31,6 +31,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
+import { fr } from 'src/assets/i18n/fr';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
@@ -43,6 +44,9 @@ export class CustomTranslateLoader implements TranslateLoader {
     }
     else if (typeof window !== 'undefined' && window.location.pathname.includes('/de')) {
       translationFile = de;
+    }
+    else if (typeof window !== 'undefined' && window.location.pathname.includes('/fr')) {
+      translationFile = fr;
     }
     
     return of(translationFile);
