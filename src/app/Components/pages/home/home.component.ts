@@ -10,6 +10,7 @@ import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { DatePipe } from '@angular/common';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { DatePipe } from '@angular/common';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
     standalone: true,
-    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule, MatDatepickerModule, MatInputModule, MatNativeDateModule]
+    imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule, MatDatepickerModule, MatInputModule, MatNativeDateModule, CarouselModule]
 })
 export class HomeComponent {
 form!: FormGroup;
