@@ -192,5 +192,6 @@ export const es ={
     "termsMetaDescription": "Términos y condiciones de reserva",
     "filtroHomePage": "Buscar por Código/Nombre del Apartamento",
     "besafeBrochure": "https://file.notion.so/f/s/e20ea29e-9312-4e50-bcae-84c7c3fb9297/ES_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=8babe4f2-bc42-4f92-8a99-8c634327b266&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697212800000&signature=jjycmscoOPiOtWrds8OZYXJCLXDbtx4Hku6z7__aLhw&downloadName=%5BES%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
-    "beSafeDownload": "Descargar el folleto de BeSafeRate"
+    "beSafeDownload": "Descargar el folleto de BeSafeRate",
+    "beSafePagaSicuro": "Pagos seguros"
 }
