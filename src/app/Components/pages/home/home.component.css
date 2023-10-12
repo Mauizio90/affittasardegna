@@ -247,7 +247,7 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .booking-container form {
     grid-template-columns: 1fr; /* Cambio il numero di colonne a 1 */
     gap: 1rem;
@@ -303,5 +303,20 @@
     flex: 1;
     width: 100%;
     margin-bottom: 2px;
+  }
+
+  .home-text{
+    width: 45%;
+    height: 50%;
+    margin-top: -100px;
+  }
+
+  .home-text h1{
+    font-size: 20px;
+  }
+
+  .home-text a{
+    font-size: 12px;
+    width: 100%;
   }
 }
