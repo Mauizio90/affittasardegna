@@ -39,6 +39,10 @@ display: block;
 outline: none;
 }
 
+.logo{
+  margin-left: -20px;
+}
+
 @media (max-width: 992px) {
   .custom-collapse a {
     text-align: center;

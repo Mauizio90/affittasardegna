@@ -189,5 +189,6 @@ export const de = {
     "singlePageMetaDescription2": " Personen in ",
     "singlePageMetaDescription3": " auf Sardinien",
     "termsMetaTitle": "AffittaSardegna - Geschäftsbedingungen",
-    "termsMetaDescription": "Buchungsbedingungen"
+    "termsMetaDescription": "Buchungsbedingungen",
+    "filtroHomePage": "Cerca per Codice/Nome Appartamento"
 }

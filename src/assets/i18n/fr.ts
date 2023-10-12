@@ -190,4 +190,5 @@ export const fr = {
     "singlePageMetaDescription3": " en Sardaigne",
     "termsMetaTitle": "AffittaSardegna - Termes et conditions",
     "termsMetaDescription": "Termes et conditions de réservation",
+    "filtroHomePage": "Cerca per Codice/Nome Appartamento"
 }

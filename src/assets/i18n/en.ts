@@ -190,4 +190,5 @@ export const en ={
     "singlePageMetaDescription3": " in Sardinia",
     "termsMetaTitle": "AffittaSardegna - Terms and Conditions",
     "termsMetaDescription": "Booking terms and conditions",
+    "filtroHomePage": "Cerca per Codice/Nome Appartamento"
 }

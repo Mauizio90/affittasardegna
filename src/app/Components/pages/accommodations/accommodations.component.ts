@@ -5,6 +5,8 @@ import { HousecardsComponent } from '../../layouts/housecards/housecards.compone
 import { Title, Meta } from '@angular/platform-browser';
 import { NgFor } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SearchService } from '../../services/search.service';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -12,9 +14,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     templateUrl: './accommodations.component.html',
     styleUrls: ['./accommodations.component.css'],
     standalone: true,
-    imports: [NgFor, HousecardsComponent, TranslateModule]
+    imports: [NgFor, HousecardsComponent, TranslateModule, FormsModule]
 })
 export class AccommodationsComponent {
+  searchInput: string = '';
   public allAccommodations?: Accommodation[];
   public originalAccommodations?: Accommodation[];
   public selectableCities: { name: string, selected: boolean }[] = [
@@ -99,7 +102,7 @@ export class AccommodationsComponent {
   public houseName: string = '';
 
 
-  constructor(private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+  constructor(private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private searchService: SearchService) {
 
     this.translate.get('accommodationsMetaTitle').subscribe((str: string) => {
       this.titleService.setTitle(str);
@@ -111,6 +114,15 @@ export class AccommodationsComponent {
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();
+    });
+  }
+
+  ngOnInit() {
+    this.searchService.currentSearch.subscribe((search) => {
+      if (search) {
+        this.searchInput = search;
+        this.filterAccommodationsByName();
+      }
     });
   }
 
@@ -179,7 +191,8 @@ export class AccommodationsComponent {
 
   private filterAccommodationsByName(): void {
     this.allAccommodations = this.originalAccommodations?.filter((accommodation) =>
-      (!this.houseName) || accommodation.name_it?.toLowerCase().includes(this.houseName.toLowerCase())
+      (!this.houseName || accommodation.name_it?.toLowerCase().includes(this.houseName.toLowerCase())) &&
+      (!this.searchInput || accommodation.name_it?.toLowerCase().includes(this.searchInput.toLowerCase()))
     );
     console.log(this.allAccommodations);
   }

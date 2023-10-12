@@ -1,5 +1,5 @@
 .home {
-  margin-top: 100px;
+  margin-top: 5px;
   height: 440px;
   border-radius: 15px;
   display: flex;
@@ -234,6 +234,16 @@
   color: var(--primary); /* Replace 'red' with the desired color */
 }
 
+.filter-box-title{
+  margin-top: 100px;
+}
+
+.input-responsive {
+  flex: 1;
+  width: 100%;
+  border-radius: 10px;
+}
+
 
 
 
@@ -287,5 +297,11 @@
   .custom-input {
     max-width: 200px; /* Adjust the width as per your requirement */
     text-align: center;
+  }
+  
+  .input-responsive {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 2px;
   }
 }

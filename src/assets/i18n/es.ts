@@ -190,4 +190,5 @@ export const es ={
     "singlePageMetaDescription3": " en Cerdeña",
     "termsMetaTitle": "AffittaSardegna - Términos y Condiciones",
     "termsMetaDescription": "Términos y condiciones de reserva",
+    "filtroHomePage": "Cerca per Codice/Nome Appartamento"
 }
