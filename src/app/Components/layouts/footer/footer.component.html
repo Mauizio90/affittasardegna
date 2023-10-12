@@ -7,7 +7,6 @@
         <ul>
           <p>{{"footerDescription" | translate}}</p>
           <li><a [routerLink]="['/' + ('rl.chiSiamo' | translate)]">{{"scopriDiPiù" | translate}}</a></li>
-
         </ul>
       </div>
       <div class="footer-col">
@@ -46,24 +45,35 @@
             </a>
           </li>
           <li>
-            
-          <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+393494787272" target="_blank" style="text-decoration: none;"><i class="ri-whatsapp-line" style="color: white;"></i></a>
+            <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+393494787272" target="_blank"
+              style="text-decoration: none;"><i class="ri-whatsapp-line" style="color: white;"></i></a>
           </li>
         </ul>
       </div>
       <div class="footer-col">
         <h4><b>{{"footerSeguici" | translate}}</b></h4>
         <div class="social-links">
-          <a href="https://www.facebook.com/affittasardegna" target="_blank"><i class="ri-facebook-circle-fill" style="font-size: 35px;"></i></a>
-          <a href="https://www.instagram.com/affitta_sardegna/" target="_blank"><i class="ri-instagram-fill" style="font-size: 35px;"></i></a>
+          <a href="https://www.facebook.com/affittasardegna" target="_blank"><i class="ri-facebook-circle-fill"
+              style="font-size: 35px;"></i></a>
+          <a href="https://www.instagram.com/affitta_sardegna/" target="_blank"><i class="ri-instagram-fill"
+              style="font-size: 35px;"></i></a>
         </div>
-        <a class="navbar-brand" routerLink="">
-          <img src="assets/images/logo.png" alt="Logo" style="height: 60px;">
+        <a class="navbar-brand" [routerLink]="['/' + ('rl.home' | translate)]">
+          <img src="assets/images/logo.png" alt="Logo AffittaSardegna" style="height: 60px;">
+        </a>
+        <a>
+          <img src="assets/images/Logo orizzontale_7.png" alt="Logo BeSafeRate" style="height: 60px; margin-top: 10px;">
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4><b>{{"beSafeDownload" | translate | uppercase}}</b></h4>
+        <a class="navbar-brand" [href]="[('besafeBrochure' | translate)]">
+          <img src="assets/images/Logo_verticale_2.png" alt="Logo" style="height: 200px;">
         </a>
       </div>
     </div>
-      <div class="closer" style="padding-top: 10px">
-        AffittaSardegna Soc. Coop - P.IVA 02737310900
-      </div>
+    <div class="closer" style="padding-top: 10px">
+      AffittaSardegna Soc. Coop - P.IVA 02737310900
+    </div>
   </div>
 </footer>
