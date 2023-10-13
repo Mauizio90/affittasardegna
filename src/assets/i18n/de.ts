@@ -195,5 +195,7 @@ export const de = {
     "beSafeDownload": "Laden Sie die BeSafeRate-Broschüre herunter",
     "beSafePagaSicuro": "Sichere Zahlungen",
     "priceSort": "Nach Preis sortieren",
-    "distanzaMare": "Entfernung zum Meer"
+    "distanzaMare": "Entfernung zum Meer",
+    "BeSafeTitle": "BeSafe Sichere Tarif",
+    "beSafeDescrizione": "Buchen Sie mit voller Sicherheit <br> mit unserem versicherten Tarif <br> Sie werden die Gewissheit haben <br> Ihre Urlaub ohne Stornierungssorgen zu planen <br> Klicken Sie, um mehr zu erfahren"
 }

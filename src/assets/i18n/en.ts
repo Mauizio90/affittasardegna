@@ -195,5 +195,7 @@ export const en ={
     "beSafeDownload": "Download the BeSafeRate brochure",
     "beSafePagaSicuro": "Secure payments",
     "priceSort": "Sort by price",
-    "distanzaMare": "Distance from the sea"
+    "distanzaMare": "Distance from the sea",
+    "BeSafeTitle": "BeSafe Secure Rate",
+    "beSafeDescrizione": "Book with total security <br> with our insured rate <br> you will have the peace of mind <br> to plan your vacations <br> without cancellation worries <br> Click to learn more"
 }

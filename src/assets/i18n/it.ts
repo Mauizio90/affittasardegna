@@ -195,5 +195,7 @@ export const it = {
     "beSafeDownload": "assicura il tuo viaggio",
     "beSafePagaSicuro": "pagamenti sicuri",
     "priceSort": "Ordina per prezzo",
-    "distanzaMare": "Distanza dal mare"
+    "distanzaMare": "Distanza dal mare",
+    "BeSafeTitle": "Tariffa Sicura Besafe",
+    "beSafeDescrizione": "Prenota in totale sicurezza <br> con la nostra tariffa assicurata <br> avrai la tranquillità <br> di programmare le tue vacanze <br> senza ansie da cancellazione <br> Clicca per saperne di più"
 }
