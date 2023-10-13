@@ -29,7 +29,7 @@
 }
 
 .home {
-  animation: carousel 100s infinite;
+  animation: carousel 60s infinite;
   background-size: cover;
   background-position: center;
 }
@@ -188,13 +188,14 @@
 
 .localities-item-details {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
 .localities-image-container {
     position: relative;
+    margin: 10px;
 }
 
 .localities-image {

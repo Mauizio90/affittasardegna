@@ -12,7 +12,7 @@ nav{
 }
 
 .nav-link{
-font-size: 12.5px;
+font-size: 11px;
 text-transform: uppercase;
 color: var(--primary);
 text-decoration: none;

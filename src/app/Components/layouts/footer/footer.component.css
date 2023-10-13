@@ -38,7 +38,7 @@ ul{
 	background-color: var(--secondary);
 	height: 4px;
 	box-sizing: border-box;
-	width: 50px;
+	width: 170px;
 }
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
