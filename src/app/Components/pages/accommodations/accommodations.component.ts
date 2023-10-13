@@ -3,18 +3,18 @@ import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
 import { Title, Meta } from '@angular/platform-browser';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SearchService } from '../../services/search.service';
 import { FormsModule } from '@angular/forms';
 
 
 @Component({
-    selector: 'app-accommodations',
-    templateUrl: './accommodations.component.html',
-    styleUrls: ['./accommodations.component.css'],
-    standalone: true,
-    imports: [NgFor, HousecardsComponent, TranslateModule, FormsModule]
+  selector: 'app-accommodations',
+  templateUrl: './accommodations.component.html',
+  styleUrls: ['./accommodations.component.css'],
+  standalone: true,
+  imports: [NgFor, HousecardsComponent, TranslateModule, FormsModule, CommonModule]
 })
 export class AccommodationsComponent {
   searchInput: string = '';
@@ -56,7 +56,7 @@ export class AccommodationsComponent {
     { name: 'Valledoria', selected: false },
     { name: 'Viddalba', selected: false },
   ];
-  
+
   public selectableAmenities: { name: string, nameEn: string, selected: boolean }[] = [
     { name: 'Zanzariere in tutta la struttura', nameEn: 'Mosquito Nets Throughout the Property', selected: false },
     { name: 'Doccia', nameEn: 'Shower', selected: false },
@@ -92,17 +92,20 @@ export class AccommodationsComponent {
     { name: 'Connessione WiFi', nameEn: 'WiFi Connection', selected: false },
     { name: 'Cortile', nameEn: 'Courtyard', selected: false },
     { name: 'Garage', nameEn: 'Garage', selected: false }
-];
+  ];
 
 
 
-  
+
   @ViewChild('child') child?: HousecardsComponent;
   guests!: number | null;
   public houseName: string = '';
+  public sortOrder: string = 'asc';
+  isMobile: boolean = window.innerWidth <= 600;
 
 
-  constructor(private accommodationService : AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private searchService: SearchService) {
+
+  constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private searchService: SearchService) {
 
     this.translate.get('accommodationsMetaTitle').subscribe((str: string) => {
       this.titleService.setTitle(str);
@@ -130,20 +133,20 @@ export class AccommodationsComponent {
     this.child?.loadMoreCards();
   }
 
-  public onChange(selectedCity: string | null, selectedAmenity: string | null, guests: number|null): void {
+  public onChange(selectedCity: string | null, selectedAmenity: string | null, guests: number | null): void {
     this.selectableCities.forEach((city) => {
       if (city.name === selectedCity) {
         city.selected = !city.selected;
       }
     });
-  
+
     this.selectableAmenities.forEach((amenity) => {
       if (amenity.name === selectedAmenity) {
         amenity.selected = !amenity.selected;
       }
     }
     );
-    
+
     const guestsInput = document.getElementById("guestsInput") as HTMLInputElement;
     this.guests = guestsInput.valueAsNumber;
     this.filterAccommodations();
@@ -154,24 +157,24 @@ export class AccommodationsComponent {
       if (this.selectableCities.some((city) => city.selected) && this.selectableAmenities.some((amenity) => amenity.selected)) {
         this.allAccommodations = accommodations.filter((accommodation) => {
           const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
-          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) && 
-                 selectedAmenities.every((amenity) => 
-                   accommodation.amenities?.some(a => a.name.it === amenity.name)
-                 ) &&
-                 (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
+          return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) &&
+            selectedAmenities.every((amenity) =>
+              accommodation.amenities?.some(a => a.name.it === amenity.name)
+            ) &&
+            (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
         });
       } else if (this.selectableCities.some((city) => city.selected)) {
         this.allAccommodations = accommodations.filter((accommodation) => {
           return this.selectableCities.some((city) => city.selected && city.name === accommodation.city) &&
-                 (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
+            (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
         });
       } else if (this.selectableAmenities.some((amenity) => amenity.selected)) {
         this.allAccommodations = accommodations.filter((accommodation) => {
           const selectedAmenities = this.selectableAmenities.filter(amenity => amenity.selected);
-          return selectedAmenities.every((amenity) => 
+          return selectedAmenities.every((amenity) =>
             accommodation.amenities?.some(a => a.name.it === amenity.name)
           ) &&
-          (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
+            (!this.guests || parseInt(accommodation.guests || '0') >= this.guests);
         });
       } else {
         this.allAccommodations = accommodations.filter((accommodation) =>
@@ -181,8 +184,8 @@ export class AccommodationsComponent {
       console.log(this.allAccommodations);
     });
   }
-  
-  
+
+
 
   public onNameChange(event: any): void {
     this.houseName = (event.target as HTMLInputElement).value;
@@ -196,10 +199,28 @@ export class AccommodationsComponent {
     );
     console.log(this.allAccommodations);
   }
-  
-  
-  
 
-  
-  
+  public sortAccommodationsByPrice(): void {
+    if (this.sortOrder === 'asc') {
+        this.allAccommodations?.sort((a, b) => {
+            let priceA = Number(a.price);
+            let priceB = Number(b.price);
+            return priceA - priceB;
+        });
+        this.sortOrder = 'desc';
+    } else {
+        this.allAccommodations?.sort((a, b) => {
+            let priceA = Number(a.price);
+            let priceB = Number(b.price);
+            return priceB - priceA;
+        });
+        this.sortOrder = 'asc';
+    }
+}
+
+
+
+
+
+
 }

@@ -45,7 +45,6 @@ ul{
 }
 .footer-col ul li a{
 	font-size: 16px;
-	text-transform: capitalize;
 	color: var(--primary);
 	text-decoration: none;
 	font-weight: 300;
@@ -61,7 +60,6 @@ ul{
 p{
 	margin-bottom: 10px;
 	font-size: 16px;
-	text-transform: capitalize;
 	color: var(--primary);
 	text-decoration: none;
 	font-weight: 300;

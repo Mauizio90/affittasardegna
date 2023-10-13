@@ -92,7 +92,7 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .dropdown-content {
     font-size: 15px;
   }
@@ -100,8 +100,15 @@
   .filter-container {
     display: block;
     max-width: 350px;
+    margin: 0 auto;
   }
 
+  #nameInput {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
   #nameInput {
     width: 60px;
   }

@@ -6,7 +6,17 @@
 </div>
 
 
-<div class="filter-container container">
+<div class="filter-container">
+  <div class="filter-column">
+    <div class="filter-box">
+      <div class="filter-box-title">
+        <div class="dropdown">
+          <input id="price-sort-checkbox" type="checkbox" class="dropdown-toggle" (change)="sortAccommodationsByPrice()" />
+          <label for="price-sort-checkbox" class="dropdown-label center-text">Ordina per prezzo</label>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title">
@@ -62,6 +72,7 @@
     </div>
   </div>
 </div>
+
 
 
 <p class="total-accommodations">{{"casedisponibili" | translate:{numero:allAccommodations?.length} }}</p>

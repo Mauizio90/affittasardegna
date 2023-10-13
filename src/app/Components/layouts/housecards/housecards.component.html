@@ -60,7 +60,9 @@
     <div class="box col-lg-3 col-md-4 col-sm-12" *ngFor="let accommodation of accommodations | slice:0:cardsToShow">
       <carousel [isAnimated]="true">
         <slide *ngFor="let image of accommodation.images">
-          <img [src]="image" alt="foto appartamento">
+          <a href="https://affittasardegna.kross.travel{{accommodation.meta_it_url}}">
+            <img [src]="image" alt="foto appartamento">
+          </a>
         </slide>
       </carousel>
       <div class="under-img" style="display: grid; grid-template-columns: repeat(1, 1fr) auto;">
