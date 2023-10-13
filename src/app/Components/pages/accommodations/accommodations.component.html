@@ -1,8 +1,8 @@
 <div class="mini-header-background">
-    <div class="mini-header">
-        <h3 style="font-size: 40px;"><b>{{"miniHeaderSuggests1" | translate}}</b></h3>
-        <h4 style="font-size: 20px;"><b>{{"miniHeaderSuggests2" | translate}}</b></h4>
-    </div>
+  <div class="mini-header">
+    <h3 style="font-size: 40px;"><b>{{"miniHeaderSuggests1" | translate}}</b></h3>
+    <h4 style="font-size: 20px;"><b>{{"miniHeaderSuggests2" | translate}}</b></h4>
+  </div>
 </div>
 
 
@@ -11,8 +11,32 @@
     <div class="filter-box">
       <div class="filter-box-title">
         <div class="dropdown">
-          <input id="price-sort-checkbox" type="checkbox" class="dropdown-toggle" (change)="sortAccommodationsByPrice()" />
-          <label for="price-sort-checkbox" class="dropdown-label center-text">Ordina per prezzo</label>
+          <input id="price-sort-checkbox" type="checkbox" class="dropdown-toggle"
+            (change)="sortAccommodationsByPrice()" />
+          <label for="price-sort-checkbox" class="dropdown-label center-text">{{"priceSort" | translate}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-column">
+    <div class="filter-box">
+      <div class="filter-box-title">
+        <div class="dropdown">
+          <input id="distanza-dropdown" type="checkbox" class="dropdown-toggle" />
+          <label for="distanza-dropdown" class="dropdown-label center-text">{{"distanzaMare" | translate}}</label>
+          <div class="dropdown-content">
+            <div class="amenities-grid">
+              <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
+                <ng-container *ngIf="selectableAmenity.name.includes('Distante')">
+                  <label>
+                    <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected"
+                      (change)="onChange(null, selectableAmenity.name, null)">
+                    {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEs, fr: selectableAmenity?.nameFr, de: selectableAmenity?.nameDe } }}
+                  </label>
+                </ng-container>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -27,8 +51,9 @@
             <div class="amenities-grid">
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
                 <label>
-                  <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected" (change)="onChange(null, selectableAmenity.name, null)">
-                  {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEn } }}
+                  <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected"
+                    (change)="onChange(null, selectableAmenity.name, null)">
+                    {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEs, fr: selectableAmenity?.nameFr, de: selectableAmenity?.nameDe } }}
                 </label>
               </div>
             </div>
@@ -47,7 +72,8 @@
             <div class="localities-grid">
               <div class="locality" *ngFor="let selectableCity of selectableCities">
                 <label>
-                  <input type="checkbox" name="checkbox" [checked]="selectableCity.selected" (change)="onChange(selectableCity.name, null, null)">
+                  <input type="checkbox" name="checkbox" [checked]="selectableCity.selected"
+                    (change)="onChange(selectableCity.name, null, null)">
                   {{selectableCity.name}}
                 </label>
               </div>
@@ -60,14 +86,16 @@
   <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title dropdown-labelz">
-        <label class="center-text">{{"filtroOspiti" | translate}}<input id="guestsInput" type="number" min="2" max="15" (input)="onChange(null,null, guests)" style="margin-left: 10px;"/></label>
+        <label class="center-text">{{"filtroOspiti" | translate}}<input id="guestsInput" type="number" min="2" max="15"
+            (input)="onChange(null,null, guests)" style="margin-left: 10px;" /></label>
       </div>
     </div>
   </div>
   <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title dropdown-labelz">
-        <label class="center-text" style="margin-right: 10px;">{{"filtroNome" | translate}}<input id="nameInput" [(ngModel)]="searchInput"  type="text" (input)="onNameChange($event)" style="margin-left: 10px;"/></label>
+        <label class="center-text" style="margin-right: 10px;">{{"filtroNome" | translate}}<input id="nameInput"
+            [(ngModel)]="searchInput" type="text" (input)="onNameChange($event)" style="margin-left: 10px;" /></label>
       </div>
     </div>
   </div>
@@ -76,14 +104,14 @@
 
 
 <p class="total-accommodations">{{"casedisponibili" | translate:{numero:allAccommodations?.length} }}</p>
-  
-  
 
 
-  
-   
+
+
+
+
 
 <app-housecards #child [accommodations]="allAccommodations"></app-housecards>
 <div style="display: flex; justify-content: center;">
-    <button class="btn" style="text-align: center;" (click)="loadMoreCards()">{{"carica" | translate}}</button>
+  <button class="btn" style="text-align: center;" (click)="loadMoreCards()">{{"carica" | translate}}</button>
 </div>

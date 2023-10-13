@@ -57,42 +57,48 @@ export class AccommodationsComponent {
     { name: 'Viddalba', selected: false },
   ];
 
-  public selectableAmenities: { name: string, nameEn: string, selected: boolean }[] = [
-    { name: 'Zanzariere in tutta la struttura', nameEn: 'Mosquito Nets Throughout the Property', selected: false },
-    { name: 'Doccia', nameEn: 'Shower', selected: false },
-    { name: 'Doccia esterna', nameEn: 'Outdoor Shower', selected: false },
-    { name: 'Frigorifero', nameEn: 'Refrigerator', selected: false },
-    { name: 'Phon', nameEn: 'Hair Dryer', selected: false },
-    { name: 'Culle', nameEn: 'Cribs', selected: false },
-    { name: 'Aria condizionata', nameEn: 'Air Conditioning', selected: false },
-    { name: 'Riscaldamento / Condizionatore autonomo', nameEn: 'Heating / Autonomous Air Conditioning', selected: false },
-    { name: 'Ferro da stiro', nameEn: 'Iron', selected: false },
-    { name: 'Lavatrice/Asciugatrice', nameEn: 'Washer/Dryer', selected: false },
-    { name: 'Seggiolone', nameEn: 'High Chair', selected: false },
-    { name: 'Vasca da bagno', nameEn: 'Bathtub', selected: false },
-    { name: 'Cucina', nameEn: 'Kitchen', selected: false },
-    { name: 'Forno', nameEn: 'Oven', selected: false },
-    { name: 'Forno a microonde', nameEn: 'Microwave', selected: false },
-    { name: 'Lavastoviglie', nameEn: 'Dishwasher', selected: false },
-    { name: 'Vista sull\'oceano', nameEn: 'Ocean View', selected: false },
-    { name: 'Tavolo da ping pong', nameEn: 'Ping Pong Table', selected: false },
-    { name: 'Area barbecue', nameEn: 'Barbecue Area', selected: false },
-    { name: 'Bicicletta', nameEn: 'Bicycle', selected: false },
-    { name: 'Giardino', nameEn: 'Garden', selected: false },
-    { name: 'Tennis', nameEn: 'Tennis', selected: false },
-    { name: 'Veranda all\'aperto', nameEn: 'Outdoor Veranda', selected: false },
-    { name: 'Parcheggio', nameEn: 'Parking', selected: false },
-    { name: 'Animali domestici permessi', nameEn: 'Pets Allowed', selected: false },
-    { name: 'Piscina comune', nameEn: 'Common Pool', selected: false },
-    { name: 'Piscina privata', nameEn: 'Private Pool', selected: false },
-    { name: 'Caminetto', nameEn: 'Fireplace', selected: false },
-    { name: 'TV', nameEn: 'TV', selected: false },
-    { name: 'Arredi da esterno', nameEn: 'Outdoor Furniture', selected: false },
-    { name: 'Biliardo', nameEn: 'Billiards', selected: false },
-    { name: 'Connessione WiFi', nameEn: 'WiFi Connection', selected: false },
-    { name: 'Cortile', nameEn: 'Courtyard', selected: false },
-    { name: 'Garage', nameEn: 'Garage', selected: false }
-  ];
+  public selectableAmenities: { name: string, nameEn: string, nameEs: string, nameDe: string, nameFr: string, selected: boolean }[] = [
+    { name: 'Zanzariere in tutta la struttura', nameEn: 'Mosquito Nets Throughout the Property', nameEs: 'Mosquiteros en toda la propiedad', nameDe: 'Mückennetze in der gesamten Unterkunft', nameFr: 'Moustiquaires dans toute la propriété', selected: false },
+    { name: 'Doccia', nameEn: 'Shower', nameEs: 'Ducha', nameDe: 'Dusche', nameFr: 'Douche', selected: false },
+    { name: 'Doccia esterna', nameEn: 'Outdoor Shower', nameEs: 'Ducha al aire libre', nameDe: 'Außendusche', nameFr: 'Douche extérieure', selected: false },
+    { name: 'Frigorifero', nameEn: 'Refrigerator', nameEs: 'Refrigerador', nameDe: 'Kühlschrank', nameFr: 'Réfrigérateur', selected: false },
+    { name: 'Phon', nameEn: 'Hair Dryer', nameEs: 'Secador de pelo', nameDe: 'Haartrockner', nameFr: 'Sèche-cheveux', selected: false },
+    { name: 'Culle', nameEn: 'Cribs', nameEs: 'Cunas', nameDe: 'Kinderbetten', nameFr: 'Lits bébé', selected: false },
+    { name: 'Aria condizionata', nameEn: 'Air Conditioning', nameEs: 'Aire acondicionado', nameDe: 'Klimaanlage', nameFr: 'Climatisation', selected: false },
+    { name: 'Riscaldamento / Condizionatore autonomo', nameEn: 'Heating / Autonomous Air Conditioning', nameEs: 'Calefacción / Aire acondicionado autónomo', nameDe: 'Heizung / Autonome Klimaanlage', nameFr: 'Chauffage / Climatisation autonome', selected: false },
+    { name: 'Ferro da stiro', nameEn: 'Iron', nameEs: 'Plancha', nameDe: 'Bügeleisen', nameFr: 'Fer à repasser', selected: false },
+    { name: 'Lavatrice/Asciugatrice', nameEn: 'Washer/Dryer', nameEs: 'Lavadora/Secadora', nameDe: 'Waschmaschine/Trockner', nameFr: 'Lave-linge/Sèche-linge', selected: false },
+    { name: 'Seggiolone', nameEn: 'High Chair', nameEs: 'Trona', nameDe: 'Hochstuhl', nameFr: 'Chaise haute', selected: false },
+    { name: 'Vasca da bagno', nameEn: 'Bathtub', nameEs: 'Bañera', nameDe: 'Badewanne', nameFr: 'Baignoire', selected: false },
+    { name: 'Cucina', nameEn: 'Kitchen', nameEs: 'Cocina', nameDe: 'Küche', nameFr: 'Cuisine', selected: false },
+    { name: 'Forno', nameEn: 'Oven', nameEs: 'Horno', nameDe: 'Ofen', nameFr: 'Four', selected: false },
+    { name: 'Forno a microonde', nameEn: 'Microwave', nameEs: 'Microondas', nameDe: 'Mikrowelle', nameFr: 'Four à micro-ondes', selected: false },
+    { name: 'Lavastoviglie', nameEn: 'Dishwasher', nameEs: 'Lavavajillas', nameDe: 'Geschirrspüler', nameFr: 'Lave-vaisselle', selected: false },
+    { name: 'Vista sull\'oceano', nameEn: 'Ocean View', nameEs: 'Vistas al océano', nameDe: 'Meerblick', nameFr: 'Vue sur l\'océan', selected: false },
+    { name: 'Tavolo da ping pong', nameEn: 'Ping Pong Table', nameEs: 'Mesa de ping pong', nameDe: 'Tischtennisplatte', nameFr: 'Table de ping-pong', selected: false },
+    { name: 'Area barbecue', nameEn: 'Barbecue Area', nameEs: 'Zona de barbacoa', nameDe: 'Grillbereich', nameFr: 'Espace barbecue', selected: false },
+    { name: 'Bicicletta', nameEn: 'Bicycle', nameEs: 'Bicicleta', nameDe: 'Fahrrad', nameFr: 'Bicyclette', selected: false },
+    { name: 'Giardino', nameEn: 'Garden', nameEs: 'Jardín', nameDe: 'Garten', nameFr: 'Jardin', selected: false },
+    { name: 'Tennis', nameEn: 'Tennis', nameEs: 'Tenis', nameDe: 'Tennis', nameFr: 'Tennis', selected: false },
+    { name: 'Veranda all\'aperto', nameEn: 'Outdoor Veranda', nameEs: 'Terraza al aire libre', nameDe: 'Außenveranda', nameFr: 'Véranda extérieure', selected: false },
+    { name: 'Parcheggio', nameEn: 'Parking', nameEs: 'Aparcamiento', nameDe: 'Parkplatz', nameFr: 'Parking', selected: false },
+    { name: 'Animali domestici permessi', nameEn: 'Pets Allowed', nameEs: 'Se admiten mascotas', nameDe: 'Haustiere erlaubt', nameFr: 'Animaux domestiques autorisés', selected: false },
+    { name: 'Piscina comune', nameEn: 'Common Pool', nameEs: 'Piscina común', nameDe: 'Gemeinschaftspool', nameFr: 'Piscine commune', selected: false },
+    { name: 'Piscina privata', nameEn: 'Private Pool', nameEs: 'Piscina privada', nameDe: 'Privater Pool', nameFr: 'Piscine privée', selected: false },
+    { name: 'Caminetto', nameEn: 'Fireplace', nameEs: 'Chimenea', nameDe: 'Kamin', nameFr: 'Cheminée', selected: false },
+    { name: 'TV', nameEn: 'TV', nameEs: 'Televisión', nameDe: 'Fernseher', nameFr: 'Télévision', selected: false },
+    { name: 'Arredi da esterno', nameEn: 'Outdoor Furniture', nameEs: 'Muebles de exterior', nameDe: 'Gartenmöbel', nameFr: 'Mobilier d\'extérieur', selected: false },
+    { name: 'Biliardo', nameEn: 'Billiards', nameEs: 'Billar', nameDe: 'Billard', nameFr: 'Billard', selected: false },
+    { name: 'Connessione WiFi', nameEn: 'WiFi Connection', nameEs: 'Conexión WiFi', nameDe: 'WLAN-Verbindung', nameFr: 'Connexion WiFi', selected: false },
+    { name: 'Cortile', nameEn: 'Courtyard', nameEs: 'Patio', nameDe: 'Innenhof', nameFr: 'Cour', selected: false },
+    { name: 'Garage', nameEn: 'Garage', nameEs: 'Garaje', nameDe: 'Garage', nameFr: 'Garage', selected: false },
+    { name: 'Distante dal mare da 0m a 100m', nameEn: '0m to 100m from the Sea', nameEs: 'A menos de 100 metros del mar', nameDe: 'In weniger als 100 Metern Entfernung vom Meer', nameFr: 'À moins de 100 mètres de la mer', selected: false },
+    { name: 'Distante dal mare da 100m a 500m', nameEn: '100m to 500m from the Sea', nameEs: 'De 100 a 500 metros del mar', nameDe: '100 Meter bis 500 Meter vom Meer entfernt', nameFr: 'De 100 mètres à 500 mètres de la mer', selected: false },
+    { name: 'Distante dal mare da 500m a 1km', nameEn: '500m to 1km from the Sea', nameEs: 'De 500 metros a 1 kilómetro del mar', nameDe: '500 Meter bis 1 Kilometer vom Meer entfernt', nameFr: 'De 500 mètres à 1 kilomètre de la mer', selected: false },
+    { name: 'Distante dal mare da 1km a 2km', nameEn: '1km to 2km from the Sea', nameEs: 'De 1 a 2 kilómetros del mar', nameDe: '1 Kilometer bis 2 Kilometer vom Meer entfernt', nameFr: 'De 1 kilomètre à 2 kilomètres de la mer', selected: false },
+    { name: 'Distante dal mare più di 2km', nameEn: 'More than 2km from the Sea', nameEs: 'A más de 2 kilómetros del mar', nameDe: 'Mehr als 2 Kilometer vom Meer entfernt', nameFr: 'À plus de 2 kilomètres de la mer', selected: false },
+];
+
 
 
 
@@ -149,6 +155,7 @@ export class AccommodationsComponent {
 
     const guestsInput = document.getElementById("guestsInput") as HTMLInputElement;
     this.guests = guestsInput.valueAsNumber;
+    
     this.filterAccommodations();
   }
 
@@ -181,9 +188,19 @@ export class AccommodationsComponent {
           (!this.guests || parseInt(accommodation.guests || '0') >= this.guests)
         );
       }
+  
+      if (this.guests && this.guests > 0) {
+        this.allAccommodations.sort((a, b) => {
+          const guestsA = parseInt(a.guests || '0');
+          const guestsB = parseInt(b.guests || '0');
+          return guestsA - guestsB;
+        });
+      }
+  
       console.log(this.allAccommodations);
     });
   }
+  
 
 
 
