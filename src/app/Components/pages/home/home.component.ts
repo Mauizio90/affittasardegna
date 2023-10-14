@@ -27,6 +27,7 @@ export class HomeComponent {
 
   constructor(private formBuilder: FormBuilder, private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>, private router: Router, private searchService: SearchService) {
     this.dateAdapter.setLocale('it');
+    this.dateAdapter.getFirstDayOfWeek = () => { return 1; }
   }
 
   ngOnInit() {

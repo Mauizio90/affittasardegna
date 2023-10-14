@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +29,7 @@ import { es } from 'src/assets/i18n/es';
 import { de } from 'src/assets/i18n/de';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
-import { MatNativeDateModule } from '@angular/material/core';
+import { DateAdapter, MatNativeDateModule, NativeDateAdapter } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
 import { fr } from 'src/assets/i18n/fr';
 
@@ -51,6 +51,15 @@ export class CustomTranslateLoader implements TranslateLoader {
     
     return of(translationFile);
   }
+}
+
+@Injectable()
+export class MyDateAdapter extends NativeDateAdapter {
+
+  override getFirstDayOfWeek(): number {
+    return 1;
+  }
+
 }
 
 @NgModule({
@@ -89,7 +98,8 @@ export class CustomTranslateLoader implements TranslateLoader {
         MatInputModule,
         MatNativeDateModule
     ],
-    providers: [provideClientHydration(),DatePipe],
+    providers: [provideClientHydration(),DatePipe,
+      {provide: DateAdapter, useClass: MyDateAdapter}],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
