@@ -53,7 +53,7 @@
                 <div class="input-group">
                     <span class="label" style="font-size: 20px;">Check-in</span>
                     <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
-                    <input matInput [matDatepicker]="checkInPicker" formControlName="checkIn" id="checkIn-input"
+                    <input style="text-align: center;" matInput [matDatepicker]="checkInPicker" formControlName="checkIn" id="checkIn-input"
                         class="custom-input">
                     <mat-datepicker #checkInPicker></mat-datepicker>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="input-group">
                     <span class="label" style="font-size: 20px;">Check-out</span>
                     <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
-                    <input matInput [matDatepicker]="checkOutPicker" formControlName="checkOut" id="checkOut-input"
+                    <input style="text-align: center;" matInput [matDatepicker]="checkOutPicker" formControlName="checkOut" id="checkOut-input"
                         class="custom-input">
                     <mat-datepicker #checkOutPicker></mat-datepicker>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="input-group">
                     <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
                     <span><i class="ri-user-5-line"></i></span>
-                    <input type="number" min="1" formControlName="guests" id="guests-input" class="custom-input">
+                    <input style="text-align: center;" type="number" min="1" formControlName="guests" id="guests-input" class="custom-input">
                 </div>
             </div>
         </div>
