@@ -38,8 +38,11 @@
     border-radius: 2rem;
     border: 1px solid var(--primary);
     box-shadow: 5px 5px 30px #888888;
-    margin: -20px 10px 10px 10px;
+    margin: 65px 10px 10px 10px;
     background-color: white;
+    position: relative;
+    left: 49.4%;
+    transform: translate(-50%, -50%);
 }
 
 .booking-nav {
@@ -150,7 +153,7 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0px;
   }
 
 
@@ -245,10 +248,32 @@
   border-radius: 10px;
 }
 
+.migliorPrezzo{
+  line-height: 38px; 
+  vertical-align: middle; 
+  margin: 0; 
+  margin-right: 50px;
+  color: var(--secondary);
+  font-weight: bolder;
+  font-size: 35px;
+}
 
 
 
-@media (max-width: 700px) {
+
+
+@media (max-width: 600px) {
+
+  .migliorPrezzo{
+    font-size: large;
+  }
+
+  .booking-container{
+    margin-top: 300px;
+    max-width: 400px;
+    left: 49%;
+  }
+
   .booking-container form {
     grid-template-columns: 1fr; /* Cambio il numero di colonne a 1 */
     gap: 1rem;
@@ -319,5 +344,9 @@
   .home-text a{
     font-size: 12px;
     width: 100%;
+  }
+
+  .featured-title{
+    margin-top: -250px;
   }
 }

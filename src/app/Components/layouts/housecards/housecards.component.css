@@ -32,6 +32,8 @@
 	color: var(--primary);
 	font-size: 22px;
 	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .box p {
@@ -43,7 +45,8 @@
 	/* Numero massimo di righe */
 	-webkit-box-orient: vertical;
 	font-size: 13px;
-	margin-bottom: 0px;
+	margin: 10px;
+	text-align: justify;
 }
 
 .icon {
@@ -55,6 +58,7 @@
 .icon-container {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr) auto;
+	margin: 10px;
 }
 
 .box span {
@@ -65,6 +69,7 @@
 a {
 	text-decoration: none;
 }
+
 
 
 

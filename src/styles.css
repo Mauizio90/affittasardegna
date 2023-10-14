@@ -17,7 +17,7 @@ body{
 
 .btn{
     padding: 8px 22px;
-    background: var(--secondary);
+    background: #FDC746;
     color: var(--light);
     border-radius: 5rem;
 }

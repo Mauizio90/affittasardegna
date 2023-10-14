@@ -118,7 +118,7 @@ export class LocationsComponent {
     { id: 3, name: "Badesi", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/2.BADESI.jpg", descriptionIta: badesiIta, descriptionEng: badesiEng, descriptionEsp: badesiEsp, descriptionDe: badesiDe },
     { id: 4, name: "Baja Sardinia", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/3. BAJA_SARDINIA_1.jpg", descriptionIta: bajaSardiniaIta, descriptionEng: bajaSardiniaEng, descriptionEsp: bajaSardiniaEsp, descriptionDe: bajaSardiniaDe },
     { id: 5, name: "Bosa", provincia: "Oristano", accommodationsCount: 0, image: "./assets/images/4. BOSA 1.jpg", descriptionIta: bosaIta, descriptionEng: bosaEng, descriptionEsp: bosaEsp, descriptionDe: bosaDe },
-    { id: 6, name: "Budoni", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/5. BUDONI Spiaggia_budoni_1536x804.JPG", descriptionIta: budoniIta, descriptionEng: budoniEng, descriptionEsp: budoniEsp, descriptionDe: budoniDe },
+    { id: 6, name: "Budoni", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/5. BUDONI Spiaggia_budoni_1536x804.jpg", descriptionIta: budoniIta, descriptionEng: budoniEng, descriptionEsp: budoniEsp, descriptionDe: budoniDe },
     { id: 7, name: "Cala Gonone", provincia: "Nuoro", accommodationsCount: 0, image: "./assets/images/6. Cala GONONE .jpg", descriptionIta: calaGononeIta, descriptionEng: calaGononeEng, descriptionEsp: calaGononeEsp, descriptionDe: calaGononeDe },
     { id: 8, name: "Cannigione", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/7. Cannigione 8.jpg", descriptionIta: cannigioneIta, descriptionEng: cannigioneEng, descriptionEsp: cannigioneEsp, descriptionDe: cannigioneDe },
     { id: 9, name: "Castelsardo", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/8. CASTELSARDO_CITY_002_WEB.jpg", descriptionIta: castelsardoIta, descriptionEng: castelsardoEng, descriptionEsp: castelsardoEsp, descriptionDe: castelSardoDe },
@@ -135,15 +135,15 @@ export class LocationsComponent {
     { id: 21, name: "Porto Rotondo", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/19. Porto_rotondo_spiaggia i sassi.jpg", descriptionIta: portoRotondoIta, descriptionEng: portoRotondoEng, descriptionEsp: portoRotondoEsp, descriptionDe: portoRotondoDe },
     { id: 22, name: "Porto Taverna", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/20. Porto-taverna-00006.jpeg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
     { id: 23, name: "Porto Torres", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/21. Porto torres balai.jpg", descriptionIta: portoTorresIta, descriptionEng: portoTorresEng, descriptionEsp: portoTorresEsp, descriptionDe: portoTorresDe },
-    { id: 24, name: "Portobello di Gallura", provincia: "Sassari", accommodationsCount: 0, image: "./assets/22. Portobello-di-gallura_141826.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
-    { id: 26, name: "San Giovanni di Posada", provincia: "Nuoro", accommodationsCount: 0, image: "./assets/images/24. San Giovanni di Posada la caletta.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
-    { id: 27, name: "San Teodoro", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/25. San Teodoro.jpg", descriptionIta: sanTeodoroIta, descriptionEng: sanTeodoroEng, descriptionEsp: sanTeodoroEsp, descriptionDe: sanTeodoroDe },
-    { id: 28, name: "Santa Teresa di Gallura", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "", descriptionIta: santaTeresaIta, descriptionEng: santaTeresaEng, descriptionEsp: santaTeresaEsp, descriptionDe: santaTeresaDe },
-    { id: 29, name: "Siniscola", provincia: "Nuoro", accommodationsCount: 0, image: "", descriptionIta: siniscolaIta, descriptionEng: siniscolaEng, descriptionEsp: siniscolaEsp, descriptionDe: siniscolaDe },
-    { id: 30, name: "Stintino", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/28. Stintino 1.jpg", descriptionIta: stintinoIta, descriptionEng: stintinoEng, descriptionEsp: stintinoEsp, descriptionDe: stintinoDe },
-    { id: 31, name: "Trinità D'agultu - Isola Rossa", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/29. Trinità d'Agultu- Isola Rossa.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
-    { id: 32, name: "Valledoria", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/30. VALLEDORIA_004_WEB.jpg", descriptionIta: valledoriaIta, descriptionEng: valledoriaEng, descriptionEsp: valledoriaEsp, descriptionDe: valledoriaDe },
-    { id: 33, name: "Viddalba", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/31. Viddalba ALLEDORIA_005_WEB.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
+    { id: 24, name: "Portobello di Gallura", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/22Portobello.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
+    { id: 25, name: "San Giovanni di Posada", provincia: "Nuoro", accommodationsCount: 0, image: "./assets/images/24. San Giovanni di Posada la caletta.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
+    { id: 26, name: "San Teodoro", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/25. San Teodoro.jpg", descriptionIta: sanTeodoroIta, descriptionEng: sanTeodoroEng, descriptionEsp: sanTeodoroEsp, descriptionDe: sanTeodoroDe },
+    { id: 27, name: "Santa Teresa di Gallura", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "", descriptionIta: santaTeresaIta, descriptionEng: santaTeresaEng, descriptionEsp: santaTeresaEsp, descriptionDe: santaTeresaDe },
+    { id: 28, name: "Siniscola", provincia: "Nuoro", accommodationsCount: 0, image: "", descriptionIta: siniscolaIta, descriptionEng: siniscolaEng, descriptionEsp: siniscolaEsp, descriptionDe: siniscolaDe },
+    { id: 29, name: "Stintino", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/28. Stintino 1.jpg", descriptionIta: stintinoIta, descriptionEng: stintinoEng, descriptionEsp: stintinoEsp, descriptionDe: stintinoDe },
+    { id: 30, name: "Trinità D'agultu - Isola Rossa", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/29. Trinità d'Agultu- Isola Rossa.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
+    { id: 31, name: "Valledoria", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/30. VALLEDORIA_004_WEB.jpg", descriptionIta: valledoriaIta, descriptionEng: valledoriaEng, descriptionEsp: valledoriaEsp, descriptionDe: valledoriaDe },
+    { id: 32, name: "Viddalba", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/31. Viddalba ALLEDORIA_005_WEB.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
   ];
 
 
@@ -167,7 +167,7 @@ export class LocationsComponent {
       this.renderer.setAttribute(ref.nativeElement, 'id', this.selectableCities[index].id.toString());
     });
   }
-
+  
   updateAccommodationsCount() {
     this.selectableCities.forEach((city) => {
       city.accommodationsCount = this.allAccommodations?.filter((accommodation) => accommodation.city === city.name).length || 0;
