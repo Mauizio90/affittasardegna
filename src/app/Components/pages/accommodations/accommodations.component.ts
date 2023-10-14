@@ -97,7 +97,7 @@ export class AccommodationsComponent {
     { name: 'Distante dal mare da 500m a 1km', nameEn: '500m to 1km from the Sea', nameEs: 'De 500 metros a 1 kilómetro del mar', nameDe: '500 Meter bis 1 Kilometer vom Meer entfernt', nameFr: 'De 500 mètres à 1 kilomètre de la mer', selected: false },
     { name: 'Distante dal mare da 1km a 2km', nameEn: '1km to 2km from the Sea', nameEs: 'De 1 a 2 kilómetros del mar', nameDe: '1 Kilometer bis 2 Kilometer vom Meer entfernt', nameFr: 'De 1 kilomètre à 2 kilomètres de la mer', selected: false },
     { name: 'Distante dal mare più di 2km', nameEn: 'More than 2km from the Sea', nameEs: 'A más de 2 kilómetros del mar', nameDe: 'Mehr als 2 Kilometer vom Meer entfernt', nameFr: 'À plus de 2 kilomètres de la mer', selected: false },
-];
+  ];
 
 
 
@@ -112,14 +112,6 @@ export class AccommodationsComponent {
 
 
   constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private searchService: SearchService) {
-
-    this.translate.get('accommodationsMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
-    });
-    this.translate.get('accommodationsMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
-    });
-
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();
@@ -127,6 +119,18 @@ export class AccommodationsComponent {
   }
 
   ngOnInit() {
+    this.translate.get('accommodationsMetaTitle').subscribe((title: string) => {
+      this.translate.get('accommodationsMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
+    });
+
     this.searchService.currentSearch.subscribe((search) => {
       if (search) {
         this.searchInput = search;
@@ -155,7 +159,7 @@ export class AccommodationsComponent {
 
     const guestsInput = document.getElementById("guestsInput") as HTMLInputElement;
     this.guests = guestsInput.valueAsNumber;
-    
+
     this.filterAccommodations();
   }
 
@@ -188,7 +192,7 @@ export class AccommodationsComponent {
           (!this.guests || parseInt(accommodation.guests || '0') >= this.guests)
         );
       }
-  
+
       if (this.guests && this.guests > 0) {
         this.allAccommodations.sort((a, b) => {
           const guestsA = parseInt(a.guests || '0');
@@ -196,11 +200,11 @@ export class AccommodationsComponent {
           return guestsA - guestsB;
         });
       }
-  
+
       console.log(this.allAccommodations);
     });
   }
-  
+
 
 
 
@@ -219,21 +223,21 @@ export class AccommodationsComponent {
 
   public sortAccommodationsByPrice(): void {
     if (this.sortOrder === 'asc') {
-        this.allAccommodations?.sort((a, b) => {
-            let priceA = Number(a.price);
-            let priceB = Number(b.price);
-            return priceA - priceB;
-        });
-        this.sortOrder = 'desc';
+      this.allAccommodations?.sort((a, b) => {
+        let priceA = Number(a.price);
+        let priceB = Number(b.price);
+        return priceA - priceB;
+      });
+      this.sortOrder = 'desc';
     } else {
-        this.allAccommodations?.sort((a, b) => {
-            let priceA = Number(a.price);
-            let priceB = Number(b.price);
-            return priceB - priceA;
-        });
-        this.sortOrder = 'asc';
+      this.allAccommodations?.sort((a, b) => {
+        let priceA = Number(a.price);
+        let priceB = Number(b.price);
+        return priceB - priceA;
+      });
+      this.sortOrder = 'asc';
     }
-}
+  }
 
 
 

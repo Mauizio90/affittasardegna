@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/affittasardegna",
+            "outputPath": "dist/affittasardegna/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -104,6 +104,60 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/affittasardegna/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "affittasardegna:build:development",
+              "serverTarget": "affittasardegna:server:development"
+            },
+            "production": {
+              "browserTarget": "affittasardegna:build:production",
+              "serverTarget": "affittasardegna:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "affittasardegna:build:production",
+              "serverTarget": "affittasardegna:server:production"
+            },
+            "development": {
+              "browserTarget": "affittasardegna:build:development",
+              "serverTarget": "affittasardegna:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

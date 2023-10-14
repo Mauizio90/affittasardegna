@@ -22,13 +22,6 @@ export class PropertiesSuggestionComponent {
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
-    this.translate.get('propertySuggestionMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
-    });
-    this.translate.get('propertySuggestionMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
-    });
-    
     this.suggestForm = this.formBuilder.group({
       city: ['', Validators.required],
       address: ['', Validators.required],
@@ -38,6 +31,20 @@ export class PropertiesSuggestionComponent {
       email: ['', [Validators.required, Validators.email]],
       privacy: [false, Validators.requiredTrue],
       trattamentodati: [false, Validators.requiredTrue]
+    });
+  }
+
+  ngOnInit(){
+    this.translate.get('propertySuggestionMetaTitle').subscribe((title: string) => {
+      this.translate.get('propertySuggestionMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
     });
   }
 

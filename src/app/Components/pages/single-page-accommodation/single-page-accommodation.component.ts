@@ -51,9 +51,7 @@ export class SinglePageAccommodationComponent {
               const str2 = translations['singlePageMetaDescription2'];
               const str3 = translations['singlePageMetaDescription3'];
 
-              this.metaTagService.updateTag({ name: 'description', content: this.accommodation?.name_it?.toString() + str1 + this.accommodation?.guests + str2 + this.accommodation?.city?.toString() + str3 });
-              const tag = this.metaTagService.getTag('name = "description"');
-              console.log(tag);
+              this.metaTagService.updateTag({ name: 'og:description', content: this.accommodation?.name_it?.toString() + str1 + this.accommodation?.guests + str2 + this.accommodation?.city?.toString() + str3 });
             });
 
             if (accommodation.images && accommodation.images.length > 0) {

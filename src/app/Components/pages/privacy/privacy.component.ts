@@ -14,11 +14,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class PrivacyComponent {
 
   constructor(private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
-    this.translate.get('privacyMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
-    });
-    this.translate.get('privacyMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
+  }
+
+  ngOnInit(){
+    this.translate.get('privacyMetaDescription').subscribe((title: string) => {
+      this.translate.get('homeMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
     });
   }
 

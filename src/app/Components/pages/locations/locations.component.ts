@@ -149,16 +149,23 @@ export class LocationsComponent {
 
 
   constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private router: Router, private renderer: Renderer2, private translate: TranslateService) {
-    this.translate.get('locationsMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
-    });
-    this.translate.get('locationsMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
-    });
-
     this.accommodationService.getAccommodations().subscribe((data) => {
       this.allAccommodations = data;
       this.updateAccommodationsCount();
+    });
+  }
+
+  ngOnInit(){
+    this.translate.get('locationsMetaTitle').subscribe((title: string) => {
+      this.translate.get('locationsMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
     });
   }
 

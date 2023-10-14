@@ -21,13 +21,6 @@ export class ContactsComponent {
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
-    this.translate.get('contactsMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
-    });
-    this.translate.get('contactsMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
-    });
-    
     this.contactForm = this.formBuilder.group({
       nome: ['', Validators.required],
       cognome: ['', Validators.required],
@@ -36,6 +29,20 @@ export class ContactsComponent {
       messaggio: ['', Validators.required],
       privacy: [false, Validators.requiredTrue],
       trattamentodati: [false, Validators.requiredTrue]
+    });
+  }
+
+  ngOnInit(){
+    this.translate.get('contactsMetaTitle').subscribe((title: string) => {
+      this.translate.get('contactsMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
     });
   }
 

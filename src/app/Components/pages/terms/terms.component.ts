@@ -14,12 +14,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class TermsComponent {
 
   constructor(private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
-    this.translate.get('termsMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
-    });
-    this.translate.get('termsMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
-    });
   }
 
+  ngOnInit(){
+    this.translate.get('termsMetaTitle').subscribe((title: string) => {
+      this.translate.get('termsMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
+    });
+  }
 }

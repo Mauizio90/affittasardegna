@@ -31,12 +31,18 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    this.translate.get('homeMetaTitle').subscribe((str: string) => {
-      this.titleService.setTitle(str);
+    this.translate.get('homeMetaTitle').subscribe((title: string) => {
+      this.translate.get('homeMetaDescription').subscribe((description: string) => {
+        this.metaTagService.addTags([
+          { property: 'og:title', content: title },
+          { property: 'og:description', content: description },
+          { property: 'description', content: description },
+          { property: 'og:image', content: './assets/images/logo.png' },
+        ]);
+        this.titleService.setTitle(title);
+      });
     });
-    this.translate.get('homeMetaDescription').subscribe((str: string) => {
-      this.metaTagService.updateTag({ name: 'description', content: str });
-    });
+
     this.form = this.formBuilder.group({
       checkIn: [this.getFormattedDate(new Date()), Validators.required],
       checkOut: [this.getFormattedDate(this.getFutureDate(7)), Validators.required],

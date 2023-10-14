@@ -56,7 +56,7 @@ const routes: Routes = [
     anchorScrolling: 'enabled',
     onSameUrlNavigation: 'reload',
     initialNavigation: 'enabledBlocking'
-  })],
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
