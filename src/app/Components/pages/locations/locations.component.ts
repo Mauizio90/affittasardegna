@@ -5,6 +5,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
 import { CommonModule, NgFor } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
 
 
 const algheroIta = "Perla della “Riviera del Corallo”, ricca di testimonianze del suo passato catalano (tra cui la lingua che ancora vi si parla), ha un vivacissimo porto turistico e commerciale, attrezzato per le attività di diporto. Famosa per l’aragosta che si pesca nelle acque cristalline del suo golfo, per la produzione di gioielli e manufatti di corallo e per il suo incantevole centro storico, le cui viuzze di notte si animano di una vivace <i>movida</i>.</p> <p>A pochi Km da Alghero, la Baia di Conte è il porto naturale più grande del Mediterraneo, utilizzato per questo sin dall’epoca romana; oggi è soprattutto una località turistica, molto amata da chi pratica sport acquatici e immersioni. A Nord la Baia è delimitata dalla scogliera di Capo Caccia, promontorio calcareo di altissime rocce a strapiombo sul mare, che va dai 170 m del capo agli oltre 300 di P. Cristallo, ricoperto dalla macchia mediterranea e da esemplari di flora rara come la palma nana, ove nidificano e si riproducono grifoni, falchi e gabbiani. Sul versante del promontorio rivolto verso il mare aperto, davanti ad una pittoresca isoletta detta “Foradada”, si aprono le famose Grotte di Nettuno cui si può arrivare in barca o, per i più coraggiosi, per mezzo dei 656 scalini della “Scala del Capriolo”, scavata lungo costone roccioso, con viste mozzafiato.</p> <p><b>Da non perdere</b>: un bagno alle Bombarde.</p> <p><b>Principali distanze</b>: <u>Porto Torres</u>, 40 Km; <u>Stintino</u>, 60 km; Sassari, 35 Km; <u>Bosa</u>, 50 Km.</p> <p><b>Come arrivare</b>: via mare, a <u>Porto Torres</u> (distanza 40 Km), collegata con Genova, Civitavecchia e Marsiglia (compagnie di navigazione: Tirrenia, Moby Lines, Grandi Navi Veloci ,Grimaldi); in aereo, l’aeroporto di Fertilia (distanza 5 km) è scalo delle principali compagnie di volo nazionali ed estere.</p> <p><b>Le spiagge</b>: il suo litorale è ampiamente balneabile e ricchissimo di calette e spiagge. Tra le principali: il Lido, spiaggia a fondo sabbioso e fondali bassi, lunga alcuni Km; Le Bombarde e il Lazzaretto, a fondo sabbioso con rocce affiorati; nella Baia di Conte: <u>Porto Conte</u> e Mugoni, a fondo sabbioso, avvolte da un’ampia pineta, Spiaggia di Tramariglio, Cala Dragunara (da cui partono barconi per le Grotte di Nettuno), Belvedere Foradada (scogliera a picco sul mare); risalendo verso nord: Cala del Porticciolo, Baia di Porto Ferro, Cala dell’Argentiera (calette sabbiose che si aprono tra alte scogliere).</p> </p>";
@@ -135,7 +136,7 @@ export class LocationsComponent {
     { id: 21, name: "Porto Rotondo", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/19. Porto_rotondo_spiaggia i sassi.jpg", descriptionIta: portoRotondoIta, descriptionEng: portoRotondoEng, descriptionEsp: portoRotondoEsp, descriptionDe: portoRotondoDe },
     { id: 22, name: "Porto Taverna", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "./assets/images/20. Porto-taverna-00006.jpeg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
     { id: 23, name: "Porto Torres", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/21. Porto torres balai.jpg", descriptionIta: portoTorresIta, descriptionEng: portoTorresEng, descriptionEsp: portoTorresEsp, descriptionDe: portoTorresDe },
-    { id: 24, name: "Portobello di Gallura", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/22Portobello.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
+    { id: 24, name: "Portobello di Gallura", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/22. Portobello-di-gallura_141826.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
     { id: 25, name: "San Giovanni di Posada", provincia: "Nuoro", accommodationsCount: 0, image: "./assets/images/24. San Giovanni di Posada la caletta.jpg", descriptionIta: "", descriptionEng: "", descriptionEsp: "", descriptionDe: "" },
     { id: 26, name: "San Teodoro", provincia: "Sassari", accommodationsCount: 0, image: "./assets/images/25. San Teodoro.jpg", descriptionIta: sanTeodoroIta, descriptionEng: sanTeodoroEng, descriptionEsp: sanTeodoroEsp, descriptionDe: sanTeodoroDe },
     { id: 27, name: "Santa Teresa di Gallura", provincia: "Olbia-Tempio", accommodationsCount: 0, image: "", descriptionIta: santaTeresaIta, descriptionEng: santaTeresaEng, descriptionEsp: santaTeresaEsp, descriptionDe: santaTeresaDe },
@@ -148,7 +149,7 @@ export class LocationsComponent {
 
 
 
-  constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private router: Router, private renderer: Renderer2, private translate: TranslateService) {
+  constructor(private accommodationService: AccommodationService, private router: Router, private renderer: Renderer2, private translate: TranslateService, private seo: SeoService) {
     this.accommodationService.getAccommodations().subscribe((data) => {
       this.allAccommodations = data;
       this.updateAccommodationsCount();
@@ -156,17 +157,10 @@ export class LocationsComponent {
   }
 
   ngOnInit(){
-    this.translate.get('locationsMetaTitle').subscribe((title: string) => {
-      this.translate.get('locationsMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('locationsMetaTitle');
+    let translatedDescription = this.translate.instant('locationsMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription)
   }
 
   ngAfterViewInit() {

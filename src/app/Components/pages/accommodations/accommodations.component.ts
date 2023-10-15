@@ -7,6 +7,7 @@ import { CommonModule, NgFor } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SearchService } from '../../services/search.service';
 import { FormsModule } from '@angular/forms';
+import { SeoService } from '../../services/seo.service';
 
 
 @Component({
@@ -111,7 +112,7 @@ export class AccommodationsComponent {
 
 
 
-  constructor(private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private searchService: SearchService) {
+  constructor(private accommodationService: AccommodationService, private translate: TranslateService, private searchService: SearchService, private seo: SeoService) {
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();
@@ -119,17 +120,10 @@ export class AccommodationsComponent {
   }
 
   ngOnInit() {
-    this.translate.get('accommodationsMetaTitle').subscribe((title: string) => {
-      this.translate.get('accommodationsMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('accommodationsMetaTitle');
+    let translatedDescription = this.translate.instant('accommodationsMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription);
 
     this.searchService.currentSearch.subscribe((search) => {
       if (search) {

@@ -7,6 +7,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class PropertiesSuggestionComponent {
   suggestForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private translate: TranslateService, private seo: SeoService) {
     this.suggestForm = this.formBuilder.group({
       city: ['', Validators.required],
       address: ['', Validators.required],
@@ -35,17 +36,10 @@ export class PropertiesSuggestionComponent {
   }
 
   ngOnInit(){
-    this.translate.get('propertySuggestionMetaTitle').subscribe((title: string) => {
-      this.translate.get('propertySuggestionMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('propertySuggestionMetaTitle');
+    let translatedDescription = this.translate.instant('propertySuggestionMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription);
   }
 
   public sendEmail(e: Event) {

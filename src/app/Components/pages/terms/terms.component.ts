@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
 
 
 @Component({
@@ -13,20 +14,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class TermsComponent {
 
-  constructor(private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+  constructor(private translate: TranslateService, private seo: SeoService) {
   }
 
   ngOnInit(){
-    this.translate.get('termsMetaTitle').subscribe((title: string) => {
-      this.translate.get('termsMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('termsMetaTitle');
+    let translatedDescription = this.translate.instant('termsMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription);
   }
 }

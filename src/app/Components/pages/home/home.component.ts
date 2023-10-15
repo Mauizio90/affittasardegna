@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { CommonModule, DatePipe } from '@angular/common';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SearchService } from '../../services/search.service';
+import { SeoService } from '../../services/seo.service';
 
 
 @Component({
@@ -25,23 +26,16 @@ export class HomeComponent {
   form!: FormGroup;
   public allAccommodations?: Accommodation[];
 
-  constructor(private formBuilder: FormBuilder, private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>, private router: Router, private searchService: SearchService) {
+  constructor(private formBuilder: FormBuilder, private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>, private router: Router, private searchService: SearchService, private seo: SeoService) {
     this.dateAdapter.setLocale('it');
     this.dateAdapter.getFirstDayOfWeek = () => { return 1; }
   }
 
   ngOnInit() {
-    this.translate.get('homeMetaTitle').subscribe((title: string) => {
-      this.translate.get('homeMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('homeMetaTitle');
+    let translatedDescription = this.translate.instant('homeMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription);
 
     this.form = this.formBuilder.group({
       checkIn: [this.getFormattedDate(new Date()), Validators.required],

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
 
 
 @Component({
@@ -13,21 +14,14 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class PrivacyComponent {
 
-  constructor(private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+  constructor(private translate: TranslateService, private seo: SeoService) {
   }
 
   ngOnInit(){
-    this.translate.get('privacyMetaDescription').subscribe((title: string) => {
-      this.translate.get('homeMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('privacyMetaDescription');
+    let translatedDescription = this.translate.instant('privacyMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription);
   }
 
 }

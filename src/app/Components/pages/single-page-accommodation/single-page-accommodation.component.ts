@@ -7,6 +7,8 @@ import { Title, Meta } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgFor } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
+
 
 
 @Component({
@@ -27,7 +29,7 @@ export class SinglePageAccommodationComponent {
   faCheck = faCheck;
   faUser = faUser;
 
-  constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private router: Router) {}
+  constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private router: Router, private seo : SeoService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -41,33 +43,34 @@ export class SinglePageAccommodationComponent {
               this.router.navigate(['/' + translatedPath]);
               return;
             }
-
+  
             this.accommodation = accommodation;
             this.translate.get('singlePageMetaTitle').subscribe((str: string) => {
-              this.titleService.setTitle("AffittaSardegna - " + this.accommodation?.name_it?.toString() + str + this.accommodation?.city?.toString());
+              this.seo.updateTitle("AffittaSardegna - " + this.accommodation?.name_it?.toString() + str + this.accommodation?.city?.toString());
             });
             this.translate.get(['singlePageMetaDescription1', 'singlePageMetaDescription2', 'singlePageMetaDescription3']).subscribe((translations: { [key: string]: string }) => {
               const str1 = translations['singlePageMetaDescription1'];
               const str2 = translations['singlePageMetaDescription2'];
               const str3 = translations['singlePageMetaDescription3'];
-
-              this.metaTagService.updateTag({ name: 'og:description', content: this.accommodation?.name_it?.toString() + str1 + this.accommodation?.guests + str2 + this.accommodation?.city?.toString() + str3 });
+  
+              this.seo.updateDescription(this.accommodation?.name_it?.toString() + str1 + this.accommodation?.guests + str2 + this.accommodation?.city?.toString() + str3);
             });
-
+  
             if (accommodation.images && accommodation.images.length > 0) {
               const firstImage = accommodation.images[0];
-              this.metaTagService.updateTag({ property: 'og:image', content: firstImage });
+              this.seo.updateImage(firstImage);
             }
-
+  
             if (accommodation.images && accommodation.images.length > 0) {
               this.bigImageSource = accommodation.images[0];
             }
-
+  
             console.log(this.accommodation);
           });
       }
     });
   }
+  
   
 
   replaceBigImage(imageSource: string) {

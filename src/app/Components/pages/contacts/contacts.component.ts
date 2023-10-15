@@ -7,6 +7,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ContactsComponent {
   contactForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private titleService: Title, private metaTagService: Meta, private translate: TranslateService) {
+  constructor(private formBuilder: FormBuilder, private dialog: MatDialog, private translate: TranslateService, private seo: SeoService) {
     this.contactForm = this.formBuilder.group({
       nome: ['', Validators.required],
       cognome: ['', Validators.required],
@@ -33,17 +34,10 @@ export class ContactsComponent {
   }
 
   ngOnInit(){
-    this.translate.get('contactsMetaTitle').subscribe((title: string) => {
-      this.translate.get('contactsMetaDescription').subscribe((description: string) => {
-        this.metaTagService.addTags([
-          { property: 'og:title', content: title },
-          { property: 'og:description', content: description },
-          { property: 'description', content: description },
-          { property: 'og:image', content: './assets/images/logo.png' },
-        ]);
-        this.titleService.setTitle(title);
-      });
-    });
+    let translatedTitle = this.translate.instant('contactsMetaTitle');
+    let translatedDescription = this.translate.instant('contactsMetaDescription');
+    this.seo.updateTitle(translatedTitle);
+    this.seo.updateDescription(translatedDescription);
   }
 
   public sendEmail(e: Event) {
