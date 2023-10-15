@@ -38,11 +38,8 @@
     border-radius: 2rem;
     border: 1px solid var(--primary);
     box-shadow: 5px 5px 30px #888888;
-    margin: 65px 10px 10px 10px;
     background-color: white;
-    position: relative;
-    left: 49.4%;
-    transform: translate(-50%, -50%);
+    margin: -65px auto 40px;
 }
 
 .booking-nav {
@@ -258,6 +255,20 @@
   font-size: 35px;
 }
 
+.btn2{
+  padding: 8px 5px;
+  background: #FDC746;
+  color: var(--light);
+  border-radius: 5rem;
+  
+  margin-left: 15px;
+}
+
+.btn2:hover{
+  background: var(--primary);
+  color: var(--light);
+}
+
 
 
 
@@ -265,13 +276,13 @@
 @media (max-width: 600px) {
 
   .migliorPrezzo{
-    font-size: large;
+    font-size: 12px;
   }
 
   .booking-container{
-    margin-top: 300px;
+    margin-bottom: 300px;
+    min-width: 350px;
     max-width: 400px;
-    left: 49%;
   }
 
   .booking-container form {
@@ -332,21 +343,27 @@
   }
 
   .home-text{
-    width: 45%;
-    height: 50%;
+    width: 60%;
+    height: 25%;
     margin-top: -100px;
   }
 
   .home-text h1{
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .home-text a{
-    font-size: 12px;
+    font-size: 10px;
     width: 100%;
   }
 
   .featured-title{
     margin-top: -250px;
   }
+
+  .btn{
+     padding: 8px 4px;
+     margin-left: -12px;
+  }
+  
 }

@@ -21,7 +21,8 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.6px);">
         <h1>{{"homeheader-trova" | translate | uppercase}} <br>{{"homeheader-alloggio" | translate | uppercase}}<br>{{"homeheader-vacanza" | translate | uppercase}}</h1>
-        <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="btn">{{'headerButton' | translate}}</a>
+        
+    <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="btn">{{'headerButton' | translate}}</a>
     </div>
 </div>
 <!-- header end -->
@@ -79,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div class="btn" (click)="onFormSubmit()"><i class="ri-search-line"></i></div>
+        <div class="btn"  style="margin: 10px;" (click)="onFormSubmit()"><i class="ri-search-line"></i></div>
     </form>
 
 </div>
