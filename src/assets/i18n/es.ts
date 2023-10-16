@@ -197,5 +197,6 @@ export const es ={
     "priceSort": "Ordenar por precio",
     "distanzaMare": "Distancia desde el mar",
     "BeSafeTitle": "Tarifa Segura BeSafe",
-    "beSafeDescrizione": "Reserva con total seguridad <br> con nuestra tarifa asegurada <br> tendrás la tranquilidad <br> de planificar tus vacaciones <br> sin preocupaciones de cancelación <br> Haz clic para obtener más información"
+    "beSafeDescrizione": "Reserva con total seguridad <br> con nuestra tarifa asegurada <br> tendrás la tranquilidad <br> de planificar tus vacaciones <br> sin preocupaciones de cancelación <br> Haz clic para obtener más información",
+    "homePrezzoGarantito": "Reserva con nosotros, mejor precio garantizado"
 }
