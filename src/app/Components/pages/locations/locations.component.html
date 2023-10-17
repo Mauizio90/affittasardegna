@@ -6,7 +6,7 @@
 </div>
 
 <div class="locations-container">
-    <div class="container pappa">
+    <div class="pappa" style="margin-left: 80px;">
         <div class="location-list-container">
             <div class="location-list-title">
                 <h3><b>{{"localita" | translate}}</b></h3>    
@@ -14,26 +14,29 @@
             <div class="location-list">
                 <ul class="location-list-item" *ngFor="let city of selectableCities">
                     <li><a [routerLink]="['.']" [fragment]="city.id.toString()">{{city.name}}</a></li>
-                    <a [routerLink]="['/ville-appartamenti-vacanze-sardegna']" class="numero-alloggi" style="font-size: 10px;">{{city.accommodationsCount}} {{"alloggi" | translate}}</a>
+                    <a [routerLink]="['/ville-appartamenti-vacanze-sardegna']" class="numero-alloggi">{{city.accommodationsCount}} {{"alloggi" | translate}}</a>
                 </ul>
            </div>
         </div>
     </div>
-    <div class="localites-big">
-        <div class="localities-description-container"  *ngFor="let city of selectableCities" #h3ElementRef>
-            <div class="localities-description-image">
-                <img src={{city.image}} alt="foto spiaggia {{city.name}}">
-            </div>
-            <div class="location-description-title">
-                <h3 class="location-title">{{city.name}}</h3>
-                <p class="location"> {{city.provincia}}</p>
-                <p class="location" [innerHTML]="'locationDescrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng, esp:city.descriptionEsp, de:city.descriptionDe, fr:city.descriptionFr}"></p>
-            </div>
-            <div class="location-description-footer-bg">
-                <div class="location-description-footer">
-                    <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]">{{"vediAlloggi" | translate}}</a>
-                </div>
+</div>
+<div class="localites-big">
+    <div class="localities-description-container"  *ngFor="let city of selectableCities" #h3ElementRef>
+        <div class="localities-description-image">
+            <img src={{city.image}} alt="foto spiaggia {{city.name}}">
+        </div>
+        <div class="location-description-title">
+            <h3 class="location-title">{{city.name}}</h3>
+            <p class="location" style="margin-left: 10px;">({{city.provincia}})</p>
+            <div style="margin-top: 20px ;"><p class="location" [innerHTML]="'locationDescrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng, esp:city.descriptionEsp, de:city.descriptionDe, fr:city.descriptionFr}"></p></div>
+            
+        </div>
+        <div class="location-description-footer-bg" style="background-color: #4CB276;">
+            <div class="location-description-footer" >
+                <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]">{{"vediAlloggi" | translate}}</a>
             </div>
         </div>
     </div>
 </div>
+
+

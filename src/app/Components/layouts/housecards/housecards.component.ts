@@ -39,8 +39,11 @@ export class HousecardsComponent {
   public cardsToShow: number = 25;
 
   public loadMoreCards(): void {
-    this.cardsToShow += 25;
+    if (this.cardsToShow < this.accommodations!.length) {
+      this.cardsToShow += 25;
+    }
   }
+  
 
   constructor(private gaService: GoogleAnalyticsService) { }
 
@@ -51,56 +54,57 @@ export class HousecardsComponent {
 
 
   hasWifi(accommodation: any): boolean {
-    return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Connessione WiFi');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Connessione WiFi');
   }
-
+  
   hasMosquitoNets(accommodation: any): boolean {
-    return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Zanzariere in tutta la struttura');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Zanzariere in tutta la struttura');
   }
-
+  
   hasShower(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Doccia');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Doccia');
   }
-
+  
   hasAirConditioning(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Aria condizionata');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Aria condizionata');
   }
-
+  
   hasKitchen(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Cucina');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Cucina');
   }
-
+  
   hasPingPongTable(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Tavolo da ping pong');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Tavolo da ping pong');
   }
-
+  
   hasBicycle(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Bicicletta');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Bicicletta');
   }
-
+  
   hasGarden(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Giardino');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Giardino');
   }
-
+  
   hasParking(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Parcheggio');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Parcheggio');
   }
-
+  
   hasPetsAllowed(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Animali domestici permessi');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Animali domestici permessi');
   }
-
+  
   hasPrivatePool(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Piscina privata');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Piscina privata');
   }
-
+  
   hasTV(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'TV');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'TV');
   }
-
+  
   hasGarage(accommodation: any): boolean {
-      return accommodation.amenities.some((amenity: any) => amenity.name.it === 'Garage');
+    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Garage');
   }
+  
 
 
 

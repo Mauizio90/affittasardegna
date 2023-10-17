@@ -259,7 +259,7 @@
   vertical-align: middle;
   margin: 0;
   margin-right: 50px;
-  color: var(--secondary);
+  color: #FDC746;
   font-weight: bolder;
   font-size: 35px;
   -webkit-animation: blinker 1s linear infinite;
@@ -270,27 +270,27 @@
 }
 @-webkit-keyframes blinker {
   50% {
-      opacity: 0;
+          opacity: 0;
   }
 }
 @-moz-keyframes blinker {
   50% {
-      opacity: 0;
+          opacity: 0;
   }
 }
 @-ms-keyframes blinker {
   50% {
-      opacity: 0;
+          opacity: 0;
   }
 }
 @-o-keyframes blinker {
   50% {
-      opacity: 0;
+          opacity: 0;
   }
 }
 @keyframes blinker {
   50% {
-      opacity: 0;
+          opacity: 0;
   }
 }
 
