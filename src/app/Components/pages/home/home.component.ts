@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Accommodation } from '../../models/accommodation';
 import { AccommodationService } from '../../services/accommodation.service';
@@ -7,7 +7,7 @@ import { HousecardsComponent } from '../../layouts/housecards/housecards.compone
 import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDatepicker, MatDatepickerInputEvent, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule, DatePipe } from '@angular/common';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -25,6 +25,9 @@ import { SeoService } from '../../services/seo.service';
 export class HomeComponent {
   form!: FormGroup;
   public allAccommodations?: Accommodation[];
+  @ViewChild('checkOutPicker') checkoutPicker!: MatDatepicker<Date>;
+
+
 
   constructor(private formBuilder: FormBuilder, private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>, private router: Router, private searchService: SearchService, private seo: SeoService) {
     this.dateAdapter.setLocale('it');
@@ -42,6 +45,7 @@ export class HomeComponent {
       checkOut: [this.getFormattedDate(this.getFutureDate(7)), Validators.required],
       guests: ['1', Validators.required]
     });
+    
 
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.allAccommodations = accommodations.filter((accommodation) => {
@@ -51,6 +55,20 @@ export class HomeComponent {
     });
 
   }
+
+  onCheckInDateChange(event: MatDatepickerInputEvent<Date>) {
+    const checkInDate = event.value;
+    if (checkInDate) {
+      const checkOutDate = new Date(checkInDate);
+      checkOutDate.setDate(checkOutDate.getDate() + 7);
+      this.form.get('checkOut')?.setValue(checkOutDate);
+      this.form.get('checkOut')?.updateValueAndValidity();
+    }
+  }
+  
+  
+  
+  
 
   onFormSubmit() {
     const checkInDate = this.form.get('checkIn')?.value;

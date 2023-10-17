@@ -9,20 +9,25 @@
 
 @keyframes carousel {
   0% {
-    background-image: url('~src/assets/images/14. OROSEI -Cala liberotto 3.jpg');
+    background-image: url('~src/assets/images/prove/2.1.jpg');
   }
+
   20% {
-    background-image: url('~src/assets/images/1. ALGHERO.jpg');
+    background-image: url('~src/assets/images/prove/3.2.jpg');
   }
+
   40% {
-    background-image: url('~src/assets/images/4. BOSA 1.jpg');
+    background-image: url('~src/assets/images/prove/CASTELSARDO_CITY_001_WEB 4.3.jpg');
   }
+
   60% {
-    background-image: url('~src/assets/images/10. Golfo Aranci.jpg');
+    background-image: url('~src/assets/images/prove/16.9.jpg');
   }
+
   80% {
     background-image: url('~src/assets/images/31. Viddalba ALLEDORIA_005_WEB.jpg');
   }
+
   100% {
     background-image: url('~src/assets/images/8. CASTELSARDO_CITY_002_WEB.jpg');
   }
@@ -34,208 +39,212 @@
   background-position: center;
 }
 
-.booking-container{
-    border-radius: 2rem;
-    border: 1px solid var(--primary);
-    box-shadow: 5px 5px 30px #888888;
-    background-color: white;
-    margin: -65px auto 40px;
+.booking-container {
+  border-radius: 2rem;
+  border: 1px solid var(--primary);
+  box-shadow: 5px 5px 30px #888888;
+  background-color: white;
+  margin: -65px auto 40px;
 }
 
 .booking-nav {
-    height: 90px;
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    background-color: var(--extra-light);
-    border-radius: 5px;
-    
+  height: 90px;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--extra-light);
+  border-radius: 5px;
+
 }
 
 .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.booking-nav span{
-    flex: 1;
-    padding: 1rem 2rem;
-    font-weight: 500;
-    color: var(--primary);
-    text-align: center;
-    border-radius: 5px;
+.booking-nav span {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-align: center;
+  border-radius: 5px;
 }
-  
-  .booking-nav span:nth-child(2) {
-    color: var(--primary);
-  }
+
+.booking-nav span:nth-child(2) {
+  color: var(--primary);
+}
 
 .booking-container form {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr) auto;
-    gap: 1rem;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1rem;
 }
 
 .booking-container .input-content {
-    width: 100%;
+  width: 100%;
 }
 
 .booking-container .form-group {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .booking-container .form-group span {
-    padding: 10px;
-    font-size: 1.7rem;
-    color: var(--primary);
-    border-radius: 1rem;
+  padding: 10px;
+  font-size: 1.7rem;
+  color: var(--primary);
+  border-radius: 1rem;
 }
 
 .booking-container .input-group {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 .booking-container label {
-    position: absolute;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--primary);
-    pointer-events: none;
-    transition: 0.3s;
-    
-    margin-top: -10px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  pointer-events: none;
+  transition: 0.3s;
+
+  margin-top: -10px;
 }
-  
-  .booking-container input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1rem;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid var(--primary);
-    color: var(--secondary);
-  }
-  
-  .booking-container input:focus ~ label {
-    font-size: 0.8rem;
-    top: 0;
-  }
-  
-  .booking-container .form-group p {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    color: var(--primary);
-  }
-  
-  .booking-container .btn {
-    padding: 1rem;
-    font-size: 1.5rem;
-  }
 
-  .btn{
-    margin : 10px 10px 10px 10px;
+.booking-container input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  color: var(--secondary);
+}
 
-  }
+.booking-container input:focus~label {
+  font-size: 0.8rem;
+  top: 0;
+}
 
-  .featured-title{
-    color: var(--primary);
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 0px;
-  }
+.booking-container .form-group p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+
+.booking-container .btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  margin: 10px 10px 10px 10px;
+
+}
+
+.featured-title {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0px;
+}
 
 
-  .localities-background {
-    position: relative;
-    background-image: url('~src/assets/images/14. OROSEI -Cala liberotto 3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 25px;
-  }
-  
+.localities-background {
+  position: relative;
+  background-image: url('~src/assets/images/14. OROSEI -Cala liberotto 3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 25px;
+}
+
 
 .localities-big-container {
-    position: relative;
-    color: white;
-    font-weight: bold;
-    backdrop-filter: blur(10px);
+  position: relative;
+  color: white;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
 }
 
 
 
-  .localities-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 10px 10px 10px;
+.localities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 10px 10px 10px;
 }
 
 
-.localities-section h2, .localities-section h4 , .localities-item-content{
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
+.localities-section h2,
+.localities-section h4,
+.localities-item-content {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 .localities-item-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 20px;
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .localities-image-container {
-    position: relative;
-    margin: 10px;
+  position: relative;
+  margin: 10px;
 }
 
 .localities-image {
-    width: 400px;
-    height: 400px;
+  width: 400px;
+  height: 400px;
 }
 
 .localities-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .localities-image-container:hover .localities-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .localities-overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
 }
 
 .custom-input {
-  max-width: 120px; /* Adjust the width as per your requirement */
+  max-width: 120px;
+  /* Adjust the width as per your requirement */
 }
 
-.mat-datepicker-toggle{
-  color: var(--primary); /* Replace 'red' with the desired color */
+.mat-datepicker-toggle {
+  color: var(--primary);
+  /* Replace 'red' with the desired color */
 }
 
-.filter-box-title{
+.filter-box-title {
   margin-top: 100px;
 }
 
@@ -245,26 +254,56 @@
   border-radius: 10px;
 }
 
-.migliorPrezzo{
-  line-height: 38px; 
-  vertical-align: middle; 
-  margin: 0; 
+.migliorPrezzo {
+  line-height: 38px;
+  vertical-align: middle;
+  margin: 0;
   margin-right: 50px;
   color: var(--secondary);
   font-weight: bolder;
   font-size: 35px;
+  -webkit-animation: blinker 1s linear infinite;
+  -moz-animation: blinker 1s linear infinite;
+  -ms-animation: blinker 1s linear infinite;
+  -o-animation: blinker 1s linear infinite;
+  animation: blinker 1s linear infinite;
+}
+@-webkit-keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+@-moz-keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+@-ms-keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+@-o-keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+@keyframes blinker {
+  50% {
+      opacity: 0;
+  }
 }
 
-.btn2{
+.btn2 {
   padding: 8px 5px;
   background: #FDC746;
   color: var(--light);
   border-radius: 5rem;
-  
+
   margin-left: 15px;
 }
 
-.btn2:hover{
+.btn2:hover {
   background: var(--primary);
   color: var(--light);
 }
@@ -275,23 +314,25 @@
 
 @media (max-width: 600px) {
 
-  .migliorPrezzo{
+  .migliorPrezzo {
     font-size: 12px;
   }
 
-  .booking-container{
+  .booking-container {
     margin-bottom: 300px;
     min-width: 350px;
     max-width: 400px;
   }
 
   .booking-container form {
-    grid-template-columns: 1fr; /* Cambio il numero di colonne a 1 */
+    grid-template-columns: 1fr;
+    /* Cambio il numero di colonne a 1 */
     gap: 1rem;
   }
 
   .booking-container .btn {
-    grid-column: 1 / -2; /* Espando il pulsante su tutta la larghezza */
+    grid-column: 1 / -2;
+    /* Espando il pulsante su tutta la larghezza */
   }
 
   .localities-item-details {
@@ -309,12 +350,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
-  .localities-overlay-description{
+  .localities-overlay-description {
     font-size: 12px;
   }
 
@@ -332,38 +373,39 @@
   }
 
   .custom-input {
-    max-width: 200px; /* Adjust the width as per your requirement */
+    max-width: 200px;
+    /* Adjust the width as per your requirement */
     text-align: center;
   }
-  
+
   .input-responsive {
     flex: 1;
     width: 100%;
     margin-bottom: 2px;
   }
 
-  .home-text{
+  .home-text {
     width: 60%;
     height: 25%;
     margin-top: -100px;
   }
 
-  .home-text h1{
+  .home-text h1 {
     font-size: 16px;
   }
 
-  .home-text a{
+  .home-text a {
     font-size: 10px;
     width: 100%;
   }
 
-  .featured-title{
+  .featured-title {
     margin-top: -250px;
   }
 
-  .btn{
-     padding: 8px 4px;
-     margin-left: -12px;
+  .btn {
+    padding: 8px 4px;
+    margin-left: -12px;
   }
-  
+
 }
