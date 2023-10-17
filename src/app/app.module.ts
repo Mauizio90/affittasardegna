@@ -32,6 +32,7 @@ import { MatInputModule } from '@angular/material/input';
 import { DateAdapter, MatNativeDateModule, NativeDateAdapter } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
 import { fr } from 'src/assets/i18n/fr';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
@@ -96,7 +97,9 @@ export class MyDateAdapter extends NativeDateAdapter {
         }),
         MatDatepickerModule,
         MatInputModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        NgxGoogleAnalyticsModule.forRoot('G-7XJBP872BN'),
+        NgxGoogleAnalyticsRouterModule
     ],
     providers: [provideClientHydration(),DatePipe,
       {provide: DateAdapter, useClass: MyDateAdapter}],

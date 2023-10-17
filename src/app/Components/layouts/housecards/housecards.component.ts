@@ -6,6 +6,7 @@ import { NgFor, SlicePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
     selector: 'app-housecards',
@@ -40,6 +41,13 @@ export class HousecardsComponent {
   public loadMoreCards(): void {
     this.cardsToShow += 25;
   }
+
+  constructor(private gaService: GoogleAnalyticsService) { }
+
+  trackEvent(eventName: string) {
+    this.gaService.event(eventName, 'click', eventName);
+  }
+
 
 
   hasWifi(accommodation: any): boolean {
