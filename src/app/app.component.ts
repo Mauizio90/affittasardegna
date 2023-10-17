@@ -12,7 +12,6 @@ declare const gtag: Function;
 })
 
 export class AppComponent {
-  title = 'affittasardegna';
   constructor(public router: Router, private metaTagService: Meta, private translate: TranslateService, private titleService: Title, private seo: SeoService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd && typeof window !== 'undefined') {
