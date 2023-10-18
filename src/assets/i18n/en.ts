@@ -38,7 +38,7 @@ export const en ={
     "descrizioneCasa": "{{descriptionEn}}",
     "popupRichiesta": "Request successfully made.",
     "popupProvvederemo": " We will contact you as soon as possible.",
-    "Leader":"In Sardinia, a leader in vacation rentals.",
+    "Leader":"Leader in vacation rentals.",
     "aboutusLeader": " is a leader in vacation rentals throughout the upper half of Sardinia. With over 500 units, it offers a diverse range of vacation homes, from simple studios to exclusive villas, to cater to every type of request for an unforgettable stay in that paradise called Sardinia!",
     "aboutusLeader2": "It is present in the most charming locations along the Sardinian coast, both the well-known and frequented ones, and those still wild and characterized by incomparable natural beauty.",
     "aboutusLeader3": " is the ideal partner to rely on for a magnificent vacation in Sardinia, whether it's for couples, families, or groups of friends; whether it's for total relaxation, well-being, fun, water sports, trekking, hiking, or cycling.",

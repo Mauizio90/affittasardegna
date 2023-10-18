@@ -38,7 +38,7 @@ export const fr = {
     "descrizioneCasa": "{{descriptionFr}}",
     "popupRichiesta": "Demande effectuée avec succès.",
     "popupProvvederemo": "Nous vous contacterons dès que possible.",
-    "Leader": "Leader des locations en Sardaigne",
+    "Leader": "Leader dans les locations touristiques",
     "aboutusLeader": "est le leader des locations de vacances pour la moitié supérieure de la Sardaigne. Avec plus de 500 unités, nous proposons une variété de locations de vacances, des studios simples aux villas exclusives, afin de satisfaire tous les types de demandes pour un séjour inoubliable dans ce paradis appelé la Sardaigne !",
     "aboutusLeader2": "Nous sommes présents dans les endroits les plus charmants de la côte sarde, à la fois les plus célèbres et fréquentés, et les plus sauvages, caractérisés par des paysages naturels d'une beauté incomparable.",
     "aboutusLeader3": "Nous sommes le partenaire idéal pour passer des vacances magnifiques en Sardaigne, que ce soit en couple, en famille ou entre amis ; que ce soit pour la détente totale, le bien-être, le divertissement, les sports nautiques, la randonnée, l'excursion, le cyclotourisme.",

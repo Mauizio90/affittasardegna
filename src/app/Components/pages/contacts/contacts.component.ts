@@ -3,9 +3,8 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angula
 import { MatDialog } from '@angular/material/dialog';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { PopupsubmissionsuccessComponent } from '../../layouts/popupsubmissionsuccess/popupsubmissionsuccess.component';
-import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SeoService } from '../../services/seo.service';
 
@@ -15,7 +14,7 @@ import { SeoService } from '../../services/seo.service';
     templateUrl: './contacts.component.html',
     styleUrls: ['./contacts.component.css'],
     standalone: true,
-    imports: [ReactiveFormsModule, NgIf, RouterLink, TranslateModule]
+    imports: [ReactiveFormsModule, NgIf, RouterLink, TranslateModule, CommonModule]
 })
 export class ContactsComponent {
   contactForm: FormGroup;

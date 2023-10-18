@@ -38,7 +38,7 @@ export const es ={
     "descrizioneCasa": "{{descriptionEs}}",
     "popupRichiesta": "Solicitud realizada con éxito.",
     "popupProvvederemo": "Nos pondremos en contacto contigo lo antes posible.",
-    "Leader": "En Cerdeña, líder en alquileres vacacionales.",
+    "Leader": "Líder en alquileres vacacionales.",
     "aboutusLeader": "es líder en alquileres vacacionales en la mitad superior de Cerdeña. Con más de 500 unidades, ofrece una amplia gama de casas de vacaciones, desde estudios sencillos hasta villas exclusivas, para satisfacer todo tipo de solicitudes para una estancia inolvidable en ese paraíso llamado Cerdeña.",
     "aboutusLeader2": "Está presente en los lugares más encantadores de la costa sarda, tanto en los conocidos y frecuentados como en los aún salvajes y caracterizados por una belleza natural incomparable.",
     "aboutusLeader3": "es el socio ideal en el que confiar para unas magníficas vacaciones en Cerdeña, ya sea para parejas, familias o grupos de amigos; ya sea para relajación total, bienestar, diversión, deportes acuáticos, senderismo, excursiones o ciclismo.",

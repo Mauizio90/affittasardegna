@@ -116,6 +116,7 @@ export class AccommodationsComponent {
     this.accommodationService.getAccommodations().subscribe((accommodations) => {
       this.originalAccommodations = accommodations;
       this.filterAccommodations();
+      this.sortAccommodationsByPrice();
     });
   }
 
@@ -232,10 +233,4 @@ export class AccommodationsComponent {
       this.sortOrder = 'asc';
     }
   }
-
-
-
-
-
-
 }

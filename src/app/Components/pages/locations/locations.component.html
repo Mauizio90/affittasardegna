@@ -14,7 +14,7 @@
             <div class="location-list">
                 <ul class="location-list-item" *ngFor="let city of selectableCities">
                     <li><a [routerLink]="['.']" [fragment]="city.id.toString()">{{city.name}}</a></li>
-                    <a [routerLink]="['/ville-appartamenti-vacanze-sardegna']" class="numero-alloggi">{{city.accommodationsCount}} {{"alloggi" | translate}}</a>
+                    <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="numero-alloggi">{{city.accommodationsCount}} {{"alloggi" | translate}}</a>
                 </ul>
            </div>
         </div>
