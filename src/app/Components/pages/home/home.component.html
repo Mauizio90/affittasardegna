@@ -3,11 +3,9 @@
         <div class="col-md">
             <div class="input-group">
                 <p class="migliorPrezzo">{{"homePrezzoGarantito" | translate | uppercase}}</p>
-                <input id="nameInput" type="text" class="form-control input-responsive w-100"
+                <input id="nameInput" type="text" class="form-control input-responsive"
                     placeholder="{{'filtroHomePage' | translate}}" />
-                <div class="input-group-append">
-                    <button class="btn" style="margin: 0px; margin-left: 5px;" (click)="onSearchClick()">Cerca</button>
-                </div>
+                    <button class="btn" style="margin: 0px" (click)="onSearchClick()">Cerca</button>
             </div>
         </div>
     </div>
@@ -53,7 +51,7 @@
     <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
         <div class="form-group">
             <div class="input-content">
-                <div class="input-group">
+                <div class="input-group2">
                     <span class="label" style="font-size: 20px;">Check-in</span>
                     <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
                     <input style="text-align: center;" matInput [matDatepicker]="checkInPicker"
@@ -65,7 +63,7 @@
         </div>
         <div class="form-group">
             <div class="input-content">
-                <div class="input-group">
+                <div class="input-group2">
                     <span class="label" style="font-size: 20px;">Check-out</span>
                     <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
                     <input style="text-align: center;" matInput [matDatepicker]="checkOutPicker"
@@ -76,7 +74,7 @@
         </div>
         <div class="form-group">
             <div class="input-content">
-                <div class="input-group">
+                <div class="input-group2">
                     <span class="label" style="font-size: 20px;">{{'ospiti' | translate}}</span>
                     <span><i class="ri-user-5-line"></i></span>
                     <input style="text-align: center;" type="number" min="1" formControlName="guests" id="guests-input"
