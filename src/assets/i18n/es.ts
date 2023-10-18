@@ -28,7 +28,7 @@ export const es ={
     "In primo piano": "En primera plana",
     "bestlocalities": "Las mejores localidades turísticas de Cerdeña. Playas de ensueño y aguas cristalinas.",
     "descrizioneLocalità1": "Pequeño municipio en la alta Baronia, en la frontera entre las provincias de Olbia-Tempio y Nuoro, con una...",
-    "footerDescription": "AffittaSardegna es líder en alquileres vacacionales en la mitad superior de Cerdeña. Con más de 500 unidades, ofrece una variedad de casas de vacaciones, desde estudios sencillos hasta villas exclusivas.",
+    "footerDescription": "AffittaSardegna es líder en alquileres vacacionales en la mitad superior de Cerdeña. Con más de 500 unidades, ofrece una variedad de casas de vacaciones, desde estudios sencillos hasta villas exclusivas...",
     "scopriDiPiù": "Descubre más",
     "contattaci": "Contáctanos",
     "footerSeguici": "SÍGUENOS EN NUESTRAS REDES SOCIALES",
@@ -191,12 +191,12 @@ export const es ={
     "termsMetaTitle": "AffittaSardegna - Términos y Condiciones",
     "termsMetaDescription": "Términos y condiciones de reserva",
     "filtroHomePage": "Buscar por Código/Nombre del Apartamento",
-    "besafeBrochure": "https://file.notion.so/f/s/e20ea29e-9312-4e50-bcae-84c7c3fb9297/ES_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=8babe4f2-bc42-4f92-8a99-8c634327b266&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697212800000&signature=jjycmscoOPiOtWrds8OZYXJCLXDbtx4Hku6z7__aLhw&downloadName=%5BES%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
+    "besafeBrochure": "https://file.notion.so/f/s/e20ea29e-9312-4e50-bcae-84c7c3fb9297/ES_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=8babe4f2-bc42-4f92-8a99-8c634327b266&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697724000000&signature=AEaC2n-llIyvSzR9Tr-NlvExuIH6R7quC7QNr7cj0pA&downloadName=%5BES%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
     "beSafeDownload": "Descargar el folleto de BeSafeRate",
     "beSafePagaSicuro": "Pagos seguros",
     "priceSort": "Ordenar por precio",
     "distanzaMare": "Distancia desde el mar",
     "BeSafeTitle": "Tarifa Segura BeSafe",
-    "beSafeDescrizione": "Reserva con total seguridad <br> con nuestra tarifa asegurada <br> tendrás la tranquilidad <br> de planificar tus vacaciones <br> sin preocupaciones de cancelación <br> Haz clic para obtener más información",
+    "beSafeDescrizione": "Reserva con total seguridad <br> con nuestra tarifa asegurada, <br> tendrás la tranquilidad <br> de planificar tus vacaciones <br> sin preocupaciones de cancelación. <br> Haz clic para obtener más información",
     "homePrezzoGarantito": "Reserva con nosotros, mejor precio garantizado"
 }

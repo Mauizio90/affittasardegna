@@ -28,7 +28,7 @@ export const fr = {
     "In primo piano": "En avant-première",
     "bestlocalities": "Les meilleures destinations touristiques de la Sardaigne. Plages de rêve et eaux cristallines.",
     "descrizioneLocalità1": "Petite commune de l'Alta Baronia, à la frontière des provinces d'Olbia-Tempio et de Nuoro, avec...",
-    "footerDescription": "AffittaSardegna est leader dans les locations de vacances pour la moitié supérieure de la Sardaigne. Avec plus de 500 unités, nous proposons une variété de locations de vacances, des studios simples aux villas exclusives.",
+    "footerDescription": "AffittaSardegna est leader dans les locations de vacances pour la moitié supérieure de la Sardaigne. Avec plus de 500 unités, nous proposons une variété de locations de vacances, des studios simples aux villas exclusives...",
     "scopriDiPiù": "En savoir plus",
     "contattaci": "Contactez-nous",
     "footerSeguici": "SUIVEZ-NOUS SUR NOS RÉSEAUX SOCIAUX",
@@ -191,13 +191,13 @@ export const fr = {
     "termsMetaTitle": "AffittaSardegna - Termes et conditions",
     "termsMetaDescription": "Termes et conditions de réservation",
     "filtroHomePage": "Rechercher par Code/Nom de l'Appartement",
-    "besafeBrochure": "https://file.notion.so/f/s/12a924a1-d0f1-4cb4-9300-1a007483cc01/FR_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=9c509a05-eb60-46e6-9648-bd1f1eca4e1f&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697212800000&signature=t5xbuAerBRXf6swSO3ylzaCI4omJcaxPxkrwv7JiOdw&downloadName=%5BFR%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
+    "besafeBrochure": "https://file.notion.so/f/s/12a924a1-d0f1-4cb4-9300-1a007483cc01/FR_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=9c509a05-eb60-46e6-9648-bd1f1eca4e1f&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697724000000&signature=iJ-fyV1ViT3gZ4mpmhR6oQHckhDGceZ0lA8ixJuZjWc&downloadName=%5BFR%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
     "beSafeDownload": "Téléchargez la brochure BeSafeRate",
     "beSafePagaSicuro": "Paiements sécurisés",
     "priceSort": "Trier par prix",
     "distanzaMare": "Distance de la mer",
     "BeSafeTitle": "Tarif Sécurisé BeSafe",
-    "beSafeDescrizione": "Réservez en toute sécurité <br> avec notre tarif assuré <br> vous aurez la tranquillité d'esprit <br> pour planifier vos vacances <br> sans souci d'annulation <br> Cliquez pour en savoir plus",
+    "beSafeDescrizione": "Réservez en toute sécurité <br> avec notre tarif assuré, <br> vous aurez la tranquillité d'esprit <br> pour planifier vos vacances <br> sans souci d'annulation. <br> Cliquez pour en savoir plus",
     "homePrezzoGarantito": "Réservez avec nous, meilleur prix garanti"
     
 }

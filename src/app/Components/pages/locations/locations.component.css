@@ -114,11 +114,25 @@ p {
 
 .pappa {
     position: fixed;
+    margin-left: 80px;
 }
 
+@media (max-width: 1880px) {
+    .pappa {
+        margin-left: 0;
+        max-width: 80px;
+    }
 
+    .locations-container {
+        display: block;
+        justify-content: center;
+        max-width: 80px;
 
-@media (max-width: 750px) {
+    }
+
+}
+
+@media (max-width: 1530px) {
     .localites-big {
         max-width: 100%;
     }
@@ -130,19 +144,12 @@ p {
     }
 
     .location-list-container {
-        min-width: 340px;
+        min-width: 300px;
     }
-}
 
-@media (max-width: 1880px) {
     .pappa {
         position: static;
+        margin-left: 80px;
     }
-
-    .locations-container {
-        display: block;
-        justify-content: center;
-
-    }
-
 }
+

@@ -28,7 +28,7 @@ export const de = {
     "In primo piano": "Im Spotlight",
     "bestlocalities": "Die besten touristischen Orte in Sardinien. Traumhafte Strände und kristallklares Wasser.",
     "descrizioneLocalità1": "Kleine Gemeinde in der hohen Baronia, an der Grenze zwischen den Provinzen Olbia-Tempio und Nuoro, mit...",
-    "footerDescription": "AffittaSardegna ist führend in der Vermietung von Ferienhäusern in der oberen Hälfte Sardiniens. Mit über 500 Einheiten bietet es vielfältige Ferienhäuser, von einfachen Studios bis hin zu exklusiven Villen.",
+    "footerDescription": "AffittaSardegna ist führend in der Vermietung von Ferienhäusern in der oberen Hälfte Sardiniens. Mit über 500 Einheiten bietet es vielfältige Ferienhäuser, von einfachen Studios bis hin zu exklusiven Villen...",
     "scopriDiPiù": "Erfahre mehr",
     "contattaci": "Kontaktiere uns",
     "footerSeguici": "FOLGE UNS AUF UNSEREN SOZIALEN NETZWERKEN",
@@ -191,12 +191,12 @@ export const de = {
     "termsMetaTitle": "AffittaSardegna - Geschäftsbedingungen",
     "termsMetaDescription": "Buchungsbedingungen",
     "filtroHomePage": "Suche nach Apartment-Code/-Namen",
-    "besafeBrochure": "https://file.notion.so/f/s/f37726de-63f3-4e93-a063-447c0f829af0/DE_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=6472c57e-3953-4e2e-8e69-2c6efb3de739&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697212800000&signature=tuGslIGepwKvBi9HnfaQsKsp_CHzqqk70ieb9aILtCw&downloadName=%5BDE%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
+    "besafeBrochure": "https://file.notion.so/f/s/f37726de-63f3-4e93-a063-447c0f829af0/DE_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=6472c57e-3953-4e2e-8e69-2c6efb3de739&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697724000000&signature=RX7p_ndjihWoSrcDsO_NQP4sZMlq5JcasQJpQO5t-kk&downloadName=%5BDE%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
     "beSafeDownload": "Laden Sie die BeSafeRate-Broschüre herunter",
     "beSafePagaSicuro": "Sichere Zahlungen",
     "priceSort": "Nach Preis sortieren",
     "distanzaMare": "Entfernung zum Meer",
     "BeSafeTitle": "BeSafe Sichere Tarif",
-    "beSafeDescrizione": "Buchen Sie mit voller Sicherheit <br> mit unserem versicherten Tarif <br> Sie werden die Gewissheit haben <br> Ihre Urlaub ohne Stornierungssorgen zu planen <br> Klicken Sie, um mehr zu erfahren",
+    "beSafeDescrizione": "Buchen Sie mit voller Sicherheit <br> mit unserem versicherten Tarif, <br> Sie werden die Gewissheit haben <br> Ihre Urlaub ohne Stornierungssorgen zu planen. <br> Klicken Sie, um mehr zu erfahren",
     "homePrezzoGarantito": "Buchen Sie bei uns, bester Preis garantiert"
 }

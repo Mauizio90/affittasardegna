@@ -28,7 +28,7 @@ export const en ={
     "In primo piano": "",
     "bestlocalities": "The best tourist destinations in Sardinia. Dreamy beaches and crystal-clear waters.",
     "descrizioneLocalità1": "Small municipality in the upper Baronia, on the border between the provinces of Olbia-Tempio and Nuoro, equipped with a...",
-    "footerDescription": "AffittaSardegna is a leader in vacation rentals throughout the upper half of Sardinia. With over 500 units, it offers a variety of vacation homes, ranging from simple studios to exclusive villas.",
+    "footerDescription": "AffittaSardegna is a leader in vacation rentals throughout the upper half of Sardinia. With over 500 units, it offers a variety of vacation homes, ranging from simple studios to exclusive villas...",
     "scopriDiPiù": "Learn more",
     "contattaci": "Contact Us",
     "footerSeguici": "FOLLOW US ON OUR SOCIAL MEDIA",
@@ -191,12 +191,12 @@ export const en ={
     "termsMetaTitle": "AffittaSardegna - Terms and Conditions",
     "termsMetaDescription": "Booking terms and conditions",
     "filtroHomePage": "Search by Apartment Code/Name",
-    "besafeBrochure": "https://file.notion.so/f/s/8612728f-20db-44a4-9bd6-b21adb079a48/EN_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=48317e74-2964-4173-b0db-7264916ed6a3&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697212800000&signature=ZYMWW2sAuDhtEJYODClWBOFhtYGTBUWm0aAGcct038c&downloadName=%5BEN%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
+    "besafeBrochure": "https://file.notion.so/f/s/8612728f-20db-44a4-9bd6-b21adb079a48/EN_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=48317e74-2964-4173-b0db-7264916ed6a3&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697724000000&signature=OGdjyhK1h8h4a7ohDaI_5kgn4j7180bViRilYU5zNGw&downloadName=%5BEN%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
     "beSafeDownload": "Download the BeSafeRate brochure",
     "beSafePagaSicuro": "Secure payments",
     "priceSort": "Sort by price",
     "distanzaMare": "Distance from the sea",
     "BeSafeTitle": "BeSafe Secure Rate",
-    "beSafeDescrizione": "Book with total security <br> with our insured rate <br> you will have the peace of mind <br> to plan your vacations <br> without cancellation worries <br> Click to learn more",
+    "beSafeDescrizione": "Book with total security <br> with our insured rate, <br> you will have the peace of mind <br> to plan your vacations <br> without cancellation worries. <br> Click to learn more",
     "homePrezzoGarantito": "Book with us, best price guaranteed"
 }

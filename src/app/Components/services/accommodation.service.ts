@@ -20,13 +20,13 @@ export class AccommodationService {
     return this.cache$;
   }
 
-  // private requestAccommodations(): Observable<Accommodation[]> {
-  //   return this.http.get<Accommodation[]>('https://data.krossbooking.com/get/get-apartments?id=affittasardegna&token=457c445d46733e5ae5c910b0d4e935d1'); /*`assets/accommodations.json*/
-  // }
-
   private requestAccommodations(): Observable<Accommodation[]> {
-    return this.http.get<Accommodation[]>('assets/accommodations.json'); /*`assets/accommodations.json`*/
+    return this.http.get<Accommodation[]>('https://data.krossbooking.com/get/get-apartments?id=affittasardegna&token=457c445d46733e5ae5c910b0d4e935d1'); /*`assets/accommodations.json*/
   }
+
+  // private requestAccommodations(): Observable<Accommodation[]> {
+  //   return this.http.get<Accommodation[]>('assets/accommodations.json'); /*`assets/accommodations.json`*/
+  // }
 
   getAccommodationByMetaUrl(metaUrl: string): Observable<Accommodation> {
     return this.getAccommodations().pipe(
