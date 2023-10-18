@@ -198,5 +198,10 @@ export const es ={
     "distanzaMare": "Distancia desde el mar",
     "BeSafeTitle": "Tarifa Segura BeSafe",
     "beSafeDescrizione": "Reserva con total seguridad <br> con nuestra tarifa asegurada, <br> tendrás la tranquilidad <br> de planificar tus vacaciones <br> sin preocupaciones de cancelación. <br> Haz clic para obtener más información",
-    "homePrezzoGarantito": "Reserva con nosotros, mejor precio garantizado"
+    "homePrezzoGarantito": "Reserva con nosotros, mejor precio garantizado",
+    "algheroHomeDescription": "Perla de la 'Costa del Coral', rica en evidencias de su pasado catalán...",
+    "stintinoHomeDescription": "Pueblo de pescadores fundado en 1885 por los habitantes de la isla Asinara, destinado a...",
+    "sanTeodoroHomeDescription": "Encantador pueblo situado en una llanura, a solo unos cientos de metros de la costa...",
+    "oroseiHomeDescription": "Capital balnearia de Barbagia, se encuentra entre el mar, aproximadamente a mitad de la costa este...",
+    "calaGononeHomeDescription": "Cala Gonone es un gran pueblo turístico en el centro del Golfo de Orosei, la capital balnearia..."
 }

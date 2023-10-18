@@ -198,5 +198,10 @@ export const it = {
     "distanzaMare": "Distanza dal mare",
     "BeSafeTitle": "Tariffa Sicura Besafe",
     "beSafeDescrizione": "Prenota in totale sicurezza <br> con la nostra tariffa assicurata, <br> avrai la tranquillità <br> di programmare le tue vacanze <br> senza ansie da cancellazione. <br> Clicca per saperne di più",
-    "homePrezzoGarantito": "prenota con noi, miglior prezzo garantito"
+    "homePrezzoGarantito": "prenota con noi, miglior prezzo garantito",
+    "algheroHomeDescription": "Perla della “Riviera del Corallo”, ricca di testimonianze del suo passato catalano...",
+    "stintinoHomeDescription": "Borgo di pescatori fondato nel 1885 dagli abitanti dell’isola Asinara, destinata a...",
+    "sanTeodoroHomeDescription": "Affascinante paesino disposto in pianura, a pochi centinaia di metri dalla costa...",
+    "oroseiHomeDescription": "Capoluogo balneare della Barbagia, è situata tra il mare, più o meno a metà della costa orientale...",
+    "calaGononeHomeDescription": "Cala Gonone è un grosso borgo turistico nel centro del Golfo di Orosei, capoluogo balneare..."
 }

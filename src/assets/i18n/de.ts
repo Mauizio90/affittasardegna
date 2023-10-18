@@ -198,5 +198,10 @@ export const de = {
     "distanzaMare": "Entfernung zum Meer",
     "BeSafeTitle": "BeSafe Sichere Tarif",
     "beSafeDescrizione": "Buchen Sie mit voller Sicherheit <br> mit unserem versicherten Tarif, <br> Sie werden die Gewissheit haben <br> Ihre Urlaub ohne Stornierungssorgen zu planen. <br> Klicken Sie, um mehr zu erfahren",
-    "homePrezzoGarantito": "Buchen Sie bei uns, bester Preis garantiert"
+    "homePrezzoGarantito": "Buchen Sie bei uns, bester Preis garantiert",
+    "algheroHomeDescription": "Perle der 'Corallo Riviera', reich an Zeugnissen ihrer katalanischen Vergangenheit...",
+    "stintinoHomeDescription": "Fischerdorf, gegründet im Jahr 1885 von den Bewohnern der Insel Asinara, bestimmt für...",
+    "sanTeodoroHomeDescription": "Reizendes Dorf in einer Ebene gelegen, nur wenige hundert Meter von der Küste entfernt...",
+    "oroseiHomeDescription": "Die Küstenhauptstadt von Barbagia liegt zwischen dem Meer, etwa in der Mitte der Ostküste...",
+    "calaGononeHomeDescription": "Cala Gonone ist ein großes Touristendorf im Zentrum des Golfs von Orosei, der Küstenhauptstadt..."
 }

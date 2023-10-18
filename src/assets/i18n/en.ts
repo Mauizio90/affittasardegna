@@ -198,5 +198,10 @@ export const en ={
     "distanzaMare": "Distance from the sea",
     "BeSafeTitle": "BeSafe Secure Rate",
     "beSafeDescrizione": "Book with total security <br> with our insured rate, <br> you will have the peace of mind <br> to plan your vacations <br> without cancellation worries. <br> Click to learn more",
-    "homePrezzoGarantito": "Book with us, best price guaranteed"
+    "homePrezzoGarantito": "Book with us, best price guaranteed",
+    "algheroHomeDescription": "Pearl of the 'Coral Riviera,' rich in evidence of its Catalan past..",
+    "stintinoHomeDescription": "Fishing village founded in 1885 by the inhabitants of the Asinara island, destined to...",
+    "sanTeodoroHomeDescription": "Charming village situated in a plain, just a few hundred meters from the coast...",
+    "oroseiHomeDescription": "The seaside capital of Barbagia, it is located between the sea, roughly halfway down the eastern coast...",
+    "calaGononeHomeDescription": "Cala Gonone is a large tourist village in the center of the Gulf of Orosei, the seaside capital..."
 }

@@ -97,6 +97,10 @@ p{
     font-weight: bold;
 }
 
+.pappa{
+    margin-left: 75px;
+}
+
 @media (max-width: 750px) {
 	.localites-big {
 	  max-width: 100%;

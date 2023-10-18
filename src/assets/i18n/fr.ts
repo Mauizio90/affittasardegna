@@ -198,6 +198,11 @@ export const fr = {
     "distanzaMare": "Distance de la mer",
     "BeSafeTitle": "Tarif Sécurisé BeSafe",
     "beSafeDescrizione": "Réservez en toute sécurité <br> avec notre tarif assuré, <br> vous aurez la tranquillité d'esprit <br> pour planifier vos vacances <br> sans souci d'annulation. <br> Cliquez pour en savoir plus",
-    "homePrezzoGarantito": "Réservez avec nous, meilleur prix garanti"
+    "homePrezzoGarantito": "Réservez avec nous, meilleur prix garanti",
+    "algheroHomeDescription": "Perle de la 'Côte du Corail', riche en témoignages de son passé catalan...",
+    "stintinoHomeDescription": "Village de pêcheurs fondé en 1885 par les habitants de l'île d'Asinara, destiné à...",
+    "sanTeodoroHomeDescription": "Village charmant situé dans une plaine, à seulement quelques centaines de mètres de la côte...",
+    "oroseiHomeDescription": "Capitale balnéaire de la Barbagia, elle est située entre la mer, à peu près à mi-chemin de la côte est...",
+    "calaGononeHomeDescription": "Cala Gonone est un grand village touristique au centre du golfe d'Orosei, la capitale balnéaire..."
     
 }
