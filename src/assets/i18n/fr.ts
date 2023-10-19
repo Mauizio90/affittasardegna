@@ -3,13 +3,15 @@ export const fr = {
     "rl.gliAlloggi": "fr/locations-maisons-appartements-sardaigne",
     "rl.localita": "fr/localites-plages-sardaigne",
     "rl.proponiImmobile": "fr/proposer-une-propriete",
+    "rl.traghetti": "fr/offre-de-ferries",
     "rl.chiSiamo": "fr/a-propos-de-nous",
     "rl.contatti": "fr/nous-contacter",
     "rl.termini": "fr/termes-et-conditions",
     "rl.privacy": "fr/confidentialite",
     "gliAlloggi": "Les Logements",
     "alloggi": "Logements",
-    "localita": "Localités",
+    "localita": "Nos Localités",
+    "traghettiPage": "Réservez le Ferry",
     "proponiImmobile": "Proposer une Propriété",
     "chiSiamo": "À Propos de Nous",
     "contatti": "Nous Contacter",
@@ -211,6 +213,7 @@ export const fr = {
     "recensioneCoerobay": "La propriété est confortable et équipée de tout ce dont vous avez besoin. Nous avons passé une semaine très relaxante et, surtout, elle est très proche de la magnifique plage de La Pelosa ! Edoardo est très attentif et gentil, il vous aide dans toutes les situations où vous pourriez avoir besoin d'assistance. Je recommande vivement cet appartement avec vue sur la mer. Salutations d'Allemagne ☺️",
     "rensioneAngelo": "Le meilleur agent de voyage/hospitalité que j'ai rencontré dans toutes mes expériences de voyage. Très professionnel, mais surtout humain. Je vous apprécie beaucoup pour toute votre aide. Merci les gars ! ❤️",
     "recensioneFranco": " Une agence sérieuse, scrupuleuse, disponible et attentive à la clientèle. L'appartement proposé correspond parfaitement à la description. D'excellentes solutions. On peut avoir confiance en eux, et je reviendrai.",
-    "recensioneRocio": "Excellent ! Le logement a été merveilleux, plus que prévu ! Et la coordination de la location a été fabuleuse. Ils prêtent attention à chaque détail pour rendre le séjour parfait !"
+    "recensioneRocio": "Excellent ! Le logement a été merveilleux, plus que prévu ! Et la coordination de la location a été fabuleuse. Ils prêtent attention à chaque détail pour rendre le séjour parfait !",
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=fr"
     
 }

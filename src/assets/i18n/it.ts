@@ -3,6 +3,7 @@ export const it = {
     "rl.gliAlloggi": "ville-appartamenti-vacanze-sardegna",
     "rl.localita": "localita-spiagge-sardegna",
     "rl.proponiImmobile": "proponi-immobile",
+    "rl.traghetti": "offerta-traghetti",
     "rl.chiSiamo": "chisiamo",
     "rl.contatti": "contatti",
     "rl.termini": "termini-e-condizioni",
@@ -10,6 +11,7 @@ export const it = {
     "gliAlloggi": "Gli Alloggi",
     "alloggi": "alloggi",
     "localita": "Località",
+    "traghettiPage": "Prenota il Traghetto",
     "proponiImmobile": "Proponi Immobile",
     "chiSiamo": "Chi Siamo",
     "contatti": "Contatti",
@@ -211,5 +213,6 @@ export const it = {
     "recensioneCoerobay": "La struttura è comoda e dotata di tutto ciò che si occorre . Abbiamo passato una settimana molto rilassante e soprattutto vicinissima alla bellissima spiaggia La Pelosa! Edoardo è molto attento e gentilissimo, aiuta in tutte le situazioni incui uno ne avrebbe di bisogno. Consiglio vivamente questo appartamento con vista mare. Un salutone dalla Germania ☺️",
     "rensioneAngelo": "Il miglior agente di viaggio/ospitalità in cui mi sono imbattuto in tutta la mia esperienza di viaggio. Molto professionale ma soprattutto umano. Ti apprezzo molto per tutto il tuo aiuto. Grazie ragazzi! ❤️",
     "recensioneFranco": "Agenzia seria, scrupolosa disponibile ed attenta ai clienti. L'appartamento proposto perfettamente corrispondente a quanto descritto. Ottime soluzioni. C'è da fidarsi, e ritornare",
-    "recensioneRocio": "Eccellente! L'alloggio è stato meraviglioso, oltre le aspettative! E il coordinamento dell'affitto è stato favoloso. Si occupano di ogni dettaglio per rendere il soggiorno perfetto!"
+    "recensioneRocio": "Eccellente! L'alloggio è stato meraviglioso, oltre le aspettative! E il coordinamento dell'affitto è stato favoloso. Si occupano di ogni dettaglio per rendere il soggiorno perfetto!",
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=it"
 }

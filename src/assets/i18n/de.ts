@@ -3,6 +3,7 @@ export const de = {
     "rl.gliAlloggi": "de/ferienhäuser-appartements-sardinien",
     "rl.localita": "de/orte-strände-sardinien",
     "rl.proponiImmobile": "de/immobilie-anbieten",
+    "rl.traghetti": "de/fährangebot",
     "rl.chiSiamo": "de/über-uns",
     "rl.contatti": "de/kontakt",
     "rl.termini": "de/geschäftsbedingungen",
@@ -10,6 +11,7 @@ export const de = {
     "gliAlloggi": "die-unterkünfte",
     "alloggi": "Unterkünfte",
     "localita": "Orte",
+    "traghettiPage": "Buchen Sie die Fähre",
     "proponiImmobile": "Immobilie anbieten",
     "chiSiamo": "Über uns",
     "contatti": "Kontakt",
@@ -211,5 +213,6 @@ export const de = {
     "recensioneCoerobay": "Die Unterkunft ist komfortabel und mit allem ausgestattet, was man braucht. Wir hatten eine sehr entspannte Woche und vor allem ist sie ganz in der Nähe des wunderschönen La Pelosa-Strandes! Edoardo ist sehr aufmerksam und freundlich, er hilft in allen Situationen, in denen du Unterstützung benötigen könntest. Ich empfehle dieses Apartment mit Meerblick sehr. Grüße aus Deutschland ☺️",
     "rensioneAngelo": "Der beste Reise-/Gastfreundschaftsagent, dem ich in all meinen Reiseerfahrungen begegnet bin. Sehr professionell, aber vor allem menschlich. Ich schätze dich sehr für all deine Hilfe. Danke, Leute! ❤️",
     "recensioneFranco": "Eine seriöse, gewissenhafte Agentur, die für Kunden verfügbar und aufmerksam ist. Die vorgeschlagene Wohnung entspricht genau der Beschreibung. Hervorragende Lösungen. Man kann ihnen vertrauen, und ich werde wiederkommen.",
-    "recensioneRocio": "Ausgezeichnet! Die Unterkunft war wunderbar, mehr als erwartet! Und die Koordination der Vermietung war fabelhaft. Sie achten auf jedes Detail, um den Aufenthalt perfekt zu gestalten!"
+    "recensioneRocio": "Ausgezeichnet! Die Unterkunft war wunderbar, mehr als erwartet! Und die Koordination der Vermietung war fabelhaft. Sie achten auf jedes Detail, um den Aufenthalt perfekt zu gestalten!",
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=de"
 }

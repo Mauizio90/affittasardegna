@@ -3,6 +3,7 @@ export const es ={
     "rl.gliAlloggi": "es/casas-apartamentos-vacaciones-cerdeña",
     "rl.localita": "es/lugares-playas-cerdeña",
     "rl.proponiImmobile": "es/propon-tu-inmueble",
+    "rl.traghetti": "es/oferta-de-transbordadores",
     "rl.chiSiamo": "es/quienes-somos",
     "rl.contatti": "es/contacto",
     "rl.termini": "es/términos-y-condiciones",
@@ -10,6 +11,7 @@ export const es ={
     "gliAlloggi": "Alojamientos",
     "alloggi": "alojamientos",
     "localita": "Localidades",
+    "traghettiPage": "Reserva el Ferry",
     "proponiImmobile": "Propón tu Inmueble",
     "chiSiamo": "Quiénes Somos",
     "contatti": "Contacto",
@@ -211,5 +213,6 @@ export const es ={
     "recensioneCoerobay": "La propiedad es cómoda y está equipada con todo lo que necesitas. Pasamos una semana muy relajante y, lo más importante, está muy cerca de la hermosa playa La Pelosa. Edoardo es muy atento y amable, ayuda en todas las situaciones en las que podrías necesitar asistencia. Recomiendo encarecidamente este apartamento con vistas al mar. ¡Saludos desde Alemania ☺️",
     "rensioneAngelo": "El mejor agente de viajes/hospitalidad que he encontrado en todas mis experiencias de viaje. Muy profesional, pero, sobre todo, humano. Te aprecio mucho por toda tu ayuda. ¡Gracias chicos! ❤️",
     "recensioneFranco": "Una agencia seria, escrupulosa, disponible y atenta a los clientes. El apartamento propuesto corresponde perfectamente a lo que se describe. Excelentes soluciones. Se puede confiar en ellos, y volveré.",
-    "recensioneRocio": "Excellent! The accommodation has been wonderful, more than expected! And the rental coordination has been fabulous. They pay attention to every detail to make the stay perfect!"
+    "recensioneRocio": "Excellent! The accommodation has been wonderful, more than expected! And the rental coordination has been fabulous. They pay attention to every detail to make the stay perfect!",
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=en"
 }

@@ -3,6 +3,7 @@ export const en ={
     "rl.gliAlloggi": "en/villas-accommodations-holiday-sardinia",
     "rl.localita": "en/locations-beaches-sardinia",
     "rl.proponiImmobile": "en/property-suggestion",
+    "rl.traghetti": "en/ferry-offer",
     "rl.chiSiamo": "en/about-us",
     "rl.contatti": "en/contact-us",
     "rl.termini": "en/terms-and-conditions",
@@ -10,6 +11,7 @@ export const en ={
     "gliAlloggi": "Accommodations",
     "alloggi": "accommodations",
     "localita": "Locations",
+    "traghettiPage": "Book the Ferry",
     "proponiImmobile": " Suggests Property",
     "chiSiamo": "About Us",
     "contatti": "Contacts",
@@ -198,7 +200,7 @@ export const en ={
     "distanzaMare": "Distance from the sea",
     "BeSafeTitle": "BeSafe Secure Rate",
     "beSafeDescrizione": "Book with total security <br> with our insured rate, <br> you will have the peace of mind <br> to plan your vacations <br> without cancellation worries. <br> Click to learn more",
-    "homePrezzoGarantito": "Book with us, best price guaranteed",
+    "homePrezzoGarantito": "Book with us, best price always guaranteed",
     "algheroHomeDescription": "Pearl of the 'Coral Riviera,' rich in evidence of its Catalan past..",
     "stintinoHomeDescription": "Fishing village founded in 1885 by the inhabitants of the Asinara island, destined to...",
     "sanTeodoroHomeDescription": "Charming village situated in a plain, just a few hundred meters from the coast...",
@@ -211,5 +213,6 @@ export const en ={
     "recensioneCoerobay": "The property is comfortable and equipped with everything you need. We had a very relaxing week and, most importantly, it's very close to the beautiful La Pelosa beach! Edoardo is very attentive and kind, he helps in all situations where you might need assistance. I highly recommend this sea-view apartment. Greetings from Germany ☺️",
     "rensioneAngelo": "The best travel/hospitality agent I have come across in all my travel experiences. Very professional but, above all, human. I appreciate you very much for all your help. Thank you guys! ❤️",
     "recensioneFranco": "A serious agency, scrupulous, available, and attentive to customers. The apartment proposed perfectly corresponds to what is described. Excellent solutions. It is trustworthy, and I will return.",
-    "recensioneRocio": "Excelente! El alojamiento ha sido una maravilla, más de lo esperado ! Y la coordinación del alquiler ha sido fabulosa. Están en todos los detalles para que la estadía sea perfecta!"
+    "recensioneRocio": "Excelente! El alojamiento ha sido una maravilla, más de lo esperado ! Y la coordinación del alquiler ha sido fabulosa. Están en todos los detalles para que la estadía sea perfecta!",
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=en"
 }
