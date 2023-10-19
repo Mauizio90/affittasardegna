@@ -216,5 +216,8 @@ export const it = {
     "recensioneRocio": "Eccellente! L'alloggio è stato meraviglioso, oltre le aspettative! E il coordinamento dell'affitto è stato favoloso. Si occupano di ogni dettaglio per rendere il soggiorno perfetto!",
     "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=it",
     "traghettiMetaTitle": "AffittaSardegna - Offerte esclusive Traghetti",
-    "traghettiMetaDescription": "Prenota il tuo traghetto con noi per usufruire di vantaggi e offerte esclusive"
+    "traghettiMetaDescription": "Prenota il tuo traghetto con noi per usufruire di vantaggi e offerte esclusive",
+    "traghettiFooter": "Prenota il tuo traghetto con noi",
+    "traghettiFooterDetails": "Per te, vantaggi e sconti esclusivi!"
+
 }

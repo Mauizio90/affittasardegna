@@ -216,6 +216,8 @@ export const fr = {
     "recensioneRocio": "Excellent ! Le logement a été merveilleux, plus que prévu ! Et la coordination de la location a été fabuleuse. Ils prêtent attention à chaque détail pour rendre le séjour parfait !",
     "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=fr",
     "traghettiMetaTitle": "AffittaSardegna - Offres exclusives de ferry",
-    "traghettiMetaDescription": "Réservez votre ferry avec nous pour profiter d'avantages et d'offres exclusives"
+    "traghettiMetaDescription": "Réservez votre ferry avec nous pour profiter d'avantages et d'offres exclusives",
+    "traghettiFooter": "Réservez votre ferry avec nous",
+    "traghettiFooterDetails": "Des avantages exclusifs et des réductions rien que pour vous !"
     
 }

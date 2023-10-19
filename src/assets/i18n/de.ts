@@ -216,5 +216,7 @@ export const de = {
     "recensioneRocio": "Ausgezeichnet! Die Unterkunft war wunderbar, mehr als erwartet! Und die Koordination der Vermietung war fabelhaft. Sie achten auf jedes Detail, um den Aufenthalt perfekt zu gestalten!",
     "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=de",
     "traghettiMetaTitle": "AffittaSardegna - Exklusive Fährangebote",
-    "traghettiMetaDescription": "Buchen Sie Ihre Fähre bei uns, um exklusive Vorteile und Angebote zu genießen"
+    "traghettiMetaDescription": "Buchen Sie Ihre Fähre bei uns, um exklusive Vorteile und Angebote zu genießen",
+    "traghettiFooter": "Buchen Sie Ihre Fähre bei uns",
+    "traghettiFooterDetails": "Exklusive Vorteile und Rabatte nur für Sie!"
 }

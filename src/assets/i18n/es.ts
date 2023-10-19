@@ -216,5 +216,7 @@ export const es ={
     "recensioneRocio": "Excellent! The accommodation has been wonderful, more than expected! And the rental coordination has been fabulous. They pay attention to every detail to make the stay perfect!",
     "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=en",
     "traghettiMetaTitle": "AffittaSardegna - Ofertas exclusivas de ferries",
-    "traghettiMetaDescription": "Reserve su ferry con nosotros para disfrutar de beneficios y ofertas exclusivas"
+    "traghettiMetaDescription": "Reserve su ferry con nosotros para disfrutar de beneficios y ofertas exclusivas",
+    "traghettiFooter": "Reserve su ferry con nosotros",
+    "traghettiFooterDetails": "¡Beneficios exclusivos y descuentos solo para ti!"
 }
