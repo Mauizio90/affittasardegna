@@ -203,5 +203,13 @@ export const it = {
     "stintinoHomeDescription": "Borgo di pescatori fondato nel 1885 dagli abitanti dell’isola Asinara, destinata a...",
     "sanTeodoroHomeDescription": "Affascinante paesino disposto in pianura, a pochi centinaia di metri dalla costa...",
     "oroseiHomeDescription": "Capoluogo balneare della Barbagia, è situata tra il mare, più o meno a metà della costa orientale...",
-    "calaGononeHomeDescription": "Cala Gonone è un grosso borgo turistico nel centro del Golfo di Orosei, capoluogo balneare..."
+    "calaGononeHomeDescription": "Cala Gonone è un grosso borgo turistico nel centro del Golfo di Orosei, capoluogo balneare...",
+    "recensioni" : "Recensioni",
+    "cheDicono" : "Cosa dicono di Noi",
+    "recensioneRoberta": "L'appartamento in cui sono stata insieme alla mia famiglia a fine agosto, era pulito e accogliente, posizione ottima e strategica, tutto esattamente come descritto sul sito. Posto tranquillo e perfetto per chi , come me vuole rilassarsi durante le vacanze. Mi sono sentita a casa. Referente presente in zona, professionale, gentile e disponibile tutto il giorno per qualsiasi informazione, domanda e/o dubbio. Se dovessi ritornare, lo farei molto volentieri! Super consigliato =) ",
+    "recensioneJan": "Abbiamo soggiornato a Orosei l'anno scorso presso la Casa del Dottore. La casa era molto grande, pulita e ci siamo sentiti tutti molto a nostro agio. L'agenzia AffittaSardegna Soc. Coop è stata molto disponibile in ogni momento e la comunicazione è stata ottima. Tutte le persone erano molto gentili! Orosei è un posto molto bello per trascorrere le vacanze. Non era troppo affollato e aveva spiagge davvero belle vicino alla casa (in auto 5 minuti). Abbiamo trascorso un tempo davvero piacevole e possiamo consigliare vivamente tutto!",
+    "recensioneCoerobay": "La struttura è comoda e dotata di tutto ciò che si occorre . Abbiamo passato una settimana molto rilassante e soprattutto vicinissima alla bellissima spiaggia La Pelosa! Edoardo è molto attento e gentilissimo, aiuta in tutte le situazioni incui uno ne avrebbe di bisogno. Consiglio vivamente questo appartamento con vista mare. Un salutone dalla Germania ☺️",
+    "rensioneAngelo": "Il miglior agente di viaggio/ospitalità in cui mi sono imbattuto in tutta la mia esperienza di viaggio. Molto professionale ma soprattutto umano. Ti apprezzo molto per tutto il tuo aiuto. Grazie ragazzi! ❤️",
+    "recensioneFranco": "Agenzia seria, scrupolosa disponibile ed attenta ai clienti. L'appartamento proposto perfettamente corrispondente a quanto descritto. Ottime soluzioni. C'è da fidarsi, e ritornare",
+    "recensioneRocio": "Eccellente! L'alloggio è stato meraviglioso, oltre le aspettative! E il coordinamento dell'affitto è stato favoloso. Si occupano di ogni dettaglio per rendere il soggiorno perfetto!"
 }

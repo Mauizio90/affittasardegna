@@ -35,7 +35,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: var(--secondary);
+	background-color: #4CB276;
 	height: 4px;
 	box-sizing: border-box;
 	width: 170px;

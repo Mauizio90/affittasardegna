@@ -25,10 +25,11 @@
                 <img src={{city.image}} alt="foto spiaggia {{city.name}}">
             </div>
             <div class="location-description-title">
-                <h3 class="location-title">{{city.name}}</h3>
-                <p class="location" style="margin-left: 10px;">({{city.provincia}})</p>
+                <h3 class="location-title" style="display: inline;">{{city.name}}</h3>
+                <p class="location" style="margin-left: 10px; display: inline;">({{city.provincia}})</p>
+            <div>
+            </div>
                 <div style="margin-top: 20px ;"><p class="location" [innerHTML]="'locationDescrizione' | translate:{ita: city.descriptionIta, eng:city.descriptionEng, esp:city.descriptionEsp, de:city.descriptionDe, fr:city.descriptionFr}"></p></div>
-                
             </div>
             <div class="location-description-footer-bg" style="background-color: #4CB276;">
                 <div class="location-description-footer" >

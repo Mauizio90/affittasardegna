@@ -203,6 +203,14 @@ export const fr = {
     "stintinoHomeDescription": "Village de pêcheurs fondé en 1885 par les habitants de l'île d'Asinara, destiné à...",
     "sanTeodoroHomeDescription": "Village charmant situé dans une plaine, à seulement quelques centaines de mètres de la côte...",
     "oroseiHomeDescription": "Capitale balnéaire de la Barbagia, elle est située entre la mer, à peu près à mi-chemin de la côte est...",
-    "calaGononeHomeDescription": "Cala Gonone est un grand village touristique au centre du golfe d'Orosei, la capitale balnéaire..."
+    "calaGononeHomeDescription": "Cala Gonone est un grand village touristique au centre du golfe d'Orosei, la capitale balnéaire...",
+    "recensioni" : "Avis",
+    "cheDicono" : "Ce qu'ils disent de nous",
+    "recensioneRoberta": "L'appartement dans lequel ma famille et moi avons séjourné à la fin du mois d'août était propre et accueillant, dans un emplacement excellent et stratégique, tout était exactement comme décrit sur le site. C'est un endroit paisible et parfait pour ceux qui, comme moi, veulent se détendre pendant leurs vacances. Je me sentais comme chez moi. Le contact local était professionnel, gentil et disponible toute la journée pour toute information, question ou doute. Si je devais y retourner, je le ferais avec plaisir ! Hautement recommandé =)",
+    "recensioneJan": "Nous avons séjourné à Orosei l'année dernière à la Casa del Dottore. La maison était très grande, propre et nous nous sentions très à l'aise. L'agence AffittaSardegna Soc. Coop a été très serviable tout le temps et la communication s'est très bien passée. Toutes les personnes étaient très gentilles ! Orosei était un endroit très agréable pour passer les vacances. Ce n'était pas trop fréquenté et il y avait de très belles plages près de la maison (en voiture à 5 minutes). Nous avons passé un très bon moment et nous recommandons vivement tout !",
+    "recensioneCoerobay": "La propriété est confortable et équipée de tout ce dont vous avez besoin. Nous avons passé une semaine très relaxante et, surtout, elle est très proche de la magnifique plage de La Pelosa ! Edoardo est très attentif et gentil, il vous aide dans toutes les situations où vous pourriez avoir besoin d'assistance. Je recommande vivement cet appartement avec vue sur la mer. Salutations d'Allemagne ☺️",
+    "rensioneAngelo": "Le meilleur agent de voyage/hospitalité que j'ai rencontré dans toutes mes expériences de voyage. Très professionnel, mais surtout humain. Je vous apprécie beaucoup pour toute votre aide. Merci les gars ! ❤️",
+    "recensioneFranco": " Une agence sérieuse, scrupuleuse, disponible et attentive à la clientèle. L'appartement proposé correspond parfaitement à la description. D'excellentes solutions. On peut avoir confiance en eux, et je reviendrai.",
+    "recensioneRocio": "Excellent ! Le logement a été merveilleux, plus que prévu ! Et la coordination de la location a été fabuleuse. Ils prêtent attention à chaque détail pour rendre le séjour parfait !"
     
 }

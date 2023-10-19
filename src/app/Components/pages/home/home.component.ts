@@ -13,6 +13,8 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SearchService } from '../../services/search.service';
 import { SeoService } from '../../services/seo.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faStar} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -20,9 +22,10 @@ import { SeoService } from '../../services/seo.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule, MatDatepickerModule, MatInputModule, MatNativeDateModule, CarouselModule, CommonModule]
+  imports: [RouterLink, ReactiveFormsModule, HousecardsComponent, TranslateModule, MatDatepickerModule, MatInputModule, MatNativeDateModule, CarouselModule, CommonModule, FontAwesomeModule]
 })
 export class HomeComponent {
+  faStar = faStar;
   form!: FormGroup;
   public allAccommodations?: Accommodation[];
   @ViewChild('checkOutPicker') checkoutPicker!: MatDatepicker<Date>;

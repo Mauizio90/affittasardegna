@@ -5,7 +5,7 @@
                 <p class="migliorPrezzo">{{"homePrezzoGarantito" | translate | uppercase}}</p>
                 <input id="nameInput" type="text" class="form-control input-responsive"
                     placeholder="{{'filtroHomePage' | translate}}" />
-                    <button class="btn" style="margin: 0px" (click)="onSearchClick()">Cerca</button>
+                <button class="btn" style="margin: 0px" (click)="onSearchClick()">Cerca</button>
             </div>
         </div>
     </div>
@@ -32,20 +32,20 @@
     <div class="booking-nav" style="display: flex;
         flex-direction: row;
         justify-content: space-around; ">
-        <div class="nav-item" style="margin-top: -40px;">
+        <div class="nav-item" style="margin-top: 20px;">
             <i class="ri-phone-find-line"
                 style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-            <span>{{'home-cerca' | translate}}</span>
+            <span style="margin-top: -12px;">{{'home-cerca' | translate}}</span>
         </div>
-        <div class="nav-item" style="margin-top: -40px;">
+        <div class="nav-item" style="margin-top: 20px;">
             <i class="ri-heart-3-line"
                 style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-            <span>{{'home-scegli' | translate}}</span>
+            <span style="margin-top: -12px;">{{'home-scegli' | translate}}</span>
         </div>
-        <div class="nav-item" style="margin-top: -40px;">
+        <div class="nav-item" style="margin-top: 20px;">
             <i class="ri-luggage-cart-line"
                 style="background-color: #2A3F80; color: white; font-size: 60px; border-radius: 40px; height: 80px; width: 80px; text-align: center;"></i>
-            <span>{{'home-prenota' | translate}}</span>
+            <span style="margin-top: -12px;">{{'home-prenota' | translate}}</span>
         </div>
     </div>
     <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
@@ -126,7 +126,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">STINTINO</h3>
                             <p class="localities-overlay-description">{{"stintinoHomeDescription" | translate}}</p>
-                                <a [href]="['/' + ('rl.localita' | translate) + '#27']" class="localities-overlay-link">{{"scopriDiPiù" | translate}}</a>
+                            <a [href]="['/' + ('rl.localita' | translate) + '#27']"
+                                class="localities-overlay-link">{{"scopriDiPiù" | translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +137,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">ALGHERO</h3>
                             <p class="localities-overlay-description">{{"algheroHomeDescription" | translate}}</p>
-                            <a [href]="['/' + ('rl.localita' | translate) + '#1']" class="localities-overlay-link">{{"scopriDiPiù" |
+                            <a [href]="['/' + ('rl.localita' | translate) + '#1']"
+                                class="localities-overlay-link">{{"scopriDiPiù" |
                                 translate}}</a>
                         </div>
                     </div>
@@ -147,7 +149,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">SAN TEODORO</h3>
                             <p class="localities-overlay-description">{{"sanTeodoroHomeDescription" | translate}}</p>
-                            <a [href]="['/' + ('rl.localita' | translate) + '#24']" class="localities-overlay-link">{{"scopriDiPiù" |
+                            <a [href]="['/' + ('rl.localita' | translate) + '#24']"
+                                class="localities-overlay-link">{{"scopriDiPiù" |
                                 translate}}</a>
                         </div>
                     </div>
@@ -158,7 +161,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">BUDONI</h3>
                             <p class="localities-overlay-description">{{"descrizioneLocalità1" | translate}}</p>
-                            <a [href]="['/' + ('rl.localita' | translate) + '#25']" class="localities-overlay-link">{{"scopriDiPiù" |
+                            <a [href]="['/' + ('rl.localita' | translate) + '#25']"
+                                class="localities-overlay-link">{{"scopriDiPiù" |
                                 translate}}</a>
                         </div>
                     </div>
@@ -169,7 +173,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">OROSEI</h3>
                             <p class="localities-overlay-description">{{"oroseiHomeDescription" | translate}}</p>
-                            <a [href]="['/' + ('rl.localita' | translate) + '#14']" class="localities-overlay-link">{{"scopriDiPiù" |
+                            <a [href]="['/' + ('rl.localita' | translate) + '#14']"
+                                class="localities-overlay-link">{{"scopriDiPiù" |
                                 translate}}</a>
                         </div>
                     </div>
@@ -180,7 +185,8 @@
                         <div class="localities-overlay-content">
                             <h3 class="localities-overlay-title">CALA GONONE</h3>
                             <p class="localities-overlay-description">{{"calaGononeHomeDescription" | translate}}</p>
-                            <a [href]="['/' + ('rl.localita' | translate) + '#6']" class="localities-overlay-link">{{"scopriDiPiù" |
+                            <a [href]="['/' + ('rl.localita' | translate) + '#6']"
+                                class="localities-overlay-link">{{"scopriDiPiù" |
                                 translate}}</a>
                         </div>
                     </div>
@@ -191,3 +197,182 @@
 </div>
 
 <!-- localities gallery end -->
+
+<!-- review section start -->
+
+<div class="testimonial-heading">
+    <span>{{"recensioni" | translate | uppercase}}</span>
+    <h2>{{"cheDicono" | translate | uppercase}}</h2>
+</div>
+<div class="testimonials-box-container container">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="https://www.google.com/maps/reviews/@40.836035,8.4079021,17z/data=!3m1!4b1!4m5!14m4!1m3!1m2!1s113392898111958954223!2s0x12dc860ca603c38b:0x658915030789bc5e?entry=ttu"
+                style="text-decoration: none;">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src=".\assets\images\prove\unnamed.png" alt="foto profilo recensore">
+                            </div>
+                            <div class="username">
+                                <strong>Roberta Larosa</strong>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>{{"recensioneRoberta" | translate}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="https://www.google.com/maps/contrib/110547588011017576491/place/ChIJi8MDpgyG3BIRXryJBwMViWU/@46.9175551,5.6115678,5z/data=!4m6!1m5!8m4!1e1!2s110547588011017576491!3m1!1e1?hl=it&entry=ttu"
+                style="text-decoration: none;">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src=".\assets\images\prove\unnamed (3).png" alt="foto profilo recensore">
+                            </div>
+                            <div class="username">
+                                <strong>Jan Peteaux</strong>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>{{"recensioneJan" | translate}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="https://www.google.com/maps/contrib/109222343050112709117/place/ChIJi8MDpgyG3BIRXryJBwMViWU/@44.1443753,10.9319302,6z/data=!4m6!1m5!8m4!1e1!2s109222343050112709117!3m1!1e1?hl=it&entry=ttu"
+                style="text-decoration: none;">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src=".\assets\images\prove\unnamed (4).png" alt="foto profilo recensore">
+                            </div>
+                            <div class="username">
+                                <strong>Coerobay 2.0</strong>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>{{"recensioneCoerobay" | translate}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="https://www.google.com/maps/contrib/117713883007182008276/place/ChIJi8MDpgyG3BIRXryJBwMViWU/@45.4635615,1.176568,6z/data=!4m4!1m3!8m2!1e1!2s117713883007182008276?hl=it&entry=ttu"
+                style="text-decoration: none;">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src=".\assets\images\prove\unnamed (5).png" alt="foto profilo recensore">
+                            </div>
+                            <div class="username">
+                                <strong>Angelo</strong>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>{{"rensioneAngelo" | translate}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="https://www.google.com/maps/contrib/110238579215932007837/place/ChIJi8MDpgyG3BIRXryJBwMViWU/@40.5872509,9.84252,8z/data=!4m4!1m3!8m2!1e1!2s110238579215932007837?hl=it&entry=ttu"
+                style="text-decoration: none;">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src=".\assets\images\prove\unnamed (6).png" alt="foto profilo recensore">
+                            </div>
+                            <div class="username">
+                                <strong>Franco D'Amore</strong>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>{{"recensioneFranco" | translate}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="https://www.google.com/maps/contrib/101950063772855002896/place/ChIJi8MDpgyG3BIRXryJBwMViWU/@1.2873323,-42.6638306,4z/data=!4m6!1m5!8m4!1e1!2s101950063772855002896!3m1!1e1?hl=it&entry=ttu"
+                style="text-decoration: none;">
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src=".\assets\images\prove\unnamed (2).png" alt="foto profilo recensore">
+                            </div>
+                            <div class="username">
+                                <strong>Rocio Irazoqui</strong>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                            <fa-icon class="icon" [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="client-comment">
+                        <p>{{"recensioneRocio" | translate}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
