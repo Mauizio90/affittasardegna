@@ -214,5 +214,7 @@ export const it = {
     "rensioneAngelo": "Il miglior agente di viaggio/ospitalità in cui mi sono imbattuto in tutta la mia esperienza di viaggio. Molto professionale ma soprattutto umano. Ti apprezzo molto per tutto il tuo aiuto. Grazie ragazzi! ❤️",
     "recensioneFranco": "Agenzia seria, scrupolosa disponibile ed attenta ai clienti. L'appartamento proposto perfettamente corrispondente a quanto descritto. Ottime soluzioni. C'è da fidarsi, e ritornare",
     "recensioneRocio": "Eccellente! L'alloggio è stato meraviglioso, oltre le aspettative! E il coordinamento dell'affitto è stato favoloso. Si occupano di ogni dettaglio per rendere il soggiorno perfetto!",
-    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=it"
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=it",
+    "traghettiMetaTitle": "AffittaSardegna - Offerte esclusive Traghetti",
+    "traghettiMetaDescription": "Prenota il tuo traghetto con noi per usufruire di vantaggi e offerte esclusive"
 }

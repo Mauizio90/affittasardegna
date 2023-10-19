@@ -214,5 +214,7 @@ export const es ={
     "rensioneAngelo": "El mejor agente de viajes/hospitalidad que he encontrado en todas mis experiencias de viaje. Muy profesional, pero, sobre todo, humano. Te aprecio mucho por toda tu ayuda. ¡Gracias chicos! ❤️",
     "recensioneFranco": "Una agencia seria, escrupulosa, disponible y atenta a los clientes. El apartamento propuesto corresponde perfectamente a lo que se describe. Excelentes soluciones. Se puede confiar en ellos, y volveré.",
     "recensioneRocio": "Excellent! The accommodation has been wonderful, more than expected! And the rental coordination has been fabulous. They pay attention to every detail to make the stay perfect!",
-    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=en"
+    "traghettiper": "https://responsive.traghettiper.it/?marea=S&portal=919&affiliate=TP1747&locale=en",
+    "traghettiMetaTitle": "AffittaSardegna - Ofertas exclusivas de ferries",
+    "traghettiMetaDescription": "Reserve su ferry con nosotros para disfrutar de beneficios y ofertas exclusivas"
 }
