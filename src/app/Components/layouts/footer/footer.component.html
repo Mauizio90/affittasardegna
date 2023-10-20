@@ -5,13 +5,14 @@
       <div class="footer-col">
         <h4><b>AFFITTASARDEGNA</b></h4>
         <ul>
-          <p>{{"footerDescription" | translate}}</p>
+          <p style="font-size: 15px; text-align: justify;">{{"footerDescription" | translate}}</p>
           <li><a [routerLink]="['/' + ('rl.chiSiamo' | translate)]">{{"scopriDiPiù" | translate}}</a></li>
         </ul>
         <h4 style="margin-top: 20px;"><b>{{"traghettiFooter" | translate}}</b></h4>
         <ul>
-          <a href="">
-            <img src=".\assets\images\Banner-TraghettiPer-Sardegna 1.png" alt="logo TraghettiPer" style="width: 200px;"></a>
+          <a [routerLink]="['/' + ('rl.traghetti' | translate)]">
+            <img src=".\assets\images\Banner-TraghettiPer-Sardegna 1.png" alt="logo TraghettiPer"
+              style="width: 200px;"></a>
         </ul>
       </div>
       <div class="footer-col">
@@ -79,7 +80,7 @@
           <li>
             <a class="navbar-brand" [href]="[('besafeBrochure' | translate)]">
               <img src="assets/images/Logo orizzontale_7.png" alt="Logo" style="height: 60px; margin-top: -10px;">
-              <p style="font-size: 16px;" [innerHTML]="'beSafeDescrizione' | translate"></p>
+              <p style="font-size: 16px; text-align: justify;" [innerHTML]="'beSafeDescrizione' | translate"></p>
             </a>
             <h4><b>{{"beSafePagaSicuro" | translate | uppercase}}</b></h4>
             <a>

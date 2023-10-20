@@ -193,7 +193,7 @@ export const de = {
     "termsMetaTitle": "AffittaSardegna - Geschäftsbedingungen",
     "termsMetaDescription": "Buchungsbedingungen",
     "filtroHomePage": "Suche nach Apartment-Code/-Namen",
-    "besafeBrochure": "https://file.notion.so/f/s/f37726de-63f3-4e93-a063-447c0f829af0/DE_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=6472c57e-3953-4e2e-8e69-2c6efb3de739&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697724000000&signature=RX7p_ndjihWoSrcDsO_NQP4sZMlq5JcasQJpQO5t-kk&downloadName=%5BDE%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
+    "besafeBrochure": "./assets/images/besafepdfs/[DE] Brochure Vantaggi Turista BeSafe Rate.pdf",
     "beSafeDownload": "Laden Sie die BeSafeRate-Broschüre herunter",
     "beSafePagaSicuro": "Sichere Zahlungen",
     "priceSort": "Nach Preis sortieren",

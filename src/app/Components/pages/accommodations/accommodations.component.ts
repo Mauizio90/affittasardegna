@@ -22,7 +22,6 @@ export class AccommodationsComponent {
   public allAccommodations?: Accommodation[];
   public originalAccommodations?: Accommodation[];
   public selectableCities: { name: string, selected: boolean }[] = [
-    { name: 'Aglientu', selected: false },
     { name: 'Alghero', selected: false },
     { name: 'Badesi', selected: false },
     { name: 'Baja Sardinia', selected: false },
@@ -34,8 +33,6 @@ export class AccommodationsComponent {
     { name: 'Costa Paradiso', selected: false },
     { name: 'Golfo Aranci', selected: false },
     { name: 'Isola La Maddalena', selected: false },
-    { name: 'Lido del Sole', selected: false },
-    { name: 'Limpiddu', selected: false },
     { name: 'Loiri Porto San Paolo', selected: false },
     { name: 'Marina di Sorso', selected: false },
     { name: 'Orosei', selected: false },

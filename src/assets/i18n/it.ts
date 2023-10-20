@@ -193,7 +193,7 @@ export const it = {
     "termsMetaTitle": "AffittaSardegna - Termini e condizioni",
     "termsMetaDescription": "Termini e condizioni di prenotazione",
     "filtroHomePage": "Cerca per Codice/Nome Appartamento",
-    "besafeBrochure": "https://file.notion.so/f/s/72d56b21-d79e-4ba8-b57e-65d6ad6bc5d3/IT_Brochure_Vantaggi_Turista_BeSafe_Rate.pdf?id=d2e858cf-a83e-4bc9-b676-1833211909b2&table=block&spaceId=8c7f8e75-67c1-4455-b0f1-6bc6d811664e&expirationTimestamp=1697724000000&signature=KAX3BV_OD0Q3MS2N9gn0SKRX6IuGSkc5_qzNVVewbfU&downloadName=%5BIT%5D+Brochure+Vantaggi+Turista+BeSafe+Rate.pdf",
+    "besafeBrochure": "./assets/images/besafepdfs/[IT] Brochure Vantaggi Turista BeSafe Rate.pdf",
     "beSafeDownload": "assicura il tuo viaggio",
     "beSafePagaSicuro": "pagamenti sicuri",
     "priceSort": "Ordina per prezzo",
