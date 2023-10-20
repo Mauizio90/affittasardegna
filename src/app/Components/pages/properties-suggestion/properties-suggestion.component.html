@@ -17,7 +17,7 @@
 <div class="property-suggestion-container container">
     <div class="property-suggestion-content">
         <div class="proponi text">
-            <p [innerHTML]="'proponiText' | translate"></p><img src=".\assets\images\logo.png" alt="logo AffittaSardegna" style="height: 50px;">
+            <p [innerHTML]="'proponiText' | translate"></p>
         </div>
         <form [formGroup]="suggestForm" (ngSubmit)="sendEmail($event)">
             <label for="city">{{"suggestLabel1" | translate}}</label>

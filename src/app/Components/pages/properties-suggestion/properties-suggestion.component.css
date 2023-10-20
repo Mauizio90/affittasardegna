@@ -32,7 +32,7 @@
 
 .property-suggestion-subtitle {
   line-height: 30px;
-  font-size: 15px;
+  font-size: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bold;
@@ -213,4 +213,5 @@ label{
   }
   label{
     color: var(--primary);
+    font-weight: bold;
   }

@@ -405,6 +405,24 @@
   color: gray;
 }
 
+.experience-banner{
+  background-image: url('~src/assets/images/banner esperienze 2.png');
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+}
+
+.experience-text{
+  color: white;
+  font-size: 40px;
+  padding: 50px;
+}
+
+.btn-experience{
+  font-size: 45px;
+  padding: 50px;
+}
+
 
 
 @media (max-width: 1380px) {
@@ -502,7 +520,7 @@
   }
 
   .home-text a {
-    font-size: 10px;
+    font-size: 15px;
     width: 100%;
   }
 
@@ -511,8 +529,25 @@
   }
 
   .btn {
-    padding: 8px 4px;
+    padding: 7px 4px;
     margin-left: -12px;
+  }
+
+  .experience-banner{
+    height: 250px;
+  }
+
+  .experience-text{
+    color: white;
+    font-size: 13px;
+    padding: 5px;
+    padding-top: 25px;
+  }
+  
+  .btn-experience{
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
   }
 
 }
