@@ -7,7 +7,7 @@
 
 
 <div class="filter-container">
-  <div class="filter-column">
+  <!-- <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title">
         <div class="dropdown">
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="filter-column">
     <div class="filter-box">
       <div class="filter-box-title">
@@ -25,13 +25,14 @@
           <input id="distanza-dropdown" type="checkbox" class="dropdown-toggle" />
           <label for="distanza-dropdown" class="dropdown-label center-text">{{"distanzaMare" | translate}}</label>
           <div class="dropdown-content">
+            <button class="btn" (click)="uncheckCheckbox()" style="display: block; width: 100%;">Cerca</button>
             <div class="amenities-grid">
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
                 <ng-container *ngIf="selectableAmenity.name.includes('Distante')">
                   <label>
                     <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected"
                       (change)="onChange(null, selectableAmenity.name, null)">
-                    {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEs, fr: selectableAmenity?.nameFr, de: selectableAmenity?.nameDe } }}
+                    {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.nameShown, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEs, fr: selectableAmenity?.nameFr, de: selectableAmenity?.nameDe } }}
                   </label>
                 </ng-container>
               </div>
@@ -48,6 +49,7 @@
           <input id="dotazioni-dropdown" type="checkbox" class="dropdown-toggle" />
           <label for="dotazioni-dropdown" class="dropdown-label center-text">{{"filtroDotazioni" | translate}}</label>
           <div class="dropdown-content">
+            <button class="btn" (click)="uncheckCheckbox()" style="display: block; width: 100%;">Cerca</button>
             <div class="amenities-grid">
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
                 <label>
@@ -69,6 +71,7 @@
           <input id="location-dropdown" type="checkbox" class="dropdown-toggle" />
           <label for="location-dropdown" class="dropdown-label center-text">{{"filtroLocalità" | translate}}</label>
           <div class="dropdown-content">
+            <button class="btn" (click)="uncheckCheckbox()" style="display: block; width: 100%;">Cerca</button>
             <div class="localities-grid">
               <div class="locality" *ngFor="let selectableCity of selectableCities">
                 <label>
