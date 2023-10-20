@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { SeoService } from '../../services/seo.service';
+import { ScriptService } from '../../services/script.service';
 
 @Component({
   selector: 'app-traghetti',
@@ -13,9 +14,13 @@ import { SeoService } from '../../services/seo.service';
 })
 export class TraghettiComponent {
 
-  constructor(private sanitizer: DomSanitizer, private translate: TranslateService, private seo: SeoService) { }
+  constructor(private sanitizer: DomSanitizer, private translate: TranslateService, private seo: SeoService, private script: ScriptService) { }
 
   ngOnInit(){
+    this.script.load('resizer').then(data => {
+      console.log('script loaded ', data);
+    }).catch(error => console.log(error));
+  
     let translatedTitle = this.translate.instant('traghettiMetaTitle');
     let translatedDescription = this.translate.instant('traghettiMetaDescription');
     this.seo.updateTitle(translatedTitle);

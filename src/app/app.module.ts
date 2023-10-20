@@ -33,6 +33,7 @@ import { DateAdapter, MatNativeDateModule, NativeDateAdapter } from '@angular/ma
 import { DatePipe } from '@angular/common';
 import { fr } from 'src/assets/i18n/fr';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { ScriptService } from './Components/services/script.service';
 
 export class CustomTranslateLoader implements TranslateLoader {
   public getTranslation(lang: string) {
@@ -102,7 +103,8 @@ export class MyDateAdapter extends NativeDateAdapter {
         NgxGoogleAnalyticsRouterModule
     ],
     providers: [provideClientHydration(),DatePipe,
-      {provide: DateAdapter, useClass: MyDateAdapter}],
+      {provide: DateAdapter, useClass: MyDateAdapter},
+    ScriptService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
