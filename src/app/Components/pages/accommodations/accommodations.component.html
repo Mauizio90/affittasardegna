@@ -52,11 +52,13 @@
             <button class="btn" (click)="uncheckCheckbox()" style="display: block; width: 100%;">Cerca</button>
             <div class="amenities-grid">
               <div class="amenity" *ngFor="let selectableAmenity of selectableAmenities">
+                <ng-container *ngIf="!selectableAmenity.name.includes('Distante')">
                 <label>
                   <input type="checkbox" name="checkbox" [checked]="selectableAmenity.selected"
                     (change)="onChange(null, selectableAmenity.name, null)">
                     {{ 'listaDotazioni' | translate:{ it: selectableAmenity?.name, en: selectableAmenity?.nameEn, es: selectableAmenity?.nameEs, fr: selectableAmenity?.nameFr, de: selectableAmenity?.nameDe } }}
                 </label>
+              </ng-container>
               </div>
             </div>
           </div>
