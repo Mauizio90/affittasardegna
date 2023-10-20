@@ -33,26 +33,36 @@ export class ScriptService {
 
   loadScript(name: string) {
     return new Promise((resolve, reject) => {
-      // Se lo script è già stato caricato, lo rimuoviamo prima di aggiungere il nuovo script
       if (this.scripts[name].loaded) {
-        let scriptElement = document.querySelector(`script[src='${this.scripts[name].src}']`);
-        if (scriptElement) {
-          document.getElementsByTagName('head')[0].removeChild(scriptElement);
-        }
-        this.scripts[name].loaded = false;
+        resolve({ script: name, loaded: true, status: 'Already Loaded' });
+      } else {
+        let script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = this.scripts[name].src;
+        script.onload = () => {
+          this.scripts[name].loaded = true;
+          resolve({ script: name, loaded: true, status: 'Loaded' });
+        };
+        script.onerror = (error: any) => resolve({ script: name, loaded: false, status: 'Loaded' });
+        document.getElementsByTagName('head')[0].appendChild(script);
       }
-  
-      // Ora aggiungiamo il nuovo script
-      let script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = this.scripts[name].src;
-      script.onload = () => {
-        this.scripts[name].loaded = true;
-        resolve({ script: name, loaded: true, status: 'Loaded' });
-      };
-      script.onerror = (error: any) => resolve({ script: name, loaded: false, status: 'Loaded' });
-      document.getElementsByTagName('head')[0].appendChild(script);
     });
   }
-  
+
+  remove(name: string) {
+    return new Promise((resolve, reject) => {
+      if (this.scripts[name].loaded) {
+        let script = document.querySelector(`script[src="${this.scripts[name].src}"]`);
+        if (script) {
+          script.remove();
+          this.scripts[name].loaded = false;
+          resolve({ script: name, removed: true, status: 'Removed' });
+        } else {
+          reject({ script: name, removed: false, status: 'Not Found' });
+        }
+      } else {
+        resolve({ script: name, removed: false, status: 'Not Loaded' });
+      }
+    });
+  }
 }

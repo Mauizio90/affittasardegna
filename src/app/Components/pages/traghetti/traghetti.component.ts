@@ -27,6 +27,13 @@ export class TraghettiComponent {
     this.seo.updateDescription(translatedDescription);
   }
 
+  ngOnDestroy() {
+    this.script.remove('resizer').then(data => {
+      console.log('script removed ', data);
+    }).catch(error => console.log(error));
+  }
+
+
   get iframeUrl() {
     const translatedUrl = this.translate.instant('traghettiper');
     return this.sanitizer.bypassSecurityTrustResourceUrl(translatedUrl);
