@@ -35,8 +35,8 @@
   font-size: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-weight: 500;
-  color: var(--secondary);
+  font-weight: bold;
+  color: #4CB276;
   box-sizing: border-box;
 }
 
