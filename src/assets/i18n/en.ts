@@ -218,5 +218,21 @@ export const en ={
     "traghettiMetaTitle": "AffittaSardegna - Exclusive Ferry Offers",
     "traghettiMetaDescription": "Book your ferry with us to enjoy exclusive benefits and offers",
     "traghettiFooter": "Book your ferry with us",
-    "traghettiFooterDetails": "Exclusive benefits and discounts just for you!"
+    "traghettiFooterDetails": "Exclusive benefits and discounts just for you!",
+    "proponiText": "<strong>Are you the owner of a holiday home or a villa and would like to turn it into an income source? You're in the right place!</strong></p><p>Renting a property for short-term stays comes with many duties and responsibilities, but with us by your side, you can sit back, relax, and let the house work for you! If you also have a holiday home that matches the characteristics sought by our guests and meets our market standards, we need to get to know each other!</p><p>Over time, we've learned to find a common ground between the needs of all those who choose to rent their home or villa in Sardinia and thousands of tourists from around the world, making their satisfaction our priority, and establishing a relationship of mutual trust and harmonious, as well as profitable, collaboration. This result is possible thanks to the great flexibility of the agreements that can be made with the owners, each customized based on the requests and needs expressed.</p><p>Relying on AffittaSardegna means enjoying the visibility and advertising that AffittaSardegna provides in all its channels, without any subscription costs. You will also be relieved from having to worry about all the tax, bureaucratic, and administrative aspects that the management of a holiday home imposes by law (and the associated risks if not complied with), commitments that we will take care of in the specified time and manner!</p><p><strong>Curious to learn more? Fill out the form, and a member of our team will contact you immediately! Join AffittaSardegna today!</strong><br>",
+    "bedIcon": "Rooms",
+    "bathIcon": "Bathrooms",
+    "wifiIcon": "WiFi Connection",
+    "mosquitoIcon": "Mosquito Nets Throughout the Property",
+    "showerIcon": "Shower",
+    "acIcon": "Air Conditioning",
+    "kitchenIcon": "Kitchen",
+    "pingPongIcon": "Ping Pong Table",
+    "bicycleIcon": "Bicycle",
+    "gardenIcon": "Garden",
+    "parkingIcon": "Parking",
+    "petsIcon": "Pets Allowed",
+    "poolIcon": "Swimming Pool",
+    "tvIcon": "Television",
+    "garageIcon": "Garage"
 }

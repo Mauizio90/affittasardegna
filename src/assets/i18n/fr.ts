@@ -218,6 +218,22 @@ export const fr = {
     "traghettiMetaTitle": "AffittaSardegna - Offres exclusives de ferry",
     "traghettiMetaDescription": "Réservez votre ferry avec nous pour profiter d'avantages et d'offres exclusives",
     "traghettiFooter": "Réservez votre ferry avec nous",
-    "traghettiFooterDetails": "Des avantages exclusifs et des réductions rien que pour vous !"
+    "traghettiFooterDetails": "Des avantages exclusifs et des réductions rien que pour vous !",
+    "proponiText": "<strong>Êtes-vous propriétaire d'une maison de vacances ou d'une villa et souhaiteriez en faire une source de revenus? Vous êtes au bon endroit !</strong></p><p>Louer une propriété pour de courts séjours comporte de nombreuses obligations et responsabilités, mais avec nous à vos côtés, vous pouvez vous détendre et laisser la maison travailler pour vous ! Si vous avez également une maison de vacances qui correspond aux caractéristiques recherchées par nos clients et qui répond à nos normes de marché, nous devons faire connaissance !</p><p>Au fil du temps, nous avons appris à trouver un terrain d'entente entre les besoins de tous ceux qui décident de louer leur maison ou leur villa en Sardaigne et des milliers de touristes du monde entier, en faisant de leur satisfaction notre priorité et en établissant une relation de confiance mutuelle et de collaboration harmonieuse, ainsi que rentable. Ce résultat est possible grâce à la grande flexibilité des accords qui peuvent être conclus avec les propriétaires, chacun étant personnalisé en fonction des demandes et des besoins exprimés.</p><p>Faire confiance à AffittaSardegna signifie bénéficier de la visibilité et de la publicité offertes par AffittaSardegna sur tous ses canaux, sans frais d'abonnement. Vous serez également soulagé de ne plus avoir à vous soucier de tous les aspects fiscaux, bureaucratiques et administratifs que la gestion d'une maison de vacances impose par la loi (et des risques associés en cas de non-respect), des engagements que nous prendrons en charge dans les délais et de la manière spécifiés !</p><p><strong>Curieux d'en savoir plus ? Remplissez le formulaire, et un membre de notre équipe vous contactera immédiatement ! Rejoignez AffittaSardegna dès aujourd'hui !</strong><br>",
+    "bedIcon": "Chambres",
+    "bathIcon": "Salles de bains",
+    "wifiIcon": "Connexion WiFi",
+    "mosquitoIcon": "Moustiquaires dans toute la propriété",
+    "showerIcon": "Douche",
+    "acIcon": "Climatisation",
+    "kitchenIcon": "Cuisine",
+    "pingPongIcon": "Table de ping-pong",
+    "bicycleIcon": "Bicyclette",
+    "gardenIcon": "Jardin",
+    "parkingIcon": "Parking",
+    "petsIcon": "Animaux domestiques autorisés",
+    "poolIcon": "Piscine",
+    "tvIcon": "Télévision",
+    "garageIcon": "Garage"
     
 }

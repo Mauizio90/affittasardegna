@@ -218,6 +218,22 @@ export const it = {
     "traghettiMetaTitle": "AffittaSardegna - Offerte esclusive Traghetti",
     "traghettiMetaDescription": "Prenota il tuo traghetto con noi per usufruire di vantaggi e offerte esclusive",
     "traghettiFooter": "Prenota il tuo traghetto con noi",
-    "traghettiFooterDetails": "Per te, vantaggi e sconti esclusivi!"
+    "traghettiFooterDetails": "Per te, vantaggi e sconti esclusivi!",
+    "proponiText": "<strong>Sei proprietario di una casa vacanze o una villa e vorresti metterla a reddito? Sei nel posto giusto!</strong></p><p>Affittare un immobile per locazioni brevi comporta molti doveri e responsabilità, ma con noi al tuo fianco potrai sederti, rilassarti e lasciare che la casa lavori per te! Se hai anche tu una casa vacanze in linea con le caratteristiche ricercate dai nostri ospiti e coi nostri standard di mercato, ci dobbiamo conoscere!</p><p>Con il tempo abbiamo imparato a trovare un punto di incontro tra le esigenze di tutti coloro che decidono di affittare la loro casa o villa in Sardegna e di migliaia di turisti provenienti da tutto il mondo, facendo della loro soddisfazione la nostra priorità, riuscendo a instaurare un rapporto di reciproca fiducia e armoniosa, nonché proficua, collaborazione. Un risultato possibile grazie alla grande flessibilità degli accordi che si possono stabilire con i proprietari, ciascuno personalizzato sulla base di quelle che sono le richieste e le esigenze manifestate.</p><p>Affidarsi ad AffittaSardegna, significa usufruire e godere della visibilità e della pubblicità che AffittaSardegna assicura in tutti i suoi canali, senza alcun costo di abbonamento. Sarai inoltre sollevato dal non dover più preoccuparti di tutta la parte fiscale, burocratica e amministrativa che la gestione di una casa vacanze impone per legge (e dei rischi ad essa legati se non vi dovesse adempiere), impegni a cui penseremo noi nei tempi e modi previsti!</p><p><strong>Sei curioso di saperne di più? Compila il form, verrai contattato subito da un membro del nostro team! Entra a far parte anche tu di AffittaSardegna!</strong><br>",
+    "bedIcon": "Camere",
+    "bathIcon": "Bagni",
+    "wifiIcon": "Connessione WiFi",
+    "mosquitoIcon": "Zanzariere in tutta la struttura",
+    "showerIcon": "Doccia",
+    "acIcon": "Aria condizionata",
+    "kitchenIcon": "Cucina",
+    "pingPongIcon": "Tavolo da ping pong",
+    "bicycleIcon": "Bicicletta",
+    "gardenIcon": "Giardino",
+    "parkingIcon": "Parcheggio",
+    "petsIcon": "Animali domestici permessi",
+    "poolIcon": "Piscina",
+    "tvIcon": "TV",
+    "garageIcon": "Garage"
 
 }

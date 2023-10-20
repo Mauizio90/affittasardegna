@@ -1,60 +1,3 @@
-<!-- <div class="accommodation" *ngFor="let accommodation of accommodations">
-  <img [src]="accommodation.images?.[0]" class="accommodation-img-top" alt="Accommodation image">
-  <div class="accomodation-body">
-    <h5 class="accomodation-title">{{ accommodation.name_it }}</h5>
-    <h6 class="accomodation-subtitle mb-2 text-muted">{{ accommodation.name_room_type_category }}</h6>
-    <p class="accomodation-text">{{ accommodation.description?.it}}</p>
-
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>Guests:</strong> {{ accommodation.guests }}
-      </li>
-      <li class="list-group-item">
-        <strong>Bedrooms:</strong> {{ accommodation.n_bedrooms }}
-      </li>
-      <li class="list-group-item">
-        <strong>Bathrooms:</strong> {{ accommodation.n_bathrooms }}
-      </li>
-      <li class="list-group-item">
-        <strong>Address:</strong> {{ accommodation.address }}, {{ accommodation.city }}, {{ accommodation.postcode }}, {{ accommodation.cod_country }}
-      </li>
-      <li class="list-group-item">
-        <strong>Price:</strong> {{ accommodation.price }}
-      </li>
-      <li class="list-group-item">
-        <strong>Amenities:</strong>
-        <ul>
-          <li *ngFor="let amenity of accommodation.amenities">{{ amenity.name.it }}</li>
-        </ul>
-      </li>
-    </ul>
-
-    <a [href]="accommodation.meta_it_url" class="btn btn-primary">View Details</a>
-  </div>
-</div>>
-   -->
-
-<!-- alternative -->
-<!-- <div class="row">
-  <div class="col-lg-12">
-    <div class="projcard-container" *ngFor="let accommodation of accommodations">
-      <div class="projcard projcard-blue">
-        <div class="projcard-innerbox col-xs-6">
-          <img class="projcard-img" [src]="accommodation.images?.[0]" />
-          <div class="projcard-textbox col-xs-6">
-            <div class="projcard-title">{{accommodation.name_it}}</div>
-            <div class="projcard-subtitle">This explains the card in more detail</div>
-            <div class="projcard-bar"></div>
-            <div class="projcard-description">{{accommodation.description?.it}}</div>
-            <div class="projcard-tagbox">
-              <span class="projcard-tag">HTML</span>
-              <span class="projcard-tag">CSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</div> -->
 <div class="card-container">
   <div class="row" style="justify-content: center;">
     <div class="box col-lg-3 col-md-4 col-sm-12" *ngFor="let accommodation of accommodations | slice:0:cardsToShow">
@@ -88,63 +31,63 @@
           </div>
           <div class="icon-container">
 
-            <div class="iconwrapper">
+            <div class="iconwrapper" title="{{'bedIcon' | translate}}">
               <fa-icon class="icon" [icon]="faBed"></fa-icon><span>{{accommodation.n_bedrooms}}</span>
             </div>
 
-            <div class="iconwrapper">
+            <div class="iconwrapper"title="{{'bathIcon' | translate}}">
               <fa-icon class="icon" [icon]="faBathtub"></fa-icon><span>{{accommodation.n_bathrooms}}</span>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasWifi(accommodation)">
+            <div class="iconwrapper" *ngIf="hasWifi(accommodation)" title="{{'wifiIcon' | translate}}" >
               <fa-icon class="icon" [icon]="faWifi"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasMosquitoNets(accommodation)">
+            <div class="iconwrapper" *ngIf="hasMosquitoNets(accommodation)" title="{{'mosquitoIcon' | translate}}">
               <fa-icon class="icon" [icon]="faMosquitoNet"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasShower(accommodation)">
+            <div class="iconwrapper" *ngIf="hasShower(accommodation)"title="{{'showerIcon' | translate}}">
               <fa-icon class="icon" [icon]="faShower"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasAirConditioning(accommodation)">
+            <div class="iconwrapper" *ngIf="hasAirConditioning(accommodation)"title="{{'acIcon' | translate}}">
               <fa-icon class="icon" [icon]="faSnowflake"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasKitchen(accommodation)">
+            <div class="iconwrapper" *ngIf="hasKitchen(accommodation)"title="{{'kitchenIcon' | translate}}">
               <fa-icon class="icon" [icon]="faKitchenSet"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasPingPongTable(accommodation)">
+            <div class="iconwrapper" *ngIf="hasPingPongTable(accommodation)"title="{{'pingPongIcon' | translate}}">
               <fa-icon class="icon" [icon]="faTableTennis"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasBicycle(accommodation)">
+            <div class="iconwrapper" *ngIf="hasBicycle(accommodation)" title="{{'bicycleIcon' | translate}}">
               <fa-icon class="icon" [icon]="faBicycle"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasGarden(accommodation)">
+            <div class="iconwrapper" *ngIf="hasGarden(accommodation)" title="{{'gardenIcon' | translate}}">
               <fa-icon class="icon" [icon]="faSeedling"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasParking(accommodation)">
+            <div class="iconwrapper" *ngIf="hasParking(accommodation)" title="{{'parkingIcon' | translate}}">
               <fa-icon class="icon" [icon]="faSquareParking"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasPetsAllowed(accommodation)">
+            <div class="iconwrapper" *ngIf="hasPetsAllowed(accommodation)" title="{{'petsIcon' | translate}}">
               <fa-icon class="icon" [icon]="faPaw"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasPrivatePool(accommodation)">
+            <div class="iconwrapper" *ngIf="hasPrivatePool(accommodation)" title="{{'poolIcon' | translate}}">
               <fa-icon class="icon" [icon]="faWaterLadder"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasTV(accommodation)">
+            <div class="iconwrapper" *ngIf="hasTV(accommodation)" title="{{'tvIcon' | translate}}">
               <fa-icon class="icon" [icon]="faTv"></fa-icon>
             </div>
 
-            <div class="iconwrapper" *ngIf="hasGarage(accommodation)">
+            <div class="iconwrapper" *ngIf="hasGarage(accommodation)" title="{{'garageIcon' | translate}}">
               <fa-icon class="icon" [icon]="faWarehouse"></fa-icon>
             </div>
           </div>

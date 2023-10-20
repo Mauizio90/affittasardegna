@@ -5,40 +5,57 @@
     </div>
 </div>
 
+
+<div class="property-suggestion-header">
+    <div class="icon-container">
+        <i class="ri-home-smile-fill"></i>
+    </div>
+    <p class="property-suggestion-title"><strong>{{"suggestP1" | translate}}</strong></p>
+    <p class="property-suggestion-subtitle">{{"suggestP2" | translate}}</p>
+</div>
+
 <div class="property-suggestion-container container">
     <div class="property-suggestion-content">
-        <div class="property-suggestion-header">
-            <div class="icon-container">
-                <i class="ri-home-smile-fill"></i>
-            </div>
-            <p class="property-suggestion-title"><strong>{{"suggestP1" | translate}}</strong></p>
-            <p class="property-suggestion-subtitle">{{"suggestP2" | translate}}</p>
+        <div class="proponi text">
+            <p [innerHTML]="'proponiText' | translate"></p><img src=".\assets\images\logo.png" alt="logo AffittaSardegna" style="height: 50px;">
         </div>
         <form [formGroup]="suggestForm" (ngSubmit)="sendEmail($event)">
             <label for="city">{{"suggestLabel1" | translate}}</label>
-            <input id="city" class="input-field" type="text" name="city" autocomplete="address-level2" [placeholder]="'citta' | translate" formControlName="city">
+            <input id="city" class="input-field" type="text" name="city" autocomplete="address-level2"
+                [placeholder]="'citta' | translate" formControlName="city">
             <label for="address">{{"suggestLabel2" | translate}}</label>
-            <input id="address" class="input-field" type="text" name="address" autocomplete="street-address" [placeholder]="'indirizzo' | translate" formControlName="address">
+            <input id="address" class="input-field" type="text" name="address" autocomplete="street-address"
+                [placeholder]="'indirizzo' | translate" formControlName="address">
             <label for="description">{{"suggestLabel3" | translate}}</label>
-            <textarea id="description" class="input-field textarea-field" name="description" autocomplete="off" [placeholder]="'descrizionePlaceholder' | translate"></textarea>
+            <textarea id="description" class="input-field textarea-field" name="description" autocomplete="off"
+                [placeholder]="'descrizionePlaceholder' | translate"></textarea>
             <label for="nome">{{"nome" | translate}}</label>
-            <input id="nome" class="input-field" type="text" name="nome" autocomplete="given-name" [placeholder]="'nome' | translate" formControlName="nome">
+            <input id="nome" class="input-field" type="text" name="nome" autocomplete="given-name"
+                [placeholder]="'nome' | translate" formControlName="nome">
             <label for="cognome">{{"cognome" | translate}}</label>
-            <input id="cognome" class="input-field" type="text" name="cognome" autocomplete="family-name" [placeholder]="'cognome' | translate" formControlName="cognome">
+            <input id="cognome" class="input-field" type="text" name="cognome" autocomplete="family-name"
+                [placeholder]="'cognome' | translate" formControlName="cognome">
             <label for="telefono">{{"telefono" | translate}}</label>
-            <input id="telefono" class="input-field" type="text" inputmode="numeric" pattern="[+0-9]+" name="telefono" autocomplete="tel" [placeholder]="'phoneplaceholder' | translate" formControlName="telefono">
-            <div *ngIf="suggestForm.get('telefono')?.hasError('pattern')" style="color: red;">{{"numberWarn" | translate}}</div>
+            <input id="telefono" class="input-field" type="text" inputmode="numeric" pattern="[+0-9]+" name="telefono"
+                autocomplete="tel" [placeholder]="'phoneplaceholder' | translate" formControlName="telefono">
+            <div *ngIf="suggestForm.get('telefono')?.hasError('pattern')" style="color: red;">{{"numberWarn" |
+                translate}}</div>
             <label for="email">Email</label>
-            <input id="email" class="input-field" type="email" name="email" autocomplete="email" placeholder="Email" formControlName="email">
-            <div *ngIf="suggestForm.get('email')?.hasError('email')" style="color: red;">{{"emailWarn" | translate}}</div>
+            <input id="email" class="input-field" type="email" name="email" autocomplete="email" placeholder="Email"
+                formControlName="email">
+            <div *ngIf="suggestForm.get('email')?.hasError('email')" style="color: red;">{{"emailWarn" | translate}}
+            </div>
             <label for="privacy" class="privacy-checkbox">
-              <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> {{"accetto" | translate}} <a class="privacy-link" routerLink="/privacy">{{"privacypolicy" | translate}}</a>
+                <input id="privacy" type="checkbox" name="privacy" formControlName="privacy"> {{"accetto" | translate}}
+                <a class="privacy-link" routerLink="/privacy">{{"privacypolicy" | translate}}</a>
             </label>
             <br>
             <label for="trattamentodati" class="privacy-checkbox">
-              <input id="trattamentodati" type="checkbox" name="trattamentodati" formControlName="trattamentodati">{{"autorizzo" | translate}}
+                <input id="trattamentodati" type="checkbox" name="trattamentodati"
+                    formControlName="trattamentodati">{{"autorizzo" | translate}}
             </label>
-            <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="suggestForm.invalid">{{"invia" | translate}}</button>
-          </form>
+            <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="suggestForm.invalid">{{"invia" |
+                translate}}</button>
+        </form>
     </div>
 </div>

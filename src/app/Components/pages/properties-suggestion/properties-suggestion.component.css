@@ -7,8 +7,6 @@
 
 .property-suggestion-header {
   width: 100%;
-  float: left;
-  position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
@@ -190,12 +188,27 @@ label{
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0);
   }
+
+  .property-suggestion-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .property-suggestion-content p{
+    color: var(--primary);
+    text-align: justify;
+    margin-right: 25px;
+  }
   
   @media (max-width: 768px) {
     .map-container,
     .contact-container {
       width: 100%;
       float: none;
+    }
+
+    .property-suggestion-content{
+      display: block;
     }
   }
   label{
