@@ -54,55 +54,94 @@ export class HousecardsComponent {
 
 
   hasWifi(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Connessione WiFi');
-  }
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Connessione WiFi');
+    }
+    return false;
+  }  
   
   hasMosquitoNets(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Zanzariere in tutta la struttura');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Zanzariere in tutta la struttura');
+    }
+    return false;
   }
   
   hasShower(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Doccia');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Doccia');
+    }
+    return false;
   }
   
   hasAirConditioning(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Aria condizionata');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Aria condizionata');
+    }
+    return false;
   }
   
   hasKitchen(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Cucina');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Cucina');
+    }
+    return false;
   }
   
   hasPingPongTable(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Tavolo da ping pong');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Tavolo da ping pong');
+    }
+    return false;
   }
   
   hasBicycle(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Bicicletta');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Bicicletta');
+    }
+    return false;
   }
   
   hasGarden(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Giardino');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Giardino');
+    }
+    return false;
   }
   
   hasParking(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Parcheggio');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Parcheggio');
+    }
+    return false;
   }
   
   hasPetsAllowed(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Animali domestici permessi');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Animali domestici permessi');
+    }
+    return false;
   }
   
   hasPrivatePool(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Piscina privata');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'Piscina privata');
+    }
+    return false;
   }
   
   hasTV(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'TV');
+    if(accommodation && accommodation.amenities) {
+      return accommodation.amenities.some((amenity: any) => amenity && amenity.name && amenity.name.it === 'TV');
+    }
+    return false;
   }
   
   hasGarage(accommodation: any): boolean {
-    return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Garage');
+    if(accommodation && accommodation.amenities) {
+      return accommodation && accommodation.amenities && accommodation.amenities.some((amenity: any) => amenity.name.it === 'Garage');
+    }
+    return false;
   }
   
 

@@ -33,6 +33,7 @@
     "@ngx-translate/http-loader": "^8.0.0",
     "bootstrap": "^5.3.1",
     "express": "^4.15.2",
+    "firebase": "^10.5.2",
     "ngx-bootstrap": "^11.0.2",
     "ngx-google-analytics": "^14.0.1",
     "remixicon": "^3.5.0",

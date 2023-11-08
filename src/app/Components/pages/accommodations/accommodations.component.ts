@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { AccommodationService } from '../../services/accommodation.service';
 import { Accommodation } from '../../models/accommodation';
 import { HousecardsComponent } from '../../layouts/housecards/housecards.component';
-import { Title, Meta } from '@angular/platform-browser';
 import { CommonModule, NgFor } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SearchService } from '../../services/search.service';

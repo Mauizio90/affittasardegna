@@ -33,4 +33,9 @@ export class AccommodationService {
       map((accommodations: any[]) => accommodations.find(a => a.meta_it_url === metaUrl))
     );
   }
+
+  refreshCache(): void {
+    this.cache$ = undefined;
+   }
+   
 }
