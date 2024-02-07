@@ -16,5 +16,28 @@
 <body>
   <app-root></app-root>
   <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1a3e05fa-838e-47a2-aeac-eb96a9c32faf"> </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDjW6I7Opc-IgT3zy0e7UzFk7oLAydTvlQ",
+      authDomain: "affittasardegna-3de16.firebaseapp.com",
+      projectId: "affittasardegna-3de16",
+      storageBucket: "affittasardegna-3de16.appspot.com",
+      messagingSenderId: "1013080335422",
+      appId: "1:1013080335422:web:faab31da399071547c9d6f",
+      measurementId: "G-LLKDZM94XW"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 </html>

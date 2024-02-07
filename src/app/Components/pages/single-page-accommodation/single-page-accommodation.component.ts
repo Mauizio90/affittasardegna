@@ -32,7 +32,7 @@ export class SinglePageAccommodationComponent {
   constructor(private accommodationService: AccommodationService, private route: ActivatedRoute, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private router: Router, private seo: SeoService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    /* this.route.params.subscribe(params => {
       const accommodationUrl = params['accommodationUrl' || 'en/' + 'accommodationUrl' || 'es/' + 'accommodationUrl' || 'de/' + 'accommodationUrl' || 'fr/' + 'accommodationUrl'];
       if (accommodationUrl) {
         this.accommodationService
@@ -63,7 +63,7 @@ export class SinglePageAccommodationComponent {
             console.log(this.accommodation);
           });
       }
-    });
+    }); */
   }
 
 

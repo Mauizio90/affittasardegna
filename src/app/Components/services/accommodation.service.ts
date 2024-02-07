@@ -28,11 +28,11 @@ export class AccommodationService {
   //   return this.http.get<Accommodation[]>('assets/accommodations.json'); /*`assets/accommodations.json`*/
   // }
 
-  getAccommodationByMetaUrl(metaUrl: string): Observable<Accommodation> {
+  /* getAccommodationByMetaUrl(metaUrl: string): Observable<Accommodation> {
     return this.getAccommodations().pipe(
       map((accommodations: any[]) => accommodations.find(a => a.meta_it_url === metaUrl))
     );
-  }
+  } */
 
   refreshCache(): void {
     this.cache$ = undefined;
