@@ -48,6 +48,7 @@ const routes: Routes = [
   {path: 'fr/termes-et-conditions', loadChildren: () => import('./Components/pages/terms/terms.module').then(m => m.TermsModule)},
   {path: 'fr/confidentialite', loadChildren: () => import('./Components/pages/privacy/privacy.module').then(m => m.PrivacyModule)},
   {path: 'fr/offre-de-ferries', loadChildren: () => import('./Components/pages/traghetti/traghetti.module').then(m => m.TraghettiModule)},
+  {path: 'puliziacache', loadChildren: () => import('./Components/pages/clear-cache/clear-cache.module').then(m => m.ClearCacheModule) },
   /* 
   {path: ':accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},
   {path: 'en/:accommodationUrl', loadChildren: () => import('./Components/pages/single-page-accommodation/single-page-accommodation.module').then(m => m.SinglePageAccommodationModule)},

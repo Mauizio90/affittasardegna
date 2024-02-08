@@ -6,12 +6,23 @@ import * as express from 'express';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { AppServerModule } from './src/main.server';
+import axios from 'axios';
+import * as NodeCache from 'node-cache';
+import { scheduleJob } from 'node-schedule';
+
+
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/affittasardegna/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const accommodationCache = new NodeCache({ stdTTL: 0, checkperiod: 0 });
+  const cacheClearJob = scheduleJob('0   0 * * *', () => {
+    accommodationCache.flushAll();
+    console.log('Cache cleared at midnight');
+  });
+
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -22,10 +33,35 @@ export function app(): express.Express {
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
+  server.get('/api/accommodations', async (req, res) => {
+    try {
+      let accommodations = accommodationCache.get('accommodations');
+
+      if (!accommodations) {
+        const response = await axios.get('https://data.krossbooking.com/get/get-apartments?id=affittasardegna&token=457c445d46733e5ae5c910b0d4e935d1');
+        accommodations = response.data;
+        accommodationCache.set('accommodations', accommodations);
+      }
+
+      res.json(accommodations);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred while fetching accommodations.' });
+    }
+  });
+
+
+  server.delete('/api/cache/clear', (req, res) => {
+    accommodationCache.flushAll();
+    res.status(200).json({ message: 'Cache cleared successfully' });
+  });
+
+
+
+
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
-    maxAge: '1d'
+    maxAge: '1y'
   }));
 
   // All regular routes use the Universal engine

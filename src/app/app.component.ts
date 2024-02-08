@@ -15,7 +15,6 @@ declare const gtag: Function;
 export class AppComponent {
 
   constructor(public router: Router, private metaTagService: Meta, private translate: TranslateService, private titleService: Title, private seo: SeoService, private accommodationService: AccommodationService) {
-  this.accommodationService.refreshCache()
 
     const allAccommodations = this.accommodationService.getAccommodations().subscribe()
 

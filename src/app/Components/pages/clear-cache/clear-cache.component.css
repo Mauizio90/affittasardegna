@@ -1,0 +1,8 @@
+.button{
+  margin:  50% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+}
