@@ -12,6 +12,9 @@ import { Meta } from '@angular/platform-browser';
 })
 export class ClearCacheComponent {
   cacheClearedMessage = 'Pulisci Cache';
+  correctPassword: string = 'Wolpiedin';
+  showButton: boolean = false
+
 
   constructor(private http: HttpClient, private metaService: Meta) { }
 
@@ -33,6 +36,18 @@ export class ClearCacheComponent {
       }
     });
   }
+
+checkPassword(event: Event): void {
+  const inputPassword = (event.target as HTMLInputElement).value;
+  if (inputPassword && inputPassword.length >  0 && inputPassword === this.correctPassword) {
+    this.showButton = true;
+  } else {
+    this.showButton = false;
+  }
+}
+
+
+  
   
 
 }

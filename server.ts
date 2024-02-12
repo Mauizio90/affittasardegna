@@ -18,10 +18,12 @@ export function app(): express.Express {
   const distFolder = join(process.cwd(), 'dist/affittasardegna/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
   const accommodationCache = new NodeCache({ stdTTL: 0, checkperiod: 0 });
-  const cacheClearJob = scheduleJob('0   0 * * *', () => {
+  const cacheClearJob = scheduleJob('0  0 * * *', async () => {
     accommodationCache.flushAll();
     console.log('Cache cleared at midnight');
+    await fetchAndSetAccommodations();
   });
+  
 
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
@@ -33,22 +35,30 @@ export function app(): express.Express {
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
-  server.get('/api/accommodations', async (req, res) => {
+
+  async function fetchAndSetAccommodations() {
     try {
-      let accommodations = accommodationCache.get('accommodations');
-
-      if (!accommodations) {
-        const response = await axios.get('https://data.krossbooking.com/get/get-apartments?id=affittasardegna&token=457c445d46733e5ae5c910b0d4e935d1');
-        accommodations = response.data;
-        accommodationCache.set('accommodations', accommodations);
-      }
-
-      res.json(accommodations);
+      const response = await axios.get('https://data.krossbooking.com/get/get-apartments?id=affittasardegna&token=457c445d46733e5ae5c910b0d4e935d1');
+      const accommodations = response.data;
+      accommodationCache.set('accommodations', accommodations);
+      console.log('Fetched and set new accommodations data');
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'An error occurred while fetching accommodations.' });
+      console.error('Error fetching accommodations:', error);
     }
+  }
+  
+
+  server.get('/api/accommodations', async (req, res) => {
+    let accommodations = accommodationCache.get('accommodations');
+  
+    if (!accommodations) {
+      await fetchAndSetAccommodations();
+      accommodations = accommodationCache.get('accommodations');
+    }
+  
+    res.json(accommodations);
   });
+  
 
 
   server.delete('/api/cache/clear', (req, res) => {

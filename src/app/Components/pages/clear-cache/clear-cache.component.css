@@ -1,8 +1,16 @@
 .button{
-  margin:  50% auto;
+  margin-left: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: red;
   color: white;
+}
+
+.password{
+  margin-top: 10% ;
+  margin-left: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

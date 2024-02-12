@@ -1,3 +1,4 @@
 <div class="container">
-    <button class="button" (click)="clearCache()">{{cacheClearedMessage}}</button>
+    <input class="password" type="password" (change)="checkPassword($event)" placeholder="Inserisci la password">
+    <button *ngIf="showButton" class="button" (click)="clearCache()">{{cacheClearedMessage}}</button>
 </div>
