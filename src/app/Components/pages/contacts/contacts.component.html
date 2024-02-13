@@ -51,7 +51,7 @@
         <h2 class="contact-title">{{"contattaci" | translate | uppercase}}</h2>
         <p class="contact-subtitle">{{"compila" | translate}}</p>
       </div>
-      <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
+      <!-- <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
         <label for="nome">{{"nome" | translate}}</label>
         <input id="nome" class="input-field" type="text" name="nome" [placeholder]="'nome' | translate" formControlName="nome">
         <label for="cognome">{{"cognome" | translate}}</label>
@@ -71,7 +71,8 @@
           <input id="trattamentodati" type="checkbox" name="trattamentodati" formControlName="trattamentodati">{{"autorizzo" | translate}}
         </label>
         <button class="btn" type="submit" style="margin-left: 60px;" [disabled]="contactForm.invalid">{{"invia" | translate}}</button>
-      </form>
+      </form> -->
+      <iframe style="border:0; height: 908.2px; width: 434px;" src="https://landing-modulo-contattaci.getresponsewebsite.com/" frameborder="0"></iframe>
     </div>
   </div>
 </div>
