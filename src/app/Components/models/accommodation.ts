@@ -30,6 +30,7 @@ export class Accommodation {
       de: string;
       fr: string;
     }
+    license_number?: string;
     images?: string[];
     price?: number;
     amenities?: Amenity[];
