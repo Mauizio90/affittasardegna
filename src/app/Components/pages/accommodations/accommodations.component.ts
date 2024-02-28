@@ -39,6 +39,8 @@ export class AccommodationsComponent {
     { name: 'Pittulongu', selected: false },
     { name: 'Porto Cervo', selected: false },
     { name: 'Porto Istana', selected: false },
+    { name: 'Porto Pollo', selected: false },
+    { name: 'Porto Rafael', selected: false },
     { name: 'Porto Rotondo', selected: false },
     { name: 'Porto Taverna', selected: false },
     { name: 'Porto Torres', selected: false },
