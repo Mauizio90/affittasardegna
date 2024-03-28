@@ -46,7 +46,6 @@ export class AccommodationsComponent {
     { name: 'Porto Torres', selected: false },
     { name: 'Portobello di Gallura', selected: false },
     { name: 'Posada', selected: false },
-    { name: 'San Giovanniu di Posada', selected: false },
     { name: 'San Teodoro', selected: false },
     { name: 'Santa Teresa di Gallura', selected: false },
     { name: 'Siniscola', selected: false },
