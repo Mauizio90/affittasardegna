@@ -27,7 +27,6 @@ export const es ={
     "ospiti": "Huéspedes",
     "primoPiano": "EN RESALTO",
     "LOCALITÀ TURISTICHE": "DESTINOS TURÍSTICOS",
-    "In primo piano": "En primera plana",
     "bestlocalities": "Las mejores localidades turísticas de Cerdeña. Playas de ensueño y aguas cristalinas.",
     "descrizioneLocalità1": "Pequeño municipio en la alta Baronia, en la frontera entre las provincias de Olbia-Tempio y Nuoro, con una...",
     "footerDescription": "AffittaSardegna es líder en alquileres vacacionales en la mitad superior de Cerdeña. Con más de 500 unidades, ofrece una variedad de casas de vacaciones, desde estudios sencillos hasta villas exclusivas...",

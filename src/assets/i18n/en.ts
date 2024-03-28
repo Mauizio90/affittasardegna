@@ -27,7 +27,6 @@ export const en ={
     "ospiti": "Guests",
     "primoPiano": "HIGHLIGHTED",
     "LOCALITÀ TURISTICHE": "BEST TOURIST DESTINATIONS",
-    "In primo piano": "",
     "bestlocalities": "The best tourist destinations in Sardinia. Dreamy beaches and crystal-clear waters.",
     "descrizioneLocalità1": "Small municipality in the upper Baronia, on the border between the provinces of Olbia-Tempio and Nuoro, equipped with a...",
     "footerDescription": "AffittaSardegna is a leader in vacation rentals throughout the upper half of Sardinia. With over 500 units, it offers a variety of vacation homes, ranging from simple studios to exclusive villas...",

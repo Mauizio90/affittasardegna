@@ -27,7 +27,6 @@ export const fr = {
     "ospiti": "Invités",
     "primoPiano": "EN AVANT-PREMIÈRE",
     "LOCALITÀ TURISTICHE": "LIEUX TOURISTIQUES",
-    "In primo piano": "En avant-première",
     "bestlocalities": "Les meilleures destinations touristiques de la Sardaigne. Plages de rêve et eaux cristallines.",
     "descrizioneLocalità1": "Petite commune de l'Alta Baronia, à la frontière des provinces d'Olbia-Tempio et de Nuoro, avec...",
     "footerDescription": "AffittaSardegna est leader dans les locations de vacances pour la moitié supérieure de la Sardaigne. Avec plus de 500 unités, nous proposons une variété de locations de vacances, des studios simples aux villas exclusives...",

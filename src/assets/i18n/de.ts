@@ -27,7 +27,6 @@ export const de = {
     "ospiti": "Gäste",
     "primoPiano": "IM SPOTLIGHT",
     "LOCALITÀ TURISTICHE": "TOURISTISCHE ORTE",
-    "In primo piano": "Im Spotlight",
     "bestlocalities": "Die besten touristischen Orte in Sardinien. Traumhafte Strände und kristallklares Wasser.",
     "descrizioneLocalità1": "Kleine Gemeinde in der hohen Baronia, an der Grenze zwischen den Provinzen Olbia-Tempio und Nuoro, mit...",
     "footerDescription": "AffittaSardegna ist führend in der Vermietung von Ferienhäusern in der oberen Hälfte Sardiniens. Mit über 500 Einheiten bietet es vielfältige Ferienhäuser, von einfachen Studios bis hin zu exklusiven Villen...",

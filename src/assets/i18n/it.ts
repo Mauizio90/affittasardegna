@@ -27,7 +27,6 @@ export const it = {
     "ospiti": "Ospiti",
     "primoPiano": "IN PRIMO PIANO",
     "LOCALITÀ TURISTICHE": "LOCALITÀ TURISTICHE",
-    "In primo piano": "In primo piano",
     "bestlocalities": "Le migliori località turistiche della Sardegna. Spiagge da sogno e acque cristalline.",
     "descrizioneLocalità1": "Piccolo comune dell'alta Baronia, al confine tra le province di Olbia-Tempio e Nuoro, dotato di un a...",
     "footerDescription": "AffittaSardegna è leader negli affitti vacanze per tutta la metà superiore della Sardegna. Con oltre 500 unità, propone case vacanze diversificate, dai semplici monolocali alle ville esclusive...",
