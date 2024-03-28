@@ -18,7 +18,7 @@ export class PrivacyComponent {
   }
 
   ngOnInit(){
-    let translatedTitle = this.translate.instant('privacyMetaDescription');
+    let translatedTitle = this.translate.instant('privacyMetaTitle');
     let translatedDescription = this.translate.instant('privacyMetaDescription');
     this.seo.updateTitle(translatedTitle);
     this.seo.updateDescription(translatedDescription);
