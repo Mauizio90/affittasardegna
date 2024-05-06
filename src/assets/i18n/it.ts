@@ -235,6 +235,11 @@ export const it = {
     "tvIcon": "TV",
     "garageIcon": "Garage",
     "experienceText": "PRENOTA CON NOI, <br> TI ASPETTA UN MARE DI ESPERIENZE DA VIVERE <br> SCOPRENDO LA SARDEGNA A 360°, <br> PER UNA VACANZA <br> INDIMENTICABILE!",
-    "experiencePrenota": "PRENOTA SUBITO!"
+    "experiencePrenota": "PRENOTA SUBITO!",
+    "message": "Questo sito web utilizza i cookie per garantirti la migliore esperienza sul nostro sito web.",
+    "dismiss": "Ho capito!",
+    "deny": "Rifiuta i cookie",
+    "link": "Maggiori informazioni",
+    "policy": "Politica sui cookie"
 
 }

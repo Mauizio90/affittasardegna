@@ -235,6 +235,11 @@ export const fr = {
     "tvIcon": "Télévision",
     "garageIcon": "Garage",
     "experienceText": "RÉSERVEZ AVEC NOUS, <br> UN OCÉAN D'EXPÉRIENCES VOUS ATTEND <br> EN DÉCOUVRANT LA SARDAIGNE <br> SOUS TOUS LES ANGLES, <br> POUR DES VACANCES INOUBLIABLES !",
-    "experiencePrenota": "RÉSERVEZ MAINTENANT !"
+    "experiencePrenota": "RÉSERVEZ MAINTENANT !",
+    "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience sur notre site web.",
+    "dismiss": "Compris !",
+    "deny": "Refuser les cookies",
+    "link": "En savoir plus",
+    "policy": "Politique en matière de cookies"
     
 }

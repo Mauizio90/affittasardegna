@@ -235,5 +235,10 @@ export const es ={
     "tvIcon": "Televisión",
     "garageIcon": "Garaje",
     "experienceText": "RESERVA CON NOSOTROS, <br> UN MAR DE EXPERIENCIAS TE ESPERA <br> DESCUBRIENDO LA CERDEÑA DESDE TODOS <br> LOS ÁNGULOS, <br> ¡PARA UNAS VACACIONES <br> INOLVIDABLES!",
-    "experiencePrenota": "¡RESERVA AHORA!"
+    "experiencePrenota": "¡RESERVA AHORA!",
+    "message": "Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.",
+    "dismiss": "¡Entendido!",
+    "deny": "Rechazar cookies",
+    "link": "Más información",
+    "policy": "Política de cookies"
 }

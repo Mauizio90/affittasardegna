@@ -34,8 +34,39 @@ import { DatePipe } from '@angular/common';
 import { fr } from 'src/assets/i18n/fr';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { ClearCacheComponent } from './Components/pages/clear-cache/clear-cache.component';
+import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+
+const cookieConfig:NgcCookieConsentConfig = {
+  "cookie": {
+    "domain": "www.affittasardegna.it"
+  },
+  "position": "bottom",
+  "theme": "classic",
+  "palette": {
+    "popup": {
+      "background": "#2a3f80",
+      "text": "#ffffff",
+      "link": "#ffffff"
+    },
+    "button": {
+      "background": "#f1d600",
+      "text": "#2a3f80",
+      "border": "transparent"
+    }
+  },
+  "type": "info",
+  "content": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Got it!",
+    "deny": "Refuse cookies",
+    "link": "Learn more",
+    "href": "/privacy",
+    "policy": "Cookie Policy"
+  }
+};
 
 export class CustomTranslateLoader implements TranslateLoader {
+  
   public getTranslation(lang: string) {
     let translationFile = it;
     if (typeof window !== 'undefined' && window.location.pathname.includes('/en')) {
@@ -101,7 +132,8 @@ export class MyDateAdapter extends NativeDateAdapter {
         MatInputModule,
         MatNativeDateModule,
         NgxGoogleAnalyticsModule.forRoot('G-7XJBP872BN'),
-        NgxGoogleAnalyticsRouterModule
+        NgxGoogleAnalyticsRouterModule,
+        NgcCookieConsentModule.forRoot(cookieConfig),
     ],
     providers: [provideClientHydration(),DatePipe,
       {provide: DateAdapter, useClass: MyDateAdapter}],

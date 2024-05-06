@@ -235,5 +235,10 @@ export const de = {
     "tvIcon": "Fernseher",
     "garageIcon": "Garage",
     "experienceText": "BUCHEN SIE BEI UNS, <br> EIN MEER VON ERLEBNISSEN ERWARTET SIE <br> ENTDECKEN SIE SARDINIEN AUS JEDER PERSPEKTIVE, <br> FÜR EIN UNVERGESSLICHEN URLAUB!",
-    "experiencePrenota": "JETZT BUCHEN!"
+    "experiencePrenota": "JETZT BUCHEN!",
+    "message": "Diese Website verwendet Cookies, um sicherzustellen, dass Sie auf unserer Website die beste Erfahrung machen.",
+    "dismiss": "Verstanden!",
+    "deny": "Cookies ablehnen",
+    "link": "Erfahren Sie mehr",
+    "policy": "Cookie-Richtlinie"
 }

@@ -235,5 +235,10 @@ export const en ={
     "tvIcon": "Television",
     "garageIcon": "Garage",
     "experienceText": "BOOK WITH US, <br> A SEA OF EXPERIENCES AWAITS YOU <br> DISCOVERING SARDINIA FROM EVERY ANGLE, <br> FOR AN UNFORGETTABLE VACATION!",
-    "experiencePrenota": "BOOK NOW!"
+    "experiencePrenota": "BOOK NOW!",
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Got it!",
+    "deny": "Refuse cookies",
+    "link": "Learn more",
+    "policy": "Cookie Policy"
 }

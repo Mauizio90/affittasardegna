@@ -15,6 +15,7 @@ import { SearchService } from '../../services/search.service';
 import { SeoService } from '../../services/seo.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar} from '@fortawesome/free-solid-svg-icons';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 
 
 @Component({
@@ -32,12 +33,30 @@ export class HomeComponent {
 
 
 
-  constructor(private formBuilder: FormBuilder, private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>, private router: Router, private searchService: SearchService, private seo: SeoService) {
+  constructor(private cookieService: NgcCookieConsentService,private formBuilder: FormBuilder, private accommodationService: AccommodationService, private titleService: Title, private metaTagService: Meta, private translate: TranslateService, private datePipe: DatePipe, private dateAdapter: DateAdapter<Date>, private router: Router, private searchService: SearchService, private seo: SeoService) {
     this.dateAdapter.setLocale('it');
     this.dateAdapter.getFirstDayOfWeek = () => { return 1; }
   }
 
   ngOnInit() {
+
+    let message = this.translate.instant("message");
+    let dismiss = this.translate.instant("dismiss");
+    let deny = this.translate.instant("deny");
+    let link = this.translate.instant("link");
+    let policy = this.translate.instant("policy");
+    let href = this.translate.instant("rl.privacy");
+
+    this.cookieService.getConfig().content!.message = message;
+    this.cookieService.getConfig().content!.dismiss = dismiss;
+    this.cookieService.getConfig().content!.deny = deny;
+    this.cookieService.getConfig().content!.link = link;
+    this.cookieService.getConfig().content!.policy = policy;
+    this.cookieService.getConfig().content!.href = href;
+
+    this.cookieService.destroy(); // remove previous cookie bar (with default messages)
+        this.cookieService.init(this.cookieService.getConfig());
+
     let translatedTitle = this.translate.instant('homeMetaTitle');
     let translatedDescription = this.translate.instant('homeMetaDescription');
     this.seo.updateTitle(translatedTitle);
