@@ -15,14 +15,12 @@
 <!-- header -->
 
 <div class="home container">
-    <div class="home-text" style="background: rgba(255, 255, 255, 0.28);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.6px);">
-        <h1>{{"homeheader-trova" | translate | uppercase}} <br>{{"homeheader-alloggio" | translate |
-            uppercase}}<br>{{"homeheader-vacanza" | translate | uppercase}}</h1>
-
-        <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="btn">{{'headerButton' | translate}}</a>
+    <div class="home-text">
+        <h1 style="font-family: sans-serif; font-weight: 900;">{{"homeheader-trova" | translate | uppercase}} {{"homeheader-alloggio" | translate |
+            uppercase}} {{"homeheader-vacanza" | translate | uppercase}}</h1>
+            <div style="display: flex; justify-content: space-around;">
+                <a [routerLink]="['/' + ('rl.gliAlloggi' | translate)]" class="btn" style="display: flex; justify-content: space-around;">{{'headerButton' | translate}}</a>
+            </div>
     </div>
 </div>
 <!-- header end -->
