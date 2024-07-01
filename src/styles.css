@@ -27,14 +27,6 @@ body{
     color: var(--light);
 }
 
-
-.home-text{
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 .home-text h1{
     color: var(--light);
     margin-bottom: 1rem;
