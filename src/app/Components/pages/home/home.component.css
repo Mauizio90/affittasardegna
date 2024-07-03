@@ -428,6 +428,10 @@
   text-align: justify;
 }
 
+.review-responsive{
+  display: flex;
+  justify-content: space-around;
+}
 
 @media (max-width: 1380px) {
   .testimonial-box{

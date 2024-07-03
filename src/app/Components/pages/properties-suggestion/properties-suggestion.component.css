@@ -191,13 +191,12 @@ label{
 
   .property-suggestion-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .property-suggestion-content p{
     color: var(--primary);
     text-align: justify;
-    margin-right: 25px;
   }
   
   @media (max-width: 768px) {

@@ -47,7 +47,7 @@
   width: 100%;
   height: 520px;
   box-sizing: border-box;
-  margin-top: 65px;
+  margin-top: 15px;
 }
 
 .contact-container {
@@ -145,6 +145,9 @@
   .contact-container {
     width: 100%;
     float: none;
+  }
+  .inner-container {
+    display: grid;
   }
 }
 label{

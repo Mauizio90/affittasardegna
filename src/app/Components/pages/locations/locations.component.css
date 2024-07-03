@@ -130,4 +130,10 @@ p{
         bottom: 20px;
         left: 20px;
     }
+
+    .pappa{
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-around;
+    }
 }
